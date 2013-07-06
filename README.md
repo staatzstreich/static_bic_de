@@ -1,4 +1,4 @@
-static_bic_de
+EXT:static_bic_de
 =============
 
-German Bankidentifiers for TYPO3 CMS Version 6.1 or lower
+This is the old verion of the extension for TYPO3 CMS if it is still needed by someone.

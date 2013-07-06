@@ -1,0 +1,12 @@
+Changelog for static_info_tables_bic_de
+06.10.2012 Michael Staatz <mstaatz@me.com>
+ * Changed Charset of SQL File to UTF-8 (no BOM)
+
+03.07.2010 Michael Staatz <info@mduttlinger.de>
+ * Uploaded extenssion to TER
+
+22.04.2010 Michael Staatz <info@mduttlinger.de>
+ * Bugfix
+
+19.11.2009 Michael Staatz <info@mduttlinger.de>
+ * initial upload

@@ -1,0 +1,15 @@
+German BIC database
+--------------------------------------------------------------
+
+This SQL table contains 4248 BICs and the associated bank names.
+The data has been supplied by @rtplan21, Germany.
+
+Each table row contains:
+ - The german BIC (BLZ)
+ - The name of the associated bank
+
+This table and the data in it is believed to be in the public
+domain. If you'd like to submit changes or updates, feel
+free to drop me a line at k.dambekalns@fishfarm.de.
+
+-- Karsten Dambekalns
