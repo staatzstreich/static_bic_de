@@ -2,8 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2008 Tom Rüther (tr@e-netconsulting.de)
-*  (c) 2009 Michael Staatz (micsta@e-netconsulting.de)
+*  (c) 2013 Michael Staatz (kontakt@mstaatz.de)
 *  All rights reserved
 *
 *  This script is part of the Typo3 project. The Typo3 project is
@@ -23,38 +22,34 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-define('theCSVFile', PATH_typo3conf . 'ext/static_info_tables_bic_de/' . 'new_bic_file.csv');
-
 /**
  * Class for updating the db
  *
- *
- * @author	Tom Rüther <tr@e-netconsulting.de>
- * @author	Michael Staatz <micsta@e-netconsulting.de>
- * @author	Karsten Dambekalns <karsten@typo3.org>
- *
- * @see http://www.bundesbank.de/zahlungsverkehr/zahlungsverkehr_bankleitzahlen_download.php
+ * @author	Michael Staatz <kontakt@mstaatz.de>
+ * @see https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/bankleitzahlen/download-bankleitzahlen-602592
  * for new updates. Download the EXCEL-File and convert it to CSV-File with ';' as delimiter
  */
 class ext_update  {
 
-	protected $tempFile = theCSVFile;
+	protected $tempFile = '';
 
 	/**
 	 * Main function, returning the HTML content of the module
 	 *
 	 * @return string HTML
 	 */
-	function main()	{
+	public function main() {
+		$this->tempFile = PATH_typo3conf . 'ext/static_info_tables_bic_de/new_bic_file.csv';
+
 		$content = '<br />Update tables.';
-		$content .= '<br />Get EXCEL-File from: http://www.bundesbank.de/zahlungsverkehr/zahlungsverkehr_bankleitzahlen_download.php';
+		$content .= '<br />Get EXCEL-File from: https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/bankleitzahlen/download-bankleitzahlen-602592';
 		$content .= '<br />export it to CSV-File and upload it here.';
 
-		if(t3lib_div::_GP('update')) {
-			if (move_uploaded_file($_FILES['fimport']['tmp_name'], $this->tempFile)) {
-				if(t3lib_div::_GP('debug') === 'show') {
+		if (\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('update')) {
+			if (\move_uploaded_file($_FILES['fimport']['tmp_name'], $this->tempFile)) {
+				if (\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('debug') === 'show') {
 					$content .= '<div class="bgColor5" style="padding:10px; border:1px solid green;">' . $this->updateTable('show') . '</div>';
-				} elseif(t3lib_div::_GP('debug') === 'preview') {
+				} elseif (\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('debug') === 'preview') {
 					$content .= '<div class="bgColor5" style="padding:10px; border:1px solid red;">' . $this->updateTable('preview') . '</div>';
 				} else {
 					$content .= '<p>' . $this->updateTable('') . '</p>';
@@ -66,7 +61,7 @@ class ext_update  {
 			$content .= '<p><a class="typo3-goBack" href="javascript:history.back()"><img width="16" height="16" alt="" class="absmiddle" src="../../../sysext/t3skin/icons/gfx/goback.gif"/>back to form</a></p>';
 		} else {
 			$content .= '</form>';
-			$content .= '<form action="' . htmlspecialchars(t3lib_div::linkThisScript()) . '" method="post" enctype="multipart/form-data">';
+			$content .= '<form action="' . \htmlspecialchars(\TYPO3\CMS\Core\Utility\GeneralUtility::linkThisScript()) . '" method="post" enctype="multipart/form-data">';
 			$content .= '<br /><br />';
 			$content .= '<input type="file" name="fimport">';
 			$content .= '<br /><br />';
@@ -86,8 +81,8 @@ class ext_update  {
 	 *
 	 * @return boolean Always returns true
 	 */
-	function access() {
-		return true;
+	public function access() {
+		return \TRUE;
 	}
 
 	/**
@@ -95,8 +90,8 @@ class ext_update  {
 	 *
 	 * @return string SQL-String
 	 */
-	 function updateTable($mode) {
-		$handle = fopen($this->tempFile, 'r');
+	public function updateTable($mode) {
+		$handle = \fopen($this->tempFile, 'r');
 		if (!$handle) {
 			return 'Can not open file: ' . $this->tempFile;
 		}
@@ -105,39 +100,38 @@ class ext_update  {
 		$rows = '';
 
 			// check if we get the org. header - @TODO better file validation
-		$data = fgetcsv($handle, 1024, ';');
+		$data = \fgetcsv($handle, 1024, ';');
 		if ($data[0] != 'Bankleitzahl') {
-			if (file_exists($this->tempFile)) {
-				unlink($this->tempFile);
+			if (\file_exists($this->tempFile)) {
+				\unlink($this->tempFile);
 			}
 			return 'The uploaded file is not a valid CSV file!';
 		}
 		unset($data);
 
-		while (($data = fgetcsv($handle, 1024, ';')) !== FALSE) {
-			$count++;
-			if ($data[1] === '1') {
-				$rows[] = 'INSERT INTO static_bic_de (uid, pid, bank_ic, bank_name) VALUES (' . $count . ', 0, \'' . $data[0] . '\', \'' . $data[2] . '\')';
+		while ($data = \fgetcsv($handle, 1024, ';')) {
+			if ((int) $data[1] === 1) {
+				$rows[] = 'INSERT INTO static_bic_de (uid, pid, bank_ic, bank_name, bank_bic) VALUES (\'\', 0,' . (int) $data[0] . ', \'' . \trim($data[2]) . '\', \'' . \trim($data[7]) .'\')';
 			}
 		}
 
-		fclose($handle);
-		if (file_exists($this->tempFile)) {
-			unlink($this->tempFile);
+		\fclose($handle);
+		if (\file_exists($this->tempFile)) {
+			\unlink($this->tempFile);
 		}
 
-		$deleteQuery = "DELETE FROM static_bic_de";
+		$deleteQuery = 'DELETE FROM static_bic_de';
 
-	 	if($mode === 'show') {
-	 		$GLOBALS['TYPO3_DB']->sql_query($deleteQuery);
+		if ($mode === 'show') {
+			$GLOBALS['TYPO3_DB']->sql_query($deleteQuery);
 			foreach ($rows as $row) {
 				$GLOBALS['TYPO3_DB']->sql_query($row);
 			}
 			$res = $deleteQuery . '<br />';
-			$res .= implode('<br />', $rows);
-		} elseif($mode === 'preview') {
+			$res .= \implode('<br />', $rows);
+		} elseif ($mode === 'preview') {
 			$res = $deleteQuery . '<br />';
-			$res .= implode('<br />', $rows);
+			$res .= \implode('<br />', $rows);
 		} else {
 			$GLOBALS['TYPO3_DB']->sql_query($deleteQuery);
 			foreach ($rows as $row) {
@@ -146,13 +140,9 @@ class ext_update  {
 			$res = '';
 		}
 
-		return($res);
+		return $res;
 	}
 
-}
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/static_info_tables_bic_de/class.ext_update.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/static_info_tables_bic_de/class.ext_update.php']);
 }
 
 ?>

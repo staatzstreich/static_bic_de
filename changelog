@@ -1,0 +1,27 @@
+19.07.2025 Michael Staatz <kontakt@mstaatz.de>
+ * Changed codebase for working with TYPO3 from 7 to 10
+
+27.03.2018 Michael Staatz <mstaatz@me.com>
+ * Changed Settings for Feature #84472 - Are there any plans for TYPO3 7.6/8.7/9.x?
+
+17.04.2014 Michael Staatz <mstaatz@me.com>
+ * Fixed #58001 Install Tool - Database analyzer drops table "static_bic_de", Thanks to Tim Klein-Hitpaß for reporting
+ * Fixed #58002 #58002 Install Tool (6.2.1) wants to delete the table "static_bic_de", Thanks to Salvatore Eckel for reporting
+
+08.01.2014 Michael Staatz <mstaatz@me.com>
+ * Changed DB Structure and added Swiftcode
+
+04.07.2013 Michael Staatz <mstaatz@me.com>
+ * Changed codebase for working with TYPO3 6.2 LTS
+
+06.10.2012 Michael Staatz <mstaatz@me.com>
+ * Changed Charset of SQL File to UTF-8 (no BOM)
+
+03.07.2010 Michael Staatz <info@mduttlinger.de>
+ * Uploaded extenssion to TER
+
+22.04.2010 Michael Staatz <info@mduttlinger.de>
+ * Bugfix
+
+19.11.2009 Michael Staatz <info@mduttlinger.de>
+ * initial upload

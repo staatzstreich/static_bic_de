@@ -1,4083 +1,4055 @@
-# TYPO3 Extension Manager dump 1.1
-#
-# Host: localhost    Database: typo3
-#--------------------------------------------------------
-
-
-#
-# Table structure for table "static_bic_de"
-#
 DROP TABLE IF EXISTS static_bic_de;
 CREATE TABLE static_bic_de (
-  uid int(11) unsigned NOT NULL auto_increment,
-  pid int(11) unsigned NOT NULL default '0',
-  bank_ic int(8) unsigned NOT NULL default '0',
-  bank_name varchar(127) NOT NULL default '',
+  uid INT(11) unsigned NOT NULL auto_increment,
+  pid INT(11) unsigned NOT NULL DEFAULT '0',
+  bank_ic INT(8) unsigned NOT NULL DEFAULT '0',
+  bank_name VARCHAR(127) NOT NULL DEFAULT '',
+  bank_bic VARCHAR(11) NOT NULL DEFAULT '',
   UNIQUE uid (uid),
   KEY bank_ic (bank_ic)
 );
 
 
-INSERT INTO static_bic_de VALUES ('1', '0', '10000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('2', '0', '10010010', 'Postbank');
-INSERT INTO static_bic_de VALUES ('3', '0', '10010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4', '0', '10010222', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('5', '0', '10010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('6', '0', '10019610', 'Dexia Kommunalbank Deutschland');
-INSERT INTO static_bic_de VALUES ('7', '0', '10020000', 'Berliner Bank');
-INSERT INTO static_bic_de VALUES ('8', '0', '10020200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('9', '0', '10020400', 'Parex Bank Berlin');
-INSERT INTO static_bic_de VALUES ('10', '0', '10020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('11', '0', '10020890', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17', '0', '10022200', 'Landesbank Berlin - ehemals Bankgesellschaft Berlin');
-INSERT INTO static_bic_de VALUES ('18', '0', '10030200', 'Berlin-Hannoversche Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('19', '0', '10030400', 'ABK-Kreditbank');
-INSERT INTO static_bic_de VALUES ('20', '0', '10030500', 'Bankhaus Löbbecke');
-INSERT INTO static_bic_de VALUES ('21', '0', '10030600', 'Bankhaus Kruber');
-INSERT INTO static_bic_de VALUES ('22', '0', '10030700', 'Gries & Heissel - Bankiers');
-INSERT INTO static_bic_de VALUES ('23', '0', '10040000', 'Commerzbank Berlin (West)');
-INSERT INTO static_bic_de VALUES ('24', '0', '10040060', 'Commerzbank Gf 160');
-INSERT INTO static_bic_de VALUES ('25', '0', '10040061', 'Commerzbank Gf 161');
-INSERT INTO static_bic_de VALUES ('26', '0', '10045050', 'Commerzbank Service-BZ');
-INSERT INTO static_bic_de VALUES ('27', '0', '10050000', 'Landesbank Berlin - Berliner Sparkasse');
-INSERT INTO static_bic_de VALUES ('28', '0', '10050001', 'Landesbank Berlin');
-INSERT INTO static_bic_de VALUES ('29', '0', '10050005', 'Landesbank Berlin - E 1 -');
-INSERT INTO static_bic_de VALUES ('30', '0', '10050006', 'Landesbank Berlin - E 2 -');
-INSERT INTO static_bic_de VALUES ('31', '0', '10050500', 'LBS Ost Berlin');
-INSERT INTO static_bic_de VALUES ('32', '0', '10050600', 'WestLB Berlin');
-INSERT INTO static_bic_de VALUES ('33', '0', '10050999', 'DekaBank Berlin');
-INSERT INTO static_bic_de VALUES ('34', '0', '10060198', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('35', '0', '10060237', 'Evangelische Darlehnsgenossenschaft');
-INSERT INTO static_bic_de VALUES ('36', '0', '10061006', 'KD-Bank - die Bank für Kirche und Diakonie - Gf SoPrBerlin');
-INSERT INTO static_bic_de VALUES ('37', '0', '10070000', 'Deutsche Bank Fil Berlin');
-INSERT INTO static_bic_de VALUES ('38', '0', '10070024', 'Deutsche Bank Privat und Geschäftskunden F 700');
-INSERT INTO static_bic_de VALUES ('39', '0', '10070100', 'Deutsche Bank Fil Berlin II');
-INSERT INTO static_bic_de VALUES ('40', '0', '10070124', 'Deutsche Bank Privat und Geschäftskd Berlin II');
-INSERT INTO static_bic_de VALUES ('41', '0', '10077777', 'norisbank');
-INSERT INTO static_bic_de VALUES ('42', '0', '10080000', 'Commerzbank vormals Dresdner Bank Filiale Berlin I');
-INSERT INTO static_bic_de VALUES ('43', '0', '10080005', 'Commerzbank vormals Dresdner Bank Zw A');
-INSERT INTO static_bic_de VALUES ('44', '0', '10080006', 'Commerzbank vormals Dresdner Bank Zw B');
-INSERT INTO static_bic_de VALUES ('45', '0', '10080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('46', '0', '10080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('47', '0', '10080085', 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('48', '0', '10080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('49', '0', '10080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('50', '0', '10080088', 'Commerzbank vormals Dresdner Bank IBLZ');
-INSERT INTO static_bic_de VALUES ('51', '0', '10080089', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6');
-INSERT INTO static_bic_de VALUES ('52', '0', '10080900', 'Commerzbank vormals Dresdner Bank Filiale Berlin III');
-INSERT INTO static_bic_de VALUES ('53', '0', '10089260', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('54', '0', '10089999', 'Commerzbank vormals Dresdner Bank ITGK 2');
-INSERT INTO static_bic_de VALUES ('55', '0', '10090000', 'Berliner Volksbank');
-INSERT INTO static_bic_de VALUES ('95', '0', '10090300', 'Bank für Schiffahrt (BFS) Fil d Ostfr VB Leer');
-INSERT INTO static_bic_de VALUES ('96', '0', '10090603', 'apoBank');
-INSERT INTO static_bic_de VALUES ('105', '0', '10090900', 'PSD Bank Berlin-Brandenburg');
-INSERT INTO static_bic_de VALUES ('106', '0', '10110300', 'Bankhaus Dr. Masel');
-INSERT INTO static_bic_de VALUES ('107', '0', '10110400', 'Investitionsbank Berlin');
-INSERT INTO static_bic_de VALUES ('108', '0', '10110600', 'Berliner Effektenbank Zndl der quirin bank');
-INSERT INTO static_bic_de VALUES ('109', '0', '10120100', 'Weberbank');
-INSERT INTO static_bic_de VALUES ('110', '0', '10120600', 'Ge Money Bank');
-INSERT INTO static_bic_de VALUES ('111', '0', '10120760', 'Bayer Hypo- und Vereinsbank Ndl 260 Bln');
-INSERT INTO static_bic_de VALUES ('112', '0', '10120800', 'VON ESSEN Bankgesellschaft');
-INSERT INTO static_bic_de VALUES ('113', '0', '10120900', 'readybank');
-INSERT INTO static_bic_de VALUES ('115', '0', '10120999', 'readybank Gf GAA');
-INSERT INTO static_bic_de VALUES ('116', '0', '10130600', 'Isbank Fil Berlin');
-INSERT INTO static_bic_de VALUES ('117', '0', '10130800', 'BIW Bank');
-INSERT INTO static_bic_de VALUES ('118', '0', '10310600', 'Tradegate Wertpapierhandelsbank Berlin');
-INSERT INTO static_bic_de VALUES ('119', '0', '10320800', 'Emporiki Bank - Germany');
-INSERT INTO static_bic_de VALUES ('120', '0', '12016836', 'KfW Kreditanstalt für Wiederaufbau');
-INSERT INTO static_bic_de VALUES ('121', '0', '12020300', 'BkmU Bank');
-INSERT INTO static_bic_de VALUES ('122', '0', '12030000', 'Deutsche Kreditbank Berlin');
-INSERT INTO static_bic_de VALUES ('137', '0', '12030900', 'Merck Finck & Co');
-INSERT INTO static_bic_de VALUES ('138', '0', '12040000', 'Commerzbank Berlin Ost');
-INSERT INTO static_bic_de VALUES ('139', '0', '12050555', 'NLB FinanzIT');
-INSERT INTO static_bic_de VALUES ('140', '0', '12060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('141', '0', '12070000', 'Deutsche Bank Ld Brandenburg');
-INSERT INTO static_bic_de VALUES ('179', '0', '12070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('217', '0', '12080000', 'Commerzbank vormals Dresdner Bank Filiale Berlin II');
-INSERT INTO static_bic_de VALUES ('218', '0', '12090640', 'apoBank');
-INSERT INTO static_bic_de VALUES ('219', '0', '12096597', 'Sparda-Bank Berlin');
-INSERT INTO static_bic_de VALUES ('260', '0', '13000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('261', '0', '13010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('264', '0', '13020780', 'Bayer Hypo- und Vereinsbank(ehem. Hypo)');
-INSERT INTO static_bic_de VALUES ('265', '0', '13040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('268', '0', '13050000', 'Ostseesparkasse Rostock');
-INSERT INTO static_bic_de VALUES ('273', '0', '13051042', 'Kreissparkasse Rügen, Sitz Bergen');
-INSERT INTO static_bic_de VALUES ('274', '0', '13051052', 'Sparkasse Hansestadt Stralsund');
-INSERT INTO static_bic_de VALUES ('275', '0', '13061008', 'Volksbank Wolgast');
-INSERT INTO static_bic_de VALUES ('277', '0', '13061028', 'Volksbank Raiffeisenbank ehem VB Greifswald');
-INSERT INTO static_bic_de VALUES ('278', '0', '13061078', 'Volks- und Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('294', '0', '13061088', 'Raiffeisenbank Wismar -alt-');
-INSERT INTO static_bic_de VALUES ('295', '0', '13061128', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('297', '0', '13070000', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('332', '0', '13070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('367', '0', '13080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('368', '0', '13090000', 'Rostocker Volks- und Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('370', '0', '13091054', 'Pommersche Volksbank');
-INSERT INTO static_bic_de VALUES ('372', '0', '13091084', 'Volksbank Wismar -alt-');
-INSERT INTO static_bic_de VALUES ('373', '0', '14000000', 'Bundesbank eh Schwerin');
-INSERT INTO static_bic_de VALUES ('374', '0', '14020781', 'Bayer Hypo- und Vereinsbank(ehem. Hypo)');
-INSERT INTO static_bic_de VALUES ('375', '0', '14040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('376', '0', '14051000', 'Sparkasse Mecklenburg-Nordwest');
-INSERT INTO static_bic_de VALUES ('392', '0', '14051362', 'Sparkasse Parchim-Lübz');
-INSERT INTO static_bic_de VALUES ('394', '0', '14051462', 'Sparkasse Schwerin -alt-');
-INSERT INTO static_bic_de VALUES ('395', '0', '14052000', 'Sparkasse Mecklenburg-Schwerin');
-INSERT INTO static_bic_de VALUES ('411', '0', '14061308', 'Volks- und Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('428', '0', '14061438', 'Raiffeisen-Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('429', '0', '14080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('432', '0', '14080011', 'Commerzbank vormals Dresdner Bank Zw W');
-INSERT INTO static_bic_de VALUES ('433', '0', '14091464', 'VR-Bank');
-INSERT INTO static_bic_de VALUES ('437', '0', '15000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('438', '0', '15040068', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('442', '0', '15050100', 'Müritz-Sparkasse');
-INSERT INTO static_bic_de VALUES ('444', '0', '15050200', 'Sparkasse Neubrandenburg-Demmin');
-INSERT INTO static_bic_de VALUES ('454', '0', '15050300', 'Kreissparkasse Demmin -alt-');
-INSERT INTO static_bic_de VALUES ('455', '0', '15050400', 'Sparkasse Uecker-Randow');
-INSERT INTO static_bic_de VALUES ('464', '0', '15050500', 'Sparkasse Vorpommern');
-INSERT INTO static_bic_de VALUES ('501', '0', '15051732', 'Sparkasse Mecklenburg-Strelitz');
-INSERT INTO static_bic_de VALUES ('508', '0', '15061618', 'Raiffeisenbank Mecklenburger Seenplatte');
-INSERT INTO static_bic_de VALUES ('524', '0', '15061638', 'Volksbank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('538', '0', '15061658', 'Raiffeisenbank Pasewalk-Strasburg');
-INSERT INTO static_bic_de VALUES ('546', '0', '15061698', 'Raiffeisenbank Malchin');
-INSERT INTO static_bic_de VALUES ('553', '0', '15061738', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('554', '0', '15061758', 'Neubrandenburger Bank -alt-');
-INSERT INTO static_bic_de VALUES ('555', '0', '15080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('560', '0', '15091674', 'Volksbank Demmin');
-INSERT INTO static_bic_de VALUES ('563', '0', '15091704', 'Volksbank Uckermark');
-INSERT INTO static_bic_de VALUES ('569', '0', '16000000', 'Bundesbank eh Potsdam');
-INSERT INTO static_bic_de VALUES ('570', '0', '16010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('572', '0', '16010300', 'Investitionsbank des Landes Brandenburg');
-INSERT INTO static_bic_de VALUES ('573', '0', '16020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('574', '0', '16040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('587', '0', '16050000', 'Mittelbrandenburgische Sparkasse in Potsdam');
-INSERT INTO static_bic_de VALUES ('667', '0', '16050101', 'Sparkasse Prignitz');
-INSERT INTO static_bic_de VALUES ('678', '0', '16050202', 'Sparkasse Ostprignitz-Ruppin');
-INSERT INTO static_bic_de VALUES ('690', '0', '16050500', 'LBS Ostdeutsche Landesbausparkasse');
-INSERT INTO static_bic_de VALUES ('691', '0', '16050888', 'Sparkasse Dahme-Spreewald -alt-');
-INSERT INTO static_bic_de VALUES ('692', '0', '16052500', 'Kreissparkasse Teltow-Fläming -alt-');
-INSERT INTO static_bic_de VALUES ('693', '0', '16060122', 'Volks- und Raiffeisenbank Prignitz');
-INSERT INTO static_bic_de VALUES ('702', '0', '16061938', 'Raiffeisenbank Ostprignitz-Ruppin');
-INSERT INTO static_bic_de VALUES ('711', '0', '16062008', 'VR-Bank Fläming');
-INSERT INTO static_bic_de VALUES ('717', '0', '16062073', 'Brandenburger Bank');
-INSERT INTO static_bic_de VALUES ('723', '0', '16080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('742', '0', '16091994', 'Volksbank Rathenow');
-INSERT INTO static_bic_de VALUES ('744', '0', '17000000', 'Bundesbank eh Frankfurt (Oder)');
-INSERT INTO static_bic_de VALUES ('745', '0', '17020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('746', '0', '17040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('752', '0', '17052000', 'Sparkasse Barnim');
-INSERT INTO static_bic_de VALUES ('754', '0', '17052302', 'Stadtsparkasse Schwedt');
-INSERT INTO static_bic_de VALUES ('755', '0', '17052472', 'Stadtsparkasse Frankfurt (Oder)');
-INSERT INTO static_bic_de VALUES ('756', '0', '17054040', 'Sparkasse Märkisch-Oderland');
-INSERT INTO static_bic_de VALUES ('759', '0', '17055050', 'Sparkasse Oder-Spree');
-INSERT INTO static_bic_de VALUES ('763', '0', '17056060', 'Sparkasse Uckermark');
-INSERT INTO static_bic_de VALUES ('773', '0', '17062428', 'Raiffeisenbank-Volksbank Oder-Spree');
-INSERT INTO static_bic_de VALUES ('775', '0', '17080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('777', '0', '17092404', 'VR Bank Fürstenwalde Seelow Wriezen');
-INSERT INTO static_bic_de VALUES ('790', '0', '18000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('791', '0', '18020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('792', '0', '18040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('796', '0', '18050000', 'Sparkasse Spree-Neiße');
-INSERT INTO static_bic_de VALUES ('800', '0', '18051000', 'Sparkasse Elbe-Elster');
-INSERT INTO static_bic_de VALUES ('801', '0', '18055000', 'Sparkasse Niederlausitz');
-INSERT INTO static_bic_de VALUES ('814', '0', '18062678', 'VR Bank Lausitz');
-INSERT INTO static_bic_de VALUES ('818', '0', '18062758', 'VR Bank Forst');
-INSERT INTO static_bic_de VALUES ('820', '0', '18080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('826', '0', '18092684', 'Spreewaldbank');
-INSERT INTO static_bic_de VALUES ('829', '0', '18092744', 'Volksbank Spremberg-Bad Muskau');
-INSERT INTO static_bic_de VALUES ('833', '0', '18092794', 'Volks- und Raiffeisenbank Cottbus -alt-');
-INSERT INTO static_bic_de VALUES ('834', '0', '20000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('835', '0', '20010020', 'Postbank (Giro)');
-INSERT INTO static_bic_de VALUES ('836', '0', '20010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('838', '0', '20010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('839', '0', '20010800', 'MPC Capital Privatbank');
-INSERT INTO static_bic_de VALUES ('840', '0', '20020200', 'SEB Merchant Bank Hamburg');
-INSERT INTO static_bic_de VALUES ('841', '0', '20020500', 'Jyske Bank Fil Hamburg');
-INSERT INTO static_bic_de VALUES ('842', '0', '20020860', 'Bayer Hypo- und Vereinsbank(ehem. Hypo)');
-INSERT INTO static_bic_de VALUES ('843', '0', '20020900', 'Signal Iduna Bauspar');
-INSERT INTO static_bic_de VALUES ('844', '0', '20030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('937', '0', '20030300', 'Donner Bank, Conrad Hinrich');
-INSERT INTO static_bic_de VALUES ('938', '0', '20030400', 'Marcard, Stein & Co Bankiers');
-INSERT INTO static_bic_de VALUES ('939', '0', '20030600', 'Sydbank Fil Hamburg');
-INSERT INTO static_bic_de VALUES ('940', '0', '20030700', 'Merck Finck & Co');
-INSERT INTO static_bic_de VALUES ('941', '0', '20030900', 'Bankhaus Wölbern & Co');
-INSERT INTO static_bic_de VALUES ('942', '0', '20040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('953', '0', '20040040', 'Commerzbank GF RME');
-INSERT INTO static_bic_de VALUES ('954', '0', '20040050', 'Commerzbank GF COC');
-INSERT INTO static_bic_de VALUES ('955', '0', '20040060', 'Commerzbank Gf 260');
-INSERT INTO static_bic_de VALUES ('956', '0', '20040061', 'Commerzbank Gf 261');
-INSERT INTO static_bic_de VALUES ('957', '0', '20041111', 'comdirect bank');
-INSERT INTO static_bic_de VALUES ('958', '0', '20041133', 'comdirect bank');
-INSERT INTO static_bic_de VALUES ('959', '0', '20041144', 'comdirect bank');
-INSERT INTO static_bic_de VALUES ('960', '0', '20041155', 'comdirect bank');
-INSERT INTO static_bic_de VALUES ('961', '0', '20050000', 'HSH Nordbank Hamburg');
-INSERT INTO static_bic_de VALUES ('962', '0', '20050550', 'Hamburger Sparkasse');
-INSERT INTO static_bic_de VALUES ('979', '0', '20060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('980', '0', '20069111', 'Norderstedter Bank');
-INSERT INTO static_bic_de VALUES ('982', '0', '20069125', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('986', '0', '20069130', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('998', '0', '20069144', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1000', '0', '20069145', 'Volks- u Raiffeisenbank Halstenbek-Schenefeld');
-INSERT INTO static_bic_de VALUES ('1001', '0', '20069177', 'Raiffeisenbank Südstormarn');
-INSERT INTO static_bic_de VALUES ('1008', '0', '20069232', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1010', '0', '20069625', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('1011', '0', '20069641', 'Raiffeisenbank Owschlag');
-INSERT INTO static_bic_de VALUES ('1014', '0', '20069659', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('1015', '0', '20069780', 'Volksbank Ahlerstedt');
-INSERT INTO static_bic_de VALUES ('1017', '0', '20069782', 'Volksbank Geest');
-INSERT INTO static_bic_de VALUES ('1028', '0', '20069786', 'Volksbank Kehdingen');
-INSERT INTO static_bic_de VALUES ('1035', '0', '20069800', 'Spar- und Kreditbank');
-INSERT INTO static_bic_de VALUES ('1038', '0', '20069812', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('1042', '0', '20069815', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('1045', '0', '20069861', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1049', '0', '20069882', 'Raiffeisenbank Travemünde');
-INSERT INTO static_bic_de VALUES ('1051', '0', '20069965', 'Volksbank Winsener Marsch');
-INSERT INTO static_bic_de VALUES ('1055', '0', '20069989', 'Volksbank Wulfsen');
-INSERT INTO static_bic_de VALUES ('1058', '0', '20070000', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1073', '0', '20070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1088', '0', '20080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1095', '0', '20080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('1096', '0', '20080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('1097', '0', '20080085', 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('1098', '0', '20080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('1099', '0', '20080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('1100', '0', '20080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('1101', '0', '20080089', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6');
-INSERT INTO static_bic_de VALUES ('1102', '0', '20089200', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('1103', '0', '20090400', 'Deutsche Genossenschafts-Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('1104', '0', '20090500', 'netbank');
-INSERT INTO static_bic_de VALUES ('1105', '0', '20090602', 'apoBank');
-INSERT INTO static_bic_de VALUES ('1106', '0', '20090700', 'Edekabank');
-INSERT INTO static_bic_de VALUES ('1108', '0', '20090745', 'EBANK Gf Cash');
-INSERT INTO static_bic_de VALUES ('1109', '0', '20090900', 'PSD Bank Nord');
-INSERT INTO static_bic_de VALUES ('1110', '0', '20110022', 'Postbank (Spar)');
-INSERT INTO static_bic_de VALUES ('1111', '0', '20110401', 'Eurohypo ehem Deutsche Hypothekenbank Hamburg');
-INSERT INTO static_bic_de VALUES ('1112', '0', '20110700', 'Bank of Tokyo-Mitsubishi, The -');
-INSERT INTO static_bic_de VALUES ('1113', '0', '20110800', 'Bank of China Fil Hamburg');
-INSERT INTO static_bic_de VALUES ('1114', '0', '20120000', 'Berenberg, Joh. - Gossler & Co');
-INSERT INTO static_bic_de VALUES ('1115', '0', '20120100', 'Warburg, M.M.- Bank');
-INSERT INTO static_bic_de VALUES ('1116', '0', '20120200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('1117', '0', '20120400', 'Deutscher Ring Bausparkasse');
-INSERT INTO static_bic_de VALUES ('1118', '0', '20120600', 'Goyer & Göppel');
-INSERT INTO static_bic_de VALUES ('1119', '0', '20120700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('1120', '0', '20120701', 'Hanseatic Bank Zw Nord');
-INSERT INTO static_bic_de VALUES ('1121', '0', '20120744', 'Hanseatic Bank Filiale Ost');
-INSERT INTO static_bic_de VALUES ('1122', '0', '20120766', 'Hanseatic Bank Filiale Süd');
-INSERT INTO static_bic_de VALUES ('1123', '0', '20130400', 'Hesse Newman & Co');
-INSERT INTO static_bic_de VALUES ('1124', '0', '20130412', 'Hesse Newman & Co. Asset Backed Sec.');
-INSERT INTO static_bic_de VALUES ('1125', '0', '20130600', 'Barclaycard Barclays Bank');
-INSERT INTO static_bic_de VALUES ('1126', '0', '20190003', 'Hamburger Volksbank');
-INSERT INTO static_bic_de VALUES ('1133', '0', '20190109', 'Volksbank Stormarn');
-INSERT INTO static_bic_de VALUES ('1145', '0', '20190206', 'Volksbank Hamburg Ost-West -alt-');
-INSERT INTO static_bic_de VALUES ('1147', '0', '20190301', 'Vierländer Volksbank');
-INSERT INTO static_bic_de VALUES ('1149', '0', '20190800', 'MKB Mittelstandskreditbank');
-INSERT INTO static_bic_de VALUES ('1150', '0', '20210200', 'Bank Melli Iran');
-INSERT INTO static_bic_de VALUES ('1151', '0', '20210300', 'Bank Saderat Iran');
-INSERT INTO static_bic_de VALUES ('1152', '0', '20220100', 'DnB NOR Bank ASA Filiale Deutschland');
-INSERT INTO static_bic_de VALUES ('1153', '0', '20220400', 'Warburg, M.M. - Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('1154', '0', '20230300', 'Schröder, Otto M. - Bank');
-INSERT INTO static_bic_de VALUES ('1155', '0', '20230600', 'Isbank Fil Hamburg');
-INSERT INTO static_bic_de VALUES ('1156', '0', '20230800', 'Sutor, Max Heinr');
-INSERT INTO static_bic_de VALUES ('1157', '0', '20310300', 'Europäisch-Iranische Handelsbank');
-INSERT INTO static_bic_de VALUES ('1158', '0', '20310600', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('1159', '0', '20320500', 'Danske Bank');
-INSERT INTO static_bic_de VALUES ('1160', '0', '20330300', 'Indonesische Overzeese Bank, De -');
-INSERT INTO static_bic_de VALUES ('1161', '0', '20350000', 'WestLB Hamburg');
-INSERT INTO static_bic_de VALUES ('1162', '0', '20690500', 'Sparda-Bank Hamburg');
-INSERT INTO static_bic_de VALUES ('1165', '0', '20730000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1166', '0', '20730051', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1167', '0', '20730053', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1168', '0', '20730054', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1169', '0', '20750000', 'Sparkasse Harburg-Buxtehude');
-INSERT INTO static_bic_de VALUES ('1192', '0', '21000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('1193', '0', '21010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('1194', '0', '21020600', 'Sydbank Filiale Kiel');
-INSERT INTO static_bic_de VALUES ('1195', '0', '21030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1196', '0', '21030092', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1197', '0', '21030093', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1198', '0', '21030094', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1199', '0', '21030095', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1200', '0', '21040010', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1202', '0', '21042076', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1203', '0', '21050000', 'HSH Nordbank Hamburg, Kiel');
-INSERT INTO static_bic_de VALUES ('1204', '0', '21050170', 'Förde Sparkasse');
-INSERT INTO static_bic_de VALUES ('1236', '0', '21051275', 'Bordesholmer Sparkasse');
-INSERT INTO static_bic_de VALUES ('1243', '0', '21051580', 'Sparkasse Kreis Plön -alt-');
-INSERT INTO static_bic_de VALUES ('1244', '0', '21052090', 'Sparkasse Eckernförde -alt-');
-INSERT INTO static_bic_de VALUES ('1245', '0', '21060237', 'Evangelische Darlehnsgenossenschaft');
-INSERT INTO static_bic_de VALUES ('1247', '0', '21064045', 'Raiffeisenbank im Kreis Plön');
-INSERT INTO static_bic_de VALUES ('1257', '0', '21070020', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1259', '0', '21070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1261', '0', '21080050', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1262', '0', '21089201', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('1263', '0', '21090007', 'Kieler Volksbank');
-INSERT INTO static_bic_de VALUES ('1274', '0', '21090619', 'apoBank');
-INSERT INTO static_bic_de VALUES ('1275', '0', '21090900', 'PSD Bank Kiel');
-INSERT INTO static_bic_de VALUES ('1276', '0', '21092023', 'Eckernförder Bank Volksbank-Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1285', '0', '21210111', 'SEB');
-INSERT INTO static_bic_de VALUES ('1286', '0', '21230085', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1287', '0', '21230086', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1288', '0', '21240040', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1290', '0', '21241540', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1291', '0', '21250000', 'Stadtsparkasse Neumünster -alt-');
-INSERT INTO static_bic_de VALUES ('1292', '0', '21261089', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('1293', '0', '21261227', 'Raiffbk Kl-Kummerfeld -alt-');
-INSERT INTO static_bic_de VALUES ('1294', '0', '21270020', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1295', '0', '21270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1296', '0', '21280002', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1297', '0', '21290016', 'Volksbank Raiffbk Neumünster');
-INSERT INTO static_bic_de VALUES ('1312', '0', '21340010', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1313', '0', '21352240', 'Sparkasse Holstein');
-INSERT INTO static_bic_de VALUES ('1345', '0', '21390008', 'Volksbank Ostholstein Nord');
-INSERT INTO static_bic_de VALUES ('1358', '0', '21392218', 'Volksbank Eutin Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1366', '0', '21430070', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1367', '0', '21440045', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1368', '0', '21450000', 'Sparkasse Mittelholstein Rendsburg');
-INSERT INTO static_bic_de VALUES ('1376', '0', '21451205', 'Sparkasse Büdelsdorf -alt-');
-INSERT INTO static_bic_de VALUES ('1377', '0', '21452030', 'Sparkasse Hohenwestedt');
-INSERT INTO static_bic_de VALUES ('1381', '0', '21461627', 'Raiffeisenbank Jevenstedt -alt-');
-INSERT INTO static_bic_de VALUES ('1382', '0', '21463603', 'Volksbank-Raiffeisenbank im Kreis Rendsburg');
-INSERT INTO static_bic_de VALUES ('1398', '0', '21464671', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1401', '0', '21480003', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1402', '0', '21500000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('1403', '0', '21510600', 'Sydbank Filiale Flensburg');
-INSERT INTO static_bic_de VALUES ('1404', '0', '21520100', 'Union-Bank Flensburg');
-INSERT INTO static_bic_de VALUES ('1406', '0', '21530080', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1407', '0', '21540060', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1408', '0', '21550050', 'Nord-Ostsee Sparkasse');
-INSERT INTO static_bic_de VALUES ('1409', '0', '21563321', 'Raiffeisenbank Flensburg -alt-');
-INSERT INTO static_bic_de VALUES ('1410', '0', '21565316', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1415', '0', '21566356', 'Volks- und Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1424', '0', '21567360', 'Raiffeisenbank Kleinjörl -alt-');
-INSERT INTO static_bic_de VALUES ('1425', '0', '21570011', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1427', '0', '21570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1429', '0', '21580000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1430', '0', '21630060', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1431', '0', '21630061', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1432', '0', '21630062', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1433', '0', '21630063', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1434', '0', '21650110', 'Sparkasse Schleswig-Flensburg -alt-');
-INSERT INTO static_bic_de VALUES ('1435', '0', '21661719', 'VR Bank Flensburg-Schleswig');
-INSERT INTO static_bic_de VALUES ('1451', '0', '21690020', 'Schleswiger Volksbank, Volksbank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1463', '0', '21700000', 'Bundesbank eh Husum');
-INSERT INTO static_bic_de VALUES ('1464', '0', '21730040', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1465', '0', '21730042', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1466', '0', '21730043', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1467', '0', '21730044', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1468', '0', '21730045', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1469', '0', '21730046', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1470', '0', '21740043', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1471', '0', '21741674', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1472', '0', '21741825', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1473', '0', '21750000', 'Nord-Ostsee Sparkasse');
-INSERT INTO static_bic_de VALUES ('1525', '0', '21751230', 'Spar- und Leihkasse zu Bredstedt');
-INSERT INTO static_bic_de VALUES ('1527', '0', '21762550', 'Volksbank-Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1544', '0', '21763542', 'VR Bank');
-INSERT INTO static_bic_de VALUES ('1559', '0', '21770011', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1560', '0', '21770024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1561', '0', '21791805', 'Sylter Bank');
-INSERT INTO static_bic_de VALUES ('1564', '0', '21791906', 'Föhr-Amrumer Bank');
-INSERT INTO static_bic_de VALUES ('1569', '0', '21830030', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1570', '0', '21830032', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1571', '0', '21830033', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1572', '0', '21830034', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1573', '0', '21830035', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1574', '0', '21830036', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1575', '0', '21840078', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1576', '0', '21841328', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1577', '0', '21851720', 'Alte Marner Sparkasse -alt-');
-INSERT INTO static_bic_de VALUES ('1578', '0', '21851830', 'Verbandssparkasse Meldorf -alt-');
-INSERT INTO static_bic_de VALUES ('1579', '0', '21852310', 'Sparkasse Hennstedt-Wesselburen');
-INSERT INTO static_bic_de VALUES ('1589', '0', '21860418', 'Raiffeisenbank Heide');
-INSERT INTO static_bic_de VALUES ('1600', '0', '21890022', 'Dithmarscher Volks- und Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1614', '0', '22130075', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1615', '0', '22140028', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1617', '0', '22141028', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1619', '0', '22141428', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1620', '0', '22141628', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1621', '0', '22150000', 'Sparkasse Elmshorn');
-INSERT INTO static_bic_de VALUES ('1622', '0', '22151410', 'Kreissparkasse Pinneberg -alt-');
-INSERT INTO static_bic_de VALUES ('1623', '0', '22151730', 'Stadtsparkasse Wedel');
-INSERT INTO static_bic_de VALUES ('1624', '0', '22162113', 'Volks- u Raiffeisenbank Halstenbek-Schenefeld');
-INSERT INTO static_bic_de VALUES ('1625', '0', '22163114', 'Raiffeisenbank Elbmarsch');
-INSERT INTO static_bic_de VALUES ('1630', '0', '22180000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1631', '0', '22181400', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1632', '0', '22190030', 'Volksbank Elmshorn');
-INSERT INTO static_bic_de VALUES ('1641', '0', '22191405', 'VR Bank Pinneberg');
-INSERT INTO static_bic_de VALUES ('1653', '0', '22200000', 'Bundesbank eh Itzehoe');
-INSERT INTO static_bic_de VALUES ('1654', '0', '22230020', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1655', '0', '22230022', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1656', '0', '22230023', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1657', '0', '22230024', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1658', '0', '22230025', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1659', '0', '22240073', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1660', '0', '22250020', 'Sparkasse Westholstein');
-INSERT INTO static_bic_de VALUES ('1691', '0', '22251580', 'Landsparkasse Schenefeld');
-INSERT INTO static_bic_de VALUES ('1695', '0', '22252050', 'Verbandssparkasse Wilster -alt-');
-INSERT INTO static_bic_de VALUES ('1696', '0', '22260136', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1710', '0', '22280000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1711', '0', '22290031', 'Volksbank Raiffeisenbank Itzehoe');
-INSERT INTO static_bic_de VALUES ('1734', '0', '23000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('1735', '0', '23010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('1737', '0', '23030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1738', '0', '23040022', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1741', '0', '23050000', 'HSH Nordbank Lübeck');
-INSERT INTO static_bic_de VALUES ('1742', '0', '23050101', 'Sparkasse zu Lübeck');
-INSERT INTO static_bic_de VALUES ('1743', '0', '23051030', 'Sparkasse Südholstein');
-INSERT INTO static_bic_de VALUES ('1776', '0', '23051610', 'Sparkasse Stormarn -alt-');
-INSERT INTO static_bic_de VALUES ('1777', '0', '23052750', 'Kreissparkasse Herzogtum Lauenburg');
-INSERT INTO static_bic_de VALUES ('1800', '0', '23061220', 'Raiffeisenbank Leezen');
-INSERT INTO static_bic_de VALUES ('1809', '0', '23062124', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1813', '0', '23062807', 'Volks- und Raiffeisenbank Mölln');
-INSERT INTO static_bic_de VALUES ('1822', '0', '23063129', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1827', '0', '23064107', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('1839', '0', '23070700', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1853', '0', '23070710', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1854', '0', '23080040', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1856', '0', '23089201', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('1857', '0', '23090142', 'Volksbank Lübeck');
-INSERT INTO static_bic_de VALUES ('1861', '0', '23092502', 'Volksbank Lauenburg -alt-');
-INSERT INTO static_bic_de VALUES ('1863', '0', '23092620', 'apoBank');
-INSERT INTO static_bic_de VALUES ('1864', '0', '24000000', 'Bundesbank eh Lüneburg');
-INSERT INTO static_bic_de VALUES ('1865', '0', '24030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1866', '0', '24040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1867', '0', '24050110', 'Sparkasse Lüneburg');
-INSERT INTO static_bic_de VALUES ('1885', '0', '24060300', 'Volksbank Nordheide');
-INSERT INTO static_bic_de VALUES ('1908', '0', '24061392', 'Volksbank Bleckede-Dahlenburg -alt-');
-INSERT INTO static_bic_de VALUES ('1909', '0', '24070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('1911', '0', '24070075', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('1913', '0', '24080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1914', '0', '24090041', 'Volksbank Lüneburg -alt-');
-INSERT INTO static_bic_de VALUES ('1927', '0', '24121000', 'Ritterschaftliches Kreditinstitut Stade');
-INSERT INTO static_bic_de VALUES ('1928', '0', '24130000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('1929', '0', '24140041', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('1930', '0', '24150001', 'Stadtsparkasse Cuxhaven');
-INSERT INTO static_bic_de VALUES ('1931', '0', '24151005', 'Sparkasse Stade-Altes Land');
-INSERT INTO static_bic_de VALUES ('1937', '0', '24151116', 'Kreissparkasse Stade');
-INSERT INTO static_bic_de VALUES ('1948', '0', '24151235', 'Sparkasse Rotenburg-Bremervörde');
-INSERT INTO static_bic_de VALUES ('1962', '0', '24161594', 'Zevener Volksbank');
-INSERT INTO static_bic_de VALUES ('1972', '0', '24162898', 'Spar- u Darlehnskasse Börde Lamstedt-Hechthausen');
-INSERT INTO static_bic_de VALUES ('1976', '0', '24180000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1977', '0', '24180001', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('1978', '0', '24191015', 'Volksbank Stade-Cuxhaven');
-INSERT INTO static_bic_de VALUES ('1993', '0', '24191255', 'Volksbank Bremervörde');
-INSERT INTO static_bic_de VALUES ('2000', '0', '25000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('2001', '0', '25010030', 'Postbank');
-INSERT INTO static_bic_de VALUES ('2002', '0', '25010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('2004', '0', '25010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('2005', '0', '25010600', 'Deutsche Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('2006', '0', '25010700', 'Berlin-Hannoversche Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('2007', '0', '25010900', 'Calenberger Kreditverein');
-INSERT INTO static_bic_de VALUES ('2008', '0', '25020200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('2009', '0', '25020600', 'GE Money Bank');
-INSERT INTO static_bic_de VALUES ('2059', '0', '25020700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('2060', '0', '25030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('2061', '0', '25040066', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2072', '0', '25050000', 'Norddeutsche Landesbank Girozentrale');
-INSERT INTO static_bic_de VALUES ('2123', '0', '25050180', 'Sparkasse Hannover');
-INSERT INTO static_bic_de VALUES ('2144', '0', '25050299', 'Sparkasse Hannover -alt-');
-INSERT INTO static_bic_de VALUES ('2145', '0', '25055500', 'LBS-Norddeutsche Landesbausparkasse');
-INSERT INTO static_bic_de VALUES ('2146', '0', '25060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('2148', '0', '25060180', 'Bankhaus Hallbaum');
-INSERT INTO static_bic_de VALUES ('2149', '0', '25060701', 'Evangelische Kreditgenossenschaft -Filiale Hannover-');
-INSERT INTO static_bic_de VALUES ('2150', '0', '25069168', 'Volks- und Raiffeisenbank Leinebergland');
-INSERT INTO static_bic_de VALUES ('2155', '0', '25069262', 'Raiffeisen-Volksbank Neustadt');
-INSERT INTO static_bic_de VALUES ('2157', '0', '25069270', 'Volksbank Aller-Oker');
-INSERT INTO static_bic_de VALUES ('2167', '0', '25069370', 'Volksbank Vechelde-Wendeburg');
-INSERT INTO static_bic_de VALUES ('2172', '0', '25069384', 'Volksbank Lehre -alt-');
-INSERT INTO static_bic_de VALUES ('2173', '0', '25069503', 'Volksbank Diepholz-Barnstorf');
-INSERT INTO static_bic_de VALUES ('2178', '0', '25069830', 'Volksbank Derental -alt-');
-INSERT INTO static_bic_de VALUES ('2179', '0', '25070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2189', '0', '25070066', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2190', '0', '25070070', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2195', '0', '25070077', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2196', '0', '25070084', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2198', '0', '25070086', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2199', '0', '25080020', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2207', '0', '25080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('2208', '0', '25089220', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('2209', '0', '25090300', 'Bank für Schiffahrt (BFS) Fil d Ostfr VB Leer');
-INSERT INTO static_bic_de VALUES ('2210', '0', '25090500', 'Sparda-Bank Hannover');
-INSERT INTO static_bic_de VALUES ('2224', '0', '25090608', 'apoBank');
-INSERT INTO static_bic_de VALUES ('2226', '0', '25090900', 'PSD Bank');
-INSERT INTO static_bic_de VALUES ('2227', '0', '25120510', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('2229', '0', '25120960', 'Bayer Hypo- und Vereinsbank(ehem. Hypo)');
-INSERT INTO static_bic_de VALUES ('2230', '0', '25151270', 'Stadtsparkasse Barsinghausen');
-INSERT INTO static_bic_de VALUES ('2231', '0', '25151371', 'Stadtsparkasse Burgdorf');
-INSERT INTO static_bic_de VALUES ('2232', '0', '25152375', 'Kreissparkasse Fallingbostel in Walsrode');
-INSERT INTO static_bic_de VALUES ('2238', '0', '25152490', 'Stadtsparkasse Wunstorf');
-INSERT INTO static_bic_de VALUES ('2239', '0', '25161322', 'Volksbank Burgdorf-Celle -alt-');
-INSERT INTO static_bic_de VALUES ('2240', '0', '25162563', 'Volksbank Garbsen -alt-');
-INSERT INTO static_bic_de VALUES ('2241', '0', '25190001', 'Hannoversche Volksbank');
-INSERT INTO static_bic_de VALUES ('2263', '0', '25190101', 'Lindener Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('2264', '0', '25191510', 'Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('2265', '0', '25193331', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('2275', '0', '25250001', 'Kreissparkasse Peine');
-INSERT INTO static_bic_de VALUES ('2282', '0', '25260010', 'Volksbank Peine');
-INSERT INTO static_bic_de VALUES ('2289', '0', '25400000', 'Bundesbank eh Hameln');
-INSERT INTO static_bic_de VALUES ('2290', '0', '25410111', 'SEB');
-INSERT INTO static_bic_de VALUES ('2291', '0', '25410200', 'BHW Bausparkasse');
-INSERT INTO static_bic_de VALUES ('2292', '0', '25410300', 'BHW Allgemeine Bausparkasse -alt-');
-INSERT INTO static_bic_de VALUES ('2293', '0', '25420800', 'BHW Bank -alt- (Postbank)');
-INSERT INTO static_bic_de VALUES ('2294', '0', '25430000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('2295', '0', '25440047', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2296', '0', '25450001', 'Stadtsparkasse Hameln');
-INSERT INTO static_bic_de VALUES ('2297', '0', '25450110', 'Sparkasse Weserbergland');
-INSERT INTO static_bic_de VALUES ('2304', '0', '25451345', 'Stadtsparkasse Bad Pyrmont');
-INSERT INTO static_bic_de VALUES ('2305', '0', '25451450', 'Sparkasse Weserbergland');
-INSERT INTO static_bic_de VALUES ('2306', '0', '25451655', 'Sparkasse Weserbergland');
-INSERT INTO static_bic_de VALUES ('2307', '0', '25462160', 'Volksbank Hameln-Stadthagen');
-INSERT INTO static_bic_de VALUES ('2328', '0', '25462680', 'Volksbank am Ith');
-INSERT INTO static_bic_de VALUES ('2332', '0', '25470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2334', '0', '25470073', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2335', '0', '25470078', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2336', '0', '25471024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2337', '0', '25471073', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2338', '0', '25480021', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2339', '0', '25491071', 'Volksbank Bückeburg-Rinteln ehem VB Rinteln');
-INSERT INTO static_bic_de VALUES ('2340', '0', '25491273', 'Volksbank Aerzen');
-INSERT INTO static_bic_de VALUES ('2344', '0', '25491744', 'Volksbank Bad Münder');
-INSERT INTO static_bic_de VALUES ('2346', '0', '25541426', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2347', '0', '25551480', 'Sparkasse Schaumburg');
-INSERT INTO static_bic_de VALUES ('2370', '0', '25562308', 'Volksbank Nordschaumburg -alt-');
-INSERT INTO static_bic_de VALUES ('2371', '0', '25562604', 'Volksbank Kirchhorsten -alt-');
-INSERT INTO static_bic_de VALUES ('2372', '0', '25591413', 'Volksbank in Schaumburg');
-INSERT INTO static_bic_de VALUES ('2385', '0', '25591748', 'Volksbank Obernkirchen -alt-');
-INSERT INTO static_bic_de VALUES ('2386', '0', '25621327', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('2389', '0', '25641302', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2390', '0', '25650106', 'Sparkasse Nienburg');
-INSERT INTO static_bic_de VALUES ('2414', '0', '25651325', 'Kreissparkasse Grafschaft Diepholz');
-INSERT INTO static_bic_de VALUES ('2432', '0', '25662540', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('2444', '0', '25663584', 'Volksbank Grafschaft Hoya');
-INSERT INTO static_bic_de VALUES ('2456', '0', '25690009', 'Volksbank Nienburg');
-INSERT INTO static_bic_de VALUES ('2468', '0', '25691633', 'Volksbank Sulingen');
-INSERT INTO static_bic_de VALUES ('2484', '0', '25700000', 'Bundesbank eh Celle');
-INSERT INTO static_bic_de VALUES ('2485', '0', '25730000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('2486', '0', '25740061', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2487', '0', '25750001', 'Sparkasse Celle');
-INSERT INTO static_bic_de VALUES ('2502', '0', '25761894', 'Volksbank Wittingen-Klötze');
-INSERT INTO static_bic_de VALUES ('2508', '0', '25770024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2509', '0', '25770069', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2510', '0', '25780022', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2511', '0', '25791516', 'Volksbank Hankensbüttel-Wahrenholz');
-INSERT INTO static_bic_de VALUES ('2518', '0', '25791635', 'Volksbank Südheide');
-INSERT INTO static_bic_de VALUES ('2533', '0', '25800000', 'Bundesbank eh Uelzen');
-INSERT INTO static_bic_de VALUES ('2534', '0', '25840048', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2535', '0', '25841403', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2537', '0', '25841708', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2538', '0', '25850110', 'Sparkasse Uelzen Lüchow-Dannenberg');
-INSERT INTO static_bic_de VALUES ('2559', '0', '25851335', 'Sparkasse Uelzen Lüchow-Dannenberg');
-INSERT INTO static_bic_de VALUES ('2560', '0', '25851660', 'Kreissparkasse Soltau');
-INSERT INTO static_bic_de VALUES ('2566', '0', '25861395', 'Volksbank Dannenberg -alt-');
-INSERT INTO static_bic_de VALUES ('2567', '0', '25861990', 'Volksbank Clenze-Hitzacker');
-INSERT INTO static_bic_de VALUES ('2573', '0', '25862292', 'Volksbank Uelzen-Salzwedel');
-INSERT INTO static_bic_de VALUES ('2589', '0', '25862393', 'Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('2590', '0', '25863489', 'Volksbank Osterburg-Lüchow-Dannenberg');
-INSERT INTO static_bic_de VALUES ('2611', '0', '25891483', 'Volksbank Osterburg-Lüchow-Dannenberg -alt-');
-INSERT INTO static_bic_de VALUES ('2612', '0', '25891636', 'Volksbank Lüneburger Heide');
-INSERT INTO static_bic_de VALUES ('2640', '0', '25900000', 'Bundesbank eh Hildesheim');
-INSERT INTO static_bic_de VALUES ('2641', '0', '25910111', 'SEB');
-INSERT INTO static_bic_de VALUES ('2642', '0', '25930000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('2643', '0', '25940033', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2644', '0', '25950001', 'Stadtsparkasse Hildesheim -alt-');
-INSERT INTO static_bic_de VALUES ('2645', '0', '25950130', 'Sparkasse Hildesheim');
-INSERT INTO static_bic_de VALUES ('2667', '0', '25960192', 'Bankhaus Hallbaum');
-INSERT INTO static_bic_de VALUES ('2668', '0', '25962470', 'Volksbank Hildesheim -alt-');
-INSERT INTO static_bic_de VALUES ('2669', '0', '25970024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2670', '0', '25970074', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2671', '0', '25971024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2673', '0', '25971071', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2675', '0', '25980027', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2676', '0', '25990011', 'Volksbank Hildesheim');
-INSERT INTO static_bic_de VALUES ('2686', '0', '25991528', 'Volksbank Hildesheimer Börde');
-INSERT INTO static_bic_de VALUES ('2696', '0', '25991911', 'Volksbank Sarstedt -alt-');
-INSERT INTO static_bic_de VALUES ('2697', '0', '26000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('2698', '0', '26010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('2699', '0', '26030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('2700', '0', '26040030', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2701', '0', '26050001', 'Sparkasse Göttingen');
-INSERT INTO static_bic_de VALUES ('2708', '0', '26051260', 'Sparkasse Duderstadt');
-INSERT INTO static_bic_de VALUES ('2712', '0', '26051450', 'Kreis- und Stadtsparkasse Münden');
-INSERT INTO static_bic_de VALUES ('2716', '0', '26060184', 'Bankhaus Hallbaum');
-INSERT INTO static_bic_de VALUES ('2717', '0', '26061291', 'Volksbank Eichsfeld-Northeim');
-INSERT INTO static_bic_de VALUES ('2732', '0', '26061556', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('2735', '0', '26062433', 'Volksbank Dransfeld');
-INSERT INTO static_bic_de VALUES ('2745', '0', '26062575', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('2752', '0', '26070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2754', '0', '26070072', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2756', '0', '26080024', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2757', '0', '26090050', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('2766', '0', '26240039', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2768', '0', '26250001', 'Kreis-Sparkasse Northeim');
-INSERT INTO static_bic_de VALUES ('2777', '0', '26251425', 'Sparkasse Einbeck');
-INSERT INTO static_bic_de VALUES ('2779', '0', '26261396', 'Volksbank Dassel');
-INSERT INTO static_bic_de VALUES ('2783', '0', '26261492', 'Volksbank Einbeck');
-INSERT INTO static_bic_de VALUES ('2789', '0', '26261693', 'Volksbank Solling');
-INSERT INTO static_bic_de VALUES ('2795', '0', '26271424', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2796', '0', '26271471', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2797', '0', '26280020', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2798', '0', '26281420', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2799', '0', '26340056', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2800', '0', '26341072', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2801', '0', '26350001', 'Stadtsparkasse Osterode');
-INSERT INTO static_bic_de VALUES ('2802', '0', '26351015', 'Sparkasse Osterode am Harz');
-INSERT INTO static_bic_de VALUES ('2810', '0', '26351445', 'Stadtsparkasse Bad Sachsa');
-INSERT INTO static_bic_de VALUES ('2811', '0', '26361299', 'Volksbank Oberharz');
-INSERT INTO static_bic_de VALUES ('2815', '0', '26500000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('2816', '0', '26510111', 'SEB');
-INSERT INTO static_bic_de VALUES ('2817', '0', '26520017', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('2824', '0', '26521703', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('2827', '0', '26522319', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('2834', '0', '26540070', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2836', '0', '26550105', 'Sparkasse Osnabrück');
-INSERT INTO static_bic_de VALUES ('2852', '0', '26551540', 'Kreissparkasse Bersenbrück');
-INSERT INTO static_bic_de VALUES ('2870', '0', '26552286', 'Kreissparkasse Melle');
-INSERT INTO static_bic_de VALUES ('2871', '0', '26560189', 'Bankhaus Hallbaum');
-INSERT INTO static_bic_de VALUES ('2872', '0', '26560625', 'apoBank');
-INSERT INTO static_bic_de VALUES ('2873', '0', '26562490', 'Volksbank Bad Laer-Borgloh-Hilter-Melle');
-INSERT INTO static_bic_de VALUES ('2878', '0', '26562694', 'Volksbank Wittlage');
-INSERT INTO static_bic_de VALUES ('2882', '0', '26563960', 'Volksbank Bramgau im Osnabrücker Land');
-INSERT INTO static_bic_de VALUES ('2888', '0', '26565928', 'Volksbank GMHütte-Hagen-Bissendorf');
-INSERT INTO static_bic_de VALUES ('2895', '0', '26566939', 'Volksbank Osnabrücker Nordland');
-INSERT INTO static_bic_de VALUES ('2901', '0', '26567943', 'VR-Bank im Altkreis Bersenbrück');
-INSERT INTO static_bic_de VALUES ('2909', '0', '26568924', 'Volksbank Hilter-Bad Laer -alt-');
-INSERT INTO static_bic_de VALUES ('2910', '0', '26570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('2917', '0', '26570090', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('2924', '0', '26580070', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('2930', '0', '26589210', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('2931', '0', '26590025', 'Volksbank Osnabrück');
-INSERT INTO static_bic_de VALUES ('2941', '0', '26600000', 'Bundesbank eh Lingen (Ems)');
-INSERT INTO static_bic_de VALUES ('2942', '0', '26620010', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('2947', '0', '26621413', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('2949', '0', '26640049', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('2951', '0', '26650001', 'Sparkasse Emsland');
-INSERT INTO static_bic_de VALUES ('2974', '0', '26660060', 'Volksbank Lingen');
-INSERT INTO static_bic_de VALUES ('2979', '0', '26661380', 'Volksbank Haselünne');
-INSERT INTO static_bic_de VALUES ('2983', '0', '26661494', 'Emsländische Volksbank Meppen');
-INSERT INTO static_bic_de VALUES ('2993', '0', '26661912', 'Volksbank Süd-Emsland -alt-');
-INSERT INTO static_bic_de VALUES ('2996', '0', '26662932', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3001', '0', '26691213', 'Volksbank Haren Fil d Ostfriesischen VB');
-INSERT INTO static_bic_de VALUES ('3002', '0', '26720028', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3008', '0', '26740044', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3009', '0', '26750001', 'Kreissparkasse Grafschaft Bentheim zu Nordhorn');
-INSERT INTO static_bic_de VALUES ('3021', '0', '26760005', 'Raiffeisen- und Volksbank Nordhorn -alt-');
-INSERT INTO static_bic_de VALUES ('3022', '0', '26770024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3026', '0', '26770095', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3030', '0', '26800000', 'Bundesbank eh Halberstadt');
-INSERT INTO static_bic_de VALUES ('3031', '0', '26840032', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3033', '0', '26850001', 'Sparkasse Goslar/Harz');
-INSERT INTO static_bic_de VALUES ('3048', '0', '26851410', 'Kreissparkasse Clausthal-Zellerfeld');
-INSERT INTO static_bic_de VALUES ('3049', '0', '26851620', 'Sparkasse Salzgitter');
-INSERT INTO static_bic_de VALUES ('3050', '0', '26870024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3053', '0', '26870032', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3056', '0', '26880063', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('3057', '0', '26890019', 'Volksbank Nordharz');
-INSERT INTO static_bic_de VALUES ('3064', '0', '26891484', 'Volksbank im Harz');
-INSERT INTO static_bic_de VALUES ('3078', '0', '26941053', 'Commerzbank Wolfsburg');
-INSERT INTO static_bic_de VALUES ('3079', '0', '26951311', 'Sparkasse Gifhorn-Wolfsburg');
-INSERT INTO static_bic_de VALUES ('3100', '0', '26971024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3101', '0', '26971038', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3102', '0', '26981062', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('3103', '0', '26989221', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('3104', '0', '26991066', 'Volksbank Braunschweig Wolfsburg');
-INSERT INTO static_bic_de VALUES ('3119', '0', '27000000', 'Bundesbank eh Braunschweig');
-INSERT INTO static_bic_de VALUES ('3120', '0', '27010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('3123', '0', '27010200', 'VON ESSEN Bankgesellschaft');
-INSERT INTO static_bic_de VALUES ('3124', '0', '27020000', 'Volkswagen Bank');
-INSERT INTO static_bic_de VALUES ('3125', '0', '27020001', 'Audi Bank Zndl d Volkswagen Bank');
-INSERT INTO static_bic_de VALUES ('3126', '0', '27020003', 'Skoda Bank');
-INSERT INTO static_bic_de VALUES ('3127', '0', '27020004', 'AutoEuropa Bank');
-INSERT INTO static_bic_de VALUES ('3128', '0', '27020800', 'Seat Bank Zndl d Volkswagen Bank');
-INSERT INTO static_bic_de VALUES ('3129', '0', '27030000', 'Bayer HypoVereinsbank ex Vereins und Westbank');
-INSERT INTO static_bic_de VALUES ('3130', '0', '27032500', 'Bankhaus C. L. Seeliger');
-INSERT INTO static_bic_de VALUES ('3131', '0', '27040080', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3138', '0', '27062290', 'Volksbank Börßum-Hornburg');
-INSERT INTO static_bic_de VALUES ('3144', '0', '27063279', 'Volksbank Vechelde-Wendeburg');
-INSERT INTO static_bic_de VALUES ('3145', '0', '27070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3154', '0', '27070030', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3155', '0', '27070031', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3156', '0', '27070034', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3159', '0', '27070041', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3160', '0', '27070042', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3161', '0', '27070043', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3162', '0', '27070079', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3163', '0', '27072524', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3164', '0', '27072537', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3165', '0', '27072724', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3166', '0', '27072736', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3167', '0', '27080060', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('3170', '0', '27089221', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('3171', '0', '27090077', 'Volksbank Braunschweig -alt-');
-INSERT INTO static_bic_de VALUES ('3172', '0', '27090618', 'apoBank');
-INSERT INTO static_bic_de VALUES ('3173', '0', '27090900', 'PSD Bank');
-INSERT INTO static_bic_de VALUES ('3177', '0', '27092555', 'Volksbank Wolfenbüttel-Salzgitter');
-INSERT INTO static_bic_de VALUES ('3194', '0', '27131300', 'Rautenschlein, Otto, Bankgeschäft');
-INSERT INTO static_bic_de VALUES ('3195', '0', '27190082', 'Volksbank Helmstedt');
-INSERT INTO static_bic_de VALUES ('3215', '0', '27240004', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3216', '0', '27290087', 'Volksbank Weserbergland');
-INSERT INTO static_bic_de VALUES ('3227', '0', '27893215', 'Vereinigte Volksbank');
-INSERT INTO static_bic_de VALUES ('3230', '0', '27893359', 'Volksbank Braunlage');
-INSERT INTO static_bic_de VALUES ('3235', '0', '27893760', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3252', '0', '28000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('3253', '0', '28010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('3256', '0', '28020050', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3259', '0', '28021002', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3262', '0', '28021301', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3264', '0', '28021504', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3274', '0', '28021623', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3276', '0', '28021705', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3281', '0', '28021906', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3283', '0', '28022015', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3284', '0', '28022412', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3289', '0', '28022511', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3293', '0', '28022620', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3295', '0', '28022822', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3299', '0', '28023224', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3302', '0', '28023325', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3304', '0', '28030300', 'Bankhaus W. Fortmann & Söhne');
-INSERT INTO static_bic_de VALUES ('3305', '0', '28040046', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3306', '0', '28042865', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3307', '0', '28050100', 'Landessparkasse Oldenburg');
-INSERT INTO static_bic_de VALUES ('3308', '0', '28060228', 'Raiffeisenbank Oldenburg');
-INSERT INTO static_bic_de VALUES ('3312', '0', '28061410', 'Raiffeisenbank Wesermarsch-Süd');
-INSERT INTO static_bic_de VALUES ('3317', '0', '28061501', 'Volksbank Cloppenburg');
-INSERT INTO static_bic_de VALUES ('3320', '0', '28061679', 'Volksbank Dammer Berge');
-INSERT INTO static_bic_de VALUES ('3323', '0', '28061822', 'Volksbank Oldenburg');
-INSERT INTO static_bic_de VALUES ('3333', '0', '28062165', 'Raiffeisenbank Rastede');
-INSERT INTO static_bic_de VALUES ('3335', '0', '28062249', 'Volksbank Ganderkesee-Hude');
-INSERT INTO static_bic_de VALUES ('3340', '0', '28062560', 'Volksbank Lohne-Mühlen');
-INSERT INTO static_bic_de VALUES ('3342', '0', '28062740', 'Volksbank Bookholzberg-Lemwerder');
-INSERT INTO static_bic_de VALUES ('3345', '0', '28062913', 'Volksbank Bösel');
-INSERT INTO static_bic_de VALUES ('3347', '0', '28063253', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3349', '0', '28063526', 'Volksbank Essen-Cappeln');
-INSERT INTO static_bic_de VALUES ('3353', '0', '28063607', 'Volksbank Bakum');
-INSERT INTO static_bic_de VALUES ('3355', '0', '28064090', 'Volksbank Steinfeld');
-INSERT INTO static_bic_de VALUES ('3356', '0', '28064179', 'Volksbank Vechta');
-INSERT INTO static_bic_de VALUES ('3360', '0', '28064241', 'Raiffeisen-Volksbank Varel-Nordenham');
-INSERT INTO static_bic_de VALUES ('3361', '0', '28065061', 'Volksbank Löningen');
-INSERT INTO static_bic_de VALUES ('3364', '0', '28065108', 'VR-Bank Dinklage-Steinfeld');
-INSERT INTO static_bic_de VALUES ('3367', '0', '28065286', 'Raiffeisenbank Scharrel');
-INSERT INTO static_bic_de VALUES ('3371', '0', '28066103', 'Volksbank Visbek');
-INSERT INTO static_bic_de VALUES ('3373', '0', '28066214', 'Volksbank Wildeshauser Geest');
-INSERT INTO static_bic_de VALUES ('3375', '0', '28066620', 'Spar- und Darlehnskasse Friesoythe');
-INSERT INTO static_bic_de VALUES ('3378', '0', '28067068', 'Volksbank Neuenkirchen-Vörden');
-INSERT INTO static_bic_de VALUES ('3380', '0', '28067170', 'Raiffeisen-Volksbank Delmenhorst-Schierbrok');
-INSERT INTO static_bic_de VALUES ('3383', '0', '28067257', 'Volksbank Lastrup');
-INSERT INTO static_bic_de VALUES ('3385', '0', '28068064', 'Volksbank Cappeln -alt-');
-INSERT INTO static_bic_de VALUES ('3386', '0', '28068156', 'Volksbank Vechta ehem VB Lutten');
-INSERT INTO static_bic_de VALUES ('3387', '0', '28068218', 'Raiffeisenbank Butjadingen-Abbehausen');
-INSERT INTO static_bic_de VALUES ('3390', '0', '28069052', 'Raiffeisenbank Strücklingen-Idafehn');
-INSERT INTO static_bic_de VALUES ('3394', '0', '28069092', 'VR Bank Oldenburg Land West');
-INSERT INTO static_bic_de VALUES ('3398', '0', '28069105', 'Raiffeisen-Volksbank Jever');
-INSERT INTO static_bic_de VALUES ('3399', '0', '28069109', 'Volksbank Emstek');
-INSERT INTO static_bic_de VALUES ('3401', '0', '28069128', 'Raiffeisenbank Garrel');
-INSERT INTO static_bic_de VALUES ('3403', '0', '28069138', 'VR Bank Oldenburg Land West');
-INSERT INTO static_bic_de VALUES ('3405', '0', '28069293', 'Volksbank Obergrafschaft -alt-');
-INSERT INTO static_bic_de VALUES ('3407', '0', '28069381', 'Hümmlinger Volksbank');
-INSERT INTO static_bic_de VALUES ('3411', '0', '28069706', 'Volksbank Nordhümmling');
-INSERT INTO static_bic_de VALUES ('3417', '0', '28069755', 'Raiffeisenbank Oldersum');
-INSERT INTO static_bic_de VALUES ('3418', '0', '28069773', 'Raiffeisenbank Wiesedermeer-Wiesede-Marcardsm');
-INSERT INTO static_bic_de VALUES ('3419', '0', '28069878', 'Raiffeisenbank Emsland-Mitte');
-INSERT INTO static_bic_de VALUES ('3426', '0', '28069926', 'Volksbank Niedergrafschaft');
-INSERT INTO static_bic_de VALUES ('3433', '0', '28069930', 'Volksbank Langen-Gersten');
-INSERT INTO static_bic_de VALUES ('3436', '0', '28069935', 'Raiffeisenbank Lorup');
-INSERT INTO static_bic_de VALUES ('3438', '0', '28069955', 'Volksbank Uelsen');
-INSERT INTO static_bic_de VALUES ('3439', '0', '28069956', 'Grafschafter Volksbank');
-INSERT INTO static_bic_de VALUES ('3446', '0', '28069991', 'Volksbank Emstal');
-INSERT INTO static_bic_de VALUES ('3453', '0', '28069994', 'Volksbank Süd-Emsland');
-INSERT INTO static_bic_de VALUES ('3463', '0', '28070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3465', '0', '28070057', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3467', '0', '28090045', 'Volksbank Oldenburg -alt-');
-INSERT INTO static_bic_de VALUES ('3468', '0', '28090633', 'apoBank');
-INSERT INTO static_bic_de VALUES ('3469', '0', '28200000', 'Bundesbank eh Wilhelmshaven');
-INSERT INTO static_bic_de VALUES ('3470', '0', '28220026', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3472', '0', '28222208', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3477', '0', '28222621', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3481', '0', '28240023', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3482', '0', '28250110', 'Sparkasse Wilhelmshaven');
-INSERT INTO static_bic_de VALUES ('3483', '0', '28252760', 'Kreissparkasse Wittmund');
-INSERT INTO static_bic_de VALUES ('3484', '0', '28261946', 'Raiffeisenbank Sande-Wangerland');
-INSERT INTO static_bic_de VALUES ('3485', '0', '28262254', 'Volksbank Jever');
-INSERT INTO static_bic_de VALUES ('3492', '0', '28262481', 'Raiffeisenbank Sande-Wangerland -alt-');
-INSERT INTO static_bic_de VALUES ('3493', '0', '28262673', 'Raiffeisen-Volksbank Varel-Nordenham');
-INSERT INTO static_bic_de VALUES ('3500', '0', '28262794', 'Raiffeisen-Volksbank Aurich-Wittmund -alt-');
-INSERT INTO static_bic_de VALUES ('3501', '0', '28270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3503', '0', '28270056', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3505', '0', '28280012', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('3506', '0', '28290063', 'Volksbank Wilhelmshaven');
-INSERT INTO static_bic_de VALUES ('3508', '0', '28291551', 'Volksbank Esens');
-INSERT INTO static_bic_de VALUES ('3517', '0', '28320014', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3524', '0', '28321816', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3525', '0', '28350000', 'Sparkasse Aurich-Norden');
-INSERT INTO static_bic_de VALUES ('3541', '0', '28361592', 'Raiffeisen-Volksbank Fresena');
-INSERT INTO static_bic_de VALUES ('3553', '0', '28420007', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3556', '0', '28421030', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3560', '0', '28440037', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3561', '0', '28450000', 'Sparkasse Emden');
-INSERT INTO static_bic_de VALUES ('3562', '0', '28451050', 'Sparkasse Aurich-Norden');
-INSERT INTO static_bic_de VALUES ('3563', '0', '28470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3567', '0', '28470091', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3571', '0', '28490073', 'Raiffeisen-Volksbank Emden-Pewsum -alt-');
-INSERT INTO static_bic_de VALUES ('3572', '0', '28500000', 'Bundesbank eh Leer');
-INSERT INTO static_bic_de VALUES ('3573', '0', '28520009', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3581', '0', '28521518', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3584', '0', '28540034', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3585', '0', '28550000', 'Sparkasse LeerWittmund');
-INSERT INTO static_bic_de VALUES ('3587', '0', '28561790', 'Aschendorfer Bank -alt-');
-INSERT INTO static_bic_de VALUES ('3588', '0', '28562297', 'Raiffeisen-Volksbank');
-INSERT INTO static_bic_de VALUES ('3600', '0', '28562716', 'Raiffeisenbank Flachsmeer');
-INSERT INTO static_bic_de VALUES ('3602', '0', '28562863', 'Raiffeisenbank Moormerland');
-INSERT INTO static_bic_de VALUES ('3603', '0', '28563749', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('3610', '0', '28563865', 'Ostfriesische Volksbank Leer');
-INSERT INTO static_bic_de VALUES ('3611', '0', '28570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3614', '0', '28570092', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3617', '0', '28590075', 'Ostfriesische Volksbank Leer');
-INSERT INTO static_bic_de VALUES ('3624', '0', '28591579', 'Volksbank Papenburg Fil d. Ostfries. VB Leer');
-INSERT INTO static_bic_de VALUES ('3625', '0', '28591654', 'Volksbank Westrhauderfehn');
-INSERT INTO static_bic_de VALUES ('3630', '0', '29000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('3631', '0', '29010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('3632', '0', '29010400', 'Deutsche Schiffsbank');
-INSERT INTO static_bic_de VALUES ('3633', '0', '29020000', 'Bankhaus Neelmeyer');
-INSERT INTO static_bic_de VALUES ('3634', '0', '29020100', 'KBC Bank Deutschland');
-INSERT INTO static_bic_de VALUES ('3635', '0', '29020200', 'NordFinanz Bank');
-INSERT INTO static_bic_de VALUES ('3636', '0', '29020400', 'Deutsche Factoring Bank');
-INSERT INTO static_bic_de VALUES ('3637', '0', '29021000', 'Bremer Aufbau-Bank');
-INSERT INTO static_bic_de VALUES ('3638', '0', '29030400', 'Plump, Carl F. - & Co');
-INSERT INTO static_bic_de VALUES ('3639', '0', '29040090', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3656', '0', '29050000', 'Bremer Landesbank');
-INSERT INTO static_bic_de VALUES ('3658', '0', '29050101', 'Sparkasse Bremen');
-INSERT INTO static_bic_de VALUES ('3659', '0', '29070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3667', '0', '29070050', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3670', '0', '29070051', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3671', '0', '29070052', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3672', '0', '29070058', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3673', '0', '29070059', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3675', '0', '29080010', 'Commerzbank vormals Bremer Bank (Dresdner Bank)');
-INSERT INTO static_bic_de VALUES ('3680', '0', '29089210', 'Commerzbank vormals Bremer Bank (Dresdner Bank) ITGK');
-INSERT INTO static_bic_de VALUES ('3681', '0', '29090605', 'apoBank');
-INSERT INTO static_bic_de VALUES ('3682', '0', '29090900', 'PSD Bank Nord');
-INSERT INTO static_bic_de VALUES ('3683', '0', '29121731', 'Oldenburgische Landesbank AG');
-INSERT INTO static_bic_de VALUES ('3689', '0', '29151700', 'Kreissparkasse Syke');
-INSERT INTO static_bic_de VALUES ('3700', '0', '29152300', 'Kreissparkasse Osterholz');
-INSERT INTO static_bic_de VALUES ('3701', '0', '29152550', 'Zweckverbandssparkasse Scheeßel');
-INSERT INTO static_bic_de VALUES ('3709', '0', '29152670', 'Kreissparkasse Verden');
-INSERT INTO static_bic_de VALUES ('3719', '0', '29162394', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3727', '0', '29162453', 'Volksbank Schwanewede');
-INSERT INTO static_bic_de VALUES ('3729', '0', '29162697', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3735', '0', '29163559', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3738', '0', '29165545', 'Volksbank Oyten');
-INSERT INTO static_bic_de VALUES ('3740', '0', '29165681', 'Volksbank Sottrum');
-INSERT INTO static_bic_de VALUES ('3750', '0', '29166568', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('3752', '0', '29167624', 'Volksbank Syke');
-INSERT INTO static_bic_de VALUES ('3760', '0', '29172624', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('3761', '0', '29172655', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('3762', '0', '29190024', 'Bremische Volksbank');
-INSERT INTO static_bic_de VALUES ('3766', '0', '29190330', 'Volksbank Bremen-Nord');
-INSERT INTO static_bic_de VALUES ('3771', '0', '29200000', 'Bundesbank eh Bremerhaven');
-INSERT INTO static_bic_de VALUES ('3772', '0', '29210111', 'SEB');
-INSERT INTO static_bic_de VALUES ('3773', '0', '29240024', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('3774', '0', '29250000', 'Sparkasse Bremerhaven');
-INSERT INTO static_bic_de VALUES ('3775', '0', '29250150', 'Kreissparkasse Wesermünde-Hadeln');
-INSERT INTO static_bic_de VALUES ('3805', '0', '29262646', 'Spar- und Darlehnskasse Langen-Neuenwalde');
-INSERT INTO static_bic_de VALUES ('3806', '0', '29262722', 'Volksbank Geeste-Nord');
-INSERT INTO static_bic_de VALUES ('3809', '0', '29265747', 'Volksbank Bremerhaven-Cuxland');
-INSERT INTO static_bic_de VALUES ('3840', '0', '29280011', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('3841', '0', '29290034', 'Volksbank Bremerhaven-Wesermünde -alt-');
-INSERT INTO static_bic_de VALUES ('3843', '0', '30000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('3844', '0', '30010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('3849', '0', '30010400', 'IKB Deutsche Industriebank');
-INSERT INTO static_bic_de VALUES ('3850', '0', '30010700', 'The Bank of Tokyo-Mitsubishi UFJ, Ltd.');
-INSERT INTO static_bic_de VALUES ('3851', '0', '30020000', 'Crown Westfalen Bank');
-INSERT INTO static_bic_de VALUES ('3852', '0', '30020300', 'Santander Consumer Bank');
-INSERT INTO static_bic_de VALUES ('3853', '0', '30020500', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('3854', '0', '30020700', 'Mizuho Corporate Bank Ltd Fil Düsseldorf');
-INSERT INTO static_bic_de VALUES ('3855', '0', '30020800', 'Emporiki Bank - Germany');
-INSERT INTO static_bic_de VALUES ('3856', '0', '30020900', 'Citibank Privatkunden');
-INSERT INTO static_bic_de VALUES ('3857', '0', '30020941', 'Citibank Privatkunden Region München');
-INSERT INTO static_bic_de VALUES ('3892', '0', '30020944', 'Citibank Privatkunden Region Duisburg');
-INSERT INTO static_bic_de VALUES ('3906', '0', '30020945', 'Citibank Privatkunden Region Hannover');
-INSERT INTO static_bic_de VALUES ('3933', '0', '30020946', 'Citibank Privatkunden Region Mannheim');
-INSERT INTO static_bic_de VALUES ('3965', '0', '30020947', 'Citibank Privatkunden Region Gelsenkirchen');
-INSERT INTO static_bic_de VALUES ('3986', '0', '30020948', 'Citibank Privatkunden Region Hamburg');
-INSERT INTO static_bic_de VALUES ('4003', '0', '30020949', 'Citibank Privatkunden Region Köln');
-INSERT INTO static_bic_de VALUES ('4024', '0', '30022000', 'NRW.BANK');
-INSERT INTO static_bic_de VALUES ('4025', '0', '30030100', 'S Broker Wiesbaden');
-INSERT INTO static_bic_de VALUES ('4026', '0', '30030400', 'FXdirekt Bank');
-INSERT INTO static_bic_de VALUES ('4027', '0', '30030500', 'C&A Bank');
-INSERT INTO static_bic_de VALUES ('4028', '0', '30030880', 'HSBC Trinkaus & Burkhardt');
-INSERT INTO static_bic_de VALUES ('4029', '0', '30030900', 'Merck Finck & Co');
-INSERT INTO static_bic_de VALUES ('4030', '0', '30040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4040', '0', '30040060', 'Commerzbank Gf 660');
-INSERT INTO static_bic_de VALUES ('4041', '0', '30040061', 'Commerzbank Gf 661');
-INSERT INTO static_bic_de VALUES ('4042', '0', '30050000', 'WestLB Düsseldorf');
-INSERT INTO static_bic_de VALUES ('4043', '0', '30050110', 'Stadtsparkasse Düsseldorf');
-INSERT INTO static_bic_de VALUES ('4044', '0', '30052525', 'NRW.BANK');
-INSERT INTO static_bic_de VALUES ('4045', '0', '30060010', 'WGZ Bank');
-INSERT INTO static_bic_de VALUES ('4047', '0', '30060601', 'apoBank');
-INSERT INTO static_bic_de VALUES ('4049', '0', '30060992', 'PSD Bank Rhein-Ruhr');
-INSERT INTO static_bic_de VALUES ('4051', '0', '30070010', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4060', '0', '30070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4069', '0', '30080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4079', '0', '30080005', 'Commerzbank vormals Dresdner Bank Zw 05');
-INSERT INTO static_bic_de VALUES ('4080', '0', '30080022', 'Commerzbank vormals Dresdner Bank Ztv 22');
-INSERT INTO static_bic_de VALUES ('4081', '0', '30080038', 'Commerzbank vormals Dresdner Bank Zw 38');
-INSERT INTO static_bic_de VALUES ('4082', '0', '30080041', 'Commerzbank vormals Dresdner Bank Zw 41');
-INSERT INTO static_bic_de VALUES ('4083', '0', '30080053', 'Commerzbank vormals Dresdner Bank Zw 53');
-INSERT INTO static_bic_de VALUES ('4084', '0', '30080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('4085', '0', '30080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('4086', '0', '30080061', 'Commerzbank vormals Dresdner Bank Zw 61');
-INSERT INTO static_bic_de VALUES ('4087', '0', '30080074', 'Commerzbank vormals Dresdner Bank Zw 74');
-INSERT INTO static_bic_de VALUES ('4088', '0', '30080080', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('4089', '0', '30080081', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('4090', '0', '30080082', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('4091', '0', '30080083', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6');
-INSERT INTO static_bic_de VALUES ('4092', '0', '30080084', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7');
-INSERT INTO static_bic_de VALUES ('4093', '0', '30080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8');
-INSERT INTO static_bic_de VALUES ('4094', '0', '30080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9');
-INSERT INTO static_bic_de VALUES ('4095', '0', '30080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10');
-INSERT INTO static_bic_de VALUES ('4096', '0', '30080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11');
-INSERT INTO static_bic_de VALUES ('4097', '0', '30080089', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 12');
-INSERT INTO static_bic_de VALUES ('4098', '0', '30080095', 'Commerzbank vormals Dresdner Bank Zw 95');
-INSERT INTO static_bic_de VALUES ('4099', '0', '30089300', 'Commerzbank vormals Dresdner Bank ITGK I');
-INSERT INTO static_bic_de VALUES ('4100', '0', '30089302', 'Commerzbank vormals Dresdner Bank ITGK II');
-INSERT INTO static_bic_de VALUES ('4101', '0', '30110300', 'Sumitomo Mitsui Banking Corporation');
-INSERT INTO static_bic_de VALUES ('4102', '0', '30120400', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('4103', '0', '30120500', 'KBC Bank Deutschland');
-INSERT INTO static_bic_de VALUES ('4104', '0', '30120764', 'Bayer Hypo- und Vereinsbank Ndl 450 Düs');
-INSERT INTO static_bic_de VALUES ('4105', '0', '30130100', 'Demir-Halk Bank (Nederland)');
-INSERT INTO static_bic_de VALUES ('4106', '0', '30130200', 'GarantiBank International');
-INSERT INTO static_bic_de VALUES ('4107', '0', '30130600', 'Isbank Fil Düsseldorf');
-INSERT INTO static_bic_de VALUES ('4108', '0', '30130800', 'Düsseldorfer Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('4109', '0', '30150001', 'SI/WLB Verrechnung Düsseldorf');
-INSERT INTO static_bic_de VALUES ('4110', '0', '30150200', 'Kreissparkasse Düsseldorf');
-INSERT INTO static_bic_de VALUES ('4115', '0', '30151660', 'Sparkasse Ratingen -alt-');
-INSERT INTO static_bic_de VALUES ('4116', '0', '30160213', 'Volksbank Düsseldorf Neuss');
-INSERT INTO static_bic_de VALUES ('4119', '0', '30220190', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('4127', '0', '30350000', 'Stadt-Sparkasse Hilden -alt-');
-INSERT INTO static_bic_de VALUES ('4128', '0', '30351220', 'Stadt-Sparkasse Haan');
-INSERT INTO static_bic_de VALUES ('4129', '0', '30520000', 'RCI Banque S.A. NL Deutschland');
-INSERT INTO static_bic_de VALUES ('4130', '0', '30530000', 'Bankhaus Werhahn');
-INSERT INTO static_bic_de VALUES ('4131', '0', '30550000', 'Sparkasse Neuss');
-INSERT INTO static_bic_de VALUES ('4137', '0', '30551240', 'Stadtsparkasse Kaarst-Büttgen -alt-');
-INSERT INTO static_bic_de VALUES ('4138', '0', '30560090', 'Volksbank Neuss -alt-');
-INSERT INTO static_bic_de VALUES ('4139', '0', '30560548', 'VR Bank');
-INSERT INTO static_bic_de VALUES ('4145', '0', '31000000', 'Bundesbank eh Mönchengladbach');
-INSERT INTO static_bic_de VALUES ('4146', '0', '31010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4147', '0', '31010833', 'Santander Consumer Bank');
-INSERT INTO static_bic_de VALUES ('4201', '0', '31040015', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4206', '0', '31050000', 'Stadtsparkasse Mönchengladbach');
-INSERT INTO static_bic_de VALUES ('4207', '0', '31060181', 'Gladbacher Bank von 1922');
-INSERT INTO static_bic_de VALUES ('4209', '0', '31060517', 'Volksbank Mönchengladbach');
-INSERT INTO static_bic_de VALUES ('4212', '0', '31061108', 'Volksbank Willich -alt-');
-INSERT INTO static_bic_de VALUES ('4213', '0', '31062154', 'Volksbank Brüggen-Nettetal');
-INSERT INTO static_bic_de VALUES ('4216', '0', '31062553', 'Volksbank Schwalmtal');
-INSERT INTO static_bic_de VALUES ('4219', '0', '31070001', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4223', '0', '31070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4227', '0', '31080015', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4233', '0', '31080061', 'Commerzbank vormals Dresdner Bank Zw 61');
-INSERT INTO static_bic_de VALUES ('4234', '0', '31251220', 'Kreissparkasse Heinsberg in Erkelenz');
-INSERT INTO static_bic_de VALUES ('4244', '0', '31261282', 'Volksbank Erkelenz-Hückelhoven-Wegberg');
-INSERT INTO static_bic_de VALUES ('4251', '0', '31263359', 'Raiffeisenbank Erkelenz');
-INSERT INTO static_bic_de VALUES ('4259', '0', '31460290', 'Volksbank Viersen');
-INSERT INTO static_bic_de VALUES ('4262', '0', '31470004', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4265', '0', '31470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4268', '0', '32000000', 'Bundesbank eh Krefeld');
-INSERT INTO static_bic_de VALUES ('4269', '0', '32040024', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4272', '0', '32050000', 'Sparkasse Krefeld');
-INSERT INTO static_bic_de VALUES ('4287', '0', '32051370', 'Sparkasse Geldern -alt-');
-INSERT INTO static_bic_de VALUES ('4288', '0', '32051996', 'Sparkasse der Stadt Straelen');
-INSERT INTO static_bic_de VALUES ('4289', '0', '32060362', 'Volksbank Krefeld');
-INSERT INTO static_bic_de VALUES ('4295', '0', '32061384', 'Volksbank an der Niers');
-INSERT INTO static_bic_de VALUES ('4306', '0', '32061414', 'Volksbank Kempen-Grefrath');
-INSERT INTO static_bic_de VALUES ('4309', '0', '32070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4317', '0', '32070080', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4325', '0', '32080010', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4330', '0', '32250050', 'Verbandssparkasse Goch');
-INSERT INTO static_bic_de VALUES ('4333', '0', '32400000', 'Bundesbank eh Kleve, Niederrhein');
-INSERT INTO static_bic_de VALUES ('4334', '0', '32440023', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4338', '0', '32450000', 'Sparkasse Kleve');
-INSERT INTO static_bic_de VALUES ('4343', '0', '32460422', 'Volksbank Kleverland');
-INSERT INTO static_bic_de VALUES ('4349', '0', '32470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4352', '0', '32470077', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4355', '0', '33000000', 'Bundesbank eh Wuppertal');
-INSERT INTO static_bic_de VALUES ('4356', '0', '33010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4359', '0', '33020000', 'akf bank');
-INSERT INTO static_bic_de VALUES ('4360', '0', '33020190', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('4361', '0', '33040001', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4367', '0', '33040310', 'Commerzbank Zw 117');
-INSERT INTO static_bic_de VALUES ('4369', '0', '33050000', 'Stadtsparkasse Wuppertal');
-INSERT INTO static_bic_de VALUES ('4370', '0', '33060098', 'Credit- und Volksbank Wuppertal');
-INSERT INTO static_bic_de VALUES ('4376', '0', '33060592', 'Sparda-Bank West');
-INSERT INTO static_bic_de VALUES ('4389', '0', '33060616', 'apoBank');
-INSERT INTO static_bic_de VALUES ('4390', '0', '33070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4397', '0', '33070090', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4404', '0', '33080001', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('4405', '0', '33080030', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4409', '0', '33080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('4410', '0', '33080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('4411', '0', '33080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('4412', '0', '33080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('4413', '0', '33440035', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4415', '0', '33450000', 'Sparkasse Hilden-Ratingen-Velbert');
-INSERT INTO static_bic_de VALUES ('4418', '0', '33451220', 'Sparkasse Heiligenhaus -alt-');
-INSERT INTO static_bic_de VALUES ('4419', '0', '34040049', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4423', '0', '34050000', 'Stadtsparkasse Remscheid');
-INSERT INTO static_bic_de VALUES ('4424', '0', '34051350', 'Sparkasse Radevormwald-Hückeswagen');
-INSERT INTO static_bic_de VALUES ('4426', '0', '34051570', 'Stadtsparkasse Wermelskirchen');
-INSERT INTO static_bic_de VALUES ('4427', '0', '34060094', 'Volksbank Remscheid-Solingen Remscheid-Lennep');
-INSERT INTO static_bic_de VALUES ('4438', '0', '34070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4443', '0', '34070093', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4448', '0', '34080031', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4449', '0', '34240050', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4451', '0', '34250000', 'Stadt-Sparkasse Solingen');
-INSERT INTO static_bic_de VALUES ('4452', '0', '34270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4454', '0', '34270094', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4456', '0', '34280032', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4458', '0', '35000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('4459', '0', '35010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4462', '0', '35020030', 'National-Bank');
-INSERT INTO static_bic_de VALUES ('4463', '0', '35040038', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4465', '0', '35050000', 'Sparkasse Duisburg');
-INSERT INTO static_bic_de VALUES ('4466', '0', '35060190', 'KD-Bank - die Bank für Kirche und Diakonie -');
-INSERT INTO static_bic_de VALUES ('4472', '0', '35060386', 'Volksbank Rhein-Ruhr');
-INSERT INTO static_bic_de VALUES ('4477', '0', '35060632', 'apoBank');
-INSERT INTO static_bic_de VALUES ('4478', '0', '35070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4484', '0', '35070030', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4490', '0', '35080070', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4494', '0', '35080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('4495', '0', '35080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('4496', '0', '35080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('4497', '0', '35080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('4498', '0', '35080089', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('4499', '0', '35090300', 'Bank für Schiffahrt (BFS) Fil d Ostfr VB Leer');
-INSERT INTO static_bic_de VALUES ('4500', '0', '35211012', 'SEB');
-INSERT INTO static_bic_de VALUES ('4501', '0', '35251000', 'Sparkasse Dinslaken-Voerde-Hünxe');
-INSERT INTO static_bic_de VALUES ('4504', '0', '35261248', 'Volksbank Dinslaken');
-INSERT INTO static_bic_de VALUES ('4507', '0', '35450000', 'Sparkasse am Niederrhein');
-INSERT INTO static_bic_de VALUES ('4511', '0', '35451250', 'Stadtsparkasse Kamp-Lintfort -alt-');
-INSERT INTO static_bic_de VALUES ('4512', '0', '35451460', 'Sparkasse Neukirchen-Vluyn');
-INSERT INTO static_bic_de VALUES ('4513', '0', '35451775', 'Sparkasse Rheinberg');
-INSERT INTO static_bic_de VALUES ('4514', '0', '35461106', 'Volksbank Niederrhein');
-INSERT INTO static_bic_de VALUES ('4525', '0', '35600000', 'Bundesbank eh Wesel');
-INSERT INTO static_bic_de VALUES ('4526', '0', '35640064', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4531', '0', '35650000', 'Verbands-Sparkasse Wesel');
-INSERT INTO static_bic_de VALUES ('4534', '0', '35660599', 'Volksbank Rhein-Lippe');
-INSERT INTO static_bic_de VALUES ('4538', '0', '35850000', 'Stadtsparkasse Emmerich-Rees');
-INSERT INTO static_bic_de VALUES ('4540', '0', '35860245', 'Volksbank Emmerich-Rees');
-INSERT INTO static_bic_de VALUES ('4544', '0', '36000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('4545', '0', '36010043', 'Postbank');
-INSERT INTO static_bic_de VALUES ('4546', '0', '36010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4548', '0', '36010200', 'VON ESSEN Bankgesellschaft');
-INSERT INTO static_bic_de VALUES ('4549', '0', '36010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('4550', '0', '36010600', 'GALLINAT-BANK');
-INSERT INTO static_bic_de VALUES ('4551', '0', '36010800', 'AKBANK N.V. Essen');
-INSERT INTO static_bic_de VALUES ('4552', '0', '36020030', 'National-Bank Essen');
-INSERT INTO static_bic_de VALUES ('4562', '0', '36020186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('4564', '0', '36020700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('4565', '0', '36036000', 'VALOVIS Bank');
-INSERT INTO static_bic_de VALUES ('4566', '0', '36040039', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4573', '0', '36050000', 'Westdeutsche Landesbank Girozentrale');
-INSERT INTO static_bic_de VALUES ('4574', '0', '36050105', 'Sparkasse Essen');
-INSERT INTO static_bic_de VALUES ('4575', '0', '36060192', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('4576', '0', '36060295', 'Bank im Bistum Essen');
-INSERT INTO static_bic_de VALUES ('4578', '0', '36060488', 'GENO BANK ESSEN');
-INSERT INTO static_bic_de VALUES ('4581', '0', '36060591', 'Sparda-Bank West');
-INSERT INTO static_bic_de VALUES ('4597', '0', '36060610', 'apoBank');
-INSERT INTO static_bic_de VALUES ('4598', '0', '36070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4599', '0', '36070050', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4600', '0', '36080080', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4604', '0', '36080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK  2');
-INSERT INTO static_bic_de VALUES ('4605', '0', '36089321', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('4606', '0', '36200000', 'Bundesbank eh Mülheim an der Ruhr');
-INSERT INTO static_bic_de VALUES ('4607', '0', '36210111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4608', '0', '36220030', 'National-Bank -alt-');
-INSERT INTO static_bic_de VALUES ('4609', '0', '36240045', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4610', '0', '36250000', 'Sparkasse Mülheim an der Ruhr');
-INSERT INTO static_bic_de VALUES ('4611', '0', '36270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4612', '0', '36270048', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4613', '0', '36280071', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4614', '0', '36500000', 'Bundesbank eh Oberhausen');
-INSERT INTO static_bic_de VALUES ('4615', '0', '36520030', 'National-Bank -alt-');
-INSERT INTO static_bic_de VALUES ('4616', '0', '36540046', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4617', '0', '36550000', 'Stadtsparkasse Oberhausen');
-INSERT INTO static_bic_de VALUES ('4618', '0', '36570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4619', '0', '36570049', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4620', '0', '36580072', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4621', '0', '37000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('4622', '0', '37010050', 'Postbank');
-INSERT INTO static_bic_de VALUES ('4623', '0', '37010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4626', '0', '37010222', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('4627', '0', '37010600', 'Fortis Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('4629', '0', '37011000', 'Deutsche Postbank Easytrade');
-INSERT INTO static_bic_de VALUES ('4630', '0', '37020090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('4632', '0', '37020100', 'RCI Banque S.A. NL Deutschland');
-INSERT INTO static_bic_de VALUES ('4633', '0', '37020200', 'AXA Bank');
-INSERT INTO static_bic_de VALUES ('4634', '0', '37020400', 'TOYOTA Kreditbank');
-INSERT INTO static_bic_de VALUES ('4635', '0', '37020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('4637', '0', '37020599', 'Bank für Sozialwirtschaft Köln Gf');
-INSERT INTO static_bic_de VALUES ('4638', '0', '37020600', 'Santander Consumer Bank MG');
-INSERT INTO static_bic_de VALUES ('4639', '0', '37020700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('4640', '0', '37020900', 'Ford Bank');
-INSERT INTO static_bic_de VALUES ('4641', '0', '37021100', 'Mazda Bank Niederlassung der FCE Bank');
-INSERT INTO static_bic_de VALUES ('4642', '0', '37021200', 'Volvo Auto Bank');
-INSERT INTO static_bic_de VALUES ('4643', '0', '37021300', 'Jaguar Financial Services');
-INSERT INTO static_bic_de VALUES ('4644', '0', '37021400', 'Land Rover Financial Services');
-INSERT INTO static_bic_de VALUES ('4645', '0', '37030000', 'BNP PARIBAS Lease Group SA Zndl Deutschland');
-INSERT INTO static_bic_de VALUES ('4646', '0', '37030200', 'Oppenheim, Sal - jr & Cie');
-INSERT INTO static_bic_de VALUES ('4647', '0', '37030300', 'GE Money Bank');
-INSERT INTO static_bic_de VALUES ('4648', '0', '37030700', 'WW Bank');
-INSERT INTO static_bic_de VALUES ('4649', '0', '37030800', 'Isbank Fil Köln');
-INSERT INTO static_bic_de VALUES ('4650', '0', '37031000', 'CNH CAPITAL EUROPE SAS Zndl Deutschland');
-INSERT INTO static_bic_de VALUES ('4651', '0', '37032000', 'CLAAS FINANCIAL SERVICES SAS Zndl Deutschland');
-INSERT INTO static_bic_de VALUES ('4652', '0', '37040044', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4663', '0', '37050198', 'Sparkasse KölnBonn');
-INSERT INTO static_bic_de VALUES ('4664', '0', '37050299', 'Kreissparkasse Köln');
-INSERT INTO static_bic_de VALUES ('4707', '0', '37060193', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('4709', '0', '37060590', 'Sparda-Bank West');
-INSERT INTO static_bic_de VALUES ('4725', '0', '37060615', 'apoBank');
-INSERT INTO static_bic_de VALUES ('4726', '0', '37060993', 'PSD Bank Köln');
-INSERT INTO static_bic_de VALUES ('4727', '0', '37062124', 'Bensberger Bank');
-INSERT INTO static_bic_de VALUES ('4729', '0', '37062365', 'Raiffeisenbank Frechen-Hürth');
-INSERT INTO static_bic_de VALUES ('4736', '0', '37062600', 'VR-Bank Bergisch Gladbach-Overath-Rösrath');
-INSERT INTO static_bic_de VALUES ('4740', '0', '37063367', 'Raiffeisenbank Fischenich-Kendenich');
-INSERT INTO static_bic_de VALUES ('4742', '0', '37069101', 'Spar- und Darlehnskasse Aegidienberg');
-INSERT INTO static_bic_de VALUES ('4744', '0', '37069103', 'Raiffeisenbank Aldenhoven');
-INSERT INTO static_bic_de VALUES ('4747', '0', '37069125', 'Raiffeisenbank Kürten-Odenthal');
-INSERT INTO static_bic_de VALUES ('4751', '0', '37069153', 'Spar- und Darlehnskasse Brachelen');
-INSERT INTO static_bic_de VALUES ('4754', '0', '37069164', 'Volksbank Meerbusch');
-INSERT INTO static_bic_de VALUES ('4756', '0', '37069252', 'Volksbank Erft');
-INSERT INTO static_bic_de VALUES ('4761', '0', '37069302', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('4765', '0', '37069303', 'Volksbank Gemünd-Kall -alt-');
-INSERT INTO static_bic_de VALUES ('4768', '0', '37069306', 'Raiffeisenbank Grevenbroich');
-INSERT INTO static_bic_de VALUES ('4774', '0', '37069322', 'Raiffeisenbank Gymnich');
-INSERT INTO static_bic_de VALUES ('4776', '0', '37069330', 'Volksbank Haaren');
-INSERT INTO static_bic_de VALUES ('4778', '0', '37069331', 'Raiffeisenbank von 1895 Zw Horrem');
-INSERT INTO static_bic_de VALUES ('4782', '0', '37069342', 'Volksbank Heimbach');
-INSERT INTO static_bic_de VALUES ('4784', '0', '37069354', 'Raiffeisenbank Selfkant Zw -alt-');
-INSERT INTO static_bic_de VALUES ('4786', '0', '37069355', 'Spar- und Darlehnskasse Hoengen');
-INSERT INTO static_bic_de VALUES ('4788', '0', '37069381', 'Volksbank Randerath-Immendorf');
-INSERT INTO static_bic_de VALUES ('4791', '0', '37069401', 'Raiffeisenbank Junkersdorf');
-INSERT INTO static_bic_de VALUES ('4793', '0', '37069405', 'Raiffeisenbank Kaarst');
-INSERT INTO static_bic_de VALUES ('4795', '0', '37069412', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('4800', '0', '37069427', 'Volksbank Dünnwald-Holweide');
-INSERT INTO static_bic_de VALUES ('4802', '0', '37069429', 'Volksbank Köln-Nord');
-INSERT INTO static_bic_de VALUES ('4805', '0', '37069472', 'Raiffeisenbk Erftstadt -alt-');
-INSERT INTO static_bic_de VALUES ('4806', '0', '37069520', 'VR-Bank Rhein-Sieg');
-INSERT INTO static_bic_de VALUES ('4813', '0', '37069521', 'Raiffeisenbank Rhein-Berg');
-INSERT INTO static_bic_de VALUES ('4821', '0', '37069524', 'Raiffeisenbank Much-Ruppichteroth');
-INSERT INTO static_bic_de VALUES ('4824', '0', '37069577', 'Raiffeisenbank Odenthal -alt-');
-INSERT INTO static_bic_de VALUES ('4825', '0', '37069620', 'Raiffeisenbank Radevormwald -alt-');
-INSERT INTO static_bic_de VALUES ('4826', '0', '37069627', 'Raiffeisenbank Rheinbach Voreifel');
-INSERT INTO static_bic_de VALUES ('4832', '0', '37069639', 'Rosbacher Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('4834', '0', '37069642', 'Raiffeisenbank Simmerath');
-INSERT INTO static_bic_de VALUES ('4838', '0', '37069707', 'Raiffeisenbank St Augustin');
-INSERT INTO static_bic_de VALUES ('4841', '0', '37069720', 'VR-Bank Nordeifel');
-INSERT INTO static_bic_de VALUES ('4848', '0', '37069805', 'Volksbank Wachtberg');
-INSERT INTO static_bic_de VALUES ('4850', '0', '37069810', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('4851', '0', '37069833', 'Raiffeisenbk Wesseling -alt-');
-INSERT INTO static_bic_de VALUES ('4852', '0', '37069840', 'Volksbank Wipperfürth-Lindlar');
-INSERT INTO static_bic_de VALUES ('4855', '0', '37069991', 'Brühler Kreditbank');
-INSERT INTO static_bic_de VALUES ('4857', '0', '37070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4873', '0', '37070060', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4889', '0', '37080040', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4905', '0', '37080085', 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('4906', '0', '37080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('4907', '0', '37080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('4908', '0', '37080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6');
-INSERT INTO static_bic_de VALUES ('4909', '0', '37080089', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7');
-INSERT INTO static_bic_de VALUES ('4910', '0', '37080090', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8');
-INSERT INTO static_bic_de VALUES ('4911', '0', '37080091', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9');
-INSERT INTO static_bic_de VALUES ('4912', '0', '37080092', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10');
-INSERT INTO static_bic_de VALUES ('4913', '0', '37080093', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11');
-INSERT INTO static_bic_de VALUES ('4914', '0', '37080094', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 12');
-INSERT INTO static_bic_de VALUES ('4915', '0', '37080095', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 13');
-INSERT INTO static_bic_de VALUES ('4916', '0', '37080096', 'Commerzbank vormals Dresdner Bank Zw 96');
-INSERT INTO static_bic_de VALUES ('4917', '0', '37080097', 'Commerzbank vormals Dresdner Bank Zw 97');
-INSERT INTO static_bic_de VALUES ('4918', '0', '37080098', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 14');
-INSERT INTO static_bic_de VALUES ('4919', '0', '37080099', 'Commerzbank vormals Dresdner Bank Zw 99');
-INSERT INTO static_bic_de VALUES ('4920', '0', '37089340', 'Commerzbank vormals Dresdner Bank ITGK I');
-INSERT INTO static_bic_de VALUES ('4921', '0', '37089342', 'Commerzbank vormals Dresdner Bank ITGK II');
-INSERT INTO static_bic_de VALUES ('4922', '0', '37160087', 'Kölner Bank');
-INSERT INTO static_bic_de VALUES ('4927', '0', '37161289', 'VR-Bank Rhein-Erft');
-INSERT INTO static_bic_de VALUES ('4934', '0', '37540050', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4935', '0', '37551020', 'Stadt-Sparkasse Leichlingen');
-INSERT INTO static_bic_de VALUES ('4936', '0', '37551440', 'Sparkasse Leverkusen');
-INSERT INTO static_bic_de VALUES ('4937', '0', '37551670', 'Stadt-Sparkasse Düsseldorf Fil Monheim');
-INSERT INTO static_bic_de VALUES ('4938', '0', '37551780', 'Stadt-Sparkasse Langenfeld');
-INSERT INTO static_bic_de VALUES ('4939', '0', '37560092', 'Volksbank Rhein-Wupper');
-INSERT INTO static_bic_de VALUES ('4943', '0', '37570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4946', '0', '37570064', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4949', '0', '38000000', 'Bundesbank eh Bonn');
-INSERT INTO static_bic_de VALUES ('4950', '0', '38010053', 'Postbank Zentrale');
-INSERT INTO static_bic_de VALUES ('4951', '0', '38010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('4952', '0', '38010700', 'DSL Bank');
-INSERT INTO static_bic_de VALUES ('4953', '0', '38010900', 'KfW Ndl Bonn');
-INSERT INTO static_bic_de VALUES ('4954', '0', '38010999', 'KfW Ausbildungsförderung Bonn');
-INSERT INTO static_bic_de VALUES ('4955', '0', '38011000', 'VÖB-ZVD Bank');
-INSERT INTO static_bic_de VALUES ('4956', '0', '38011001', 'VÖB-ZVD Bank Gf 1');
-INSERT INTO static_bic_de VALUES ('4957', '0', '38011002', 'VÖB-ZVD Bank Gf 2');
-INSERT INTO static_bic_de VALUES ('4958', '0', '38011003', 'VÖB-ZVD Bank Gf 3');
-INSERT INTO static_bic_de VALUES ('4959', '0', '38011004', 'VÖB-ZVD Bank Gf 4');
-INSERT INTO static_bic_de VALUES ('4960', '0', '38011005', 'VÖB-ZVD Bank Gf 5');
-INSERT INTO static_bic_de VALUES ('4961', '0', '38011006', 'VÖB-ZVD Bank für Zahlungsverkehrsdienstleistungen Gf 6');
-INSERT INTO static_bic_de VALUES ('4962', '0', '38011007', 'VÖB-ZVD Bank für Zahlungsverkehrsdienstleistungen Gf 7');
-INSERT INTO static_bic_de VALUES ('4963', '0', '38011008', 'VÖB-ZVD Bank für Zahlungsverkehrsdienstleistungen Gf 8');
-INSERT INTO static_bic_de VALUES ('4964', '0', '38020090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('4965', '0', '38040007', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('4971', '0', '38050000', 'Sparkasse Bonn -alt-');
-INSERT INTO static_bic_de VALUES ('4972', '0', '38051290', 'Stadtsparkasse Bad Honnef');
-INSERT INTO static_bic_de VALUES ('4973', '0', '38060186', 'Volksbank Bonn Rhein-Sieg');
-INSERT INTO static_bic_de VALUES ('4984', '0', '38070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('4990', '0', '38070059', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('4996', '0', '38070724', 'Deutsche Bank Privat und Geschäftskunden F 950');
-INSERT INTO static_bic_de VALUES ('4997', '0', '38077724', 'Deutsche Bank Privat und Geschäftskunden F 950');
-INSERT INTO static_bic_de VALUES ('4998', '0', '38080055', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('4999', '0', '38160220', 'VR-Bank Bonn');
-INSERT INTO static_bic_de VALUES ('5002', '0', '38250110', 'Kreissparkasse Euskirchen');
-INSERT INTO static_bic_de VALUES ('5008', '0', '38260082', 'Volksbank Euskirchen');
-INSERT INTO static_bic_de VALUES ('5017', '0', '38440016', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5021', '0', '38450000', 'Sparkasse Gummersbach-Bergneustadt');
-INSERT INTO static_bic_de VALUES ('5023', '0', '38452490', 'Sparkasse der Homburgischen Gemeinden');
-INSERT INTO static_bic_de VALUES ('5025', '0', '38462135', 'Volksbank Oberberg');
-INSERT INTO static_bic_de VALUES ('5037', '0', '38470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5042', '0', '38470091', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5047', '0', '38600000', 'Bundesbank eh Siegburg');
-INSERT INTO static_bic_de VALUES ('5048', '0', '38621500', 'Steyler Bank');
-INSERT INTO static_bic_de VALUES ('5049', '0', '38650000', 'Kreissparkasse Siegburg');
-INSERT INTO static_bic_de VALUES ('5050', '0', '38651390', 'Sparkasse Hennef');
-INSERT INTO static_bic_de VALUES ('5051', '0', '39000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('5052', '0', '39010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5054', '0', '39020000', 'Aachener Bausparkasse');
-INSERT INTO static_bic_de VALUES ('5055', '0', '39040013', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5062', '0', '39050000', 'Sparkasse Aachen');
-INSERT INTO static_bic_de VALUES ('5072', '0', '39060180', 'Aachener Bank');
-INSERT INTO static_bic_de VALUES ('5079', '0', '39060630', 'apoBank');
-INSERT INTO static_bic_de VALUES ('5080', '0', '39061981', 'Heinsberger Volksbank');
-INSERT INTO static_bic_de VALUES ('5082', '0', '39070020', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5093', '0', '39070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5104', '0', '39080005', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5110', '0', '39080098', 'Commerzbank vormals Dresdner Bank Zw 98');
-INSERT INTO static_bic_de VALUES ('5111', '0', '39080099', 'Commerzbank vormals Dresdner Bank Zw 99');
-INSERT INTO static_bic_de VALUES ('5112', '0', '39160191', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('5113', '0', '39161490', 'Volksbank Aachen Süd');
-INSERT INTO static_bic_de VALUES ('5114', '0', '39162287', 'Volksbank Herzogenrath -alt-');
-INSERT INTO static_bic_de VALUES ('5115', '0', '39162980', 'VR-Bank');
-INSERT INTO static_bic_de VALUES ('5125', '0', '39360097', 'Volksbank Stolberg-Eschweiler -alt-');
-INSERT INTO static_bic_de VALUES ('5126', '0', '39362254', 'Raiffeisen-Bank Eschweiler');
-INSERT INTO static_bic_de VALUES ('5128', '0', '39500000', 'Bundesbank eh Düren');
-INSERT INTO static_bic_de VALUES ('5129', '0', '39540052', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5130', '0', '39550110', 'Sparkasse Düren');
-INSERT INTO static_bic_de VALUES ('5145', '0', '39560201', 'Volksbank Düren');
-INSERT INTO static_bic_de VALUES ('5150', '0', '39570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5152', '0', '39570061', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5154', '0', '39580041', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5160', '0', '40000000', 'Bundesbank eh Münster');
-INSERT INTO static_bic_de VALUES ('5161', '0', '40010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5162', '0', '40022000', 'NRW.BANK');
-INSERT INTO static_bic_de VALUES ('5163', '0', '40030000', 'Münsterländische Bank Thie & Co');
-INSERT INTO static_bic_de VALUES ('5164', '0', '40040028', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5170', '0', '40050000', 'WestLB Münster');
-INSERT INTO static_bic_de VALUES ('5171', '0', '40050150', 'Sparkasse Münsterland Ost');
-INSERT INTO static_bic_de VALUES ('5183', '0', '40052525', 'NRW.BANK');
-INSERT INTO static_bic_de VALUES ('5184', '0', '40060000', 'WGZ Bank');
-INSERT INTO static_bic_de VALUES ('5186', '0', '40060265', 'DKM Darlehnskasse Münster');
-INSERT INTO static_bic_de VALUES ('5188', '0', '40060300', 'WL BANK Westfälische Landschaft Bodenkreditbank');
-INSERT INTO static_bic_de VALUES ('5190', '0', '40060560', 'Sparda-Bank Münster');
-INSERT INTO static_bic_de VALUES ('5198', '0', '40060614', 'apoBank');
-INSERT INTO static_bic_de VALUES ('5199', '0', '40061238', 'Volksbank Greven');
-INSERT INTO static_bic_de VALUES ('5203', '0', '40062624', 'Volksbank Telgte-Westbevern -alt-');
-INSERT INTO static_bic_de VALUES ('5204', '0', '40069226', 'Volksbank Lette-Darup-Rorup');
-INSERT INTO static_bic_de VALUES ('5208', '0', '40069266', 'Volksbank Marsberg');
-INSERT INTO static_bic_de VALUES ('5210', '0', '40069283', 'Volksbank Schlangen');
-INSERT INTO static_bic_de VALUES ('5213', '0', '40069348', 'Volksbank Medebach');
-INSERT INTO static_bic_de VALUES ('5215', '0', '40069362', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('5217', '0', '40069363', 'Volksbank Schermbeck');
-INSERT INTO static_bic_de VALUES ('5219', '0', '40069371', 'Volksbank Thülen');
-INSERT INTO static_bic_de VALUES ('5221', '0', '40069408', 'Volksbank Baumberge');
-INSERT INTO static_bic_de VALUES ('5226', '0', '40069462', 'Volksbank Sprakel');
-INSERT INTO static_bic_de VALUES ('5228', '0', '40069477', 'Volksbank Wulfen -alt-');
-INSERT INTO static_bic_de VALUES ('5229', '0', '40069537', 'Volksbank Ostbevern-Kattenvenne -alt-');
-INSERT INTO static_bic_de VALUES ('5230', '0', '40069545', 'Volksbank Schönholthausen -alt-');
-INSERT INTO static_bic_de VALUES ('5231', '0', '40069546', 'Volksbank Senden');
-INSERT INTO static_bic_de VALUES ('5233', '0', '40069600', 'Volksbank Amelsbüren');
-INSERT INTO static_bic_de VALUES ('5235', '0', '40069601', 'Volksbank Ascheberg-Herbern');
-INSERT INTO static_bic_de VALUES ('5237', '0', '40069606', 'Volksbank Erle');
-INSERT INTO static_bic_de VALUES ('5239', '0', '40069622', 'Volksbank Seppenrade');
-INSERT INTO static_bic_de VALUES ('5241', '0', '40069636', 'Volksbank Lette -alt-');
-INSERT INTO static_bic_de VALUES ('5242', '0', '40069709', 'Volksbank Lembeck-Rhade');
-INSERT INTO static_bic_de VALUES ('5244', '0', '40069716', 'Volksbank Südkirchen-Capelle-Nordkirchen');
-INSERT INTO static_bic_de VALUES ('5246', '0', '40070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5252', '0', '40070080', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5258', '0', '40080040', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5264', '0', '40080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('5265', '0', '40090900', 'PSD Bank Westfalen-Lippe');
-INSERT INTO static_bic_de VALUES ('5266', '0', '40150001', 'SI/WLB Verrechnung Münster');
-INSERT INTO static_bic_de VALUES ('5267', '0', '40153768', 'Verbundsparkasse Emsdetten Ochtrup');
-INSERT INTO static_bic_de VALUES ('5269', '0', '40154006', 'Sparkasse Gronau');
-INSERT INTO static_bic_de VALUES ('5270', '0', '40154476', 'Stadtsparkasse Lengerich');
-INSERT INTO static_bic_de VALUES ('5271', '0', '40154530', 'Sparkasse Westmünsterland');
-INSERT INTO static_bic_de VALUES ('5297', '0', '40154680', 'Stadtsparkasse Ochtrup -alt-');
-INSERT INTO static_bic_de VALUES ('5298', '0', '40154702', 'Stadtsparkasse Stadtlohn');
-INSERT INTO static_bic_de VALUES ('5299', '0', '40160050', 'Volksbank Münster');
-INSERT INTO static_bic_de VALUES ('5304', '0', '40163123', 'Volksbank Coesfeld -alt-');
-INSERT INTO static_bic_de VALUES ('5305', '0', '40163720', 'Volksbank Nordmünsterland');
-INSERT INTO static_bic_de VALUES ('5311', '0', '40164024', 'Volksbank Gronau-Ahaus');
-INSERT INTO static_bic_de VALUES ('5319', '0', '40164256', 'Volksbank Laer-Horstmar-Leer');
-INSERT INTO static_bic_de VALUES ('5322', '0', '40164352', 'Volksbank Nottuln');
-INSERT INTO static_bic_de VALUES ('5324', '0', '40164528', 'Volksbank Lüdinghausen-Olfen');
-INSERT INTO static_bic_de VALUES ('5327', '0', '40164618', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('5330', '0', '40164901', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('5332', '0', '40165366', 'Volksbank Selm-Bork');
-INSERT INTO static_bic_de VALUES ('5335', '0', '40166439', 'Volksbank Lengerich/Lotte -alt-');
-INSERT INTO static_bic_de VALUES ('5336', '0', '40166800', 'Volksbank Buldern -alt-');
-INSERT INTO static_bic_de VALUES ('5337', '0', '40300000', 'Bundesbank eh Rheine');
-INSERT INTO static_bic_de VALUES ('5338', '0', '40340030', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5340', '0', '40350005', 'Stadtsparkasse Rheine');
-INSERT INTO static_bic_de VALUES ('5341', '0', '40351060', 'Kreissparkasse Steinfurt');
-INSERT INTO static_bic_de VALUES ('5361', '0', '40351220', 'Sparkasse Steinfurt -alt-');
-INSERT INTO static_bic_de VALUES ('5362', '0', '40361627', 'Volksbank Westerkappeln-Wersen');
-INSERT INTO static_bic_de VALUES ('5365', '0', '40361906', 'Volksbank Tecklenburger Land');
-INSERT INTO static_bic_de VALUES ('5377', '0', '40362280', 'Riesenbecker Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('5378', '0', '40363433', 'Volksbank Hörstel');
-INSERT INTO static_bic_de VALUES ('5380', '0', '40370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5387', '0', '40370079', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5394', '0', '41000000', 'Bundesbank eh Hamm');
-INSERT INTO static_bic_de VALUES ('5395', '0', '41010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5397', '0', '41040018', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5399', '0', '41041000', 'ZTB der Commerzbank');
-INSERT INTO static_bic_de VALUES ('5400', '0', '41050095', 'Sparkasse Hamm');
-INSERT INTO static_bic_de VALUES ('5401', '0', '41051605', 'Stadtsparkasse Werne');
-INSERT INTO static_bic_de VALUES ('5402', '0', '41051845', 'Sparkasse Bergkamen-Bönen');
-INSERT INTO static_bic_de VALUES ('5404', '0', '41060120', 'Volksbank Hamm');
-INSERT INTO static_bic_de VALUES ('5406', '0', '41061011', 'Spar- und Darlehnskasse Bockum-Hövel');
-INSERT INTO static_bic_de VALUES ('5408', '0', '41061903', 'BAG Bankaktiengesellschaft');
-INSERT INTO static_bic_de VALUES ('5409', '0', '41062215', 'Volksbank Bönen');
-INSERT INTO static_bic_de VALUES ('5411', '0', '41070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5413', '0', '41070049', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5415', '0', '41250035', 'Sparkasse Beckum-Wadersloh');
-INSERT INTO static_bic_de VALUES ('5417', '0', '41260006', 'Volksbank Beckum');
-INSERT INTO static_bic_de VALUES ('5423', '0', '41261324', 'Volksbank Enniger-Ostenfelde-Westkirchen');
-INSERT INTO static_bic_de VALUES ('5425', '0', '41261419', 'Volksbank Oelde-Ennigerloh-Neubeckum');
-INSERT INTO static_bic_de VALUES ('5429', '0', '41262501', 'Volksbank Ahlen-Sassenberg-Warendorf');
-INSERT INTO static_bic_de VALUES ('5434', '0', '41262621', 'Vereinigte Volksbank Telgte');
-INSERT INTO static_bic_de VALUES ('5442', '0', '41280043', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5445', '0', '41440018', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5446', '0', '41450075', 'Sparkasse Soest');
-INSERT INTO static_bic_de VALUES ('5451', '0', '41451750', 'Sparkasse Werl');
-INSERT INTO static_bic_de VALUES ('5454', '0', '41460116', 'Volksbank Hellweg');
-INSERT INTO static_bic_de VALUES ('5462', '0', '41462295', 'Volksbank Wickede, Ruhr');
-INSERT INTO static_bic_de VALUES ('5464', '0', '41650001', 'Sparkasse Lippstadt');
-INSERT INTO static_bic_de VALUES ('5465', '0', '41651770', 'Sparkasse Hochsauerland');
-INSERT INTO static_bic_de VALUES ('5470', '0', '41651815', 'Sparkasse Erwitte-Anröchte');
-INSERT INTO static_bic_de VALUES ('5472', '0', '41651965', 'Sparkasse Geseke');
-INSERT INTO static_bic_de VALUES ('5473', '0', '41652560', 'Sparkasse Warstein-Rüthen');
-INSERT INTO static_bic_de VALUES ('5475', '0', '41660124', 'Volksbank Lippstadt');
-INSERT INTO static_bic_de VALUES ('5479', '0', '41661206', 'Volksbank Anröchte');
-INSERT INTO static_bic_de VALUES ('5483', '0', '41661379', 'Volksbank Bad Westernkotten');
-INSERT INTO static_bic_de VALUES ('5484', '0', '41661504', 'Volksbank Benninghausen');
-INSERT INTO static_bic_de VALUES ('5486', '0', '41661719', 'Volksbank Brilon');
-INSERT INTO static_bic_de VALUES ('5488', '0', '41662390', 'Volksbank Rüthen');
-INSERT INTO static_bic_de VALUES ('5489', '0', '41662465', 'Volksbank Störmede');
-INSERT INTO static_bic_de VALUES ('5491', '0', '41662557', 'Volksbank Warstein-Belecke -alt-');
-INSERT INTO static_bic_de VALUES ('5493', '0', '41663335', 'Volksbank Hörste');
-INSERT INTO static_bic_de VALUES ('5495', '0', '41670024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5499', '0', '41670027', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5500', '0', '41670028', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5501', '0', '41670029', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5502', '0', '41670030', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5503', '0', '42000000', 'Bundesbank eh Gelsenkirchen');
-INSERT INTO static_bic_de VALUES ('5504', '0', '42010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5505', '0', '42030600', 'Isbank Fil Gelsenkirchen');
-INSERT INTO static_bic_de VALUES ('5506', '0', '42040040', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5508', '0', '42050001', 'Sparkasse Gelsenkirchen');
-INSERT INTO static_bic_de VALUES ('5509', '0', '42070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5517', '0', '42070062', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5525', '0', '42080082', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5526', '0', '42260001', 'Volksbank Ruhr Mitte');
-INSERT INTO static_bic_de VALUES ('5534', '0', '42450040', 'Stadtsparkasse Gladbeck');
-INSERT INTO static_bic_de VALUES ('5535', '0', '42451220', 'Sparkasse Bottrop');
-INSERT INTO static_bic_de VALUES ('5536', '0', '42461435', 'Volksbank Kirchhellen');
-INSERT INTO static_bic_de VALUES ('5538', '0', '42600000', 'Bundesbank eh Recklinghausen');
-INSERT INTO static_bic_de VALUES ('5539', '0', '42610112', 'SEB');
-INSERT INTO static_bic_de VALUES ('5541', '0', '42640048', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5542', '0', '42650150', 'Sparkasse Vest Recklinghausen');
-INSERT INTO static_bic_de VALUES ('5550', '0', '42651315', 'Stadtsparkasse Haltern');
-INSERT INTO static_bic_de VALUES ('5551', '0', '42661008', 'Volksbank Marl-Recklinghausen');
-INSERT INTO static_bic_de VALUES ('5554', '0', '42661330', 'Volksbank Haltern');
-INSERT INTO static_bic_de VALUES ('5556', '0', '42661522', 'Volksbank Herten-Westerholt -alt-');
-INSERT INTO static_bic_de VALUES ('5558', '0', '42661717', 'Volksbank Waltrop');
-INSERT INTO static_bic_de VALUES ('5564', '0', '42662320', 'Volksbank Dorsten');
-INSERT INTO static_bic_de VALUES ('5566', '0', '42680081', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5568', '0', '42840005', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5571', '0', '42850035', 'Stadtsparkasse Bocholt');
-INSERT INTO static_bic_de VALUES ('5572', '0', '42851310', 'Kreissparkasse Borken -alt-');
-INSERT INTO static_bic_de VALUES ('5573', '0', '42860003', 'Volksbank Bocholt');
-INSERT INTO static_bic_de VALUES ('5576', '0', '42861239', 'Spar- und Darlehnskasse');
-INSERT INTO static_bic_de VALUES ('5578', '0', '42861387', 'VR-Bank Westmünsterland');
-INSERT INTO static_bic_de VALUES ('5588', '0', '42861416', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('5590', '0', '42861515', 'Volksbank Gemen');
-INSERT INTO static_bic_de VALUES ('5592', '0', '42861608', 'Volksbank Heiden');
-INSERT INTO static_bic_de VALUES ('5594', '0', '42861814', 'Volksbank Rhede');
-INSERT INTO static_bic_de VALUES ('5597', '0', '42862451', 'Volksbank Raesfeld');
-INSERT INTO static_bic_de VALUES ('5599', '0', '42870024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5601', '0', '42870077', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5603', '0', '43000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('5604', '0', '43010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5610', '0', '43020000', 'Crown Westfalen Bank');
-INSERT INTO static_bic_de VALUES ('5611', '0', '43040036', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5613', '0', '43050001', 'Sparkasse Bochum');
-INSERT INTO static_bic_de VALUES ('5614', '0', '43051040', 'Sparkasse Hattingen');
-INSERT INTO static_bic_de VALUES ('5615', '0', '43060129', 'Volksbank Bochum Witten');
-INSERT INTO static_bic_de VALUES ('5621', '0', '43060967', 'GLS Gemeinschaftsbank');
-INSERT INTO static_bic_de VALUES ('5625', '0', '43070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5630', '0', '43070061', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5635', '0', '43080083', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5637', '0', '43250030', 'Herner Sparkasse');
-INSERT INTO static_bic_de VALUES ('5638', '0', '44000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('5639', '0', '44010046', 'Postbank');
-INSERT INTO static_bic_de VALUES ('5640', '0', '44010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5642', '0', '44010200', 'BHW Bausparkasse Dortmund');
-INSERT INTO static_bic_de VALUES ('5643', '0', '44010300', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('5644', '0', '44020090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('5645', '0', '44040037', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5649', '0', '44050000', 'WestLB Dortmund');
-INSERT INTO static_bic_de VALUES ('5650', '0', '44050199', 'Sparkasse Dortmund');
-INSERT INTO static_bic_de VALUES ('5651', '0', '44060122', 'Volksbank Dortmund-Nordwest');
-INSERT INTO static_bic_de VALUES ('5653', '0', '44060604', 'apoBank');
-INSERT INTO static_bic_de VALUES ('5654', '0', '44064406', 'KD-Bank-die Bank für Kirche und Diakonie-Gf SoPr Dortmund');
-INSERT INTO static_bic_de VALUES ('5655', '0', '44070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5662', '0', '44070050', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5669', '0', '44080050', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5682', '0', '44080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('5683', '0', '44080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('5684', '0', '44080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('5685', '0', '44089320', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('5686', '0', '44090920', 'PSD Bank Dortmund -alt-');
-INSERT INTO static_bic_de VALUES ('5687', '0', '44130000', 'Handel und Kredit Bankhaus Altena Fil');
-INSERT INTO static_bic_de VALUES ('5688', '0', '44152255', 'Sparkasse Castrop-Rauxel -alt-');
-INSERT INTO static_bic_de VALUES ('5689', '0', '44152370', 'Sparkasse Lünen');
-INSERT INTO static_bic_de VALUES ('5691', '0', '44152490', 'Stadtsparkasse Schwerte');
-INSERT INTO static_bic_de VALUES ('5692', '0', '44160014', 'Dortmunder Volksbank');
-INSERT INTO static_bic_de VALUES ('5703', '0', '44340037', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5704', '0', '44350060', 'Kreis- und Stadtsparkasse Unna');
-INSERT INTO static_bic_de VALUES ('5706', '0', '44351380', 'Städtische Sparkasse Kamen');
-INSERT INTO static_bic_de VALUES ('5707', '0', '44351740', 'Sparkasse Fröndenberg');
-INSERT INTO static_bic_de VALUES ('5708', '0', '44360002', 'Volksbank Unna Schwerte -alt-');
-INSERT INTO static_bic_de VALUES ('5709', '0', '44361342', 'Volksbank Kamen-Werne');
-INSERT INTO static_bic_de VALUES ('5713', '0', '44540022', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5716', '0', '44550045', 'Sparkasse der Stadt Iserlohn');
-INSERT INTO static_bic_de VALUES ('5717', '0', '44551210', 'Stadtsparkasse Hemer');
-INSERT INTO static_bic_de VALUES ('5718', '0', '44561102', 'Volksbank Letmathe -alt-');
-INSERT INTO static_bic_de VALUES ('5719', '0', '44570004', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5726', '0', '44570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5733', '0', '44580070', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5737', '0', '44580085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('5738', '0', '44750065', 'Sparkasse Menden');
-INSERT INTO static_bic_de VALUES ('5739', '0', '44760037', 'Volksbank Menden -alt-');
-INSERT INTO static_bic_de VALUES ('5740', '0', '44761312', 'Mendener Bank');
-INSERT INTO static_bic_de VALUES ('5742', '0', '44761534', 'Volksbank im Märkischen Kreis');
-INSERT INTO static_bic_de VALUES ('5750', '0', '45000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('5751', '0', '45030000', 'Handel und Kredit Bankhaus Altena');
-INSERT INTO static_bic_de VALUES ('5753', '0', '45040042', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5754', '0', '45050001', 'Sparkasse Hagen');
-INSERT INTO static_bic_de VALUES ('5755', '0', '45051485', 'Stadtsparkasse Herdecke');
-INSERT INTO static_bic_de VALUES ('5756', '0', '45060009', 'Märkische Bank');
-INSERT INTO static_bic_de VALUES ('5764', '0', '45061524', 'Volksbank Hohenlimburg');
-INSERT INTO static_bic_de VALUES ('5767', '0', '45070002', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5772', '0', '45070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5777', '0', '45080060', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5782', '0', '45240056', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5783', '0', '45250035', 'Sparkasse Witten');
-INSERT INTO static_bic_de VALUES ('5784', '0', '45251480', 'Stadtsparkasse Wetter');
-INSERT INTO static_bic_de VALUES ('5785', '0', '45251515', 'Stadtsparkasse Sprockhövel');
-INSERT INTO static_bic_de VALUES ('5786', '0', '45260041', 'Volksbank Witten -alt-');
-INSERT INTO static_bic_de VALUES ('5787', '0', '45260475', 'Spar- u Kreditbank d Bundes Fr ev Gemeinden');
-INSERT INTO static_bic_de VALUES ('5789', '0', '45261547', 'Volksbank Sprockhövel');
-INSERT INTO static_bic_de VALUES ('5795', '0', '45450050', 'Stadtsparkasse Gevelsberg');
-INSERT INTO static_bic_de VALUES ('5796', '0', '45451060', 'Sparkasse Ennepetal-Breckerfeld');
-INSERT INTO static_bic_de VALUES ('5798', '0', '45451555', 'Stadtsparkasse Schwelm');
-INSERT INTO static_bic_de VALUES ('5799', '0', '45660029', 'Volksbank Altena -alt-');
-INSERT INTO static_bic_de VALUES ('5800', '0', '45840026', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5806', '0', '45841031', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5807', '0', '45850005', 'Sparkasse Lüdenscheid');
-INSERT INTO static_bic_de VALUES ('5811', '0', '45851020', 'Vereinigte Sparkasse im Märkischen Kreis');
-INSERT INTO static_bic_de VALUES ('5817', '0', '45851665', 'Sparkasse Kierspe-Meinerzhagen');
-INSERT INTO static_bic_de VALUES ('5819', '0', '45860033', 'Volksbank Lüdenscheid');
-INSERT INTO static_bic_de VALUES ('5823', '0', '45861434', 'Volksbank Kierspe');
-INSERT INTO static_bic_de VALUES ('5825', '0', '45861617', 'Volksbank Meinerzhagen');
-INSERT INTO static_bic_de VALUES ('5828', '0', '46000000', 'Bundesbank eh Siegen');
-INSERT INTO static_bic_de VALUES ('5829', '0', '46010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('5830', '0', '46040033', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5835', '0', '46050001', 'Sparkasse Siegen');
-INSERT INTO static_bic_de VALUES ('5836', '0', '46051240', 'Sparkasse Burbach-Neunkirchen');
-INSERT INTO static_bic_de VALUES ('5838', '0', '46051733', 'Stadtsparkasse Freudenberg');
-INSERT INTO static_bic_de VALUES ('5839', '0', '46051875', 'Stadtsparkasse Hilchenbach');
-INSERT INTO static_bic_de VALUES ('5840', '0', '46052855', 'Stadtsparkasse Schmallenberg');
-INSERT INTO static_bic_de VALUES ('5841', '0', '46053480', 'Sparkasse Wittgenstein');
-INSERT INTO static_bic_de VALUES ('5844', '0', '46060040', 'Volksbank Siegerland');
-INSERT INTO static_bic_de VALUES ('5854', '0', '46061724', 'VR-Bank Freudenberg-Niederfischbach');
-INSERT INTO static_bic_de VALUES ('5858', '0', '46062106', 'Volksbank Littfeld');
-INSERT INTO static_bic_de VALUES ('5860', '0', '46062632', 'Volksbank Süd-Siegerland Neunkirchen -alt-');
-INSERT INTO static_bic_de VALUES ('5861', '0', '46062817', 'Volksbank Schmallenberg');
-INSERT INTO static_bic_de VALUES ('5865', '0', '46063405', 'Volksbank Wittgenstein');
-INSERT INTO static_bic_de VALUES ('5869', '0', '46070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5886', '0', '46070090', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5903', '0', '46080010', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('5907', '0', '46240016', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5908', '0', '46250049', 'Sparkasse Olpe-Drolshagen-Wenden');
-INSERT INTO static_bic_de VALUES ('5911', '0', '46251590', 'Sparkasse Finnentrop');
-INSERT INTO static_bic_de VALUES ('5912', '0', '46251630', 'Sparkasse Attendorn-Lennestadt-Kirchhundem');
-INSERT INTO static_bic_de VALUES ('5915', '0', '46260023', 'Volksbank Olpe');
-INSERT INTO static_bic_de VALUES ('5917', '0', '46261306', 'Volksbank Attendorn -alt-');
-INSERT INTO static_bic_de VALUES ('5918', '0', '46261607', 'Volksbank Grevenbrück');
-INSERT INTO static_bic_de VALUES ('5921', '0', '46261822', 'Volksbank Wenden-Drolshagen');
-INSERT INTO static_bic_de VALUES ('5924', '0', '46262456', 'Volksbank Bigge-Lenne');
-INSERT INTO static_bic_de VALUES ('5928', '0', '46400000', 'Bundesbank eh Arnsberg');
-INSERT INTO static_bic_de VALUES ('5929', '0', '46441003', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5930', '0', '46451012', 'Zweckverbandssparkasse Meschede');
-INSERT INTO static_bic_de VALUES ('5932', '0', '46451250', 'Sparkasse Bestwig -alt-');
-INSERT INTO static_bic_de VALUES ('5933', '0', '46461126', 'Volksbank Sauerland');
-INSERT INTO static_bic_de VALUES ('5940', '0', '46462271', 'Spar- und Darlehnskasse Oeventrop');
-INSERT INTO static_bic_de VALUES ('5942', '0', '46464453', 'Volksbank Reiste-Eslohe');
-INSERT INTO static_bic_de VALUES ('5946', '0', '46640018', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5947', '0', '46650005', 'Sparkasse Arnsberg-Sundern');
-INSERT INTO static_bic_de VALUES ('5949', '0', '46660022', 'Volksbank Arnsberg-Sundern');
-INSERT INTO static_bic_de VALUES ('5953', '0', '46670007', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('5956', '0', '46670024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('5959', '0', '47200000', 'Bundesbank eh Paderborn');
-INSERT INTO static_bic_de VALUES ('5960', '0', '47240047', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('5963', '0', '47250101', 'Sparkasse Paderborn');
-INSERT INTO static_bic_de VALUES ('5973', '0', '47251550', 'Sparkasse Höxter');
-INSERT INTO static_bic_de VALUES ('5983', '0', '47251740', 'Stadtsparkasse Delbrück');
-INSERT INTO static_bic_de VALUES ('5984', '0', '47260121', 'Volksbank Paderborn-Höxter-Detmold');
-INSERT INTO static_bic_de VALUES ('6008', '0', '47260234', 'Volksbank Elsen-Wewer-Borchen');
-INSERT INTO static_bic_de VALUES ('6011', '0', '47260307', 'Bank für Kirche und Caritas');
-INSERT INTO static_bic_de VALUES ('6013', '0', '47261429', 'Volksbank Haaren -alt-');
-INSERT INTO static_bic_de VALUES ('6014', '0', '47261603', 'Volksbank Büren und Salzkotten');
-INSERT INTO static_bic_de VALUES ('6021', '0', '47262406', 'Volksbank Höxter-Beverungen -alt-');
-INSERT INTO static_bic_de VALUES ('6023', '0', '47262626', 'Volksbank Westenholz');
-INSERT INTO static_bic_de VALUES ('6025', '0', '47262703', 'Volksbank Delbrück-Hövelhof');
-INSERT INTO static_bic_de VALUES ('6027', '0', '47263472', 'Volksbank Westerloh-Westerwiehe');
-INSERT INTO static_bic_de VALUES ('6030', '0', '47264367', 'Volksbank Bad Driburg-Brakel-Steinheim');
-INSERT INTO static_bic_de VALUES ('6036', '0', '47265383', 'Volksbank Wewelsburg-Ahden');
-INSERT INTO static_bic_de VALUES ('6038', '0', '47267216', 'Volksbank Borgentreich -alt-');
-INSERT INTO static_bic_de VALUES ('6039', '0', '47270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6044', '0', '47270029', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6049', '0', '47451235', 'Stadtsparkasse Marsberg -alt-');
-INSERT INTO static_bic_de VALUES ('6050', '0', '47460028', 'Volksbank Warburger Land');
-INSERT INTO static_bic_de VALUES ('6054', '0', '47640051', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6058', '0', '47650130', 'Sparkasse Detmold');
-INSERT INTO static_bic_de VALUES ('6066', '0', '47651225', 'Stadtsparkasse Blomberg');
-INSERT INTO static_bic_de VALUES ('6067', '0', '47670023', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6073', '0', '47670024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6079', '0', '47690080', 'Volksbank Detmold -alt-');
-INSERT INTO static_bic_de VALUES ('6084', '0', '47691200', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('6088', '0', '47800000', 'Bundesbank eh Gütersloh');
-INSERT INTO static_bic_de VALUES ('6089', '0', '47840065', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6094', '0', '47840080', 'Commerzbank Zw 80');
-INSERT INTO static_bic_de VALUES ('6095', '0', '47850065', 'Sparkasse Gütersloh');
-INSERT INTO static_bic_de VALUES ('6097', '0', '47852760', 'Sparkasse Rietberg');
-INSERT INTO static_bic_de VALUES ('6098', '0', '47853355', 'Stadtsparkasse Versmold');
-INSERT INTO static_bic_de VALUES ('6099', '0', '47853520', 'Kreissparkasse Wiedenbrück');
-INSERT INTO static_bic_de VALUES ('6104', '0', '47860125', 'Volksbank Gütersloh');
-INSERT INTO static_bic_de VALUES ('6111', '0', '47861317', 'Volksbank Clarholz-Lette-Beelen');
-INSERT INTO static_bic_de VALUES ('6115', '0', '47861518', 'Volksbank Harsewinkel');
-INSERT INTO static_bic_de VALUES ('6117', '0', '47861806', 'Volksbank Kaunitz');
-INSERT INTO static_bic_de VALUES ('6119', '0', '47861907', 'Volksbank Langenberg -alt-');
-INSERT INTO static_bic_de VALUES ('6120', '0', '47862261', 'Volksbank Marienfeld -alt-');
-INSERT INTO static_bic_de VALUES ('6121', '0', '47862447', 'Volksbank Rietberg');
-INSERT INTO static_bic_de VALUES ('6124', '0', '47862540', 'Volksbank Peckeloh -alt-');
-INSERT INTO static_bic_de VALUES ('6125', '0', '47863288', 'Verler Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('6126', '0', '47863373', 'Volksbank Versmold');
-INSERT INTO static_bic_de VALUES ('6128', '0', '47880031', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6131', '0', '48000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('6132', '0', '48010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('6136', '0', '48020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('6137', '0', '48020151', 'Bankhaus Lampe');
-INSERT INTO static_bic_de VALUES ('6148', '0', '48021900', 'Bankverein Werther');
-INSERT INTO static_bic_de VALUES ('6149', '0', '48040035', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6151', '0', '48050000', 'Westdeutsche Landesbank');
-INSERT INTO static_bic_de VALUES ('6152', '0', '48050161', 'Sparkasse Bielefeld');
-INSERT INTO static_bic_de VALUES ('6153', '0', '48051580', 'Kreissparkasse Halle');
-INSERT INTO static_bic_de VALUES ('6157', '0', '48060036', 'Bielefelder Volksbank');
-INSERT INTO static_bic_de VALUES ('6160', '0', '48061818', 'Volksbank Steinhagen -alt-');
-INSERT INTO static_bic_de VALUES ('6161', '0', '48062051', 'Volksbank Halle/Westf');
-INSERT INTO static_bic_de VALUES ('6166', '0', '48062466', 'Spar-u Darlehnskasse Schloß Holte-Stukenbrock');
-INSERT INTO static_bic_de VALUES ('6169', '0', '48070020', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6172', '0', '48070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6184', '0', '48070040', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6185', '0', '48070042', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6186', '0', '48070043', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6187', '0', '48070044', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6188', '0', '48070045', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6189', '0', '48070046', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6190', '0', '48070050', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6191', '0', '48070051', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6192', '0', '48070052', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6193', '0', '48080020', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6201', '0', '48089350', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('6202', '0', '48091315', 'Volksbank Brackwede -alt-');
-INSERT INTO static_bic_de VALUES ('6204', '0', '48250110', 'Sparkasse Lemgo');
-INSERT INTO static_bic_de VALUES ('6211', '0', '48262248', 'Volksbank Nordlippe -alt-');
-INSERT INTO static_bic_de VALUES ('6218', '0', '48291490', 'Volksbank Bad Salzuflen');
-INSERT INTO static_bic_de VALUES ('6225', '0', '49000000', 'Bundesbank eh Minden');
-INSERT INTO static_bic_de VALUES ('6226', '0', '49040043', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6227', '0', '49050101', 'Sparkasse Minden-Lübbecke');
-INSERT INTO static_bic_de VALUES ('6235', '0', '49051065', 'Stadtsparkasse Rahden');
-INSERT INTO static_bic_de VALUES ('6236', '0', '49051285', 'Stadtsparkasse Bad Oeynhausen');
-INSERT INTO static_bic_de VALUES ('6237', '0', '49051990', 'Stadtsparkasse Porta Westfalica');
-INSERT INTO static_bic_de VALUES ('6238', '0', '49060127', 'Volksbank Minden-Hille-Porta');
-INSERT INTO static_bic_de VALUES ('6242', '0', '49060392', 'Volksbank Minden');
-INSERT INTO static_bic_de VALUES ('6244', '0', '49061298', 'Volksbank Bad Oeynhausen -alt-');
-INSERT INTO static_bic_de VALUES ('6245', '0', '49061470', 'Volksbank Stemweder Berg -alt-');
-INSERT INTO static_bic_de VALUES ('6246', '0', '49061510', 'Volksbank Eisbergen');
-INSERT INTO static_bic_de VALUES ('6248', '0', '49063296', 'Volksbank Petershagen');
-INSERT INTO static_bic_de VALUES ('6250', '0', '49063338', 'Volksbank Hille -alt-');
-INSERT INTO static_bic_de VALUES ('6251', '0', '49070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6256', '0', '49070028', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6261', '0', '49080025', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6264', '0', '49092650', 'Volksbank Lübbecker Land');
-INSERT INTO static_bic_de VALUES ('6271', '0', '49240096', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6273', '0', '49262364', 'Volksbank Schnathorst');
-INSERT INTO static_bic_de VALUES ('6276', '0', '49440043', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6278', '0', '49450120', 'Sparkasse Herford');
-INSERT INTO static_bic_de VALUES ('6287', '0', '49451210', 'Sparkasse Bad Salzuflen -alt-');
-INSERT INTO static_bic_de VALUES ('6288', '0', '49461323', 'Volksbank Enger-Spenge');
-INSERT INTO static_bic_de VALUES ('6292', '0', '49490070', 'Volksbank Bad Oeynhausen-Herford');
-INSERT INTO static_bic_de VALUES ('6301', '0', '50000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('6302', '0', '50010060', 'Postbank');
-INSERT INTO static_bic_de VALUES ('6303', '0', '50010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('6308', '0', '50010200', 'AKBANK');
-INSERT INTO static_bic_de VALUES ('6309', '0', '50010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('6310', '0', '50010517', 'ING-DiBa');
-INSERT INTO static_bic_de VALUES ('6311', '0', '50010700', 'Degussa Bank');
-INSERT INTO static_bic_de VALUES ('6347', '0', '50010800', 'DEPFA Deutsche Pfandbriefbank');
-INSERT INTO static_bic_de VALUES ('6348', '0', '50010900', 'Bank of America');
-INSERT INTO static_bic_de VALUES ('6349', '0', '50012800', 'Alte Leipziger Bauspar');
-INSERT INTO static_bic_de VALUES ('6350', '0', '50020160', 'Bayer Hypo- und Vereinsbank Ndl 427 Ffm');
-INSERT INTO static_bic_de VALUES ('6351', '0', '50020200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('6352', '0', '50020300', 'KBC Bank Deutschland');
-INSERT INTO static_bic_de VALUES ('6353', '0', '50020400', 'KfW Kreditanstalt für Wiederaufbau Frankfurt');
-INSERT INTO static_bic_de VALUES ('6354', '0', '50020500', 'Landwirtschaftliche Rentenbank');
-INSERT INTO static_bic_de VALUES ('6355', '0', '50020700', 'Credit Europe Bank Ndl. Deutschland');
-INSERT INTO static_bic_de VALUES ('6356', '0', '50020800', 'Intesa Sanpaolo Frankfurt');
-INSERT INTO static_bic_de VALUES ('6357', '0', '50020900', 'COREALCREDIT BANK');
-INSERT INTO static_bic_de VALUES ('6358', '0', '50021000', 'ING Bank Frankfurt am Main');
-INSERT INTO static_bic_de VALUES ('6359', '0', '50021100', 'Frankfurter Fondsbank');
-INSERT INTO static_bic_de VALUES ('6360', '0', '50030000', 'Banque PSA Finance Deutschland');
-INSERT INTO static_bic_de VALUES ('6361', '0', '50030100', 'Handel + Kredit Bankhaus Altena, Frankfurt');
-INSERT INTO static_bic_de VALUES ('6362', '0', '50030400', 'Kaupthing Bank Niederlassung Deutschland -Kaupthing Edge-');
-INSERT INTO static_bic_de VALUES ('6363', '0', '50030500', 'BNP PARIBAS Securities Services');
-INSERT INTO static_bic_de VALUES ('6364', '0', '50030600', 'Deutsche WertpapierService Bank');
-INSERT INTO static_bic_de VALUES ('6365', '0', '50030700', 'DenizBank (Wien) Zw Frankfurt');
-INSERT INTO static_bic_de VALUES ('6366', '0', '50030800', 'LHB Internationale Handelsbank');
-INSERT INTO static_bic_de VALUES ('6367', '0', '50030900', 'Lehman Brothers Bankhaus Frankfurt');
-INSERT INTO static_bic_de VALUES ('6368', '0', '50040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6382', '0', '50040033', 'Commerzbank Gf BRS');
-INSERT INTO static_bic_de VALUES ('6383', '0', '50040040', 'Commerzbank Gf ZRK');
-INSERT INTO static_bic_de VALUES ('6384', '0', '50040060', 'Commerzbank Gf 460');
-INSERT INTO static_bic_de VALUES ('6385', '0', '50040061', 'Commerzbank Gf 461');
-INSERT INTO static_bic_de VALUES ('6386', '0', '50040075', 'Commerzbank Gf ZCM');
-INSERT INTO static_bic_de VALUES ('6387', '0', '50042500', 'Commerzbank Zw 425 - keine Auslandsbanken');
-INSERT INTO static_bic_de VALUES ('6388', '0', '50044444', 'Commerzbank Vermögensverwaltung');
-INSERT INTO static_bic_de VALUES ('6389', '0', '50047010', 'Commerzbank Service - BZ');
-INSERT INTO static_bic_de VALUES ('6390', '0', '50050000', 'Landesbank Hessen-Thür Girozentrale');
-INSERT INTO static_bic_de VALUES ('6391', '0', '50050201', 'Frankfurter Sparkasse');
-INSERT INTO static_bic_de VALUES ('6404', '0', '50050222', 'Frankfurter Sparkasse GF 1822direkt');
-INSERT INTO static_bic_de VALUES ('6405', '0', '50050999', 'DekaBank Frankfurt');
-INSERT INTO static_bic_de VALUES ('6406', '0', '50060000', 'DZ Bank');
-INSERT INTO static_bic_de VALUES ('6407', '0', '50060400', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('6408', '0', '50060500', 'Evangelische Kreditgenossenschaft -Filiale Frankfurt-');
-INSERT INTO static_bic_de VALUES ('6409', '0', '50061741', 'Raiffeisenbank Oberursel');
-INSERT INTO static_bic_de VALUES ('6414', '0', '50069126', 'Raiffeisenbank Alzey-Land');
-INSERT INTO static_bic_de VALUES ('6418', '0', '50069146', 'Volksbank Grebenhain');
-INSERT INTO static_bic_de VALUES ('6420', '0', '50069187', 'Volksbank Egelsbach -alt-');
-INSERT INTO static_bic_de VALUES ('6421', '0', '50069241', 'Raiffeisenkasse Erbes-Büdesheim und Umgebung');
-INSERT INTO static_bic_de VALUES ('6426', '0', '50069345', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('6428', '0', '50069384', 'Volksbank Heppenheim - Offstein');
-INSERT INTO static_bic_de VALUES ('6429', '0', '50069455', 'Hüttenberger Bank');
-INSERT INTO static_bic_de VALUES ('6431', '0', '50069464', 'Volksbank Inheiden-Villingen -alt-');
-INSERT INTO static_bic_de VALUES ('6433', '0', '50069477', 'Raiffeisenbank Kirtorf');
-INSERT INTO static_bic_de VALUES ('6437', '0', '50069693', 'Raiffeisenbank Bad Homburg Ndl d FrankfurterVB');
-INSERT INTO static_bic_de VALUES ('6438', '0', '50069828', 'Raiffeisenbank Mücke -alt-');
-INSERT INTO static_bic_de VALUES ('6440', '0', '50069842', 'Raiffeisen Volksbank');
-INSERT INTO static_bic_de VALUES ('6442', '0', '50069976', 'Volksbank Wißmar');
-INSERT INTO static_bic_de VALUES ('6444', '0', '50070010', 'Deutsche Bank Filiale');
-INSERT INTO static_bic_de VALUES ('6452', '0', '50070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6460', '0', '50073019', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6462', '0', '50073024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6464', '0', '50080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6479', '0', '50080015', 'Commerzbank vormals Dresdner Bank Zw 15');
-INSERT INTO static_bic_de VALUES ('6480', '0', '50080025', 'Commerzbank vormals Dresdner Bank Zw 25');
-INSERT INTO static_bic_de VALUES ('6481', '0', '50080035', 'Commerzbank vormals Dresdner Bank Zw 35');
-INSERT INTO static_bic_de VALUES ('6482', '0', '50080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('6483', '0', '50080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('6484', '0', '50080060', 'Commerzbank vormals Dresdner Bank Gf DrKW');
-INSERT INTO static_bic_de VALUES ('6485', '0', '50080061', 'Commerzbank vormals Dresdner Bank Gf DrKWSL');
-INSERT INTO static_bic_de VALUES ('6486', '0', '50080077', 'Commerzbank vormals Allianz Dresdner Bauspar');
-INSERT INTO static_bic_de VALUES ('6487', '0', '50080080', 'Commerzbank vormals Dresdner Bank Bs 80');
-INSERT INTO static_bic_de VALUES ('6488', '0', '50080081', 'Commerzbank vormals Dresdner Bank ESOP');
-INSERT INTO static_bic_de VALUES ('6489', '0', '50080082', 'Commerzbank vormals Dresdner Bank Gf AVB');
-INSERT INTO static_bic_de VALUES ('6490', '0', '50080085', 'Commerzbank vormals Dresdner Bank Card Service');
-INSERT INTO static_bic_de VALUES ('6491', '0', '50080086', 'Commerzbank vormals Dresdner Bank ITGK 3');
-INSERT INTO static_bic_de VALUES ('6492', '0', '50080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('6493', '0', '50080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('6494', '0', '50080089', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6');
-INSERT INTO static_bic_de VALUES ('6495', '0', '50080091', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7');
-INSERT INTO static_bic_de VALUES ('6496', '0', '50080092', 'Commerzbank vormals Dresdner Bank Finance and Controlling');
-INSERT INTO static_bic_de VALUES ('6497', '0', '50080095', 'Commerzbank vormals Dresdner Bank Gf Card Service2');
-INSERT INTO static_bic_de VALUES ('6498', '0', '50080099', 'Commerzbank vormals Dresdner Bank Zw 99');
-INSERT INTO static_bic_de VALUES ('6499', '0', '50080300', 'Commerzbank vormals Dresdner Bank Private Banking Inland');
-INSERT INTO static_bic_de VALUES ('6500', '0', '50083007', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6501', '0', '50083838', 'Commerzbank vormals Dresdner Bank in Frankfurt MBP');
-INSERT INTO static_bic_de VALUES ('6502', '0', '50089400', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('6503', '0', '50090200', 'VR DISKONTBANK');
-INSERT INTO static_bic_de VALUES ('6504', '0', '50090500', 'Sparda-Bank Hessen');
-INSERT INTO static_bic_de VALUES ('6534', '0', '50090607', 'apoBank');
-INSERT INTO static_bic_de VALUES ('6535', '0', '50090900', 'PSD Bank Hessen-Thüringen');
-INSERT INTO static_bic_de VALUES ('6536', '0', '50092100', 'Spar- u Kreditbank ev-freikirchl Gemeinden');
-INSERT INTO static_bic_de VALUES ('6538', '0', '50092200', 'Volksbank Main-Taunus');
-INSERT INTO static_bic_de VALUES ('6550', '0', '50092700', 'Volksbank Dreieich');
-INSERT INTO static_bic_de VALUES ('6551', '0', '50092900', 'Volksbank Usinger Land Ndl d Frankfurter VB');
-INSERT INTO static_bic_de VALUES ('6552', '0', '50093000', 'Rüsselsheimer Volksbank');
-INSERT INTO static_bic_de VALUES ('6556', '0', '50093400', 'Volksbank Kelsterbach Ndl d Frankfurter VB');
-INSERT INTO static_bic_de VALUES ('6557', '0', '50110200', 'Industrial and Commercial Bank of China');
-INSERT INTO static_bic_de VALUES ('6558', '0', '50110300', 'DVB Bank');
-INSERT INTO static_bic_de VALUES ('6559', '0', '50110400', 'AKA Ausfuhrkredit GmbH');
-INSERT INTO static_bic_de VALUES ('6560', '0', '50110500', 'NATIXIS Zweigniederlassung Deutschland');
-INSERT INTO static_bic_de VALUES ('6561', '0', '50110636', 'DTC Standard Chartered Bank Germany');
-INSERT INTO static_bic_de VALUES ('6562', '0', '50110700', 'Frankfurter Bankgesellschaft');
-INSERT INTO static_bic_de VALUES ('6563', '0', '50110800', 'J.P. Morgan');
-INSERT INTO static_bic_de VALUES ('6564', '0', '50110900', 'Bank of America N.A. Military Bank');
-INSERT INTO static_bic_de VALUES ('6565', '0', '50120000', 'MainFirst Bank');
-INSERT INTO static_bic_de VALUES ('6566', '0', '50120100', 'ICICI Bank UK Ndl Frankfurt am Main');
-INSERT INTO static_bic_de VALUES ('6567', '0', '50120383', 'Delbrück Bethmann Maffei');
-INSERT INTO static_bic_de VALUES ('6575', '0', '50120500', 'Credit Suisse (Deutschland)');
-INSERT INTO static_bic_de VALUES ('6576', '0', '50120600', 'Bank of Communications Frankfurt branch');
-INSERT INTO static_bic_de VALUES ('6577', '0', '50120900', 'VakifBank International Wien Zndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('6578', '0', '50130000', 'National Bank of Pakistan Zndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('6579', '0', '50130100', 'BethmannMaffei Bank -alt-');
-INSERT INTO static_bic_de VALUES ('6580', '0', '50130200', 'Oppenheim, Sal - jr & Cie');
-INSERT INTO static_bic_de VALUES ('6581', '0', '50130300', 'FIRST INTERNATIONAL BANK');
-INSERT INTO static_bic_de VALUES ('6582', '0', '50130400', 'Merck Finck & Co');
-INSERT INTO static_bic_de VALUES ('6583', '0', '50130600', 'UBS Deutschland');
-INSERT INTO static_bic_de VALUES ('6584', '0', '50150000', 'Westdeutsche Landesbank Ndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('6585', '0', '50190000', 'Frankfurter Volksbank');
-INSERT INTO static_bic_de VALUES ('6618', '0', '50190300', 'Volksbank Höchst');
-INSERT INTO static_bic_de VALUES ('6622', '0', '50190400', 'Volksbank Griesheim');
-INSERT INTO static_bic_de VALUES ('6624', '0', '50210111', 'SEB TZN Clearing');
-INSERT INTO static_bic_de VALUES ('6625', '0', '50210112', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6626', '0', '50210130', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6627', '0', '50210131', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6628', '0', '50210132', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6629', '0', '50210133', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6630', '0', '50210134', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6631', '0', '50210135', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6632', '0', '50210136', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6633', '0', '50210137', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6634', '0', '50210138', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6635', '0', '50210139', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6636', '0', '50210140', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6637', '0', '50210141', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6638', '0', '50210142', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6639', '0', '50210143', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6640', '0', '50210144', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6641', '0', '50210145', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6642', '0', '50210146', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6643', '0', '50210147', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6644', '0', '50210148', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6645', '0', '50210149', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6646', '0', '50210150', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6647', '0', '50210151', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6648', '0', '50210152', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6649', '0', '50210153', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6650', '0', '50210154', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6651', '0', '50210155', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6652', '0', '50210156', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6653', '0', '50210157', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6654', '0', '50210158', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6655', '0', '50210159', 'SEB TZN MB Ffm.');
-INSERT INTO static_bic_de VALUES ('6656', '0', '50210160', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6657', '0', '50210161', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6658', '0', '50210162', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6659', '0', '50210163', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6660', '0', '50210164', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6661', '0', '50210165', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6662', '0', '50210166', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6663', '0', '50210167', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6664', '0', '50210168', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6665', '0', '50210169', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6666', '0', '50210170', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6667', '0', '50210171', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6668', '0', '50210172', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6669', '0', '50210173', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6670', '0', '50210174', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6671', '0', '50210175', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6672', '0', '50210176', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6673', '0', '50210177', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6674', '0', '50210178', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6675', '0', '50210179', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6676', '0', '50210180', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6677', '0', '50210181', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6678', '0', '50210182', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6679', '0', '50210183', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6680', '0', '50210184', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6681', '0', '50210185', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6682', '0', '50210186', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6683', '0', '50210187', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6684', '0', '50210188', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6685', '0', '50210189', 'SEB TZN MB Frankfurt');
-INSERT INTO static_bic_de VALUES ('6686', '0', '50210200', 'Rabobank International Frankfurt Branch');
-INSERT INTO static_bic_de VALUES ('6687', '0', '50210300', 'Eurohypo');
-INSERT INTO static_bic_de VALUES ('6688', '0', '50210400', 'Eurohypo ehem Rheinische Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('6689', '0', '50210900', 'Citigroup Global Markets Deutschland');
-INSERT INTO static_bic_de VALUES ('6690', '0', '50220085', 'UBS Deutschland');
-INSERT INTO static_bic_de VALUES ('6699', '0', '50220200', 'LGT Bank in Liechtenstein');
-INSERT INTO static_bic_de VALUES ('6700', '0', '50220500', 'Bank of Scotland');
-INSERT INTO static_bic_de VALUES ('6701', '0', '50220800', 'Emporiki Bank Germany');
-INSERT INTO static_bic_de VALUES ('6702', '0', '50220900', 'Hauck & Aufhäuser Privatbankiers');
-INSERT INTO static_bic_de VALUES ('6704', '0', '50230000', 'ABC International Bank Frankfurt am Main');
-INSERT INTO static_bic_de VALUES ('6705', '0', '50230100', 'Morgan Stanley Bank Internaional');
-INSERT INTO static_bic_de VALUES ('6706', '0', '50230200', 'Deutsche Leasing Finance -alt-');
-INSERT INTO static_bic_de VALUES ('6707', '0', '50230300', 'FCB Firmen-Credit Bank');
-INSERT INTO static_bic_de VALUES ('6708', '0', '50230400', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('6709', '0', '50230600', 'Isbank');
-INSERT INTO static_bic_de VALUES ('6710', '0', '50230700', 'Metzler, B. - seel Sohn & Co');
-INSERT INTO static_bic_de VALUES ('6711', '0', '50230800', 'PLUS Finanzservice');
-INSERT INTO static_bic_de VALUES ('6712', '0', '50250200', 'Deutsche Leasing Finance');
-INSERT INTO static_bic_de VALUES ('6713', '0', '50310400', 'Barclays Bank Frankfurt');
-INSERT INTO static_bic_de VALUES ('6714', '0', '50310455', 'Reiseschecks - Barclays Bank Frankfurt');
-INSERT INTO static_bic_de VALUES ('6715', '0', '50310900', 'China Construction Bank Ndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('6716', '0', '50320000', 'VTB Bank (Deutschland)');
-INSERT INTO static_bic_de VALUES ('6717', '0', '50320191', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('6720', '0', '50320200', 'Bankhaus Zwirn');
-INSERT INTO static_bic_de VALUES ('6721', '0', '50320500', 'Banco Santander Filiale Frankfurt');
-INSERT INTO static_bic_de VALUES ('6722', '0', '50320900', 'Pictet & Cie (Europe) Ndl Frankfurt am Main');
-INSERT INTO static_bic_de VALUES ('6723', '0', '50330000', 'State Bank of India');
-INSERT INTO static_bic_de VALUES ('6724', '0', '50330200', 'MHB-Bank');
-INSERT INTO static_bic_de VALUES ('6725', '0', '50330300', 'The Bank of New York Mellon');
-INSERT INTO static_bic_de VALUES ('6726', '0', '50330600', 'Bank Sepah-Iran');
-INSERT INTO static_bic_de VALUES ('6727', '0', '50330700', 'KarstadtQuelle Bank');
-INSERT INTO static_bic_de VALUES ('6728', '0', '50330800', 'Mizuho Corporate Bank (Germany)');
-INSERT INTO static_bic_de VALUES ('6729', '0', '50400000', 'Bundesbank Zentrale');
-INSERT INTO static_bic_de VALUES ('6730', '0', '50510111', 'SEB');
-INSERT INTO static_bic_de VALUES ('6734', '0', '50520000', 'Honda Bank');
-INSERT INTO static_bic_de VALUES ('6735', '0', '50520190', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('6737', '0', '50530000', 'Cronbank');
-INSERT INTO static_bic_de VALUES ('6738', '0', '50530001', 'CRONBANK Zw CS');
-INSERT INTO static_bic_de VALUES ('6739', '0', '50540028', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6742', '0', '50550020', 'Städtische Sparkasse Offenbach');
-INSERT INTO static_bic_de VALUES ('6743', '0', '50560102', 'Raiffeisenbank Offenbach/M.-Bieber');
-INSERT INTO static_bic_de VALUES ('6745', '0', '50561315', 'Vereinigte Volksbank Maingau');
-INSERT INTO static_bic_de VALUES ('6758', '0', '50561908', 'Volksbank Obertshausen -alt-');
-INSERT INTO static_bic_de VALUES ('6759', '0', '50570018', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6768', '0', '50570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6777', '0', '50580005', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6782', '0', '50580085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('6783', '0', '50590000', 'Offenbacher Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('6784', '0', '50592200', 'Volksbank Dreieich');
-INSERT INTO static_bic_de VALUES ('6789', '0', '50600000', 'Bundesbank eh Hanau');
-INSERT INTO static_bic_de VALUES ('6790', '0', '50620700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('6791', '0', '50640015', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6792', '0', '50650023', 'Sparkasse Hanau');
-INSERT INTO static_bic_de VALUES ('6805', '0', '50652124', 'Sparkasse Langen-Seligenstadt');
-INSERT INTO static_bic_de VALUES ('6818', '0', '50661639', 'VR Bank Main-Kinzig');
-INSERT INTO static_bic_de VALUES ('6837', '0', '50661816', 'Volksbank Heldenbergen Ndl d Frankfurter VB');
-INSERT INTO static_bic_de VALUES ('6838', '0', '50662299', 'Raiffeisenbank Bruchköbel -alt-');
-INSERT INTO static_bic_de VALUES ('6841', '0', '50662669', 'Raiffeisenbank Maintal Ndl d Frankfurter VB');
-INSERT INTO static_bic_de VALUES ('6842', '0', '50663699', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('6846', '0', '50670009', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('6848', '0', '50670024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('6850', '0', '50680002', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6851', '0', '50680085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('6852', '0', '50690000', 'Volksbank Raiffeisenbank Hanau Ndl d Frankf VB');
-INSERT INTO static_bic_de VALUES ('6853', '0', '50691300', 'DZB BANK');
-INSERT INTO static_bic_de VALUES ('6854', '0', '50692100', 'Volksbank Seligenstadt');
-INSERT INTO static_bic_de VALUES ('6858', '0', '50750094', 'Kreissparkasse Gelnhausen');
-INSERT INTO static_bic_de VALUES ('6870', '0', '50761333', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('6883', '0', '50761613', 'Volksbank Büdingen -alt-');
-INSERT INTO static_bic_de VALUES ('6884', '0', '50762649', 'VR Bank Bad Orb-Gelnhausen');
-INSERT INTO static_bic_de VALUES ('6885', '0', '50763319', 'Raiffeisenbank Vogelsberg');
-INSERT INTO static_bic_de VALUES ('6889', '0', '50780006', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('6890', '0', '50790000', 'VR Bank Bad Orb-Gelnhausen');
-INSERT INTO static_bic_de VALUES ('6894', '0', '50793200', 'VR Bank Bad Orb-Gelnhausen');
-INSERT INTO static_bic_de VALUES ('6895', '0', '50793300', 'Birsteiner Volksbank');
-INSERT INTO static_bic_de VALUES ('6898', '0', '50794300', 'VR Bank Wächtersbach/Bad Soden-Salmünster -alt');
-INSERT INTO static_bic_de VALUES ('6899', '0', '50800000', 'Bundesbank eh Darmstadt');
-INSERT INTO static_bic_de VALUES ('6900', '0', '50810900', 'DBS Deutsche Bausparkasse');
-INSERT INTO static_bic_de VALUES ('6901', '0', '50820292', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('6902', '0', '50835800', 'MCE Bank');
-INSERT INTO static_bic_de VALUES ('6903', '0', '50840005', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('6908', '0', '50850049', 'Landesbank Hessen-Thür Girozentrale');
-INSERT INTO static_bic_de VALUES ('6909', '0', '50850150', 'Stadt- und Kreis-Sparkasse Darmstadt');
-INSERT INTO static_bic_de VALUES ('6922', '0', '50851952', 'Sparkasse Odenwaldkreis');
-INSERT INTO static_bic_de VALUES ('6934', '0', '50852553', 'Kreissparkasse Groß-Gerau');
-INSERT INTO static_bic_de VALUES ('6948', '0', '50852651', 'Sparkasse Dieburg');
-INSERT INTO static_bic_de VALUES ('6962', '0', '50861393', 'Spar- und Darlehnskasse Zell -alt-');
-INSERT INTO static_bic_de VALUES ('6963', '0', '50861501', 'Raiffeisenbank Nördliche Bergstraße');
-INSERT INTO static_bic_de VALUES ('6966', '0', '50862311', 'Volksbank Gräfenhausen -alt-');
-INSERT INTO static_bic_de VALUES ('6968', '0', '50862408', 'Vereinigte Volksbank Griesheim-Weiterstadt');
-INSERT INTO static_bic_de VALUES ('6971', '0', '50862703', 'Volksbank Gersprenztal-Otzberg');
-INSERT INTO static_bic_de VALUES ('6972', '0', '50862835', 'Raiffeisenbank Schaafheim');
-INSERT INTO static_bic_de VALUES ('6974', '0', '50862903', 'Volksbank Mainspitze');
-INSERT INTO static_bic_de VALUES ('6979', '0', '50863317', 'Volksbank Seeheim-Jugenheim');
-INSERT INTO static_bic_de VALUES ('6980', '0', '50863513', 'Volksbank Odenwald');
-INSERT INTO static_bic_de VALUES ('7001', '0', '50863906', 'Volksbank Modautal Modau');
-INSERT INTO static_bic_de VALUES ('7003', '0', '50864322', 'Volksbank Modau');
-INSERT INTO static_bic_de VALUES ('7007', '0', '50864421', 'Vereinigte Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('7008', '0', '50864808', 'Volksbank Seeheim-Jugenheim');
-INSERT INTO static_bic_de VALUES ('7010', '0', '50865224', 'VB Mörfelden-Walldorf Ndl d Frankfurter VB');
-INSERT INTO static_bic_de VALUES ('7011', '0', '50865503', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('7013', '0', '50870005', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7017', '0', '50870024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7021', '0', '50880050', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7025', '0', '50880085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('7026', '0', '50880086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('7027', '0', '50890000', 'Volksbank Darmstadt');
-INSERT INTO static_bic_de VALUES ('7034', '0', '50890634', 'apoBank');
-INSERT INTO static_bic_de VALUES ('7035', '0', '50892500', 'Groß-Gerauer Volksbank');
-INSERT INTO static_bic_de VALUES ('7046', '0', '50950068', 'Sparkasse Bensheim');
-INSERT INTO static_bic_de VALUES ('7052', '0', '50951469', 'Sparkasse Starkenburg');
-INSERT INTO static_bic_de VALUES ('7065', '0', '50960101', 'Volksbank Bergstraße');
-INSERT INTO static_bic_de VALUES ('7071', '0', '50961206', 'Raiffeisenbank Ried');
-INSERT INTO static_bic_de VALUES ('7076', '0', '50961312', 'Raiffeisenbank Groß-Rohrheim');
-INSERT INTO static_bic_de VALUES ('7078', '0', '50961592', 'Volksbank Weschnitztal');
-INSERT INTO static_bic_de VALUES ('7084', '0', '50961685', 'Volksbank Überwald-Gorxheimertal');
-INSERT INTO static_bic_de VALUES ('7089', '0', '50970004', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7091', '0', '50970024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7093', '0', '50991400', 'Volksbank Kreis Bergstraße');
-INSERT INTO static_bic_de VALUES ('7101', '0', '51000000', 'Bundesbank eh Wiesbaden');
-INSERT INTO static_bic_de VALUES ('7102', '0', '51010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('7103', '0', '51010400', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('7104', '0', '51010800', 'Aareal Bank Zw L');
-INSERT INTO static_bic_de VALUES ('7105', '0', '51020000', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('7106', '0', '51020186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('7107', '0', '51040038', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7109', '0', '51050015', 'Nassauische Sparkasse');
-INSERT INTO static_bic_de VALUES ('7193', '0', '51070021', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7196', '0', '51070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7199', '0', '51080060', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7205', '0', '51080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('7206', '0', '51080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK2');
-INSERT INTO static_bic_de VALUES ('7207', '0', '51089410', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('7208', '0', '51090000', 'Wiesbadener Volksbank');
-INSERT INTO static_bic_de VALUES ('7214', '0', '51090636', 'apoBank');
-INSERT INTO static_bic_de VALUES ('7215', '0', '51091400', 'Volksbank Eltville');
-INSERT INTO static_bic_de VALUES ('7219', '0', '51091500', 'Rheingauer Volksbank');
-INSERT INTO static_bic_de VALUES ('7229', '0', '51091700', 'vr bank Untertaunus');
-INSERT INTO static_bic_de VALUES ('7238', '0', '51091711', 'Bank f Orden u Mission Zndl vr bk Untertaunus');
-INSERT INTO static_bic_de VALUES ('7240', '0', '51140029', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7242', '0', '51150018', 'Kreissparkasse Limburg');
-INSERT INTO static_bic_de VALUES ('7253', '0', '51151919', 'Kreissparkasse Weilburg');
-INSERT INTO static_bic_de VALUES ('7262', '0', '51161606', 'Volksbank Langendernbach');
-INSERT INTO static_bic_de VALUES ('7266', '0', '51170010', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7267', '0', '51170024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7268', '0', '51180041', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7269', '0', '51190000', 'Vereinigte Volksbank Limburg');
-INSERT INTO static_bic_de VALUES ('7277', '0', '51191200', 'Volksbank Goldner Grund');
-INSERT INTO static_bic_de VALUES ('7284', '0', '51191800', 'Volksbank Schupbach');
-INSERT INTO static_bic_de VALUES ('7286', '0', '51192200', 'Volks- und Raiffeisenbank Weilmünster -alt-');
-INSERT INTO static_bic_de VALUES ('7287', '0', '51210600', 'BNP PARIBAS Ndl Frankfurt, Main');
-INSERT INTO static_bic_de VALUES ('7288', '0', '51210700', 'NIBC Bank Zndl Frankfurt am Main');
-INSERT INTO static_bic_de VALUES ('7289', '0', '51210800', 'Societe Generale');
-INSERT INTO static_bic_de VALUES ('7290', '0', '51220200', 'SEB Merchant Banking');
-INSERT INTO static_bic_de VALUES ('7291', '0', '51220400', 'Bank Saderat Iran');
-INSERT INTO static_bic_de VALUES ('7292', '0', '51220500', 'Anglo-Romanian Bank Ndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('7293', '0', '51220700', 'ZIRAAT BANK International');
-INSERT INTO static_bic_de VALUES ('7294', '0', '51220800', 'Banco do Brasil');
-INSERT INTO static_bic_de VALUES ('7295', '0', '51220900', 'Morgan Stanley Bank');
-INSERT INTO static_bic_de VALUES ('7296', '0', '51220910', 'Morgan Stanley Bank');
-INSERT INTO static_bic_de VALUES ('7297', '0', '51230100', 'Eurohypo ehem. Deutsche Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('7298', '0', '51230400', 'RBS ( Deutschland ) Frankfurt am Main');
-INSERT INTO static_bic_de VALUES ('7299', '0', '51230500', 'Standard Chartered Bank (Germany) Frankfurt');
-INSERT INTO static_bic_de VALUES ('7300', '0', '51230502', 'ETC Standard Chartered Bank Germany');
-INSERT INTO static_bic_de VALUES ('7301', '0', '51230600', 'Europe ARAB Bank');
-INSERT INTO static_bic_de VALUES ('7302', '0', '51230800', 'Wirecard Bank');
-INSERT INTO static_bic_de VALUES ('7303', '0', '51230801', 'Wirecard Bank');
-INSERT INTO static_bic_de VALUES ('7304', '0', '51230802', 'Wirecard Bank');
-INSERT INTO static_bic_de VALUES ('7305', '0', '51230805', 'Wirecard Bank');
-INSERT INTO static_bic_de VALUES ('7306', '0', '51250000', 'Taunus-Sparkasse');
-INSERT INTO static_bic_de VALUES ('7332', '0', '51300000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('7333', '0', '51310111', 'SEB');
-INSERT INTO static_bic_de VALUES ('7335', '0', '51340013', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7337', '0', '51343224', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7338', '0', '51350025', 'Sparkasse Gießen');
-INSERT INTO static_bic_de VALUES ('7350', '0', '51351526', 'Sparkasse Grünberg');
-INSERT INTO static_bic_de VALUES ('7352', '0', '51352227', 'Sparkasse Laubach-Hungen');
-INSERT INTO static_bic_de VALUES ('7354', '0', '51361021', 'Volksbank Heuchelheim');
-INSERT INTO static_bic_de VALUES ('7360', '0', '51361704', 'Volksbank Holzheim');
-INSERT INTO static_bic_de VALUES ('7362', '0', '51362514', 'VR Bank Mücke -alt-');
-INSERT INTO static_bic_de VALUES ('7364', '0', '51363407', 'Volksbank Garbenteich -alt-');
-INSERT INTO static_bic_de VALUES ('7366', '0', '51370008', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7367', '0', '51370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7368', '0', '51380040', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7370', '0', '51380085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('7371', '0', '51390000', 'Volksbank Mittelhessen');
-INSERT INTO static_bic_de VALUES ('7412', '0', '51410111', 'SEB direct');
-INSERT INTO static_bic_de VALUES ('7413', '0', '51410600', 'Merrill Lynch International Bank Limited Zndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('7414', '0', '51410700', 'Bank of China');
-INSERT INTO static_bic_de VALUES ('7415', '0', '51410800', 'BOURSORAMA Zndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('7416', '0', '51420200', 'Misr Bank-Europe');
-INSERT INTO static_bic_de VALUES ('7417', '0', '51420300', 'Bank Julius Bär (Deutschland)');
-INSERT INTO static_bic_de VALUES ('7418', '0', '51420600', 'Svenska Handelsbanken Ndl Frankfurt');
-INSERT INTO static_bic_de VALUES ('7419', '0', '51430300', 'Nordea Bank Finnland');
-INSERT INTO static_bic_de VALUES ('7421', '0', '51430400', 'Goldman, Sachs & Co');
-INSERT INTO static_bic_de VALUES ('7422', '0', '51540037', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7424', '0', '51550035', 'Sparkasse Wetzlar');
-INSERT INTO static_bic_de VALUES ('7439', '0', '51560231', 'Volksbank Wetzlar-Weilburg');
-INSERT INTO static_bic_de VALUES ('7461', '0', '51570008', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7462', '0', '51570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7463', '0', '51580044', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7464', '0', '51591300', 'Volksbank Brandoberndorf');
-INSERT INTO static_bic_de VALUES ('7466', '0', '51640043', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7467', '0', '51650045', 'Sparkasse Dillenburg');
-INSERT INTO static_bic_de VALUES ('7478', '0', '51690000', 'Volksbank Dill VB und Raiffbk');
-INSERT INTO static_bic_de VALUES ('7490', '0', '51691500', 'Volksbank Herborn-Eschenburg');
-INSERT INTO static_bic_de VALUES ('7494', '0', '51752267', 'Sparkasse Battenberg');
-INSERT INTO static_bic_de VALUES ('7498', '0', '51762434', 'VR Bank Biedenkopf-Gladenbach');
-INSERT INTO static_bic_de VALUES ('7508', '0', '51850079', 'Sparkasse Oberhessen');
-INSERT INTO static_bic_de VALUES ('7550', '0', '51861325', 'BVB Volksbank Ndl d Frankfurter Volksbank');
-INSERT INTO static_bic_de VALUES ('7551', '0', '51861403', 'Volksbank Butzbach');
-INSERT INTO static_bic_de VALUES ('7555', '0', '51861616', 'Landbank Horlofftal');
-INSERT INTO static_bic_de VALUES ('7559', '0', '51861806', 'Volksbank Ober-Mörlen');
-INSERT INTO static_bic_de VALUES ('7561', '0', '51862677', 'Weiseler Volksbank');
-INSERT INTO static_bic_de VALUES ('7563', '0', '51961023', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('7567', '0', '51961515', 'Spar- und Darlehnskasse Stockhausen');
-INSERT INTO static_bic_de VALUES ('7569', '0', '51961801', 'Volksbank Feldatal');
-INSERT INTO static_bic_de VALUES ('7572', '0', '51990000', 'Volksbank Lauterbach-Schlitz');
-INSERT INTO static_bic_de VALUES ('7577', '0', '52000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('7578', '0', '52010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('7579', '0', '52020000', 'BASF Bank');
-INSERT INTO static_bic_de VALUES ('7581', '0', '52040021', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7584', '0', '52050000', 'Landeskreditkasse Kassel');
-INSERT INTO static_bic_de VALUES ('7585', '0', '52050353', 'Kasseler Sparkasse');
-INSERT INTO static_bic_de VALUES ('7613', '0', '52051373', 'Stadtsparkasse Borken');
-INSERT INTO static_bic_de VALUES ('7614', '0', '52051555', 'Stadtsparkasse Felsberg');
-INSERT INTO static_bic_de VALUES ('7617', '0', '52051877', 'Stadtsparkasse Grebenstein');
-INSERT INTO static_bic_de VALUES ('7621', '0', '52052154', 'Kreissparkasse Schwalm-Eder');
-INSERT INTO static_bic_de VALUES ('7648', '0', '52053458', 'Stadtsparkasse Schwalmstadt');
-INSERT INTO static_bic_de VALUES ('7649', '0', '52060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('7650', '0', '52060208', 'Kurhessische Landbank');
-INSERT INTO static_bic_de VALUES ('7652', '0', '52060400', 'Evangelische Kreditgenossenschaft Gf');
-INSERT INTO static_bic_de VALUES ('7653', '0', '52060410', 'Evangelische Kreditgenossenschaft');
-INSERT INTO static_bic_de VALUES ('7655', '0', '52061210', 'Genossenschaftsbank Bad Wildungen -alt-');
-INSERT INTO static_bic_de VALUES ('7659', '0', '52061303', 'Raiffeisenbank Borken');
-INSERT INTO static_bic_de VALUES ('7664', '0', '52062200', 'VR-Bank Chattengau');
-INSERT INTO static_bic_de VALUES ('7671', '0', '52062601', 'VR-Bank Schwalm-Eder');
-INSERT INTO static_bic_de VALUES ('7680', '0', '52063369', 'VR-Bank Spangenberg-Morschen');
-INSERT INTO static_bic_de VALUES ('7683', '0', '52063550', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('7692', '0', '52064156', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('7701', '0', '52065220', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('7706', '0', '52069013', 'Raiffeisenbank Burghaun');
-INSERT INTO static_bic_de VALUES ('7708', '0', '52069029', 'Spar-u. Kredit-Bank');
-INSERT INTO static_bic_de VALUES ('7713', '0', '52069065', 'Raiffeisenbank Langenschwarz');
-INSERT INTO static_bic_de VALUES ('7715', '0', '52069103', 'Raiffeisenbank Trendelburg');
-INSERT INTO static_bic_de VALUES ('7717', '0', '52069129', 'Raiffeisenbank Freienhagen-Höringhausen -alt-');
-INSERT INTO static_bic_de VALUES ('7719', '0', '52069149', 'Raiffeisenbank Volkmarsen');
-INSERT INTO static_bic_de VALUES ('7723', '0', '52069183', 'Raiffeisenbank Bottendorf -alt-');
-INSERT INTO static_bic_de VALUES ('7724', '0', '52069503', 'Raiffeisenbank Ulmbach -alt-');
-INSERT INTO static_bic_de VALUES ('7725', '0', '52069519', 'Frankenberger Bank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('7731', '0', '52070012', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7734', '0', '52070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7737', '0', '52071212', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7738', '0', '52071224', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7739', '0', '52080080', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7741', '0', '52080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK1');
-INSERT INTO static_bic_de VALUES ('7742', '0', '52090000', 'Kasseler Bank');
-INSERT INTO static_bic_de VALUES ('7761', '0', '52090500', 'Sparda-Bank Kassel -alt-');
-INSERT INTO static_bic_de VALUES ('7762', '0', '52090611', 'apoBank');
-INSERT INTO static_bic_de VALUES ('7763', '0', '52240006', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7764', '0', '52250030', 'Sparkasse Werra-Meißner');
-INSERT INTO static_bic_de VALUES ('7765', '0', '52260385', 'VR-Bank Werra-Meißner');
-INSERT INTO static_bic_de VALUES ('7780', '0', '52270012', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7781', '0', '52270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7782', '0', '52350005', 'Sparkasse Waldeck-Frankenberg');
-INSERT INTO static_bic_de VALUES ('7800', '0', '52360059', 'Waldecker Bank');
-INSERT INTO static_bic_de VALUES ('7811', '0', '52410300', 'Reisebank');
-INSERT INTO static_bic_de VALUES ('7812', '0', '52410400', 'Korea Exchange Bank (Deutschland)');
-INSERT INTO static_bic_de VALUES ('7813', '0', '52410600', 'NEWEDGE GROUP (Frankfurt Branch)');
-INSERT INTO static_bic_de VALUES ('7814', '0', '52410700', 'Fortis Bank Global Clearing, Frankfurt, Main');
-INSERT INTO static_bic_de VALUES ('7815', '0', '52410900', 'Maple Bank');
-INSERT INTO static_bic_de VALUES ('7816', '0', '52411000', 'Cash Express Gesellschaft f Finanz-u Reisedienstleistungen');
-INSERT INTO static_bic_de VALUES ('7817', '0', '52411010', 'Cash Express Gesellschaft f.Finanz-u.Reisedienstleistungen');
-INSERT INTO static_bic_de VALUES ('7818', '0', '52420000', 'Calyon Deutschland Ndl einer französischen Societe Anonyme');
-INSERT INTO static_bic_de VALUES ('7819', '0', '52420300', 'SHINHAN BANK EUROPE');
-INSERT INTO static_bic_de VALUES ('7820', '0', '52420600', 'Agricultural Bank of Greece Frankfurt Branch');
-INSERT INTO static_bic_de VALUES ('7822', '0', '52420700', 'SECB Swiss Euro Clearing Bank');
-INSERT INTO static_bic_de VALUES ('7823', '0', '52430000', 'Credit Mutuel - BECM - Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('7824', '0', '52430100', 'Banque Federative Credit Mutuel Ndl Deutschl');
-INSERT INTO static_bic_de VALUES ('7825', '0', '53000000', 'Bundesbank eh Fulda');
-INSERT INTO static_bic_de VALUES ('7826', '0', '53040012', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7827', '0', '53050180', 'Sparkasse Fulda');
-INSERT INTO static_bic_de VALUES ('7850', '0', '53051130', 'Sparkasse Vogelsbergkreis -alt-');
-INSERT INTO static_bic_de VALUES ('7851', '0', '53051396', 'Kreissparkasse Schlüchtern');
-INSERT INTO static_bic_de VALUES ('7855', '0', '53060180', 'VR Genossenschaftsbank Fulda');
-INSERT INTO static_bic_de VALUES ('7868', '0', '53061230', 'VR-Bank Nordrhön');
-INSERT INTO static_bic_de VALUES ('7879', '0', '53061313', 'Volksbank Raiffeisenbank Schlüchtern');
-INSERT INTO static_bic_de VALUES ('7883', '0', '53062035', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('7889', '0', '53062350', 'Raiffeisenbank Biebergrund-Petersberg');
-INSERT INTO static_bic_de VALUES ('7893', '0', '53064023', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('7895', '0', '53070007', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7898', '0', '53070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7901', '0', '53080030', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7904', '0', '53093200', 'VR Bank HessenLand');
-INSERT INTO static_bic_de VALUES ('7926', '0', '53093255', 'AgrarB@nk');
-INSERT INTO static_bic_de VALUES ('7927', '0', '53200000', 'Bundesbank eh Bad Hersfeld');
-INSERT INTO static_bic_de VALUES ('7928', '0', '53240048', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7929', '0', '53250000', 'Sparkasse Bad Hersfeld-Rotenburg');
-INSERT INTO static_bic_de VALUES ('7949', '0', '53260145', 'Raiffeisenbank Asbach-Sorga');
-INSERT INTO static_bic_de VALUES ('7952', '0', '53261202', 'Bankverein Bebra');
-INSERT INTO static_bic_de VALUES ('7959', '0', '53261342', 'Raiffeisenbank Werratal-Landeck Zw');
-INSERT INTO static_bic_de VALUES ('7968', '0', '53261700', 'Raiffeisenbank Aulatal');
-INSERT INTO static_bic_de VALUES ('7972', '0', '53262073', 'Raiffeisenbank Haunetal');
-INSERT INTO static_bic_de VALUES ('7977', '0', '53262455', 'Raiffeisenbank Ronshausen-Marksuhl');
-INSERT INTO static_bic_de VALUES ('7986', '0', '53270012', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('7987', '0', '53270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('7988', '0', '53280081', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('7989', '0', '53290000', 'VR-Bank Bad Hersfeld-Rotenburg');
-INSERT INTO static_bic_de VALUES ('7996', '0', '53340024', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('7998', '0', '53350000', 'Sparkasse Marburg-Biedenkopf');
-INSERT INTO static_bic_de VALUES ('8020', '0', '53361724', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('8024', '0', '53370008', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8025', '0', '53370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8026', '0', '53380042', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8027', '0', '53381843', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8028', '0', '53390000', 'Marburger Bank -alt-');
-INSERT INTO static_bic_de VALUES ('8029', '0', '53390635', 'apoBank');
-INSERT INTO static_bic_de VALUES ('8030', '0', '54000000', 'Bundesbank eh Kaiserslautern');
-INSERT INTO static_bic_de VALUES ('8031', '0', '54020090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8032', '0', '54020474', 'Bayer Hypo- und Vereinsbank Ndl 697 Kais');
-INSERT INTO static_bic_de VALUES ('8033', '0', '54030011', 'Service Credit Union Overseas Headquarters');
-INSERT INTO static_bic_de VALUES ('8034', '0', '54040042', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8035', '0', '54050110', 'Stadtsparkasse Kaiserslautern');
-INSERT INTO static_bic_de VALUES ('8036', '0', '54050220', 'Kreissparkasse Kaiserslautern');
-INSERT INTO static_bic_de VALUES ('8076', '0', '54051550', 'Kreissparkasse Kusel');
-INSERT INTO static_bic_de VALUES ('8103', '0', '54051660', 'Stadtsparkasse Landstuhl -alt-');
-INSERT INTO static_bic_de VALUES ('8104', '0', '54051990', 'Sparkasse Donnersberg');
-INSERT INTO static_bic_de VALUES ('8119', '0', '54061650', 'VR-Bank Westpfalz');
-INSERT INTO static_bic_de VALUES ('8144', '0', '54062027', 'Raiffeisenbank Donnersberg -alt-');
-INSERT INTO static_bic_de VALUES ('8146', '0', '54070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8148', '0', '54070092', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8150', '0', '54080021', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8151', '0', '54090000', 'Volksbank Kaiserslautern-Nordwestpfalz');
-INSERT INTO static_bic_de VALUES ('8175', '0', '54091700', 'Volksbank Lauterecken');
-INSERT INTO static_bic_de VALUES ('8193', '0', '54091800', 'VR Bank Nordwestpfalz -alt-');
-INSERT INTO static_bic_de VALUES ('8194', '0', '54092400', 'Volksbank Glan-Münchweiler');
-INSERT INTO static_bic_de VALUES ('8205', '0', '54210111', 'SEB');
-INSERT INTO static_bic_de VALUES ('8206', '0', '54220091', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8207', '0', '54220576', 'Bayer Hypo- und Vereinsbank Ndl 358 Pirm');
-INSERT INTO static_bic_de VALUES ('8208', '0', '54240032', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8209', '0', '54250010', 'Sparkasse Südwestpfalz');
-INSERT INTO static_bic_de VALUES ('8232', '0', '54261700', 'VR-Bank Südwestpfalz');
-INSERT INTO static_bic_de VALUES ('8247', '0', '54261900', 'Genossenschaftsbank Südliche Westpfalz -alt-');
-INSERT INTO static_bic_de VALUES ('8248', '0', '54262330', 'Raiffeisenbank Vinningen -alt-');
-INSERT INTO static_bic_de VALUES ('8249', '0', '54270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8251', '0', '54270096', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8253', '0', '54280023', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8254', '0', '54290000', 'VR-Bank Pirmasens');
-INSERT INTO static_bic_de VALUES ('8263', '0', '54291200', 'Raiffeisen- u Volksbank Dahn');
-INSERT INTO static_bic_de VALUES ('8272', '0', '54350010', 'Stadtsparkasse Zweibrücken');
-INSERT INTO static_bic_de VALUES ('8273', '0', '54500000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('8274', '0', '54510067', 'Postbank');
-INSERT INTO static_bic_de VALUES ('8275', '0', '54520071', 'Bayer Hypo- und Vereinsbank Ndl 650 Lu');
-INSERT INTO static_bic_de VALUES ('8276', '0', '54520194', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8288', '0', '54540033', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8292', '0', '54550010', 'Sparkasse Vorderpfalz');
-INSERT INTO static_bic_de VALUES ('8293', '0', '54550120', 'Kreissparkasse Rhein-Pfalz');
-INSERT INTO static_bic_de VALUES ('8309', '0', '54560320', 'VR Bank Ludwigshafen');
-INSERT INTO static_bic_de VALUES ('8318', '0', '54561310', 'RV Bank Rhein-Haardt');
-INSERT INTO static_bic_de VALUES ('8339', '0', '54570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8345', '0', '54570094', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8351', '0', '54580020', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8352', '0', '54620093', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8353', '0', '54620574', 'Bayer Hypo- und Vereinsbank Ndl 660 Ne/W');
-INSERT INTO static_bic_de VALUES ('8354', '0', '54640035', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8355', '0', '54651240', 'Sparkasse Rhein-Haardt');
-INSERT INTO static_bic_de VALUES ('8382', '0', '54661800', 'Raiffeisenbank Freinsheim');
-INSERT INTO static_bic_de VALUES ('8385', '0', '54663270', 'Raiffeisenbank Friedelsheim-Rödersheim');
-INSERT INTO static_bic_de VALUES ('8388', '0', '54670024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8391', '0', '54670095', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8394', '0', '54680022', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8395', '0', '54690623', 'apoBank');
-INSERT INTO static_bic_de VALUES ('8396', '0', '54691200', 'VR Bank Mittelhaardt');
-INSERT INTO static_bic_de VALUES ('8406', '0', '54750010', 'Kreis- und Stadtsparkasse Speyer');
-INSERT INTO static_bic_de VALUES ('8413', '0', '54751440', 'Stadtsparkasse Schifferstadt');
-INSERT INTO static_bic_de VALUES ('8414', '0', '54760900', 'Evangelische Kreditgenossenschaft - Filiale Speyer-');
-INSERT INTO static_bic_de VALUES ('8415', '0', '54761411', 'Raiffeisenbank Schifferstadt');
-INSERT INTO static_bic_de VALUES ('8420', '0', '54790000', 'Volksbank Kur- und Rheinpfalz');
-INSERT INTO static_bic_de VALUES ('8448', '0', '54820674', 'Bayer Hypo- und Vereinsbank Ndl 659 Lan/P');
-INSERT INTO static_bic_de VALUES ('8449', '0', '54850010', 'Sparkasse Südliche Weinstraße in Landau');
-INSERT INTO static_bic_de VALUES ('8476', '0', '54851440', 'Sparkasse Germersheim-Kandel');
-INSERT INTO static_bic_de VALUES ('8498', '0', '54861190', 'Raiffeisenbank Oberhaardt-Gäu');
-INSERT INTO static_bic_de VALUES ('8506', '0', '54862390', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('8510', '0', '54862500', 'VR Bank Südpfalz');
-INSERT INTO static_bic_de VALUES ('8542', '0', '54891300', 'VR Bank Südliche Weinstraße');
-INSERT INTO static_bic_de VALUES ('8559', '0', '55000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('8560', '0', '55010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('8562', '0', '55010400', 'Aareal Bank GF - BK01 -');
-INSERT INTO static_bic_de VALUES ('8563', '0', '55010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('8564', '0', '55010625', 'Aareal Bank Clearing Wiesbaden');
-INSERT INTO static_bic_de VALUES ('8565', '0', '55010800', 'Investitions- und Strukturbank RP');
-INSERT INTO static_bic_de VALUES ('8566', '0', '55020000', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('8567', '0', '55020100', 'Bausparkasse Mainz');
-INSERT INTO static_bic_de VALUES ('8568', '0', '55020486', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8569', '0', '55020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('8570', '0', '55020600', 'Westdeutsche Immobilien Bank');
-INSERT INTO static_bic_de VALUES ('8571', '0', '55020700', 'Süd-West-Kreditbank Finanzierung');
-INSERT INTO static_bic_de VALUES ('8572', '0', '55030500', 'GE Capital Bank');
-INSERT INTO static_bic_de VALUES ('8573', '0', '55040022', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8577', '0', '55050000', 'ZV Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('8578', '0', '55050120', 'Sparkasse Mainz');
-INSERT INTO static_bic_de VALUES ('8590', '0', '55051260', 'Kreissparkasse Alzey-alt-');
-INSERT INTO static_bic_de VALUES ('8591', '0', '55060321', 'Volksbank Mainz-Finthen');
-INSERT INTO static_bic_de VALUES ('8592', '0', '55060417', 'VR-Bank Mainz');
-INSERT INTO static_bic_de VALUES ('8595', '0', '55060611', 'Genobank Mainz');
-INSERT INTO static_bic_de VALUES ('8597', '0', '55060831', 'apoBank');
-INSERT INTO static_bic_de VALUES ('8598', '0', '55061303', 'Budenheimer Volksbank');
-INSERT INTO static_bic_de VALUES ('8600', '0', '55061507', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('8602', '0', '55061907', 'Volksbank Rhein-Selz -alt-');
-INSERT INTO static_bic_de VALUES ('8614', '0', '55070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8618', '0', '55070040', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8622', '0', '55080065', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('8623', '0', '55080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('8624', '0', '55080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('8625', '0', '55090500', 'Sparda-Bank Südwest');
-INSERT INTO static_bic_de VALUES ('8663', '0', '55091200', 'Volksbank Alzey');
-INSERT INTO static_bic_de VALUES ('8700', '0', '55150098', 'Clearingkonto LRP-SI');
-INSERT INTO static_bic_de VALUES ('8701', '0', '55160195', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('8702', '0', '55190000', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8714', '0', '55190028', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8715', '0', '55190050', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8716', '0', '55190064', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8717', '0', '55190065', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8718', '0', '55190068', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8719', '0', '55190088', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8720', '0', '55190094', 'Mainzer Volksbank');
-INSERT INTO static_bic_de VALUES ('8721', '0', '55340041', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8722', '0', '55350010', 'Sparkasse Worms-Alzey-Ried');
-INSERT INTO static_bic_de VALUES ('8744', '0', '55360784', 'Volksbank Rheindürkheim');
-INSERT INTO static_bic_de VALUES ('8746', '0', '55361202', 'Raiffeisenbank Alsheim-Gimbsheim');
-INSERT INTO static_bic_de VALUES ('8749', '0', '55361313', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('8750', '0', '55361422', 'Volksbank Wonnegau -alt-');
-INSERT INTO static_bic_de VALUES ('8751', '0', '55362071', 'Volksbank Bechtheim');
-INSERT INTO static_bic_de VALUES ('8754', '0', '55390000', 'Volksbank Worms-Wonnegau');
-INSERT INTO static_bic_de VALUES ('8770', '0', '56000000', 'Bundesbank eh Bad Kreuznach');
-INSERT INTO static_bic_de VALUES ('8771', '0', '56020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8772', '0', '56050180', 'Sparkasse Rhein-Nahe');
-INSERT INTO static_bic_de VALUES ('8810', '0', '56051790', 'Kreissparkasse Rhein-Hunsrück');
-INSERT INTO static_bic_de VALUES ('8825', '0', '56061151', 'Raiffeisenbank Kastellaun');
-INSERT INTO static_bic_de VALUES ('8834', '0', '56061472', 'Volksbank Hunsrück');
-INSERT INTO static_bic_de VALUES ('8854', '0', '56061974', 'Volksbank Nahetal -alt-');
-INSERT INTO static_bic_de VALUES ('8855', '0', '56062227', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('8860', '0', '56062577', 'Vereinigte Raiffeisenkassen');
-INSERT INTO static_bic_de VALUES ('8867', '0', '56070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8868', '0', '56070040', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8869', '0', '56090000', 'Volksbank Nahetal');
-INSERT INTO static_bic_de VALUES ('8893', '0', '56240050', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8895', '0', '56250030', 'Kreissparkasse Birkenfeld');
-INSERT INTO static_bic_de VALUES ('8919', '0', '56261073', 'Volksbank Kirn-Sobernheim -alt-');
-INSERT INTO static_bic_de VALUES ('8920', '0', '56261735', 'Raiffeisenbank Nahe');
-INSERT INTO static_bic_de VALUES ('8929', '0', '56270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('8930', '0', '56270044', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('8931', '0', '56290000', 'Volksbank-Raiffeisenbank Naheland');
-INSERT INTO static_bic_de VALUES ('8943', '0', '57000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('8944', '0', '57010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('8946', '0', '57020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('8947', '0', '57020301', 'MKB Mittelrheinische Bank');
-INSERT INTO static_bic_de VALUES ('8948', '0', '57020500', 'Oyak Anker Bank');
-INSERT INTO static_bic_de VALUES ('8954', '0', '57020600', 'Debeka Bausparkasse');
-INSERT INTO static_bic_de VALUES ('8955', '0', '57040044', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('8959', '0', '57050120', 'Sparkasse Koblenz');
-INSERT INTO static_bic_de VALUES ('8982', '0', '57051001', 'Kreissparkasse Westerwald');
-INSERT INTO static_bic_de VALUES ('9067', '0', '57051870', 'Kreissparkasse Cochem-Zell -alt-');
-INSERT INTO static_bic_de VALUES ('9068', '0', '57060000', 'WGZ Bank');
-INSERT INTO static_bic_de VALUES ('9069', '0', '57060612', 'apoBank');
-INSERT INTO static_bic_de VALUES ('9071', '0', '57062675', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('9077', '0', '57063478', 'Volksbank Vallendar-Niederwerth');
-INSERT INTO static_bic_de VALUES ('9080', '0', '57064221', 'Volksbank Mülheim-Kärlich');
-INSERT INTO static_bic_de VALUES ('9082', '0', '57069067', 'Raiffeisenbank Lutzerather Höhe');
-INSERT INTO static_bic_de VALUES ('9088', '0', '57069081', 'Raiffeisenbank Moselkrampen');
-INSERT INTO static_bic_de VALUES ('9094', '0', '57069126', 'Raiffeisenbank Koblenz-Horchheim -alt-');
-INSERT INTO static_bic_de VALUES ('9095', '0', '57069144', 'Raiffeisenbank Kaisersesch');
-INSERT INTO static_bic_de VALUES ('9106', '0', '57069238', 'Raiffeisenbank Neustadt');
-INSERT INTO static_bic_de VALUES ('9113', '0', '57069257', 'Raiffeisenbank Untermosel');
-INSERT INTO static_bic_de VALUES ('9114', '0', '57069315', 'Raiffeisenbank Straßenhaus -alt-');
-INSERT INTO static_bic_de VALUES ('9115', '0', '57069361', 'Raiffeisenbank Welling');
-INSERT INTO static_bic_de VALUES ('9117', '0', '57069526', 'Raiffeisenbank Idarwald -alt-');
-INSERT INTO static_bic_de VALUES ('9118', '0', '57069727', 'Raiffeisenbank Irrel');
-INSERT INTO static_bic_de VALUES ('9122', '0', '57069806', 'VR-Bank Hunsrück-Mosel');
-INSERT INTO static_bic_de VALUES ('9135', '0', '57069858', 'Raiffeisenbank Pronsfeld-Waxweiler Gs -alt-');
-INSERT INTO static_bic_de VALUES ('9141', '0', '57070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('9147', '0', '57070045', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('9153', '0', '57080070', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('9157', '0', '57090000', 'Volksbank Koblenz Mittelrhein');
-INSERT INTO static_bic_de VALUES ('9162', '0', '57090900', 'PSD Bank Koblenz');
-INSERT INTO static_bic_de VALUES ('9164', '0', '57091000', 'Volksbank Montabaur-Höhr-Grenzhausen');
-INSERT INTO static_bic_de VALUES ('9173', '0', '57091100', 'Volksbank Höhr-Grenzhausen -alt-');
-INSERT INTO static_bic_de VALUES ('9174', '0', '57091500', 'Volksbank Boppard');
-INSERT INTO static_bic_de VALUES ('9181', '0', '57092400', 'Kauber Volksbank');
-INSERT INTO static_bic_de VALUES ('9182', '0', '57092800', 'Volksbank Rhein-Lahn');
-INSERT INTO static_bic_de VALUES ('9209', '0', '57263015', 'Raiffeisenbank Unterwesterwald');
-INSERT INTO static_bic_de VALUES ('9214', '0', '57351030', 'Kreissparkasse Altenkirchen');
-INSERT INTO static_bic_de VALUES ('9239', '0', '57361476', 'Volksbank Gebhardshain');
-INSERT INTO static_bic_de VALUES ('9245', '0', '57363243', 'Raiffeisenbank Niederfischbach -alt-');
-INSERT INTO static_bic_de VALUES ('9247', '0', '57391200', 'Volksbank Daaden');
-INSERT INTO static_bic_de VALUES ('9252', '0', '57391500', 'Volksbank Hamm, Sieg');
-INSERT INTO static_bic_de VALUES ('9256', '0', '57391800', 'Westerwald Bank');
-INSERT INTO static_bic_de VALUES ('9293', '0', '57400000', 'Bundesbank eh Neuwied');
-INSERT INTO static_bic_de VALUES ('9294', '0', '57450120', 'Sparkasse Neuwied');
-INSERT INTO static_bic_de VALUES ('9323', '0', '57451410', 'Stadtsparkasse Linz -alt-');
-INSERT INTO static_bic_de VALUES ('9324', '0', '57460117', 'Volks- und Raiffeisenbank Neuwied-Linz');
-INSERT INTO static_bic_de VALUES ('9337', '0', '57461400', 'Volksbank Linz');
-INSERT INTO static_bic_de VALUES ('9338', '0', '57461759', 'Raiffeisenbank Mittelrhein');
-INSERT INTO static_bic_de VALUES ('9347', '0', '57470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('9351', '0', '57470047', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('9355', '0', '57650010', 'Kreissparkasse Mayen');
-INSERT INTO static_bic_de VALUES ('9383', '0', '57661253', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('9386', '0', '57662263', 'VR Bank Rhein-Mosel');
-INSERT INTO static_bic_de VALUES ('9414', '0', '57751310', 'Kreissparkasse Ahrweiler');
-INSERT INTO static_bic_de VALUES ('9438', '0', '57761591', 'Volksbank RheinAhrEifel');
-INSERT INTO static_bic_de VALUES ('9472', '0', '57762265', 'Raiffeisenbank Grafschaft-Wachtberg');
-INSERT INTO static_bic_de VALUES ('9477', '0', '58500000', 'Bundesbank eh Trier');
-INSERT INTO static_bic_de VALUES ('9478', '0', '58510111', 'SEB');
-INSERT INTO static_bic_de VALUES ('9479', '0', '58520086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('9480', '0', '58540035', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('9482', '0', '58550130', 'Sparkasse Trier');
-INSERT INTO static_bic_de VALUES ('9527', '0', '58560103', 'Volksbank Trier');
-INSERT INTO static_bic_de VALUES ('9542', '0', '58560294', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('9543', '0', '58561250', 'Volksbank Hermeskeil -alt-');
-INSERT INTO static_bic_de VALUES ('9544', '0', '58561594', 'Raiffeisenbank Schweich -alt-');
-INSERT INTO static_bic_de VALUES ('9545', '0', '58561626', 'Volksbank Saarburg');
-INSERT INTO static_bic_de VALUES ('9556', '0', '58561771', 'Raiffeisenbank Mehring-Leiwen');
-INSERT INTO static_bic_de VALUES ('9561', '0', '58564788', 'Volksbank Hochwald');
-INSERT INTO static_bic_de VALUES ('9571', '0', '58570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('9574', '0', '58570048', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('9577', '0', '58580074', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('9579', '0', '58590900', 'PSD Bank Trier Ndl der PSD Bank Köln');
-INSERT INTO static_bic_de VALUES ('9580', '0', '58650030', 'Kreissparkasse Bitburg-Prüm');
-INSERT INTO static_bic_de VALUES ('9605', '0', '58651240', 'Kreissparkasse Vulkaneifel');
-INSERT INTO static_bic_de VALUES ('9619', '0', '58660101', 'Volksbank Bitburg');
-INSERT INTO static_bic_de VALUES ('9635', '0', '58661901', 'Raiffeisenbank Westeifel');
-INSERT INTO static_bic_de VALUES ('9648', '0', '58662653', 'Raiffeisenbank östl Südeifel');
-INSERT INTO static_bic_de VALUES ('9660', '0', '58668818', 'Raiffeisenbank Neuerburg-Land -alt-');
-INSERT INTO static_bic_de VALUES ('9661', '0', '58691500', 'Volksbank Eifel Mitte');
-INSERT INTO static_bic_de VALUES ('9677', '0', '58751230', 'Sparkasse Mittelmosel-Eifel Mosel Hunsrück');
-INSERT INTO static_bic_de VALUES ('9678', '0', '58760954', 'Vereinigte Volksbank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('9697', '0', '58761343', 'Raiffeisenbank Zeller Land');
-INSERT INTO static_bic_de VALUES ('9705', '0', '58771224', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('9708', '0', '58771242', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('9711', '0', '58790100', 'Vereinigte Volksbank');
-INSERT INTO static_bic_de VALUES ('9713', '0', '59000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('9714', '0', '59010011', 'ZVC Postbank Gf FK 11');
-INSERT INTO static_bic_de VALUES ('9715', '0', '59010012', 'ZVC Postbank Gf FK 12');
-INSERT INTO static_bic_de VALUES ('9716', '0', '59010013', 'ZVC Postbank Gf FK 13');
-INSERT INTO static_bic_de VALUES ('9717', '0', '59010014', 'ZVC Postbank Gf FK 14');
-INSERT INTO static_bic_de VALUES ('9718', '0', '59010015', 'ZVC Postbank Gf FK 15');
-INSERT INTO static_bic_de VALUES ('9719', '0', '59010016', 'ZVC Postbank Gf FK 16');
-INSERT INTO static_bic_de VALUES ('9720', '0', '59010017', 'ZVC Postbank Gf FK 17');
-INSERT INTO static_bic_de VALUES ('9721', '0', '59010018', 'ZVC Postbank Gf FK 18');
-INSERT INTO static_bic_de VALUES ('9722', '0', '59010019', 'ZVC Postbank Gf FK 19');
-INSERT INTO static_bic_de VALUES ('9723', '0', '59010066', 'Postbank');
-INSERT INTO static_bic_de VALUES ('9724', '0', '59010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('9725', '0', '59010400', 'Saarl Investitionskreditbank');
-INSERT INTO static_bic_de VALUES ('9726', '0', '59020090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('9736', '0', '59020700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('9737', '0', '59040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('9743', '0', '59050000', 'Landesbank Saar');
-INSERT INTO static_bic_de VALUES ('9744', '0', '59050101', 'Sparkasse Saarbrücken');
-INSERT INTO static_bic_de VALUES ('9753', '0', '59051090', 'Stadtsparkasse Völklingen');
-INSERT INTO static_bic_de VALUES ('9754', '0', '59052020', 'SKG BANK');
-INSERT INTO static_bic_de VALUES ('9755', '0', '59070000', 'Deutsche Bank Saarbruecken');
-INSERT INTO static_bic_de VALUES ('9756', '0', '59070070', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('9764', '0', '59080090', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('9768', '0', '59090500', 'Sparda-Bank Saarbrücken -alt-');
-INSERT INTO static_bic_de VALUES ('9769', '0', '59090626', 'apoBank');
-INSERT INTO static_bic_de VALUES ('9770', '0', '59090900', 'PSD Bank RheinNeckarSaar');
-INSERT INTO static_bic_de VALUES ('9771', '0', '59091000', 'Volksbank Völklingen-Warndt');
-INSERT INTO static_bic_de VALUES ('9772', '0', '59091500', 'Volksbank Sulzbachtal -alt-');
-INSERT INTO static_bic_de VALUES ('9773', '0', '59091800', 'Volksbank Quierschied -alt-');
-INSERT INTO static_bic_de VALUES ('9774', '0', '59092000', 'Volksbank Dudweiler');
-INSERT INTO static_bic_de VALUES ('9781', '0', '59099330', 'Volksbank Nonnweiler');
-INSERT INTO static_bic_de VALUES ('9783', '0', '59099480', 'Volksbank Urexweiler-Marpingen -alt-');
-INSERT INTO static_bic_de VALUES ('9784', '0', '59099530', 'Raiffeisenkasse Wiesbach');
-INSERT INTO static_bic_de VALUES ('9786', '0', '59099550', 'Volksbank Nahe-Schaumberg');
-INSERT INTO static_bic_de VALUES ('9789', '0', '59190000', 'Bank 1 Saar');
-INSERT INTO static_bic_de VALUES ('9819', '0', '59190100', 'VVBS Ver. Volksbanken Saarbrücken-St Ingbert');
-INSERT INTO static_bic_de VALUES ('9820', '0', '59190200', 'Volksbank Saar-West');
-INSERT INTO static_bic_de VALUES ('9831', '0', '59251020', 'Kreissparkasse St. Wendel');
-INSERT INTO static_bic_de VALUES ('9839', '0', '59252046', 'Sparkasse Neunkirchen');
-INSERT INTO static_bic_de VALUES ('9846', '0', '59290100', 'Volksbank Neunkirchen');
-INSERT INTO static_bic_de VALUES ('9847', '0', '59291000', 'St. Wendeler Volksbank');
-INSERT INTO static_bic_de VALUES ('9857', '0', '59291200', 'Volksbank Saarpfalz');
-INSERT INTO static_bic_de VALUES ('9865', '0', '59291300', 'Volksbank Spiesen-Elversberg -alt-');
-INSERT INTO static_bic_de VALUES ('9866', '0', '59292400', 'Eppelborner Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('9867', '0', '59300000', 'Bundesbank eh Saarlouis');
-INSERT INTO static_bic_de VALUES ('9868', '0', '59320087', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('9869', '0', '59350110', 'Kreissparkasse Saarlouis');
-INSERT INTO static_bic_de VALUES ('9882', '0', '59351040', 'Sparkasse Merzig-Wadern');
-INSERT INTO static_bic_de VALUES ('9889', '0', '59390100', 'Volksbank Saarlouis');
-INSERT INTO static_bic_de VALUES ('9895', '0', '59391100', 'Volksbank Untere Saar');
-INSERT INTO static_bic_de VALUES ('9898', '0', '59391200', 'Volksbank Überherrn');
-INSERT INTO static_bic_de VALUES ('9900', '0', '59391800', 'Volksbank Wadgassen');
-INSERT INTO static_bic_de VALUES ('9902', '0', '59392000', 'Volksbank Dillingen');
-INSERT INTO static_bic_de VALUES ('9907', '0', '59392200', 'Volksbank Untere Saar');
-INSERT INTO static_bic_de VALUES ('9912', '0', '59392400', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('9916', '0', '59393000', 'LevoBank Vereinte VB Lebach Eppelborn');
-INSERT INTO static_bic_de VALUES ('9923', '0', '59394200', 'Volksbank Schmelz-Hüttersdorf');
-INSERT INTO static_bic_de VALUES ('9924', '0', '59450010', 'Kreissparkasse Saarpfalz');
-INSERT INTO static_bic_de VALUES ('9931', '0', '59491000', 'Volksbank Homburg -alt-');
-INSERT INTO static_bic_de VALUES ('9932', '0', '59491114', 'VR Bank Saarpfalz');
-INSERT INTO static_bic_de VALUES ('9933', '0', '59491200', 'Volksbank Blieskastel -alt-');
-INSERT INTO static_bic_de VALUES ('9934', '0', '59491300', 'VR Bank Saarpfalz');
-INSERT INTO static_bic_de VALUES ('9940', '0', '60000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('9941', '0', '60010070', 'Postbank');
-INSERT INTO static_bic_de VALUES ('9942', '0', '60010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('9945', '0', '60010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('9946', '0', '60010500', 'Hypo Real Estate Bank');
-INSERT INTO static_bic_de VALUES ('9947', '0', '60010700', 'Landeskreditbank Baden-Württemberg Förderbank -alt-');
-INSERT INTO static_bic_de VALUES ('9948', '0', '60020030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('9949', '0', '60020100', 'Schwäbische Bank');
-INSERT INTO static_bic_de VALUES ('9950', '0', '60020290', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('9956', '0', '60020300', 'VON ESSEN Bankgesellschaft');
-INSERT INTO static_bic_de VALUES ('9957', '0', '60020700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('9958', '0', '60020800', 'Emporiki Bank - Germany');
-INSERT INTO static_bic_de VALUES ('9959', '0', '60030000', 'Mercedes-Benz Bank');
-INSERT INTO static_bic_de VALUES ('9960', '0', '60030100', 'Bankhaus Bauer');
-INSERT INTO static_bic_de VALUES ('9961', '0', '60030200', 'Bankhaus Ellwanger & Geiger');
-INSERT INTO static_bic_de VALUES ('9962', '0', '60030600', 'CreditPlus Bank');
-INSERT INTO static_bic_de VALUES ('9972', '0', '60030700', 'AKTIVBANK');
-INSERT INTO static_bic_de VALUES ('9973', '0', '60030900', 'Isbank Fil Stuttgart');
-INSERT INTO static_bic_de VALUES ('9974', '0', '60033000', 'Wüstenrot Bausparkasse');
-INSERT INTO static_bic_de VALUES ('9975', '0', '60035810', 'IBM Deutschland Kreditbank');
-INSERT INTO static_bic_de VALUES ('9976', '0', '60040071', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('9983', '0', '60050000', 'Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('9984', '0', '60050009', 'ZV Landesbank Baden-Württemberg ISE');
-INSERT INTO static_bic_de VALUES ('9985', '0', '60050101', 'Landesbank Baden-Württemberg/Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10086', '0', '60060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('10087', '0', '60060396', 'Untertürkheimer Volksbank');
-INSERT INTO static_bic_de VALUES ('10089', '0', '60060497', 'Volksbank Weilimdorf -alt-');
-INSERT INTO static_bic_de VALUES ('10090', '0', '60060606', 'Evangelische Kreditgenossenschaft -Filiale Stuttgart-');
-INSERT INTO static_bic_de VALUES ('10091', '0', '60060893', 'VR-Bank Stuttgart');
-INSERT INTO static_bic_de VALUES ('10094', '0', '60062775', 'Echterdinger Bank');
-INSERT INTO static_bic_de VALUES ('10096', '0', '60062909', 'Volksbank Strohgäu');
-INSERT INTO static_bic_de VALUES ('10101', '0', '60069017', 'Raiffeisenbank Dellmensingen');
-INSERT INTO static_bic_de VALUES ('10104', '0', '60069066', 'Raiffeisenbank Niedere Alb');
-INSERT INTO static_bic_de VALUES ('10109', '0', '60069075', 'Raiffeisenbank Vellberg-Großaltdorf');
-INSERT INTO static_bic_de VALUES ('10111', '0', '60069126', 'Raiffeisenbank Römerstein -alt-');
-INSERT INTO static_bic_de VALUES ('10113', '0', '60069147', 'Raiffeisenbank Sondelfingen');
-INSERT INTO static_bic_de VALUES ('10115', '0', '60069158', 'Raiffeisenbank Steinheim');
-INSERT INTO static_bic_de VALUES ('10118', '0', '60069206', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10120', '0', '60069224', 'Genossenschaftsbank Weil im Schönbuch');
-INSERT INTO static_bic_de VALUES ('10122', '0', '60069235', 'Raiffeisenbank Zndl VB Nordschwarzwald');
-INSERT INTO static_bic_de VALUES ('10123', '0', '60069239', 'Bopfinger Bank Sechta-Ries');
-INSERT INTO static_bic_de VALUES ('10129', '0', '60069242', 'Raiffeisenbank Gruibingen');
-INSERT INTO static_bic_de VALUES ('10131', '0', '60069245', 'Raiffeisenbank Oberes Bühlertal');
-INSERT INTO static_bic_de VALUES ('10134', '0', '60069251', 'Raiffeisenbank Donau-Iller');
-INSERT INTO static_bic_de VALUES ('10144', '0', '60069280', 'Raiffeisenbank Pfedelbach -alt-');
-INSERT INTO static_bic_de VALUES ('10145', '0', '60069302', 'Raiffeisenbank Erlenmoos');
-INSERT INTO static_bic_de VALUES ('10147', '0', '60069303', 'Raiffeisenbank Bad Schussenried');
-INSERT INTO static_bic_de VALUES ('10149', '0', '60069305', 'Raiffeisenbank Härtsfeld -alt-');
-INSERT INTO static_bic_de VALUES ('10150', '0', '60069308', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10152', '0', '60069315', 'Volksbank Freiberg und Umgebung');
-INSERT INTO static_bic_de VALUES ('10153', '0', '60069317', 'Raiffeisenbank Essingen -alt-');
-INSERT INTO static_bic_de VALUES ('10154', '0', '60069325', 'Hegnacher Bank');
-INSERT INTO static_bic_de VALUES ('10156', '0', '60069336', 'Raiffeisenbank Maitis');
-INSERT INTO static_bic_de VALUES ('10158', '0', '60069343', 'Raiffeisenbank Rißtal');
-INSERT INTO static_bic_de VALUES ('10160', '0', '60069346', 'Raiffeisenbank Ehingen (Donau)');
-INSERT INTO static_bic_de VALUES ('10165', '0', '60069350', 'Raiffeisenbank Reute-Gaisbeuren');
-INSERT INTO static_bic_de VALUES ('10167', '0', '60069355', 'Ehninger Bank');
-INSERT INTO static_bic_de VALUES ('10169', '0', '60069357', 'Raiffeisenbank Rottal');
-INSERT INTO static_bic_de VALUES ('10170', '0', '60069371', 'Raiffbk Neukirch Ndl d Volksbank Tettnang');
-INSERT INTO static_bic_de VALUES ('10171', '0', '60069378', 'Volksbank Dettenhausen');
-INSERT INTO static_bic_de VALUES ('10173', '0', '60069383', 'Raiffeisenbank Dewangen -alt-');
-INSERT INTO static_bic_de VALUES ('10174', '0', '60069387', 'Dettinger Bank');
-INSERT INTO static_bic_de VALUES ('10176', '0', '60069417', 'Raiffeisenbank Kirchheim-Walheim');
-INSERT INTO static_bic_de VALUES ('10178', '0', '60069419', 'Uhlbacher Bank');
-INSERT INTO static_bic_de VALUES ('10180', '0', '60069420', 'Raiffeisenbank Mittelbiberach');
-INSERT INTO static_bic_de VALUES ('10181', '0', '60069431', 'Raiffeisenbank Oberessendorf');
-INSERT INTO static_bic_de VALUES ('10183', '0', '60069442', 'Raiffeisenbank Frankenhardt-Stimpfach');
-INSERT INTO static_bic_de VALUES ('10186', '0', '60069455', 'Raiffeisenbank Vordersteinenberg');
-INSERT INTO static_bic_de VALUES ('10188', '0', '60069457', 'Raiffeisenbank Ottenbach');
-INSERT INTO static_bic_de VALUES ('10190', '0', '60069461', 'Raiffeisenbank Rottumtal');
-INSERT INTO static_bic_de VALUES ('10195', '0', '60069462', 'Winterbacher Bank');
-INSERT INTO static_bic_de VALUES ('10197', '0', '60069463', 'Raiffeisenbank Geislingen-Rosenfeld');
-INSERT INTO static_bic_de VALUES ('10198', '0', '60069476', 'Raiffeisenbank Heidenheimer Alb');
-INSERT INTO static_bic_de VALUES ('10201', '0', '60069485', 'Raiffeisenbank Oberer Wald');
-INSERT INTO static_bic_de VALUES ('10204', '0', '60069505', 'Volksbank Murgtal Baiersbr-Klosterreichenbach');
-INSERT INTO static_bic_de VALUES ('10206', '0', '60069511', 'Genossenschaftsbank Honhardt');
-INSERT INTO static_bic_de VALUES ('10207', '0', '60069517', 'Scharnhauser Bank');
-INSERT INTO static_bic_de VALUES ('10209', '0', '60069520', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10210', '0', '60069527', 'Volksbank Brenztal');
-INSERT INTO static_bic_de VALUES ('10216', '0', '60069538', 'Löchgauer Bank');
-INSERT INTO static_bic_de VALUES ('10219', '0', '60069544', 'Raiffeisenbank Westhausen');
-INSERT INTO static_bic_de VALUES ('10222', '0', '60069545', 'Nufringer Bank -Raiffeisen-');
-INSERT INTO static_bic_de VALUES ('10224', '0', '60069549', 'Walheimer Bank');
-INSERT INTO static_bic_de VALUES ('10225', '0', '60069553', 'Raiffeisenbank Aichhalden-Hardt-Sulgen');
-INSERT INTO static_bic_de VALUES ('10229', '0', '60069564', 'Raiffeisenbank Vordere Alb');
-INSERT INTO static_bic_de VALUES ('10232', '0', '60069593', 'Raiffeisenbank Oberes Schlichemtal');
-INSERT INTO static_bic_de VALUES ('10239', '0', '60069595', 'Raiffeisenbank Schrozberg-Rot am See');
-INSERT INTO static_bic_de VALUES ('10244', '0', '60069639', 'Raiffeisenbank Ingersheim');
-INSERT INTO static_bic_de VALUES ('10246', '0', '60069647', 'Ebhauser Bank -Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('10247', '0', '60069648', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10252', '0', '60069669', 'Erligheimer Bank -alt-');
-INSERT INTO static_bic_de VALUES ('10253', '0', '60069670', 'Raiffeisenbank Hochsträß Pappelau');
-INSERT INTO static_bic_de VALUES ('10257', '0', '60069673', 'Abtsgmünder Bank -Raiffeisen-');
-INSERT INTO static_bic_de VALUES ('10260', '0', '60069680', 'Raiffeisenbank Bretzfeld-Neuenstein');
-INSERT INTO static_bic_de VALUES ('10263', '0', '60069685', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10268', '0', '60069692', 'Raiffeisenbank Enzberg');
-INSERT INTO static_bic_de VALUES ('10269', '0', '60069699', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10270', '0', '60069705', 'Raiffeisenbank Schlat -alt-');
-INSERT INTO static_bic_de VALUES ('10271', '0', '60069706', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10274', '0', '60069710', 'Raiffeisenbank Gammesfeld');
-INSERT INTO static_bic_de VALUES ('10276', '0', '60069714', 'Raiffeisenbank Kocher-Jagst');
-INSERT INTO static_bic_de VALUES ('10283', '0', '60069716', 'Raiffeisenbank Nattheim');
-INSERT INTO static_bic_de VALUES ('10285', '0', '60069724', 'Raiffeisenbank Heroldstatt');
-INSERT INTO static_bic_de VALUES ('10287', '0', '60069727', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10289', '0', '60069738', 'Volksbank Freiberg und Umgebung');
-INSERT INTO static_bic_de VALUES ('10291', '0', '60069766', 'Volks- und Raiffeisenbank Boll -alt-');
-INSERT INTO static_bic_de VALUES ('10292', '0', '60069773', 'Raiffeisenbank Kreßberg -alt-');
-INSERT INTO static_bic_de VALUES ('10293', '0', '60069780', 'Genossenschaftsbank Grabenstetten');
-INSERT INTO static_bic_de VALUES ('10294', '0', '60069795', 'Volksbank Freiberg und Umgebung');
-INSERT INTO static_bic_de VALUES ('10295', '0', '60069798', 'Raiffeisenbank Horb');
-INSERT INTO static_bic_de VALUES ('10298', '0', '60069817', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10300', '0', '60069832', 'Raiffeisenbank Urbach');
-INSERT INTO static_bic_de VALUES ('10302', '0', '60069842', 'Darmsheimer Bank');
-INSERT INTO static_bic_de VALUES ('10304', '0', '60069858', 'Enztalbank');
-INSERT INTO static_bic_de VALUES ('10308', '0', '60069860', 'Federseebank');
-INSERT INTO static_bic_de VALUES ('10314', '0', '60069876', 'Raiffeisenbank Oberes Gäu Ergenzingen');
-INSERT INTO static_bic_de VALUES ('10318', '0', '60069896', 'Volksbank Freiberg und Umgebung');
-INSERT INTO static_bic_de VALUES ('10319', '0', '60069904', 'VR-Bank Alb');
-INSERT INTO static_bic_de VALUES ('10325', '0', '60069905', 'Volksbank Remseck');
-INSERT INTO static_bic_de VALUES ('10327', '0', '60069911', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10329', '0', '60069926', 'Volksbank Glatten-Wittendorf');
-INSERT INTO static_bic_de VALUES ('10332', '0', '60069927', 'Berkheimer Bank');
-INSERT INTO static_bic_de VALUES ('10334', '0', '60069931', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10336', '0', '60069950', 'Raiffeisenbank Tüngental');
-INSERT INTO static_bic_de VALUES ('10338', '0', '60069971', 'Raiffeisenbank Oberdischingen-Donaurieden');
-INSERT INTO static_bic_de VALUES ('10340', '0', '60069972', 'Raiffeisenbank Sechta-Ries');
-INSERT INTO static_bic_de VALUES ('10341', '0', '60069976', 'Raiffeisenbank Böllingertal');
-INSERT INTO static_bic_de VALUES ('10344', '0', '60069980', 'Raiffeisenbank Maselheim-Äpfingen');
-INSERT INTO static_bic_de VALUES ('10345', '0', '60070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10351', '0', '60070070', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10357', '0', '60080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('10366', '0', '60080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('10367', '0', '60080057', 'Commerzbank vormals Dresdner Bank Gf Zw 57');
-INSERT INTO static_bic_de VALUES ('10368', '0', '60080085', 'Commerzbank vormals Dresdner Bank ITGK 2');
-INSERT INTO static_bic_de VALUES ('10369', '0', '60080086', 'Commerzbank vormals Dresdner Bank Gf PCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('10370', '0', '60080087', 'Commerzbank vormals Dresdner Bank, PCC DC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('10371', '0', '60080088', 'Commerzbank vormals Dresdner Bank, PCC DC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('10372', '0', '60089450', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('10373', '0', '60090100', 'Stuttgarter Volksbank');
-INSERT INTO static_bic_de VALUES ('10380', '0', '60090300', 'Volksbank Zuffenhausen m Zndl Stammheimer VB');
-INSERT INTO static_bic_de VALUES ('10382', '0', '60090500', 'Württ. Handelsbank - Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('10383', '0', '60090609', 'apoBank');
-INSERT INTO static_bic_de VALUES ('10384', '0', '60090700', 'Südwestbank');
-INSERT INTO static_bic_de VALUES ('10411', '0', '60090800', 'Sparda-Bank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('10421', '0', '60090900', 'PSD Bank RheinNeckarSaar');
-INSERT INTO static_bic_de VALUES ('10422', '0', '60120050', 'Bayer Hypo- und Vereinsbank Ndl 434 Stgt');
-INSERT INTO static_bic_de VALUES ('10423', '0', '60120200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('10424', '0', '60120500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('10425', '0', '60130100', 'FFS Bank');
-INSERT INTO static_bic_de VALUES ('10426', '0', '60200000', 'Bundesbank eh Waiblingen');
-INSERT INTO static_bic_de VALUES ('10427', '0', '60220030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10428', '0', '60241074', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('10429', '0', '60250010', 'Kreissparkasse Waiblingen');
-INSERT INTO static_bic_de VALUES ('10460', '0', '60250184', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('10461', '0', '60261329', 'Fellbacher Bank');
-INSERT INTO static_bic_de VALUES ('10463', '0', '60261622', 'VR-Bank Weinstadt');
-INSERT INTO static_bic_de VALUES ('10465', '0', '60261818', 'Raiffeisenbank Weissacher Tal');
-INSERT INTO static_bic_de VALUES ('10468', '0', '60262063', 'Korber Bank');
-INSERT INTO static_bic_de VALUES ('10470', '0', '60262693', 'Kerner Volksbank');
-INSERT INTO static_bic_de VALUES ('10472', '0', '60270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10476', '0', '60270073', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10480', '0', '60290110', 'Volksbank Rems');
-INSERT INTO static_bic_de VALUES ('10496', '0', '60291120', 'Volksbank Backnang');
-INSERT INTO static_bic_de VALUES ('10511', '0', '60291410', 'Volksbank Schorndorf');
-INSERT INTO static_bic_de VALUES ('10512', '0', '60291510', 'Volksbank Winnenden');
-INSERT INTO static_bic_de VALUES ('10517', '0', '60300000', 'Bundesbank eh Sindelfingen');
-INSERT INTO static_bic_de VALUES ('10518', '0', '60320030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10519', '0', '60320291', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('10520', '0', '60340071', 'Commerzbank Sindelfingen');
-INSERT INTO static_bic_de VALUES ('10521', '0', '60350130', 'Kreissparkasse Böblingen');
-INSERT INTO static_bic_de VALUES ('10547', '0', '60361923', 'Raiffeisenbank Weissach');
-INSERT INTO static_bic_de VALUES ('10550', '0', '60380002', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('10553', '0', '60390000', 'Vereinigte Volksbank');
-INSERT INTO static_bic_de VALUES ('10571', '0', '60390300', 'Volksbank Region Leonberg');
-INSERT INTO static_bic_de VALUES ('10578', '0', '60391310', 'Volksbank Herrenberg-Rottenburg');
-INSERT INTO static_bic_de VALUES ('10585', '0', '60391420', 'Volksbank Magstadt');
-INSERT INTO static_bic_de VALUES ('10587', '0', '60400000', 'Bundesbank eh Ludwigsburg');
-INSERT INTO static_bic_de VALUES ('10588', '0', '60410600', 'Wüstenrot Bank Pfandbriefbk ehe Wüstenrot Hypo');
-INSERT INTO static_bic_de VALUES ('10589', '0', '60420000', 'Wüstenrot Bank Pfandbriefbank');
-INSERT INTO static_bic_de VALUES ('10614', '0', '60420186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('10615', '0', '60422000', 'RSB Retail + Service Bank');
-INSERT INTO static_bic_de VALUES ('10616', '0', '60430060', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10617', '0', '60431061', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10618', '0', '60440073', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('10620', '0', '60450050', 'Kreissparkasse Ludwigsburg');
-INSERT INTO static_bic_de VALUES ('10659', '0', '60450193', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('10660', '0', '60460142', 'Volksbank Freiberg und Umgebung');
-INSERT INTO static_bic_de VALUES ('10661', '0', '60461809', 'Volksbank Markgröningen');
-INSERT INTO static_bic_de VALUES ('10662', '0', '60462808', 'VR-Bank Asperg-Markgröningen');
-INSERT INTO static_bic_de VALUES ('10670', '0', '60470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10677', '0', '60470082', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10684', '0', '60480008', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('10686', '0', '60490150', 'Volksbank Ludwigsburg');
-INSERT INTO static_bic_de VALUES ('10702', '0', '60491430', 'VR-Bank Stromberg-Neckar');
-INSERT INTO static_bic_de VALUES ('10713', '0', '60651070', 'Kreissparkasse Calw -alt-');
-INSERT INTO static_bic_de VALUES ('10715', '0', '60661369', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('10721', '0', '60661906', 'Raiffeisenbank Wimsheim-Mönsheim');
-INSERT INTO static_bic_de VALUES ('10724', '0', '60663084', 'Raiffeisenbank im Kreis Calw');
-INSERT INTO static_bic_de VALUES ('10734', '0', '60670024', 'Deutsche Bank Privat- und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10735', '0', '60670070', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10736', '0', '60691440', 'Volksbank Maulbronn-Oberderdingen -alt-');
-INSERT INTO static_bic_de VALUES ('10742', '0', '61020030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10743', '0', '61030000', 'Bankhaus Gebr. Martin');
-INSERT INTO static_bic_de VALUES ('10744', '0', '61040014', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('10746', '0', '61050000', 'Kreissparkasse Göppingen');
-INSERT INTO static_bic_de VALUES ('10784', '0', '61050181', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('10785', '0', '61060500', 'Volksbank Göppingen');
-INSERT INTO static_bic_de VALUES ('10805', '0', '61070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10808', '0', '61070078', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10811', '0', '61080006', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('10812', '0', '61091200', 'Volksbank-Raiffeisenbank Deggingen');
-INSERT INTO static_bic_de VALUES ('10818', '0', '61100000', 'Bundesbank eh Esslingen');
-INSERT INTO static_bic_de VALUES ('10819', '0', '61120030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10820', '0', '61120286', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('10821', '0', '61140071', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('10823', '0', '61150020', 'Kreissparkasse Esslingen-Nürtingen');
-INSERT INTO static_bic_de VALUES ('10867', '0', '61150185', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('10868', '0', '61161696', 'Volksbank Filder');
-INSERT INTO static_bic_de VALUES ('10871', '0', '61170024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10875', '0', '61170076', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10879', '0', '61180004', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('10881', '0', '61190110', 'Volksbank Esslingen');
-INSERT INTO static_bic_de VALUES ('10886', '0', '61191310', 'Volksbank Plochingen');
-INSERT INTO static_bic_de VALUES ('10895', '0', '61220030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10896', '0', '61261213', 'Raiffeisenbank Teck');
-INSERT INTO static_bic_de VALUES ('10903', '0', '61261339', 'Volksbank Hohenneuffen');
-INSERT INTO static_bic_de VALUES ('10909', '0', '61262258', 'Genossenschaftsbank Wolfschlugen');
-INSERT INTO static_bic_de VALUES ('10911', '0', '61262345', 'Bernhauser Bank');
-INSERT INTO static_bic_de VALUES ('10913', '0', '61281007', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('10915', '0', '61290120', 'Volksbank Kirchheim-Nürtingen');
-INSERT INTO static_bic_de VALUES ('10932', '0', '61340079', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('10933', '0', '61361722', 'Raiffeisenbank Rosenstein');
-INSERT INTO static_bic_de VALUES ('10939', '0', '61361975', 'Raiffeisenbank Mutlangen');
-INSERT INTO static_bic_de VALUES ('10948', '0', '61370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('10956', '0', '61370086', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('10964', '0', '61390140', 'Volksbank Schwäbisch Gmünd');
-INSERT INTO static_bic_de VALUES ('10974', '0', '61391410', 'Volksbank Welzheim');
-INSERT INTO static_bic_de VALUES ('10977', '0', '61400000', 'Bundesbank eh Aalen');
-INSERT INTO static_bic_de VALUES ('10978', '0', '61420086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('10979', '0', '61430000', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('10980', '0', '61440086', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('10981', '0', '61450050', 'Kreissparkasse Ostalb');
-INSERT INTO static_bic_de VALUES ('11019', '0', '61450191', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11020', '0', '61460127', 'Raiffeisenbank Aalen-Unterrombach -alt-');
-INSERT INTO static_bic_de VALUES ('11021', '0', '61461958', 'Wasseralfinger Bank -alt-');
-INSERT INTO static_bic_de VALUES ('11022', '0', '61480001', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11023', '0', '61490150', 'VR-Bank Aalen');
-INSERT INTO static_bic_de VALUES ('11033', '0', '61491010', 'VR-Bank Ellwangen');
-INSERT INTO static_bic_de VALUES ('11042', '0', '62000000', 'Bundesbank eh Heilbronn');
-INSERT INTO static_bic_de VALUES ('11043', '0', '62020000', 'Hoerner-Bank');
-INSERT INTO static_bic_de VALUES ('11044', '0', '62020100', 'FGA Bank');
-INSERT INTO static_bic_de VALUES ('11045', '0', '62030050', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11046', '0', '62030058', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11047', '0', '62030059', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11048', '0', '62030060', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11049', '0', '62032000', 'Iveco Finance');
-INSERT INTO static_bic_de VALUES ('11050', '0', '62040060', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11051', '0', '62050000', 'Kreissparkasse Heilbronn');
-INSERT INTO static_bic_de VALUES ('11098', '0', '62050181', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11099', '0', '62061991', 'Volksbank Sulmtal');
-INSERT INTO static_bic_de VALUES ('11106', '0', '62062215', 'Volksbank Beilstein-Ilsfeld-Abstatt');
-INSERT INTO static_bic_de VALUES ('11112', '0', '62062643', 'Volksbank Flein-Talheim');
-INSERT INTO static_bic_de VALUES ('11116', '0', '62063263', 'VBU Volksbank im Unterland');
-INSERT INTO static_bic_de VALUES ('11123', '0', '62070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('11128', '0', '62070081', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('11133', '0', '62080012', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11135', '0', '62090100', 'Volksbank Heilbronn');
-INSERT INTO static_bic_de VALUES ('11146', '0', '62091400', 'Volksbank Brackenheim-Güglingen');
-INSERT INTO static_bic_de VALUES ('11152', '0', '62091600', 'Volksbank Möckmühl-Neuenstadt');
-INSERT INTO static_bic_de VALUES ('11162', '0', '62091800', 'Volksbank Hohenlohe');
-INSERT INTO static_bic_de VALUES ('11187', '0', '62200000', 'Bundesbank eh Schwäbisch Hall');
-INSERT INTO static_bic_de VALUES ('11188', '0', '62220000', 'Bausparkasse Schwäbisch Hall');
-INSERT INTO static_bic_de VALUES ('11189', '0', '62230050', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11190', '0', '62250030', 'Sparkasse Schwäbisch Hall-Crailsheim');
-INSERT INTO static_bic_de VALUES ('11220', '0', '62250182', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11221', '0', '62251550', 'Sparkasse Hohenlohekreis');
-INSERT INTO static_bic_de VALUES ('11237', '0', '62280012', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11238', '0', '62290110', 'VR Bank Schwäbisch Hall');
-INSERT INTO static_bic_de VALUES ('11254', '0', '62291020', 'Crailsheimer Volksbank');
-INSERT INTO static_bic_de VALUES ('11262', '0', '62351060', 'Kreissparkasse Mergentheim -alt-');
-INSERT INTO static_bic_de VALUES ('11263', '0', '62361274', 'Creglinger Bank');
-INSERT INTO static_bic_de VALUES ('11266', '0', '62391010', 'Volksbank Bad Mergentheim');
-INSERT INTO static_bic_de VALUES ('11269', '0', '62391420', 'Volksbank Vorbach-Tauber');
-INSERT INTO static_bic_de VALUES ('11272', '0', '63000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('11273', '0', '63010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('11276', '0', '63020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('11281', '0', '63020130', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11282', '0', '63020450', 'Bayer Hypo- und Vereinsbank Ndl 274 Ulm');
-INSERT INTO static_bic_de VALUES ('11283', '0', '63040053', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11286', '0', '63050000', 'Sparkasse Ulm');
-INSERT INTO static_bic_de VALUES ('11324', '0', '63050181', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11325', '0', '63061486', 'VR-Bank Langenau-Ulmer Alb');
-INSERT INTO static_bic_de VALUES ('11339', '0', '63070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('11342', '0', '63070088', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('11345', '0', '63080015', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11347', '0', '63080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('11348', '0', '63090100', 'Volksbank Ulm-Biberach');
-INSERT INTO static_bic_de VALUES ('11365', '0', '63091010', 'Ehinger Volksbank');
-INSERT INTO static_bic_de VALUES ('11374', '0', '63091200', 'Volksbank Blaubeuren');
-INSERT INTO static_bic_de VALUES ('11377', '0', '63091300', 'Volksbank Laichingen');
-INSERT INTO static_bic_de VALUES ('11385', '0', '63220090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('11386', '0', '63240016', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11387', '0', '63250030', 'Kreissparkasse Heidenheim');
-INSERT INTO static_bic_de VALUES ('11398', '0', '63290110', 'Heidenheimer Volksbank');
-INSERT INTO static_bic_de VALUES ('11406', '0', '63291210', 'Giengener Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('11408', '0', '64000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('11409', '0', '64020030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11410', '0', '64020186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('11411', '0', '64040033', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11412', '0', '64040045', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11413', '0', '64050000', 'Kreissparkasse Reutlingen');
-INSERT INTO static_bic_de VALUES ('11439', '0', '64050181', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11440', '0', '64061854', 'VR Bank Steinlach-Wiesaz-Härten');
-INSERT INTO static_bic_de VALUES ('11447', '0', '64070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('11454', '0', '64070085', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('11461', '0', '64080014', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11462', '0', '64090100', 'Volksbank Reutlingen');
-INSERT INTO static_bic_de VALUES ('11472', '0', '64091200', 'Volksbank Metzingen-Bad Urach');
-INSERT INTO static_bic_de VALUES ('11479', '0', '64091300', 'Volksbank Münsingen');
-INSERT INTO static_bic_de VALUES ('11485', '0', '64120030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11486', '0', '64140036', 'Commerzbank Tübingen');
-INSERT INTO static_bic_de VALUES ('11487', '0', '64150020', 'Kreissparkasse Tübingen');
-INSERT INTO static_bic_de VALUES ('11502', '0', '64150182', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11503', '0', '64161397', 'Volksbank Ammerbuch');
-INSERT INTO static_bic_de VALUES ('11507', '0', '64161608', 'Raiffeisenbank Härten -alt-');
-INSERT INTO static_bic_de VALUES ('11509', '0', '64161956', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('11512', '0', '64163225', 'Volksbank Hohenzollern');
-INSERT INTO static_bic_de VALUES ('11525', '0', '64180014', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11526', '0', '64190110', 'Volksbank Tübingen');
-INSERT INTO static_bic_de VALUES ('11529', '0', '64191030', 'Volksbank Nagoldtal');
-INSERT INTO static_bic_de VALUES ('11537', '0', '64191210', 'Volksbank Nordschwarzwald');
-INSERT INTO static_bic_de VALUES ('11538', '0', '64191700', 'Volksbank Horb -alt-');
-INSERT INTO static_bic_de VALUES ('11542', '0', '64232000', 'Bankhaus J. Faißt');
-INSERT INTO static_bic_de VALUES ('11543', '0', '64240071', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11544', '0', '64250040', 'Kreissparkasse Rottweil');
-INSERT INTO static_bic_de VALUES ('11563', '0', '64251060', 'Kreissparkasse Freudenstadt');
-INSERT INTO static_bic_de VALUES ('11564', '0', '64261363', 'Volksbank Baiersbronn');
-INSERT INTO static_bic_de VALUES ('11567', '0', '64261626', 'Murgtalbank Mitteltal - Obertal -alt-');
-INSERT INTO static_bic_de VALUES ('11568', '0', '64261853', 'Volksbank Nordschwarzwald');
-INSERT INTO static_bic_de VALUES ('11574', '0', '64262408', 'Volksbank Dornstetten');
-INSERT INTO static_bic_de VALUES ('11581', '0', '64263273', 'Volksbank Bösingen Dunningen Fluorn-Winzeln -alt-');
-INSERT INTO static_bic_de VALUES ('11587', '0', '64290120', 'Volksbank Rottweil');
-INSERT INTO static_bic_de VALUES ('11600', '0', '64291010', 'Volksbank Horb-Freudenstadt');
-INSERT INTO static_bic_de VALUES ('11606', '0', '64291420', 'Volksbank Deißlingen');
-INSERT INTO static_bic_de VALUES ('11608', '0', '64292020', 'Volksbank Schwarzwald-Neckar');
-INSERT INTO static_bic_de VALUES ('11614', '0', '64292310', 'Volksbank Trossingen');
-INSERT INTO static_bic_de VALUES ('11620', '0', '64350070', 'Kreissparkasse Tuttlingen');
-INSERT INTO static_bic_de VALUES ('11652', '0', '64361359', 'Raiffeisenbank Donau-Heuberg');
-INSERT INTO static_bic_de VALUES ('11662', '0', '64380011', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11664', '0', '64390130', 'Volksbank Donau-Neckar');
-INSERT INTO static_bic_de VALUES ('11687', '0', '64420030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11688', '0', '64450288', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11689', '0', '65000000', 'Bundesbank eh Ravensburg');
-INSERT INTO static_bic_de VALUES ('11690', '0', '65020030', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11691', '0', '65020186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('11692', '0', '65040073', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11693', '0', '65050110', 'Kreissparkasse Ravensburg');
-INSERT INTO static_bic_de VALUES ('11721', '0', '65050281', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11722', '0', '65061219', 'Raiffeisenbank Aulendorf');
-INSERT INTO static_bic_de VALUES ('11724', '0', '65062577', 'Raiffeisenbank Ravensburg');
-INSERT INTO static_bic_de VALUES ('11728', '0', '65062793', 'Raiffeisenbank Vorallgäu');
-INSERT INTO static_bic_de VALUES ('11733', '0', '65063086', 'Raiffeisenbank Bad Saulgau');
-INSERT INTO static_bic_de VALUES ('11735', '0', '65063434', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('11736', '0', '65070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('11743', '0', '65070084', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('11750', '0', '65080009', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11753', '0', '65090100', 'Volksbank Ulm-Biberach');
-INSERT INTO static_bic_de VALUES ('11754', '0', '65091040', 'Leutkircher Bank Raiffeisen- und Volksbank');
-INSERT INTO static_bic_de VALUES ('11759', '0', '65091300', 'Bad Waldseer Bank');
-INSERT INTO static_bic_de VALUES ('11762', '0', '65091400', 'Isnyer Volksbank -alt-');
-INSERT INTO static_bic_de VALUES ('11763', '0', '65091600', 'Volksbank Weingarten');
-INSERT INTO static_bic_de VALUES ('11768', '0', '65092010', 'Volksbank Allgäu-West');
-INSERT INTO static_bic_de VALUES ('11778', '0', '65092200', 'Volksbank Altshausen');
-INSERT INTO static_bic_de VALUES ('11785', '0', '65093020', 'Volksbank Bad Saulgau');
-INSERT INTO static_bic_de VALUES ('11802', '0', '65110200', 'Internationales Bankhaus Bodensee');
-INSERT INTO static_bic_de VALUES ('11803', '0', '65120091', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('11804', '0', '65140072', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11805', '0', '65150040', 'Spk -alt-');
-INSERT INTO static_bic_de VALUES ('11806', '0', '65161497', 'Genossenschaftsbank Meckenbeuren');
-INSERT INTO static_bic_de VALUES ('11808', '0', '65162832', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('11810', '0', '65180005', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11812', '0', '65190110', 'Volksbank Friedrichshafen');
-INSERT INTO static_bic_de VALUES ('11816', '0', '65191500', 'Volksbank Tettnang');
-INSERT INTO static_bic_de VALUES ('11822', '0', '65300000', 'Bundesbank eh Albstadt');
-INSERT INTO static_bic_de VALUES ('11823', '0', '65310111', 'SEB');
-INSERT INTO static_bic_de VALUES ('11826', '0', '65340004', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11828', '0', '65341204', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11829', '0', '65350186', 'Baden-Württemb.Bank/Landesbank Baden-Württemb.');
-INSERT INTO static_bic_de VALUES ('11830', '0', '65351050', 'Hohenz Landesbank Kreissparkasse Sigmaringen');
-INSERT INTO static_bic_de VALUES ('11849', '0', '65351260', 'Sparkasse Zollernalb');
-INSERT INTO static_bic_de VALUES ('11868', '0', '65361469', 'Volksbank Heuberg');
-INSERT INTO static_bic_de VALUES ('11872', '0', '65361898', 'Winterlinger Bank');
-INSERT INTO static_bic_de VALUES ('11874', '0', '65361989', 'Onstmettinger Bank');
-INSERT INTO static_bic_de VALUES ('11876', '0', '65362499', 'Raiffeisenbank Geislingen-Rosenfeld');
-INSERT INTO static_bic_de VALUES ('11879', '0', '65370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('11882', '0', '65370075', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('11885', '0', '65380003', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('11886', '0', '65390120', 'Volksbank Ebingen');
-INSERT INTO static_bic_de VALUES ('11894', '0', '65391210', 'Volksbank Balingen');
-INSERT INTO static_bic_de VALUES ('11898', '0', '65392030', 'Volksbank Tailfingen');
-INSERT INTO static_bic_de VALUES ('11900', '0', '65440087', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11901', '0', '65450070', 'Kreissparkasse Biberach');
-INSERT INTO static_bic_de VALUES ('11941', '0', '65461878', 'Raiffeisenbank Risstal');
-INSERT INTO static_bic_de VALUES ('11945', '0', '65462231', 'Raiffeisenbank Illertal');
-INSERT INTO static_bic_de VALUES ('11953', '0', '65490130', 'Volksbank Ulm-Biberach');
-INSERT INTO static_bic_de VALUES ('11954', '0', '65491320', 'Volksbank Laupheim');
-INSERT INTO static_bic_de VALUES ('11962', '0', '65491510', 'Volksbank-Raiffeisenbank Riedlingen');
-INSERT INTO static_bic_de VALUES ('11971', '0', '66000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('11972', '0', '66010075', 'Postbank');
-INSERT INTO static_bic_de VALUES ('11973', '0', '66010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('11975', '0', '66010200', 'Deutsche Bausparkasse Badenia');
-INSERT INTO static_bic_de VALUES ('11976', '0', '66010700', 'Landeskreditbank Baden-Württemberg Förderbank');
-INSERT INTO static_bic_de VALUES ('11978', '0', '66020020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('11979', '0', '66020150', 'Bayer Hypo- und Vereinsbank Ndl 145 Kruhe');
-INSERT INTO static_bic_de VALUES ('11980', '0', '66020286', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('11983', '0', '66020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('11984', '0', '66030600', 'Isbank Fil Karlsruhe');
-INSERT INTO static_bic_de VALUES ('11985', '0', '66040018', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('11988', '0', '66040026', 'Commerzbank/Kreditcenter Badenia');
-INSERT INTO static_bic_de VALUES ('11989', '0', '66050000', 'Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('11990', '0', '66050101', 'Sparkasse Karlsruhe');
-INSERT INTO static_bic_de VALUES ('11995', '0', '66051220', 'Sparkasse Ettlingen');
-INSERT INTO static_bic_de VALUES ('12000', '0', '66051326', 'Sparkasse Graben-Neudorf/Philippsburg');
-INSERT INTO static_bic_de VALUES ('12005', '0', '66060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('12006', '0', '66060300', 'Spar- und Kreditbank');
-INSERT INTO static_bic_de VALUES ('12008', '0', '66060800', 'Evangelische Kreditgenossenschaft -Filiale Karlsruhe-');
-INSERT INTO static_bic_de VALUES ('12009', '0', '66061059', 'Volksbank Stutensee Hardt');
-INSERT INTO static_bic_de VALUES ('12011', '0', '66061407', 'Spar- und Kreditbank');
-INSERT INTO static_bic_de VALUES ('12013', '0', '66061724', 'Volksbank Weingarten-Walzbachtal');
-INSERT INTO static_bic_de VALUES ('12016', '0', '66062138', 'Spar- und Kreditbank Hardt');
-INSERT INTO static_bic_de VALUES ('12019', '0', '66062366', 'Raiffeisenbank Hardt-Bruhrain');
-INSERT INTO static_bic_de VALUES ('12024', '0', '66069103', 'Raiffeisenbank Elztal');
-INSERT INTO static_bic_de VALUES ('12026', '0', '66069104', 'Spar- und Kreditbank');
-INSERT INTO static_bic_de VALUES ('12028', '0', '66069117', 'Raiffeisenbank Döggingen-Mundelfingen -alt-');
-INSERT INTO static_bic_de VALUES ('12029', '0', '66069265', 'Raiffeisenbank Hilsbach -alt-');
-INSERT INTO static_bic_de VALUES ('12030', '0', '66069323', 'Spar- und Kreditbank Daxlanden Karlsruhe -alt-');
-INSERT INTO static_bic_de VALUES ('12031', '0', '66069342', 'Volksbank Krautheim');
-INSERT INTO static_bic_de VALUES ('12035', '0', '66069573', 'Raiffeisenbank Sexau -alt-');
-INSERT INTO static_bic_de VALUES ('12036', '0', '66069582', 'Volksbank Hardt');
-INSERT INTO static_bic_de VALUES ('12039', '0', '66069617', 'Raiffeisenbank Schwenningen-Heuberg');
-INSERT INTO static_bic_de VALUES ('12040', '0', '66070004', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12044', '0', '66070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12048', '0', '66080052', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('12051', '0', '66090621', 'apoBank');
-INSERT INTO static_bic_de VALUES ('12052', '0', '66090800', 'BBBank');
-INSERT INTO static_bic_de VALUES ('12103', '0', '66090900', 'PSD Bank Karlsruhe-Neustadt');
-INSERT INTO static_bic_de VALUES ('12104', '0', '66091200', 'Volksbank Ettlingen');
-INSERT INTO static_bic_de VALUES ('12111', '0', '66091500', 'Volksbank Neureut -alt-');
-INSERT INTO static_bic_de VALUES ('12112', '0', '66190000', 'Volksbank Karlsruhe');
-INSERT INTO static_bic_de VALUES ('12114', '0', '66190100', 'Volksbank Durlach -alt-');
-INSERT INTO static_bic_de VALUES ('12116', '0', '66200000', 'Bundesbank eh Baden-Baden');
-INSERT INTO static_bic_de VALUES ('12117', '0', '66220020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12118', '0', '66220562', 'Bayer Hypo- und Vereinsbank Ndl 410 Baba');
-INSERT INTO static_bic_de VALUES ('12119', '0', '66240002', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12120', '0', '66250030', 'Stadtsparkasse Baden-Baden');
-INSERT INTO static_bic_de VALUES ('12121', '0', '66251434', 'Sparkasse Bühl');
-INSERT INTO static_bic_de VALUES ('12127', '0', '66261092', 'Spar- und Kreditbank');
-INSERT INTO static_bic_de VALUES ('12129', '0', '66261416', 'Raiffeisenbank Altschweier');
-INSERT INTO static_bic_de VALUES ('12131', '0', '66270001', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12136', '0', '66270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12141', '0', '66280053', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('12144', '0', '66290000', 'Volksbank Baden-Baden Rastatt');
-INSERT INTO static_bic_de VALUES ('12156', '0', '66291300', 'Volksbank Achern');
-INSERT INTO static_bic_de VALUES ('12158', '0', '66291400', 'Volksbank Bühl');
-INSERT INTO static_bic_de VALUES ('12167', '0', '66340018', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12168', '0', '66350036', 'Sparkasse Kraichgau Bruchsal-Bretten-Sinsheim');
-INSERT INTO static_bic_de VALUES ('12196', '0', '66361178', 'Raiffeisenbank Kraich-Hardt -alt-');
-INSERT INTO static_bic_de VALUES ('12198', '0', '66361335', 'Volksbank Kirrlach -alt-');
-INSERT INTO static_bic_de VALUES ('12199', '0', '66361588', 'Raiffeisenbank Sulzfeld -alt-');
-INSERT INTO static_bic_de VALUES ('12203', '0', '66362345', 'Raiffeisenbank Kronau -alt-');
-INSERT INTO static_bic_de VALUES ('12204', '0', '66363487', 'Raiffeisenbank Odenheim-Tiefenbach -alt-');
-INSERT INTO static_bic_de VALUES ('12205', '0', '66390000', 'Volksbank Bruchsal-Bretten -alt-');
-INSERT INTO static_bic_de VALUES ('12210', '0', '66391200', 'Volksbank Bruchsal-Bretten');
-INSERT INTO static_bic_de VALUES ('12229', '0', '66391600', 'Volksbank Bruhrain-Kraich-Hardt');
-INSERT INTO static_bic_de VALUES ('12234', '0', '66400000', 'Bundesbank eh Offenburg');
-INSERT INTO static_bic_de VALUES ('12235', '0', '66420020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12236', '0', '66432700', 'Bankhaus J. Faißt');
-INSERT INTO static_bic_de VALUES ('12237', '0', '66440084', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12238', '0', '66450050', 'Sparkasse Offenburg-Ortenau');
-INSERT INTO static_bic_de VALUES ('12255', '0', '66451346', 'Sparkasse Gengenbach');
-INSERT INTO static_bic_de VALUES ('12258', '0', '66451548', 'Sparkasse Haslach-Zell');
-INSERT INTO static_bic_de VALUES ('12269', '0', '66451862', 'Sparkasse Hanauerland');
-INSERT INTO static_bic_de VALUES ('12273', '0', '66452776', 'Sparkasse Wolfach');
-INSERT INTO static_bic_de VALUES ('12278', '0', '66470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12282', '0', '66470035', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12286', '0', '66490000', 'Volksbank Offenburg');
-INSERT INTO static_bic_de VALUES ('12297', '0', '66491800', 'Volksbank Bühl Fil Kehl');
-INSERT INTO static_bic_de VALUES ('12299', '0', '66492300', 'Renchtalbank -alt-');
-INSERT INTO static_bic_de VALUES ('12300', '0', '66492600', 'Volksbank Appenweier-Urloffen Appenweier -alt-');
-INSERT INTO static_bic_de VALUES ('12301', '0', '66492700', 'Volksbank Kinzigtal');
-INSERT INTO static_bic_de VALUES ('12312', '0', '66550070', 'Sparkasse Rastatt-Gernsbach');
-INSERT INTO static_bic_de VALUES ('12326', '0', '66551290', 'Sparkasse Gaggenau-Kuppenheim');
-INSERT INTO static_bic_de VALUES ('12329', '0', '66562053', 'Raiffeisenbank Südhardt Durmersheim');
-INSERT INTO static_bic_de VALUES ('12334', '0', '66562300', 'VR-Bank in Mittelbaden');
-INSERT INTO static_bic_de VALUES ('12345', '0', '66562419', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('12346', '0', '66600000', 'Bundesbank eh Pforzheim');
-INSERT INTO static_bic_de VALUES ('12347', '0', '66610111', 'SEB');
-INSERT INTO static_bic_de VALUES ('12348', '0', '66620020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12349', '0', '66640035', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12350', '0', '66650085', 'Sparkasse Pforzheim Calw');
-INSERT INTO static_bic_de VALUES ('12382', '0', '66661244', 'Raiffeisenbank Bauschlott');
-INSERT INTO static_bic_de VALUES ('12384', '0', '66661329', 'Raiffeisenbank Kieselbronn');
-INSERT INTO static_bic_de VALUES ('12386', '0', '66661454', 'VR Bank im Enzkreis');
-INSERT INTO static_bic_de VALUES ('12393', '0', '66662155', 'Raiffeisenbank Ersingen');
-INSERT INTO static_bic_de VALUES ('12395', '0', '66662220', 'Volksbank Stein Eisingen');
-INSERT INTO static_bic_de VALUES ('12400', '0', '66663145', 'Raiffeisenbank Eisingen');
-INSERT INTO static_bic_de VALUES ('12401', '0', '66663439', 'Raiffeisen-Gebietsbank');
-INSERT INTO static_bic_de VALUES ('12402', '0', '66670006', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12404', '0', '66670024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12406', '0', '66680013', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('12408', '0', '66690000', 'Volksbank Pforzheim');
-INSERT INTO static_bic_de VALUES ('12431', '0', '66692300', 'Volksbank Wilferdingen-Keltern');
-INSERT INTO static_bic_de VALUES ('12438', '0', '66762332', 'Raiffeisenbank Kraichgau');
-INSERT INTO static_bic_de VALUES ('12443', '0', '66762433', 'Raiffeisenbank Neudenau-Stein-Herbolzheim');
-INSERT INTO static_bic_de VALUES ('12446', '0', '67000000', 'Bundesbank eh Mannheim');
-INSERT INTO static_bic_de VALUES ('12447', '0', '67010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('12450', '0', '67020020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12451', '0', '67020190', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('12454', '0', '67020259', 'Bayer Hypo- und Vereinsbank Ndl 681 Mnh');
-INSERT INTO static_bic_de VALUES ('12455', '0', '67020500', 'Oyak Anker Bank');
-INSERT INTO static_bic_de VALUES ('12456', '0', '67040031', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12464', '0', '67050000', 'Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('12465', '0', '67050101', 'Sparkasse Mannheim');
-INSERT INTO static_bic_de VALUES ('12466', '0', '67050505', 'Sparkasse Rhein Neckar Nord');
-INSERT INTO static_bic_de VALUES ('12467', '0', '67051203', 'Sparkasse Hockenheim');
-INSERT INTO static_bic_de VALUES ('12471', '0', '67052385', 'Bezirkssparkasse Weinheim');
-INSERT INTO static_bic_de VALUES ('12480', '0', '67060031', 'Volksbank Sandhofen');
-INSERT INTO static_bic_de VALUES ('12482', '0', '67070010', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12487', '0', '67070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12492', '0', '67080050', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('12504', '0', '67080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('12505', '0', '67080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('12506', '0', '67089440', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('12507', '0', '67090000', 'VR Bank Rhein-Neckar');
-INSERT INTO static_bic_de VALUES ('12521', '0', '67090617', 'apoBank');
-INSERT INTO static_bic_de VALUES ('12522', '0', '67091300', 'Volksbank Bezirk Schwetzingen -alt-');
-INSERT INTO static_bic_de VALUES ('12524', '0', '67091500', 'Volksbank Neckar-Bergstraße');
-INSERT INTO static_bic_de VALUES ('12532', '0', '67092300', 'Volksbank Weinheim');
-INSERT INTO static_bic_de VALUES ('12539', '0', '67210111', 'SEB');
-INSERT INTO static_bic_de VALUES ('12541', '0', '67220020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12542', '0', '67220286', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('12543', '0', '67220464', 'Bayer Hypo- und Vereinsbank Ndl 488 Hd');
-INSERT INTO static_bic_de VALUES ('12544', '0', '67230000', 'MLP Finanzdienstleistungen');
-INSERT INTO static_bic_de VALUES ('12545', '0', '67230001', 'MLP Finanzdienstleistungen Zw CS');
-INSERT INTO static_bic_de VALUES ('12546', '0', '67240039', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12547', '0', '67250020', 'Sparkasse Heidelberg');
-INSERT INTO static_bic_de VALUES ('12575', '0', '67251918', 'Sparkasse Sinsheim -alt-');
-INSERT INTO static_bic_de VALUES ('12576', '0', '67261909', 'Raiffeisenbank Steinsberg -alt-');
-INSERT INTO static_bic_de VALUES ('12577', '0', '67262243', 'Raiffeisenbank Baiertal');
-INSERT INTO static_bic_de VALUES ('12580', '0', '67262402', 'Volksbank Schwarzbachtal');
-INSERT INTO static_bic_de VALUES ('12591', '0', '67262550', 'Volksbank Rot');
-INSERT INTO static_bic_de VALUES ('12593', '0', '67263256', 'Volksbank Helmstadt-Reichartshausen');
-INSERT INTO static_bic_de VALUES ('12596', '0', '67270003', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12599', '0', '67270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12602', '0', '67280051', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('12604', '0', '67290000', 'Heidelberger Volksbank');
-INSERT INTO static_bic_de VALUES ('12608', '0', '67290100', 'H + G BANK Heidelberg');
-INSERT INTO static_bic_de VALUES ('12611', '0', '67291500', 'Volksbank f d Angelbachtal');
-INSERT INTO static_bic_de VALUES ('12615', '0', '67291700', 'Volksbank Neckartal');
-INSERT INTO static_bic_de VALUES ('12635', '0', '67291900', 'Volksbank Kraichgau');
-INSERT INTO static_bic_de VALUES ('12644', '0', '67292200', 'Volksbank Wiesloch');
-INSERT INTO static_bic_de VALUES ('12657', '0', '67320020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12658', '0', '67332551', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12659', '0', '67352565', 'Sparkasse Tauberfranken');
-INSERT INTO static_bic_de VALUES ('12678', '0', '67362560', 'Volksbank Tauber -alt-');
-INSERT INTO static_bic_de VALUES ('12679', '0', '67390000', 'Volksbank Main-Tauber');
-INSERT INTO static_bic_de VALUES ('12694', '0', '67450048', 'Sparkasse Neckartal-Odenwald');
-INSERT INTO static_bic_de VALUES ('12723', '0', '67451475', 'Sparkasse Buchen-Walldürn -alt-');
-INSERT INTO static_bic_de VALUES ('12724', '0', '67451680', 'Sparkasse Osterburken -alt-');
-INSERT INTO static_bic_de VALUES ('12725', '0', '67460041', 'Volksbank Mosbach');
-INSERT INTO static_bic_de VALUES ('12736', '0', '67461424', 'Volksbank Franken');
-INSERT INTO static_bic_de VALUES ('12744', '0', '67461733', 'Volksbank Kirnau');
-INSERT INTO static_bic_de VALUES ('12749', '0', '67462368', 'Volksbank Limbach');
-INSERT INTO static_bic_de VALUES ('12752', '0', '67462480', 'Raiffeisenbank Schefflenz-Seckach -alt-');
-INSERT INTO static_bic_de VALUES ('12753', '0', '68000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('12754', '0', '68010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('12755', '0', '68020020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12756', '0', '68020186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('12759', '0', '68020460', 'Bayer Hypo- und Vereinsbank Ndl 405 Frb');
-INSERT INTO static_bic_de VALUES ('12760', '0', '68030000', 'Bankhaus E. Mayer');
-INSERT INTO static_bic_de VALUES ('12761', '0', '68040007', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12764', '0', '68050000', 'Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('12765', '0', '68050101', 'Sparkasse Freiburg-Nördlicher Breisgau');
-INSERT INTO static_bic_de VALUES ('12770', '0', '68051004', 'Sparkasse Hochschwarzwald');
-INSERT INTO static_bic_de VALUES ('12784', '0', '68051207', 'Sparkasse Bonndorf-Stühlingen');
-INSERT INTO static_bic_de VALUES ('12790', '0', '68051310', 'Sparkasse Breisach -alt-');
-INSERT INTO static_bic_de VALUES ('12791', '0', '68052230', 'Bezirkssparkasse St Blasien');
-INSERT INTO static_bic_de VALUES ('12797', '0', '68052328', 'Sparkasse Staufen-Breisach');
-INSERT INTO static_bic_de VALUES ('12815', '0', '68052863', 'Sparkasse Schönau-Todtnau');
-INSERT INTO static_bic_de VALUES ('12817', '0', '68061505', 'Volksbank Breisgau-Süd');
-INSERT INTO static_bic_de VALUES ('12832', '0', '68062105', 'Raiffeisenbank Denzlingen-Sexau');
-INSERT INTO static_bic_de VALUES ('12835', '0', '68062730', 'Raiffeisenbank Wyhl');
-INSERT INTO static_bic_de VALUES ('12837', '0', '68063068', 'Volksbank Emmendingen-Kaiserstuhl -alt-');
-INSERT INTO static_bic_de VALUES ('12838', '0', '68063254', 'Spar- u Kreditbank Bad Krozingen-Heitersheim');
-INSERT INTO static_bic_de VALUES ('12839', '0', '68063479', 'Raiffeisenbank Kaiserstuhl');
-INSERT INTO static_bic_de VALUES ('12842', '0', '68064222', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('12849', '0', '68070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12854', '0', '68070030', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12859', '0', '68080030', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('12867', '0', '68080031', 'Commerzbank vormals Dresdner Bank Zw Münsterstraße');
-INSERT INTO static_bic_de VALUES ('12868', '0', '68080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('12869', '0', '68080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('12870', '0', '68090000', 'Volksbank Freiburg');
-INSERT INTO static_bic_de VALUES ('12899', '0', '68090622', 'apoBank');
-INSERT INTO static_bic_de VALUES ('12900', '0', '68090900', 'PSD Bank RheinNeckarSaar');
-INSERT INTO static_bic_de VALUES ('12901', '0', '68091700', 'Volksbank Löffingen');
-INSERT INTO static_bic_de VALUES ('12902', '0', '68091900', 'Volksbank Müllheim');
-INSERT INTO static_bic_de VALUES ('12911', '0', '68092000', 'Volksbank Breisgau Nord');
-INSERT INTO static_bic_de VALUES ('12931', '0', '68092300', 'Volksbank Staufen');
-INSERT INTO static_bic_de VALUES ('12939', '0', '68092400', 'Volksbank Waldkirch -alt-');
-INSERT INTO static_bic_de VALUES ('12940', '0', '68250040', 'Sparkasse Lahr -alt-');
-INSERT INTO static_bic_de VALUES ('12952', '0', '68270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('12953', '0', '68270033', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('12954', '0', '68290000', 'Volksbank Lahr');
-INSERT INTO static_bic_de VALUES ('12961', '0', '68300000', 'Bundesbank eh Lörrach');
-INSERT INTO static_bic_de VALUES ('12962', '0', '68310111', 'SEB');
-INSERT INTO static_bic_de VALUES ('12963', '0', '68320020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('12964', '0', '68340058', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('12968', '0', '68350048', 'Sparkasse Lörrach-Rheinfelden');
-INSERT INTO static_bic_de VALUES ('12979', '0', '68351557', 'Sparkasse Schopfheim-Zell');
-INSERT INTO static_bic_de VALUES ('12983', '0', '68351865', 'Sparkasse Markgräflerland');
-INSERT INTO static_bic_de VALUES ('12996', '0', '68351976', 'Sparkasse Zell i W -alt-');
-INSERT INTO static_bic_de VALUES ('12999', '0', '68361394', 'Raiffeisenbank Maulburg -alt-');
-INSERT INTO static_bic_de VALUES ('13000', '0', '68370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('13008', '0', '68370034', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('13016', '0', '68390000', 'Volksbank Dreiländereck');
-INSERT INTO static_bic_de VALUES ('13029', '0', '68391500', 'VR Bank');
-INSERT INTO static_bic_de VALUES ('13038', '0', '68452290', 'Sparkasse Hochrhein');
-INSERT INTO static_bic_de VALUES ('13057', '0', '68462427', 'Volksbank Klettgau-Wutöschingen');
-INSERT INTO static_bic_de VALUES ('13062', '0', '68490000', 'Volksbank Rhein-Wehra');
-INSERT INTO static_bic_de VALUES ('13075', '0', '68491500', 'Volksbank Jestetten');
-INSERT INTO static_bic_de VALUES ('13078', '0', '68492200', 'Volksbank Hochrhein');
-INSERT INTO static_bic_de VALUES ('13095', '0', '69000000', 'Bundesbank eh Konstanz');
-INSERT INTO static_bic_de VALUES ('13096', '0', '69010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('13097', '0', '69020020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('13098', '0', '69020190', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('13099', '0', '69040045', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('13100', '0', '69050001', 'Sparkasse Bodensee');
-INSERT INTO static_bic_de VALUES ('13117', '0', '69051410', 'Bezirkssparkasse Reichenau');
-INSERT INTO static_bic_de VALUES ('13119', '0', '69051620', 'Sparkasse Pfullendorf-Meßkirch');
-INSERT INTO static_bic_de VALUES ('13125', '0', '69051725', 'Sparkasse Salem-Heiligenberg');
-INSERT INTO static_bic_de VALUES ('13132', '0', '69061800', 'Volksbank Überlingen');
-INSERT INTO static_bic_de VALUES ('13149', '0', '69070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('13151', '0', '69070032', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('13153', '0', '69091200', 'Hagnauer Volksbank');
-INSERT INTO static_bic_de VALUES ('13156', '0', '69091600', 'Volksbank Pfullendorf');
-INSERT INTO static_bic_de VALUES ('13159', '0', '69220020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('13160', '0', '69220186', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('13161', '0', '69240075', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('13162', '0', '69250035', 'Sparkasse Singen-Radolfzell');
-INSERT INTO static_bic_de VALUES ('13170', '0', '69251445', 'Sparkasse Engen-Gottmadingen');
-INSERT INTO static_bic_de VALUES ('13180', '0', '69251550', 'Sparkasse Gottmadingen -alt-');
-INSERT INTO static_bic_de VALUES ('13181', '0', '69251755', 'Sparkasse Stockach');
-INSERT INTO static_bic_de VALUES ('13186', '0', '69270024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('13188', '0', '69270038', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('13190', '0', '69280035', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('13196', '0', '69290000', 'Volksbank Hegau');
-INSERT INTO static_bic_de VALUES ('13206', '0', '69291000', 'Volksbank Konstanz');
-INSERT INTO static_bic_de VALUES ('13217', '0', '69352060', 'Sparkasse Meßkirch -alt-');
-INSERT INTO static_bic_de VALUES ('13218', '0', '69362032', 'Volksbank Meßkirch Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('13228', '0', '69400000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('13229', '0', '69421020', 'Baden-Württembergische Bank');
-INSERT INTO static_bic_de VALUES ('13230', '0', '69440007', 'Commerzbank Villingen u Schwenningen');
-INSERT INTO static_bic_de VALUES ('13234', '0', '69450065', 'Sparkasse Schwarzwald-Baar');
-INSERT INTO static_bic_de VALUES ('13254', '0', '69451070', 'Sparkasse Donaueschingen -alt-');
-INSERT INTO static_bic_de VALUES ('13255', '0', '69461312', 'Volksbank Baar');
-INSERT INTO static_bic_de VALUES ('13256', '0', '69461803', 'VB Tennenbronn-Königsfeld SpKrBk Königsfd-alt-');
-INSERT INTO static_bic_de VALUES ('13257', '0', '69462647', 'Volksbank Tennenbronn-Königsfeld -alt-');
-INSERT INTO static_bic_de VALUES ('13258', '0', '69470024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('13264', '0', '69470039', 'Deutsche Bank Villingen u Schwenningen');
-INSERT INTO static_bic_de VALUES ('13270', '0', '69490000', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('13287', '0', '69491700', 'Volksbank Triberg');
-INSERT INTO static_bic_de VALUES ('13293', '0', '70000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('13294', '0', '70010080', 'Postbank (Giro)');
-INSERT INTO static_bic_de VALUES ('13295', '0', '70010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('13298', '0', '70010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('13299', '0', '70010500', 'Hypo Real Estate Bank München');
-INSERT INTO static_bic_de VALUES ('13300', '0', '70011200', 'Bank Vontobel Europe');
-INSERT INTO static_bic_de VALUES ('13301', '0', '70011700', 'Bankhaus von der Heydt');
-INSERT INTO static_bic_de VALUES ('13302', '0', '70011900', 'InterCard');
-INSERT INTO static_bic_de VALUES ('13303', '0', '70011910', 'InterCard Cash Services 10');
-INSERT INTO static_bic_de VALUES ('13304', '0', '70011920', 'InterCard Cash Services 20');
-INSERT INTO static_bic_de VALUES ('13305', '0', '70012000', 'UniCredit Family Financing Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('13306', '0', '70012100', 'VEM Aktienbank');
-INSERT INTO static_bic_de VALUES ('13307', '0', '70012200', 'Bank Sarasin');
-INSERT INTO static_bic_de VALUES ('13308', '0', '70012300', 'V-Bank');
-INSERT INTO static_bic_de VALUES ('13309', '0', '70012500', 'Hypo Tirol Bank');
-INSERT INTO static_bic_de VALUES ('13310', '0', '70013000', 'European Bank for Fund Services');
-INSERT INTO static_bic_de VALUES ('13311', '0', '70020001', 'Bayer Hypo- und Vereinsbank Ndl 645 M');
-INSERT INTO static_bic_de VALUES ('13312', '0', '70020270', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('13348', '0', '70020300', 'Dresdner-Cetelem Kreditbank');
-INSERT INTO static_bic_de VALUES ('13349', '0', '70020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('13351', '0', '70020800', 'INTESA SANPAOLO');
-INSERT INTO static_bic_de VALUES ('13352', '0', '70021180', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('13353', '0', '70025175', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('13357', '0', '70030014', 'Fürst Fugger Privatbank');
-INSERT INTO static_bic_de VALUES ('13358', '0', '70030111', 'Bankhaus Max Flessa');
-INSERT INTO static_bic_de VALUES ('13359', '0', '70030300', 'Bankhaus Reuschel & Co');
-INSERT INTO static_bic_de VALUES ('13360', '0', '70030400', 'Merck Finck & Co');
-INSERT INTO static_bic_de VALUES ('13361', '0', '70030800', 'Delbrück Bethmann Maffei');
-INSERT INTO static_bic_de VALUES ('13362', '0', '70031000', 'Bankhaus Ludwig Sperrer');
-INSERT INTO static_bic_de VALUES ('13363', '0', '70032500', 'St. Galler Kantonalbank Deutschland');
-INSERT INTO static_bic_de VALUES ('13364', '0', '70033100', 'Baader Bank');
-INSERT INTO static_bic_de VALUES ('13365', '0', '70035000', 'Allianz Bank (Zndl der Oldenburgische Landesbank)');
-INSERT INTO static_bic_de VALUES ('13366', '0', '70040041', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('13374', '0', '70040060', 'Commerzbank Gf 860');
-INSERT INTO static_bic_de VALUES ('13375', '0', '70040061', 'Commerzbank Gf 861');
-INSERT INTO static_bic_de VALUES ('13376', '0', '70045050', 'Commerzbank Service-BZ');
-INSERT INTO static_bic_de VALUES ('13377', '0', '70050000', 'Bayerische Landesbank');
-INSERT INTO static_bic_de VALUES ('13378', '0', '70051003', 'Sparkasse Freising');
-INSERT INTO static_bic_de VALUES ('13391', '0', '70051540', 'Sparkasse Dachau');
-INSERT INTO static_bic_de VALUES ('13405', '0', '70051805', 'Kreissparkasse Ebersberg');
-INSERT INTO static_bic_de VALUES ('13418', '0', '70051995', 'Kreis- und Stadtsparkasse Erding-Dorfen');
-INSERT INTO static_bic_de VALUES ('13435', '0', '70052060', 'Sparkasse Landsberg-Dießen');
-INSERT INTO static_bic_de VALUES ('13457', '0', '70053070', 'Sparkasse Fürstenfeldbruck');
-INSERT INTO static_bic_de VALUES ('13476', '0', '70054080', 'Sparkasse Starnberg -alt-');
-INSERT INTO static_bic_de VALUES ('13477', '0', '70054306', 'Sparkasse Bad Tölz-Wolfratshausen');
-INSERT INTO static_bic_de VALUES ('13498', '0', '70070010', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('13519', '0', '70070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('13540', '0', '70080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('13571', '0', '70080056', 'Commerzbank vormals Dresdner Bank Zw 56');
-INSERT INTO static_bic_de VALUES ('13572', '0', '70080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('13573', '0', '70080085', 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 3');
-INSERT INTO static_bic_de VALUES ('13574', '0', '70080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4');
-INSERT INTO static_bic_de VALUES ('13575', '0', '70080087', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5');
-INSERT INTO static_bic_de VALUES ('13576', '0', '70080088', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6');
-INSERT INTO static_bic_de VALUES ('13577', '0', '70089470', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('13578', '0', '70089472', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('13579', '0', '70090100', 'Hausbank München');
-INSERT INTO static_bic_de VALUES ('13581', '0', '70090124', 'Hausbank München');
-INSERT INTO static_bic_de VALUES ('13582', '0', '70090500', 'Sparda-Bank München');
-INSERT INTO static_bic_de VALUES ('13601', '0', '70090606', 'apoBank');
-INSERT INTO static_bic_de VALUES ('13603', '0', '70091500', 'Volksbank Raiffeisenbank Dachau');
-INSERT INTO static_bic_de VALUES ('13622', '0', '70091600', 'Landsberg-Ammersee Bank');
-INSERT INTO static_bic_de VALUES ('13636', '0', '70091900', 'VR-Bank Erding');
-INSERT INTO static_bic_de VALUES ('13643', '0', '70093200', 'VR-Bank Starnberg-Herrsching-Landsberg');
-INSERT INTO static_bic_de VALUES ('13660', '0', '70093400', 'Volksbank Raiffeisenbank Ismaning');
-INSERT INTO static_bic_de VALUES ('13664', '0', '70110088', 'Postbank (Spar)');
-INSERT INTO static_bic_de VALUES ('13665', '0', '70110500', 'Münchener Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('13666', '0', '70110600', 'UBI BANCA INTERNATIONAL - Ndl München');
-INSERT INTO static_bic_de VALUES ('13667', '0', '70120100', 'State Street Bank');
-INSERT INTO static_bic_de VALUES ('13668', '0', '70120200', 'ABN AMRO Bank Ndl Deutschland');
-INSERT INTO static_bic_de VALUES ('13669', '0', '70120400', 'DAB bank');
-INSERT INTO static_bic_de VALUES ('13670', '0', '70120500', 'CACEIS Bank Deutschland');
-INSERT INTO static_bic_de VALUES ('13671', '0', '70120600', 'Salzburg München Bank');
-INSERT INTO static_bic_de VALUES ('13672', '0', '70120700', 'Oberbank Bayern');
-INSERT INTO static_bic_de VALUES ('13687', '0', '70120800', 'Emporiki Bank - Germany');
-INSERT INTO static_bic_de VALUES ('13688', '0', '70120900', 'Bayer Hypo- und Vereinsbank Ndl BACA');
-INSERT INTO static_bic_de VALUES ('13689', '0', '70121099', 'Bayer Hypo- und Vereinsbank Scheckeinzug (GSE)');
-INSERT INTO static_bic_de VALUES ('13690', '0', '70130700', 'Bankhaus August Lenz & Co');
-INSERT INTO static_bic_de VALUES ('13691', '0', '70130800', 'Merkur Bank');
-INSERT INTO static_bic_de VALUES ('13692', '0', '70150000', 'Stadtsparkasse München');
-INSERT INTO static_bic_de VALUES ('13693', '0', '70160000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('13694', '0', '70160300', 'Raiffeisenbank München -alt-');
-INSERT INTO static_bic_de VALUES ('13695', '0', '70163370', 'Volksbank Raiffeisenbank Fürstenfeldbruck');
-INSERT INTO static_bic_de VALUES ('13714', '0', '70166486', 'VR Bank München Land');
-INSERT INTO static_bic_de VALUES ('13732', '0', '70169110', 'Raiffeisenbank Beyharting -alt-');
-INSERT INTO static_bic_de VALUES ('13733', '0', '70169132', 'Raiffeisenbank Griesstätt-Halfing');
-INSERT INTO static_bic_de VALUES ('13738', '0', '70169144', 'Raiffeisenbank Höhenrain-Kirchdorf -alt-');
-INSERT INTO static_bic_de VALUES ('13740', '0', '70169162', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('13741', '0', '70169165', 'Raiffeisenbank Chiemgau-Nord - Obing');
-INSERT INTO static_bic_de VALUES ('13747', '0', '70169168', 'VR-Bank Chiemgau-Süd -alt-');
-INSERT INTO static_bic_de VALUES ('13748', '0', '70169174', 'Raiffeisenbank Rupertiwinkel-Nord');
-INSERT INTO static_bic_de VALUES ('13749', '0', '70169175', 'Volks-Raiffeisenbk Salzachtal Waging Trostberg -alt-');
-INSERT INTO static_bic_de VALUES ('13751', '0', '70169179', 'Volksbank Siegsdorf-Bergen -alt-');
-INSERT INTO static_bic_de VALUES ('13752', '0', '70169182', 'Raiffeisenbank Schnaitsee-Waldhausen -alt-');
-INSERT INTO static_bic_de VALUES ('13753', '0', '70169186', 'Raiffeisenbank Pfaffenhofen a d Glonn');
-INSERT INTO static_bic_de VALUES ('13758', '0', '70169190', 'Raiffeisenbank Tattenh-Großkarolinenf');
-INSERT INTO static_bic_de VALUES ('13760', '0', '70169191', 'Raiffeisenbank Rupertiwinkel');
-INSERT INTO static_bic_de VALUES ('13765', '0', '70169195', 'Raiffeisenbank Trostberg-Traunreut');
-INSERT INTO static_bic_de VALUES ('13775', '0', '70169310', 'Raiffeisenbank Alxing-Bruck');
-INSERT INTO static_bic_de VALUES ('13777', '0', '70169322', 'Raiffeisenbank Aufkirchen -alt-');
-INSERT INTO static_bic_de VALUES ('13778', '0', '70169331', 'Raiffeisenbank südöstl. Starnberger See');
-INSERT INTO static_bic_de VALUES ('13786', '0', '70169333', 'Raiffeisenbank Beuerberg-Eurasburg');
-INSERT INTO static_bic_de VALUES ('13788', '0', '70169351', 'Raiffeisenbank Nordkreis Landsberg');
-INSERT INTO static_bic_de VALUES ('13794', '0', '70169356', 'Raiffeisenbank Erding');
-INSERT INTO static_bic_de VALUES ('13802', '0', '70169382', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('13804', '0', '70169383', 'Raiffeisenbank Gmund am Tegernsee');
-INSERT INTO static_bic_de VALUES ('13809', '0', '70169384', 'Raiffeisen-Volksbank Grafing-Ebersberg -alt-');
-INSERT INTO static_bic_de VALUES ('13810', '0', '70169388', 'Raiffeisenbank Haag-Gars-Maitenbeth');
-INSERT INTO static_bic_de VALUES ('13817', '0', '70169402', 'Raiffeisenbank Höhenkirchen und Umgebung');
-INSERT INTO static_bic_de VALUES ('13823', '0', '70169410', 'Raiffeisenbank Holzkirchen-Otterfing');
-INSERT INTO static_bic_de VALUES ('13826', '0', '70169413', 'Raiffeisenbank Singoldtal');
-INSERT INTO static_bic_de VALUES ('13829', '0', '70169433', 'Raiffeisenbank Königsdorf-Gelting');
-INSERT INTO static_bic_de VALUES ('13831', '0', '70169444', 'Raiffeisenbank im Isarwinkel -alt-');
-INSERT INTO static_bic_de VALUES ('13834', '0', '70169450', 'Raiffeisen-Volksbank Ebersberg');
-INSERT INTO static_bic_de VALUES ('13845', '0', '70169459', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('13847', '0', '70169460', 'Raiffeisenbank Westkreis Fürstenfeldbruck');
-INSERT INTO static_bic_de VALUES ('13853', '0', '70169464', 'Genossenschaftsbank München');
-INSERT INTO static_bic_de VALUES ('13855', '0', '70169465', 'Raiffeisenbank München-Nord');
-INSERT INTO static_bic_de VALUES ('13861', '0', '70169466', 'Raiffeisenbank München-Süd');
-INSERT INTO static_bic_de VALUES ('13867', '0', '70169472', 'Raiffeisenbank Hallbergmoos-Neufahrn');
-INSERT INTO static_bic_de VALUES ('13870', '0', '70169474', 'Raiffbk Neumarkt-St. Veit - Niederbergkirchen');
-INSERT INTO static_bic_de VALUES ('13878', '0', '70169476', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('13879', '0', '70169493', 'Raiffeisenbank Oberschleißheim');
-INSERT INTO static_bic_de VALUES ('13881', '0', '70169495', 'Raiffeisenbank Buchbach-Schwindegg -alt-');
-INSERT INTO static_bic_de VALUES ('13882', '0', '70169505', 'Raiffeisenbank Anzing-Forstern -alt-');
-INSERT INTO static_bic_de VALUES ('13883', '0', '70169509', 'Raiffeisenbank Pfaffenwinkel');
-INSERT INTO static_bic_de VALUES ('13896', '0', '70169521', 'Raiffeisenbank Raisting');
-INSERT INTO static_bic_de VALUES ('13898', '0', '70169524', 'Raiffeisenbank RSA');
-INSERT INTO static_bic_de VALUES ('13903', '0', '70169530', 'Raiffeisenbank Reischach-Wurmannsquick-Zeilarn');
-INSERT INTO static_bic_de VALUES ('13909', '0', '70169538', 'Raiffeisenbank St. Wolfgang-Schwindkirchen');
-INSERT INTO static_bic_de VALUES ('13912', '0', '70169541', 'Raiffeisenbank Lech-Ammersee');
-INSERT INTO static_bic_de VALUES ('13920', '0', '70169543', 'Raiffeisenbank Isar-Loisachtal');
-INSERT INTO static_bic_de VALUES ('13926', '0', '70169558', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('13934', '0', '70169566', 'VR-Bank Taufkirchen-Dorfen');
-INSERT INTO static_bic_de VALUES ('13944', '0', '70169568', 'Raiffeisenbank Taufkirchen-Oberneukirchen');
-INSERT INTO static_bic_de VALUES ('13949', '0', '70169570', 'Raiffeisenbank Thalheim');
-INSERT INTO static_bic_de VALUES ('13951', '0', '70169571', 'Raiffeisenbank Tölzer Land');
-INSERT INTO static_bic_de VALUES ('13958', '0', '70169575', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('13963', '0', '70169576', 'Raiffeisen-Volksbank');
-INSERT INTO static_bic_de VALUES ('13969', '0', '70169585', 'Raiffeisenbank Unterschleißheim-Haimhn -alt-');
-INSERT INTO static_bic_de VALUES ('13970', '0', '70169590', 'Raiffeisenbank im Oberland -alt-');
-INSERT INTO static_bic_de VALUES ('13975', '0', '70169596', 'Raiffeisenbank Walpertskirchen-Wörth-Hörlkofen');
-INSERT INTO static_bic_de VALUES ('13976', '0', '70169598', 'Raiffeisenbank im Oberland');
-INSERT INTO static_bic_de VALUES ('13984', '0', '70169599', 'Raiffeisenbank Weil u Umgebung');
-INSERT INTO static_bic_de VALUES ('13986', '0', '70169602', 'Raiffeisenbank Weilheim');
-INSERT INTO static_bic_de VALUES ('13999', '0', '70169605', 'Raiffeisen-Volksbank Isen-Sempt');
-INSERT INTO static_bic_de VALUES ('14009', '0', '70169614', 'Freisinger Bank Volksbank-Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14025', '0', '70169619', 'Raiffeisenbank Zorneding');
-INSERT INTO static_bic_de VALUES ('14029', '0', '70169653', 'Raiffeisenbank Aiglsbach');
-INSERT INTO static_bic_de VALUES ('14032', '0', '70169693', 'Raiffeisenbank Hallertau');
-INSERT INTO static_bic_de VALUES ('14040', '0', '70190000', 'Münchner Bank');
-INSERT INTO static_bic_de VALUES ('14054', '0', '70190200', 'IntegraBank');
-INSERT INTO static_bic_de VALUES ('14056', '0', '70220000', 'LfA Förderbank Bayern');
-INSERT INTO static_bic_de VALUES ('14057', '0', '70220200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('14058', '0', '70220300', 'BMW Bank');
-INSERT INTO static_bic_de VALUES ('14059', '0', '70220400', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('14060', '0', '70220700', 'Vereinsbank Victoria Bauspar (ehem Heimstatt)');
-INSERT INTO static_bic_de VALUES ('14061', '0', '70220800', 'Vereinsbank Victoria Bauspar');
-INSERT INTO static_bic_de VALUES ('14062', '0', '70220900', 'Allianz Dresdner Bauspar');
-INSERT INTO static_bic_de VALUES ('14063', '0', '70230000', 'Advance Bank München');
-INSERT INTO static_bic_de VALUES ('14064', '0', '70230600', 'Isbank Fil München');
-INSERT INTO static_bic_de VALUES ('14065', '0', '70250150', 'Kreissparkasse München Starnberg');
-INSERT INTO static_bic_de VALUES ('14111', '0', '70300000', 'Bundesbank eh Garmisch-Partenkirchen');
-INSERT INTO static_bic_de VALUES ('14112', '0', '70320090', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14116', '0', '70320305', 'Bayer Hypo- und Vereinsbank Ndl 635 Gar');
-INSERT INTO static_bic_de VALUES ('14117', '0', '70321194', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14118', '0', '70322192', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14119', '0', '70350000', 'Kreissparkasse Garmisch-Partenkirchen');
-INSERT INTO static_bic_de VALUES ('14133', '0', '70351030', 'Vereinigte Sparkassen im Landkreis Weilheim');
-INSERT INTO static_bic_de VALUES ('14148', '0', '70362595', 'Raiffeisenbank Wallgau-Krün');
-INSERT INTO static_bic_de VALUES ('14151', '0', '70380006', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('14152', '0', '70390000', 'VR-Bank im Landkreis Garmisch-Partenkirchen');
-INSERT INTO static_bic_de VALUES ('14165', '0', '70391800', 'Volksbank-Raiffeisenbank Penzberg');
-INSERT INTO static_bic_de VALUES ('14172', '0', '71000000', 'Bundesbank eh Bad Reichenhall');
-INSERT INTO static_bic_de VALUES ('14173', '0', '71020072', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14178', '0', '71021270', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14183', '0', '71022182', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14188', '0', '71023173', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14189', '0', '71050000', 'Sparkasse Berchtesgadener Land');
-INSERT INTO static_bic_de VALUES ('14203', '0', '71051010', 'Kreissparkasse Altötting-Burghausen');
-INSERT INTO static_bic_de VALUES ('14220', '0', '71052050', 'Kreissparkasse Traunstein-Trostberg');
-INSERT INTO static_bic_de VALUES ('14247', '0', '71061009', 'RVB in den Landkreisen Altötting-Mühldorf');
-INSERT INTO static_bic_de VALUES ('14271', '0', '71062194', 'Volksbank Raiffeisen Traunstein -alt-');
-INSERT INTO static_bic_de VALUES ('14273', '0', '71062802', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14275', '0', '71090000', 'Volksbank Raiffeisenbank Oberbayern Südost');
-INSERT INTO static_bic_de VALUES ('14306', '0', '71093000', 'Volksbank Burghausen -alt-');
-INSERT INTO static_bic_de VALUES ('14311', '0', '71100000', 'Bundesbank eh Rosenheim');
-INSERT INTO static_bic_de VALUES ('14312', '0', '71120077', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14319', '0', '71120078', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14324', '0', '71121176', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14327', '0', '71122183', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14328', '0', '71140041', 'Commerzbank Rosenheim');
-INSERT INTO static_bic_de VALUES ('14329', '0', '71141041', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('14330', '0', '71142041', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('14331', '0', '71150000', 'Sparkasse Rosenheim-Bad Aibling');
-INSERT INTO static_bic_de VALUES ('14362', '0', '71151020', 'Kreissparkasse Mühldorf');
-INSERT INTO static_bic_de VALUES ('14372', '0', '71151240', 'Kreissparkasse Bad Aibling -alt-');
-INSERT INTO static_bic_de VALUES ('14373', '0', '71152570', 'Kreissparkasse Miesbach-Tegernsee');
-INSERT INTO static_bic_de VALUES ('14387', '0', '71152680', 'Kreis- und Stadtsparkasse Wasserburg');
-INSERT INTO static_bic_de VALUES ('14404', '0', '71160000', 'Volksbank Raiffeisenbank Mangfalltal-Rosenheim');
-INSERT INTO static_bic_de VALUES ('14421', '0', '71160161', 'VR Bank Rosenheim-Chiemsee');
-INSERT INTO static_bic_de VALUES ('14458', '0', '71161964', 'Volksbank-Raiffeisenbank Chiemsee -alt-');
-INSERT INTO static_bic_de VALUES ('14460', '0', '71162355', 'Raiffeisenbank Oberaudorf');
-INSERT INTO static_bic_de VALUES ('14464', '0', '71162804', 'Raiffeisenbank Aschau-Samerberg');
-INSERT INTO static_bic_de VALUES ('14469', '0', '71165150', 'Raiffeisenbank Mangfalltal -alt-');
-INSERT INTO static_bic_de VALUES ('14470', '0', '71180005', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('14471', '0', '71190000', 'Volksbank Rosenheim -alt-');
-INSERT INTO static_bic_de VALUES ('14472', '0', '71191000', 'VR-Bank Burghausen-Mühldorf');
-INSERT INTO static_bic_de VALUES ('14481', '0', '72000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('14482', '0', '72010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('14484', '0', '72012300', 'Bank für Tirol und Vorarlberg Deutschland');
-INSERT INTO static_bic_de VALUES ('14485', '0', '72020070', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14499', '0', '72020240', 'Bayer Hypo- und Vereinsbank Ndl 677 Agsb');
-INSERT INTO static_bic_de VALUES ('14500', '0', '72020700', 'Augsburger Aktienbank');
-INSERT INTO static_bic_de VALUES ('14501', '0', '72021271', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14502', '0', '72021876', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14504', '0', '72030014', 'Fürst Fugger Privatbank');
-INSERT INTO static_bic_de VALUES ('14505', '0', '72030227', 'Hafner, Anton - Bankgeschäft');
-INSERT INTO static_bic_de VALUES ('14508', '0', '72040046', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('14510', '0', '72050000', 'Stadtsparkasse Augsburg');
-INSERT INTO static_bic_de VALUES ('14521', '0', '72050101', 'Kreissparkasse Augsburg');
-INSERT INTO static_bic_de VALUES ('14556', '0', '72051210', 'Stadtsparkasse Aichach');
-INSERT INTO static_bic_de VALUES ('14566', '0', '72051303', 'Marktsparkasse Altomünster -alt-');
-INSERT INTO static_bic_de VALUES ('14567', '0', '72051840', 'Sparkasse Günzburg-Krumbach');
-INSERT INTO static_bic_de VALUES ('14587', '0', '72060300', 'Handels- und Gewerbebank Augsburg');
-INSERT INTO static_bic_de VALUES ('14594', '0', '72062152', 'VR-Bank Lech-Zusam');
-INSERT INTO static_bic_de VALUES ('14615', '0', '72069002', 'Raiffeisenbank Adelzhausen-Sielenbach');
-INSERT INTO static_bic_de VALUES ('14620', '0', '72069005', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14625', '0', '72069034', 'Raiffeisenbank Bissingen');
-INSERT INTO static_bic_de VALUES ('14627', '0', '72069036', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14633', '0', '72069043', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14642', '0', '72069081', 'Raiffeisenbank Gersthofen -alt-');
-INSERT INTO static_bic_de VALUES ('14643', '0', '72069090', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14645', '0', '72069105', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14648', '0', '72069108', 'Raiffeisenbank Höchstädt u. U. -alt-');
-INSERT INTO static_bic_de VALUES ('14649', '0', '72069113', 'Raiffeisenbank Aschberg');
-INSERT INTO static_bic_de VALUES ('14654', '0', '72069114', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14657', '0', '72069116', 'Raiffeisenbank Horgau -alt-');
-INSERT INTO static_bic_de VALUES ('14659', '0', '72069119', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14664', '0', '72069121', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('14665', '0', '72069123', 'Raiffeisenbank Jettingen-Scheppach');
-INSERT INTO static_bic_de VALUES ('14667', '0', '72069126', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14669', '0', '72069132', 'Raiffeisenbank Krumbach/Schwaben');
-INSERT INTO static_bic_de VALUES ('14679', '0', '72069135', 'Raiffeisenbank Stauden');
-INSERT INTO static_bic_de VALUES ('14687', '0', '72069138', 'Raiffeisenbank Langerringen');
-INSERT INTO static_bic_de VALUES ('14688', '0', '72069139', 'Raiffeisenbank Langweid-Achsheim');
-INSERT INTO static_bic_de VALUES ('14689', '0', '72069141', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('14690', '0', '72069155', 'Raiffeisenbank Kissing-Mering');
-INSERT INTO static_bic_de VALUES ('14699', '0', '72069168', 'Vereinigte Raiffeisenbank in Niederraunau -alt-');
-INSERT INTO static_bic_de VALUES ('14700', '0', '72069179', 'Raiffeisenbank Unteres Zusamtal');
-INSERT INTO static_bic_de VALUES ('14702', '0', '72069181', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14706', '0', '72069193', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14709', '0', '72069209', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14711', '0', '72069220', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14717', '0', '72069233', 'Raiffeisenbank Thalfingen');
-INSERT INTO static_bic_de VALUES ('14718', '0', '72069235', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14722', '0', '72069263', 'Raiffeisenbank Wittislingen');
-INSERT INTO static_bic_de VALUES ('14726', '0', '72069274', 'Raiffeisenbank Augsburger Land West');
-INSERT INTO static_bic_de VALUES ('14738', '0', '72069308', 'Raiffeisen-Volksbank Wemding');
-INSERT INTO static_bic_de VALUES ('14746', '0', '72069325', 'Raiffeisenbank Möttingen -alt-');
-INSERT INTO static_bic_de VALUES ('14747', '0', '72069329', 'Raiffeisen-Volksbank Ries');
-INSERT INTO static_bic_de VALUES ('14765', '0', '72069330', 'Raiffeisenbank Oberes Kesseltal -alt-');
-INSERT INTO static_bic_de VALUES ('14766', '0', '72069736', 'Raiffeisenbank Iller-Roth-Günz');
-INSERT INTO static_bic_de VALUES ('14786', '0', '72069742', 'Raiffeisenbank Echsheim -alt-');
-INSERT INTO static_bic_de VALUES ('14787', '0', '72069789', 'Raiffeisenbank Pfaffenhausen');
-INSERT INTO static_bic_de VALUES ('14793', '0', '72070001', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('14800', '0', '72070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('14807', '0', '72080001', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('14809', '0', '72090000', 'Augusta-Bank Raiffeisen-Volksbank');
-INSERT INTO static_bic_de VALUES ('14821', '0', '72090500', 'Sparda-Bank Augsburg');
-INSERT INTO static_bic_de VALUES ('14822', '0', '72090900', 'PSD Bank München');
-INSERT INTO static_bic_de VALUES ('14823', '0', '72091800', 'Volksbank Günzburg');
-INSERT INTO static_bic_de VALUES ('14832', '0', '72100000', 'Bundesbank eh Ingolstadt');
-INSERT INTO static_bic_de VALUES ('14833', '0', '72120078', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14843', '0', '72120079', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14844', '0', '72120207', 'Bayer Hypo- und Vereinsbank Ndl 648 Ing');
-INSERT INTO static_bic_de VALUES ('14845', '0', '72122181', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('14846', '0', '72140052', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('14847', '0', '72150000', 'Sparkasse Ingolstadt');
-INSERT INTO static_bic_de VALUES ('14861', '0', '72151340', 'Sparkasse Eichstätt');
-INSERT INTO static_bic_de VALUES ('14872', '0', '72151650', 'Vereinigte Sparkassen Pfaffenhofen');
-INSERT INTO static_bic_de VALUES ('14887', '0', '72151880', 'Stadtsparkasse Schrobenhausen');
-INSERT INTO static_bic_de VALUES ('14895', '0', '72152070', 'Sparkasse Neuburg-Rain');
-INSERT INTO static_bic_de VALUES ('14908', '0', '72160818', 'Raiffeisenbk Ingolstadt-Pfaffenhofen-Eichstätt');
-INSERT INTO static_bic_de VALUES ('14926', '0', '72169013', 'Raiffeisenbank Aresing-Hörzhausen-Schiltberg');
-INSERT INTO static_bic_de VALUES ('14930', '0', '72169080', 'Raiffeisenbank Gerolsbach');
-INSERT INTO static_bic_de VALUES ('14932', '0', '72169111', 'Raiffeisenbank Hohenwart -alt-');
-INSERT INTO static_bic_de VALUES ('14934', '0', '72169218', 'Raiffeisenbank Schrobenhausen');
-INSERT INTO static_bic_de VALUES ('14938', '0', '72169246', 'Raiffeisenbank Schrobenhausener Land');
-INSERT INTO static_bic_de VALUES ('14943', '0', '72169380', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('14946', '0', '72169733', 'Raiffeisenbank Berg im Gau-Langenmosen -alt-');
-INSERT INTO static_bic_de VALUES ('14947', '0', '72169745', 'Raiffeisenbank Ehekirchen-Oberhausen');
-INSERT INTO static_bic_de VALUES ('14950', '0', '72169753', 'Raiffeisenbank Ober-Unterhausen-Sinning -alt-');
-INSERT INTO static_bic_de VALUES ('14952', '0', '72169756', 'Raiffeisen-Volksbank Neuburg/Donau');
-INSERT INTO static_bic_de VALUES ('14959', '0', '72169764', 'Raiffeisenbank Donaumooser Land');
-INSERT INTO static_bic_de VALUES ('14966', '0', '72169812', 'Raiffeisenbank Gaimersheim-Buxheim');
-INSERT INTO static_bic_de VALUES ('14974', '0', '72169831', 'Raiffeisenbank Riedenburg-Lobsing');
-INSERT INTO static_bic_de VALUES ('14979', '0', '72170007', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('14983', '0', '72170024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('14987', '0', '72180002', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('14988', '0', '72191300', 'Volksbank Raiffeisenbank Eichstätt');
-INSERT INTO static_bic_de VALUES ('15002', '0', '72191600', 'Hallertauer Volksbank');
-INSERT INTO static_bic_de VALUES ('15024', '0', '72191800', 'Volksbank Schrobenhausen');
-INSERT INTO static_bic_de VALUES ('15027', '0', '72192000', 'Volksbank Neuburg -alt-');
-INSERT INTO static_bic_de VALUES ('15028', '0', '72220074', 'Bayer, Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15029', '0', '72223182', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15030', '0', '72250000', 'Sparkasse Nördlingen');
-INSERT INTO static_bic_de VALUES ('15039', '0', '72250160', 'Sparkasse Donauwörth');
-INSERT INTO static_bic_de VALUES ('15058', '0', '72251520', 'Kreis- und Stadtsparkasse Dillingen');
-INSERT INTO static_bic_de VALUES ('15080', '0', '72261754', 'Raiffeisenbank Rain am Lech');
-INSERT INTO static_bic_de VALUES ('15087', '0', '72262401', 'Raiffeisen-Volksbank Dillingen');
-INSERT INTO static_bic_de VALUES ('15095', '0', '72262901', 'Genossenschaftsbank Wertingen -alt-');
-INSERT INTO static_bic_de VALUES ('15096', '0', '72290100', 'Raiffeisen-Volksbank Donauwörth');
-INSERT INTO static_bic_de VALUES ('15118', '0', '73050000', 'Sparkasse Neu-Ulm-Illertissen');
-INSERT INTO static_bic_de VALUES ('15134', '0', '73061191', 'VR-Bank Neu-Ulm/Weißenhorn');
-INSERT INTO static_bic_de VALUES ('15139', '0', '73090000', 'Volksbank Neu-Ulm');
-INSERT INTO static_bic_de VALUES ('15143', '0', '73100000', 'Bundesbank eh Memmingen');
-INSERT INTO static_bic_de VALUES ('15144', '0', '73120075', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15150', '0', '73140046', 'Commerzbank Memmingen');
-INSERT INTO static_bic_de VALUES ('15151', '0', '73150000', 'Sparkasse Memmingen-Lindau-Mindelheim');
-INSERT INTO static_bic_de VALUES ('15197', '0', '73160000', 'Genossenschaftsbank Unterallgäu');
-INSERT INTO static_bic_de VALUES ('15210', '0', '73161455', 'Raiffeisenbank Bad Grönenbach');
-INSERT INTO static_bic_de VALUES ('15215', '0', '73180011', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('15216', '0', '73190000', 'VR-Bank Memmingen');
-INSERT INTO static_bic_de VALUES ('15232', '0', '73191500', 'Volksbank Ulm-Biberach');
-INSERT INTO static_bic_de VALUES ('15233', '0', '73300000', 'Bundesbank eh Kempten');
-INSERT INTO static_bic_de VALUES ('15234', '0', '73311600', 'Vorarlberger Landes- und Hypothekenbank');
-INSERT INTO static_bic_de VALUES ('15236', '0', '73311800', 'UniCredit Bank Austria');
-INSERT INTO static_bic_de VALUES ('15237', '0', '73320073', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15239', '0', '73320442', 'Bayer Hypo- und Vereinsbank Ndl 669 Kpt');
-INSERT INTO static_bic_de VALUES ('15240', '0', '73321177', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15241', '0', '73322380', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15245', '0', '73331700', 'Gabler Saliter Bankgeschäft');
-INSERT INTO static_bic_de VALUES ('15249', '0', '73340046', 'Commerzbank Kempten Allgäu');
-INSERT INTO static_bic_de VALUES ('15250', '0', '73350000', 'Sparkasse Allgäu');
-INSERT INTO static_bic_de VALUES ('15292', '0', '73351635', 'Sparkasse Riezlern, Kleinwalsertal');
-INSERT INTO static_bic_de VALUES ('15293', '0', '73351840', 'Dornbirner Sparkasse');
-INSERT INTO static_bic_de VALUES ('15294', '0', '73361592', 'Raiffeisenbank Kleinwalsertal');
-INSERT INTO static_bic_de VALUES ('15297', '0', '73362421', 'Bankhaus Jungholz Zndl der Raiffeisenbank Reutte');
-INSERT INTO static_bic_de VALUES ('15298', '0', '73362500', 'Raiffeisen-Landesbank Tirol');
-INSERT INTO static_bic_de VALUES ('15299', '0', '73369264', 'Raiffeisenbank im Allgäuer Land');
-INSERT INTO static_bic_de VALUES ('15314', '0', '73369750', 'Raiffeisenbank Erkheim -alt-');
-INSERT INTO static_bic_de VALUES ('15315', '0', '73369821', 'Raiffeisen-Bodenseebank');
-INSERT INTO static_bic_de VALUES ('15320', '0', '73369823', 'Raiffeisenbank Westallgäu');
-INSERT INTO static_bic_de VALUES ('15331', '0', '73369824', 'Raiffeisenbank Heimenkirch-Ellhofen -alt-');
-INSERT INTO static_bic_de VALUES ('15333', '0', '73369826', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('15340', '0', '73369851', 'Raiffeisenbank Aitrang-Ruderatshofen');
-INSERT INTO static_bic_de VALUES ('15343', '0', '73369854', 'Raiffeisenbank Fuchstal-Denklingen');
-INSERT INTO static_bic_de VALUES ('15347', '0', '73369859', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15349', '0', '73369871', 'Raiffeisenbank Baisweil-Eggenthal-Friesenried');
-INSERT INTO static_bic_de VALUES ('15353', '0', '73369878', 'Raiffeisenbank Füssen-Pfronten-Nesselwang');
-INSERT INTO static_bic_de VALUES ('15362', '0', '73369881', 'Raiffeisenbank Haldenwang');
-INSERT INTO static_bic_de VALUES ('15365', '0', '73369888', 'Raiffeisenbank Irsee-Pforzen-Rieden -alt-');
-INSERT INTO static_bic_de VALUES ('15370', '0', '73369902', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15377', '0', '73369915', 'Raiffeisenbank Obergermaringen');
-INSERT INTO static_bic_de VALUES ('15379', '0', '73369918', 'Raiffeisenbank Kirchweihtal');
-INSERT INTO static_bic_de VALUES ('15389', '0', '73369920', 'Raiffeisenbank Oberallgäu-Süd');
-INSERT INTO static_bic_de VALUES ('15403', '0', '73369933', 'Raiffeisenbank Südliches Ostallgäu');
-INSERT INTO static_bic_de VALUES ('15411', '0', '73369936', 'Raiffeisenbank Seeg -alt-');
-INSERT INTO static_bic_de VALUES ('15412', '0', '73369951', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('15413', '0', '73369954', 'Raiffeisenbank Wald-Görisried');
-INSERT INTO static_bic_de VALUES ('15416', '0', '73370008', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('15422', '0', '73370024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('15428', '0', '73380004', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('15429', '0', '73390000', 'Allgäuer Volksbank Kempten-Sonthofen');
-INSERT INTO static_bic_de VALUES ('15436', '0', '73391600', 'Volksbank im Kleinwalsertal');
-INSERT INTO static_bic_de VALUES ('15437', '0', '73392000', 'Volksbank Immenstadt');
-INSERT INTO static_bic_de VALUES ('15440', '0', '73392400', 'Volksbank Tirol Jungholz');
-INSERT INTO static_bic_de VALUES ('15441', '0', '73420071', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15445', '0', '73420546', 'Bayer Hypo- und Vereinsbank Ndl 693 Kaufb');
-INSERT INTO static_bic_de VALUES ('15446', '0', '73421478', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15448', '0', '73450000', 'Kreis- und Stadtsparkasse Kaufbeuren');
-INSERT INTO static_bic_de VALUES ('15458', '0', '73451450', 'Kreissparkasse Schongau');
-INSERT INTO static_bic_de VALUES ('15472', '0', '73460046', 'VR Bank Kaufbeuren-Ostallgäu');
-INSERT INTO static_bic_de VALUES ('15491', '0', '73480013', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('15492', '0', '73491300', 'Volksbank Ostallgäu -alt-');
-INSERT INTO static_bic_de VALUES ('15494', '0', '74000000', 'Bundesbank eh Passau');
-INSERT INTO static_bic_de VALUES ('15495', '0', '74020074', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15503', '0', '74020100', 'Raiffeisenlandesbank OÖ Zndl Süddeutschland');
-INSERT INTO static_bic_de VALUES ('15504', '0', '74020414', 'Bayer Hypo- und Vereinsbank Ndl 672 Pass');
-INSERT INTO static_bic_de VALUES ('15505', '0', '74040082', 'Commerzbank Passau');
-INSERT INTO static_bic_de VALUES ('15506', '0', '74050000', 'Sparkasse Passau');
-INSERT INTO static_bic_de VALUES ('15537', '0', '74051230', 'Sparkasse Freyung-Grafenau');
-INSERT INTO static_bic_de VALUES ('15557', '0', '74061101', 'Raiffeisenbank Am Goldenen Steig');
-INSERT INTO static_bic_de VALUES ('15565', '0', '74061564', 'Raiffeisenbank Unteres Inntal');
-INSERT INTO static_bic_de VALUES ('15569', '0', '74061670', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15572', '0', '74061780', 'Raiffeisenbank Tettenweis-Schmidham -alt-');
-INSERT INTO static_bic_de VALUES ('15573', '0', '74061813', 'VR-Bank Rottal-Inn');
-INSERT INTO static_bic_de VALUES ('15594', '0', '74062490', 'Raiffeisenbank Vilshofener Land');
-INSERT INTO static_bic_de VALUES ('15602', '0', '74062555', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15603', '0', '74062786', 'Raiffeisenbank i Lkr Passau-Nord');
-INSERT INTO static_bic_de VALUES ('15614', '0', '74064593', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15617', '0', '74064742', 'Raiffeisenbank Fürstenzell -alt-');
-INSERT INTO static_bic_de VALUES ('15618', '0', '74065782', 'Raiffeisenbank Salzweg-Thyrnau');
-INSERT INTO static_bic_de VALUES ('15623', '0', '74066749', 'Raiffeisenbank im Südl Bayerischen Wald');
-INSERT INTO static_bic_de VALUES ('15628', '0', '74067000', 'Rottaler Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15637', '0', '74069186', 'Raiffeisenbank Viechtach-Zwiesel');
-INSERT INTO static_bic_de VALUES ('15638', '0', '74069738', 'Raiffeisenbank Buchhofen-Künzing -alt-');
-INSERT INTO static_bic_de VALUES ('15639', '0', '74069744', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15641', '0', '74069752', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15643', '0', '74069758', 'Raiffeisenbank Kirchberg v. Wald');
-INSERT INTO static_bic_de VALUES ('15648', '0', '74069763', 'Raiffeisenbank Mauth');
-INSERT INTO static_bic_de VALUES ('15649', '0', '74069768', 'Raiffeisenbank am Dreisessel');
-INSERT INTO static_bic_de VALUES ('15653', '0', '74090000', 'VR-Bank Passau');
-INSERT INTO static_bic_de VALUES ('15663', '0', '74092400', 'Volksbank Vilshofen');
-INSERT INTO static_bic_de VALUES ('15671', '0', '74100000', 'Bundesbank eh Deggendorf');
-INSERT INTO static_bic_de VALUES ('15672', '0', '74120071', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15673', '0', '74120514', 'Bayer Hypo- und Vereinsbank Ndl 674 Dgdf');
-INSERT INTO static_bic_de VALUES ('15674', '0', '74131000', 'TEBA Kreditbank');
-INSERT INTO static_bic_de VALUES ('15675', '0', '74150000', 'Sparkasse Deggendorf');
-INSERT INTO static_bic_de VALUES ('15694', '0', '74151450', 'Sparkasse Regen-Viechtach');
-INSERT INTO static_bic_de VALUES ('15715', '0', '74160025', 'Raiffeisenbank Deggendorf-Plattling');
-INSERT INTO static_bic_de VALUES ('15729', '0', '74161608', 'Raiffeisenbank Hengersberg-Schöllnach');
-INSERT INTO static_bic_de VALUES ('15736', '0', '74164149', 'VR-Bank');
-INSERT INTO static_bic_de VALUES ('15751', '0', '74165013', 'Raiffeisenbank Sonnenwald');
-INSERT INTO static_bic_de VALUES ('15759', '0', '74167099', 'Raiffeisenbank Metten');
-INSERT INTO static_bic_de VALUES ('15760', '0', '74180009', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('15761', '0', '74190000', 'GenoBank DonauWald');
-INSERT INTO static_bic_de VALUES ('15780', '0', '74191000', 'VR-Bank Landau');
-INSERT INTO static_bic_de VALUES ('15791', '0', '74220075', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15792', '0', '74221170', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15794', '0', '74240062', 'Commerzbank Straubing');
-INSERT INTO static_bic_de VALUES ('15795', '0', '74250000', 'Sparkasse Niederbayern-Mitte');
-INSERT INTO static_bic_de VALUES ('15834', '0', '74251020', 'Sparkasse im Landkreis Cham');
-INSERT INTO static_bic_de VALUES ('15865', '0', '74260110', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('15880', '0', '74261024', 'Raiffeisenbank Cham-Roding-Furth im Wald');
-INSERT INTO static_bic_de VALUES ('15898', '0', '74290000', 'Volksbank Straubing');
-INSERT INTO static_bic_de VALUES ('15919', '0', '74290100', 'CB Credit-Bank');
-INSERT INTO static_bic_de VALUES ('15920', '0', '74300000', 'Bundesbank eh Landshut');
-INSERT INTO static_bic_de VALUES ('15921', '0', '74320073', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('15931', '0', '74320307', 'Bayer Hypo- und Vereinsbank Ndl 601 Ldsht');
-INSERT INTO static_bic_de VALUES ('15932', '0', '74340077', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('15933', '0', '74350000', 'Sparkasse Landshut');
-INSERT INTO static_bic_de VALUES ('15961', '0', '74351310', 'Sparkasse Dingolfing-Landau -alt-');
-INSERT INTO static_bic_de VALUES ('15962', '0', '74351430', 'Sparkasse Rottal-Inn');
-INSERT INTO static_bic_de VALUES ('15992', '0', '74351740', 'Stadt- und Kreissparkasse Moosburg');
-INSERT INTO static_bic_de VALUES ('16000', '0', '74361211', 'Raiffeisenbank Arnstorf');
-INSERT INTO static_bic_de VALUES ('16006', '0', '74362663', 'Raiffeisenbank Altdorf-Ergolding');
-INSERT INTO static_bic_de VALUES ('16013', '0', '74364689', 'Raiffeisenbank Pfeffenhausen-Rottenburg');
-INSERT INTO static_bic_de VALUES ('16020', '0', '74366666', 'Raiffeisenbank Geisenhausen');
-INSERT INTO static_bic_de VALUES ('16023', '0', '74369068', 'Raiffeisenbank Hofkirchen-Bayerbach');
-INSERT INTO static_bic_de VALUES ('16026', '0', '74369088', 'Raiffeisenbank Geiselhöring-Pfaffenberg');
-INSERT INTO static_bic_de VALUES ('16031', '0', '74369091', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16034', '0', '74369130', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16039', '0', '74369146', 'Raiffeisenbank Rattiszell-Konzell');
-INSERT INTO static_bic_de VALUES ('16047', '0', '74369656', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16053', '0', '74369662', 'Raiffeisenbank Buch-Eching');
-INSERT INTO static_bic_de VALUES ('16058', '0', '74369704', 'Raiffeisenbank Mengkofen-Loiching');
-INSERT INTO static_bic_de VALUES ('16063', '0', '74369709', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16065', '0', '74380007', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('16066', '0', '74390000', 'VR-Bank Landshut');
-INSERT INTO static_bic_de VALUES ('16072', '0', '74391300', 'Volksbank-Raiffeisenbank Dingolfing');
-INSERT INTO static_bic_de VALUES ('16078', '0', '74391400', 'Rottaler Volksbank-Raiffeisenbank Eggenfelden');
-INSERT INTO static_bic_de VALUES ('16089', '0', '74392300', 'VR-Bank Vilsbiburg');
-INSERT INTO static_bic_de VALUES ('16097', '0', '75000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('16098', '0', '75010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('16099', '0', '75020073', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16108', '0', '75020314', 'Bayer Hypo- und Vereinsbank Ndl 670 Rgsb');
-INSERT INTO static_bic_de VALUES ('16109', '0', '75021174', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16110', '0', '75040062', 'Commerzbank Regensburg');
-INSERT INTO static_bic_de VALUES ('16111', '0', '75050000', 'Sparkasse Regensburg');
-INSERT INTO static_bic_de VALUES ('16146', '0', '75051040', 'Sparkasse im Landkreis Schwandorf');
-INSERT INTO static_bic_de VALUES ('16170', '0', '75051565', 'Kreissparkasse Kelheim');
-INSERT INTO static_bic_de VALUES ('16192', '0', '75060150', 'Raiffeisenbank Regensburg-Wenzenbach');
-INSERT INTO static_bic_de VALUES ('16199', '0', '75061168', 'Raiffeisenbank Schwandorf-Nittenau');
-INSERT INTO static_bic_de VALUES ('16209', '0', '75061851', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16213', '0', '75062026', 'Raiffeisenbank Oberpfalz Süd');
-INSERT INTO static_bic_de VALUES ('16233', '0', '75069014', 'Raiffeisen-Bank Bad Abbach-Saal');
-INSERT INTO static_bic_de VALUES ('16242', '0', '75069015', 'Raiffeisenbank Bad Gögging');
-INSERT INTO static_bic_de VALUES ('16249', '0', '75069020', 'Raiffeisen-Bank Bruck');
-INSERT INTO static_bic_de VALUES ('16252', '0', '75069038', 'Raiffeisenbank Falkenstein-Wörth');
-INSERT INTO static_bic_de VALUES ('16259', '0', '75069043', 'Raiffeisen-Bank -alt-');
-INSERT INTO static_bic_de VALUES ('16264', '0', '75069050', 'Raiffeisenbank Grafenwöhr-Kirchenthumbach');
-INSERT INTO static_bic_de VALUES ('16267', '0', '75069055', 'Raiffeisenbank Alteglofsheim-Hagelstadt');
-INSERT INTO static_bic_de VALUES ('16270', '0', '75069061', 'Raiffeisenbank Hemau-Kallmünz');
-INSERT INTO static_bic_de VALUES ('16278', '0', '75069062', 'Raiffeisenbank Herrnwahlthann-Teugn-Dünzling -alt-');
-INSERT INTO static_bic_de VALUES ('16282', '0', '75069074', 'Raiffeisenbank Inkofen-Eggmühl');
-INSERT INTO static_bic_de VALUES ('16285', '0', '75069076', 'Raiffeisenbank Kallmünz -alt-');
-INSERT INTO static_bic_de VALUES ('16288', '0', '75069078', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16291', '0', '75069081', 'Raiffeisenbank Bad Kötzting');
-INSERT INTO static_bic_de VALUES ('16298', '0', '75069090', 'Raiffeisen-Bank');
-INSERT INTO static_bic_de VALUES ('16301', '0', '75069092', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16302', '0', '75069094', 'Raiffeisenbank Parsberg-Velburg');
-INSERT INTO static_bic_de VALUES ('16308', '0', '75069110', 'Raiffeisenbank Eschlkam-Lam-Lohberg-Neukirchen b Hl Blut');
-INSERT INTO static_bic_de VALUES ('16311', '0', '75069164', 'Raiffeisenbank Schierling-Obertraubling -alt-');
-INSERT INTO static_bic_de VALUES ('16319', '0', '75069171', 'Raiffeisenbank im Naabtal');
-INSERT INTO static_bic_de VALUES ('16336', '0', '75070013', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('16340', '0', '75070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('16344', '0', '75080003', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('16345', '0', '75090000', 'Volksbank Regensburg');
-INSERT INTO static_bic_de VALUES ('16348', '0', '75090300', 'LIGA Bank');
-INSERT INTO static_bic_de VALUES ('16359', '0', '75090500', 'Sparda-Bank Regensburg');
-INSERT INTO static_bic_de VALUES ('16364', '0', '75090629', 'apoBank');
-INSERT INTO static_bic_de VALUES ('16365', '0', '75090900', 'PSD Bank');
-INSERT INTO static_bic_de VALUES ('16366', '0', '75091400', 'VR Bank Burglengenfeld');
-INSERT INTO static_bic_de VALUES ('16371', '0', '75220070', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16373', '0', '75240000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('16375', '0', '75250000', 'Sparkasse Amberg-Sulzbach');
-INSERT INTO static_bic_de VALUES ('16394', '0', '75261700', 'Raiffeisenbank Sulzbach-Rosenberg');
-INSERT INTO static_bic_de VALUES ('16399', '0', '75290000', 'Volksbank-Raiffeisenbank Amberg');
-INSERT INTO static_bic_de VALUES ('16405', '0', '75300000', 'Bundesbank eh Weiden Oberpf');
-INSERT INTO static_bic_de VALUES ('16406', '0', '75320075', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16410', '0', '75340090', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('16412', '0', '75350000', 'Sparkasse Oberpfalz Nord');
-INSERT INTO static_bic_de VALUES ('16432', '0', '75351960', 'Vereinigte Sparkassen Eschenbach i d Opf');
-INSERT INTO static_bic_de VALUES ('16464', '0', '75360011', 'Raiffeisenbank Weiden');
-INSERT INTO static_bic_de VALUES ('16481', '0', '75362039', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16484', '0', '75363189', 'Raiffeisenbank Neustadt-Vohenstrauß');
-INSERT INTO static_bic_de VALUES ('16495', '0', '75390000', 'Volksbank Nordoberpfalz');
-INSERT INTO static_bic_de VALUES ('16506', '0', '76000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('16507', '0', '76010085', 'Postbank');
-INSERT INTO static_bic_de VALUES ('16508', '0', '76010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('16509', '0', '76020070', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16517', '0', '76020214', 'Bayer Hypo- und Vereinsbank Ndl 156 Nbg');
-INSERT INTO static_bic_de VALUES ('16518', '0', '76020600', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('16519', '0', '76020800', 'Emporiki Bank - Germany');
-INSERT INTO static_bic_de VALUES ('16520', '0', '76020900', 'Entrium Direct Bankers -alt-');
-INSERT INTO static_bic_de VALUES ('16521', '0', '76026000', 'norisbank');
-INSERT INTO static_bic_de VALUES ('16578', '0', '76030080', 'Cortal Consors S.A. Zndl Deutschland');
-INSERT INTO static_bic_de VALUES ('16579', '0', '76030600', 'Isbank Fil Nürnberg');
-INSERT INTO static_bic_de VALUES ('16580', '0', '76032000', 'TeamBank Nürnberg');
-INSERT INTO static_bic_de VALUES ('16581', '0', '76032001', 'TeamBank Nürnberg GF Austria');
-INSERT INTO static_bic_de VALUES ('16582', '0', '76035000', 'UmweltBank');
-INSERT INTO static_bic_de VALUES ('16583', '0', '76040061', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('16587', '0', '76050000', 'Bayerische Landesbank');
-INSERT INTO static_bic_de VALUES ('16588', '0', '76050101', 'Sparkasse Nürnberg');
-INSERT INTO static_bic_de VALUES ('16614', '0', '76052080', 'Sparkasse Neumarkt i d OPf-Parsberg');
-INSERT INTO static_bic_de VALUES ('16633', '0', '76060000', 'DZ BANK');
-INSERT INTO static_bic_de VALUES ('16634', '0', '76060561', 'ACREDOBANK');
-INSERT INTO static_bic_de VALUES ('16638', '0', '76060618', 'Volksbank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16644', '0', '76061025', 'Raiffeisen Spar+Kreditbank Lauf a d Pegnitz');
-INSERT INTO static_bic_de VALUES ('16653', '0', '76061482', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16666', '0', '76069359', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16668', '0', '76069369', 'Raiffeisenbank Auerbach-Freihung');
-INSERT INTO static_bic_de VALUES ('16676', '0', '76069372', 'Raiffeisenbank Bad Windsheim');
-INSERT INTO static_bic_de VALUES ('16684', '0', '76069378', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16686', '0', '76069393', 'Raiffeisenbank Büchenbach-Ottersdorf -alt-');
-INSERT INTO static_bic_de VALUES ('16687', '0', '76069404', 'Raiffeisenbank Uehlfeld-Dachsbach');
-INSERT INTO static_bic_de VALUES ('16692', '0', '76069409', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16694', '0', '76069410', 'Raiffeisenbank Dietersheim und Umgebung');
-INSERT INTO static_bic_de VALUES ('16697', '0', '76069411', 'Raiffeisenbank Dietfurt');
-INSERT INTO static_bic_de VALUES ('16699', '0', '76069412', 'Raiffeisenbank Dinkelsbühl-Hesselberg -alt-');
-INSERT INTO static_bic_de VALUES ('16700', '0', '76069440', 'Raiffeisenbank Altdorf-Feucht');
-INSERT INTO static_bic_de VALUES ('16707', '0', '76069441', 'VR-Bank Feuchtwangen-Limes');
-INSERT INTO static_bic_de VALUES ('16716', '0', '76069448', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('16717', '0', '76069449', 'Raiffeisenbank Berching-Freystadt-Mühlhausen');
-INSERT INTO static_bic_de VALUES ('16721', '0', '76069462', 'Raiffeisenbank Greding - Thalmässing');
-INSERT INTO static_bic_de VALUES ('16723', '0', '76069468', 'Raiffeisenbank Weißenburg-Gunzenhausen');
-INSERT INTO static_bic_de VALUES ('16748', '0', '76069483', 'Raiffeisenbank Herzogenaurach');
-INSERT INTO static_bic_de VALUES ('16750', '0', '76069486', 'Raiffeisenbank Hirschau');
-INSERT INTO static_bic_de VALUES ('16754', '0', '76069512', 'Raiffeisenbank Knoblauchsland Nürnberg-Buch');
-INSERT INTO static_bic_de VALUES ('16756', '0', '76069539', 'Raiffeisenbank Markt Erlbach-Linden -alt-');
-INSERT INTO static_bic_de VALUES ('16758', '0', '76069549', 'Raiffeisenbank Münchaurach -alt-');
-INSERT INTO static_bic_de VALUES ('16761', '0', '76069552', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('16762', '0', '76069553', 'Raiffeisenbank Neumarkt');
-INSERT INTO static_bic_de VALUES ('16770', '0', '76069559', 'VR-Bank Uffenheim-Neustadt');
-INSERT INTO static_bic_de VALUES ('16801', '0', '76069564', 'Raiffeisenbank Oberferrieden-Burgthann');
-INSERT INTO static_bic_de VALUES ('16804', '0', '76069576', 'Raiffeisenbank Plankstetten');
-INSERT INTO static_bic_de VALUES ('16807', '0', '76069598', 'Raiffeisenbank Großhabersdorf-Roßtal');
-INSERT INTO static_bic_de VALUES ('16811', '0', '76069601', 'VR-Bank Rothenburg');
-INSERT INTO static_bic_de VALUES ('16824', '0', '76069602', 'Raiffeisenbank Seebachgrund');
-INSERT INTO static_bic_de VALUES ('16830', '0', '76069611', 'Raiffeisenbank Unteres Vilstal');
-INSERT INTO static_bic_de VALUES ('16836', '0', '76069635', 'Raiffeisenbank Ursensollen-Ammerthal-Hohenburg');
-INSERT INTO static_bic_de VALUES ('16840', '0', '76069654', 'Raiffeisenbank Weißenburg -alt-');
-INSERT INTO static_bic_de VALUES ('16842', '0', '76069663', 'Raiffeisenbank Heilsbronn-Windsbach');
-INSERT INTO static_bic_de VALUES ('16848', '0', '76069669', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('16852', '0', '76070012', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('16868', '0', '76070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('16884', '0', '76080040', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('16904', '0', '76080053', 'Commerzbank vormals Dresdner Bank Zw 53');
-INSERT INTO static_bic_de VALUES ('16905', '0', '76080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('16906', '0', '76080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('16907', '0', '76080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('16908', '0', '76089480', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('16909', '0', '76089482', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('16910', '0', '76090300', 'Bäcker-Bank Nürnberg');
-INSERT INTO static_bic_de VALUES ('16911', '0', '76090400', 'Evenord-Bank');
-INSERT INTO static_bic_de VALUES ('16914', '0', '76090500', 'Sparda-Bank Nürnberg');
-INSERT INTO static_bic_de VALUES ('16922', '0', '76090613', 'apoBank');
-INSERT INTO static_bic_de VALUES ('16923', '0', '76090900', 'PSD Bank');
-INSERT INTO static_bic_de VALUES ('16924', '0', '76091000', 'Sparda-Bank Nürnberg Zw Sonnenstraße');
-INSERT INTO static_bic_de VALUES ('16925', '0', '76211900', 'CVW - Privatbank');
-INSERT INTO static_bic_de VALUES ('16926', '0', '76220073', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16930', '0', '76230000', 'Quelle Bauspar AG');
-INSERT INTO static_bic_de VALUES ('16931', '0', '76240011', 'Commerzbank Fürth Bayern');
-INSERT INTO static_bic_de VALUES ('16933', '0', '76250000', 'Sparkasse Fürth');
-INSERT INTO static_bic_de VALUES ('16947', '0', '76251020', 'Sparkasse i Landkreis Neustadt a d Aisch');
-INSERT INTO static_bic_de VALUES ('16972', '0', '76260451', 'Raiffeisen-Volksbank Fürth');
-INSERT INTO static_bic_de VALUES ('16980', '0', '76300000', 'Bundesbank eh Erlangen');
-INSERT INTO static_bic_de VALUES ('16981', '0', '76320072', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('16988', '0', '76330111', 'Bankhaus Max Flessa');
-INSERT INTO static_bic_de VALUES ('16989', '0', '76340061', 'Commerzbank Erlangen');
-INSERT INTO static_bic_de VALUES ('16990', '0', '76350000', 'Stadt- und Kreissparkasse Erlangen');
-INSERT INTO static_bic_de VALUES ('17002', '0', '76351040', 'Sparkasse Forchheim');
-INSERT INTO static_bic_de VALUES ('17029', '0', '76351560', 'Kreissparkasse Höchstadt');
-INSERT INTO static_bic_de VALUES ('17044', '0', '76360033', 'Raiffeisen-Volksbank');
-INSERT INTO static_bic_de VALUES ('17052', '0', '76391000', 'Volksbank Forchheim');
-INSERT INTO static_bic_de VALUES ('17060', '0', '76420080', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17062', '0', '76450000', 'Sparkasse Mittelfranken-Süd');
-INSERT INTO static_bic_de VALUES ('17087', '0', '76460015', 'Raiffeisenbank Roth-Schwabach');
-INSERT INTO static_bic_de VALUES ('17097', '0', '76461485', 'Raiffeisenbank am Rothsee');
-INSERT INTO static_bic_de VALUES ('17101', '0', '76500000', 'Bundesbank eh Ansbach');
-INSERT INTO static_bic_de VALUES ('17102', '0', '76520071', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17109', '0', '76550000', 'Vereinigte Sparkassen Ansbach');
-INSERT INTO static_bic_de VALUES ('17140', '0', '76551020', 'Kreis- und Stadtsparkasse Dinkelsbühl');
-INSERT INTO static_bic_de VALUES ('17146', '0', '76551540', 'Vereinigte Sparkassen Gunzenhausen');
-INSERT INTO static_bic_de VALUES ('17161', '0', '76551860', 'Stadt- und Kreissparkasse Rothenburg');
-INSERT INTO static_bic_de VALUES ('17169', '0', '76560060', 'RaiffeisenVolksbank Gewerbebank');
-INSERT INTO static_bic_de VALUES ('17193', '0', '76561979', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('17194', '0', '76591000', 'VR Bank Dinkelsbühl');
-INSERT INTO static_bic_de VALUES ('17208', '0', '77000000', 'Bundesbank eh Bamberg');
-INSERT INTO static_bic_de VALUES ('17209', '0', '77020070', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17212', '0', '77030111', 'Bankhaus Max Flessa');
-INSERT INTO static_bic_de VALUES ('17213', '0', '77040080', 'Commerzbank Bamberg');
-INSERT INTO static_bic_de VALUES ('17214', '0', '77050000', 'Sparkasse Bamberg');
-INSERT INTO static_bic_de VALUES ('17246', '0', '77060100', 'VR Bank Bamberg Raiffeisen-Volksbank');
-INSERT INTO static_bic_de VALUES ('17272', '0', '77061004', 'Raiffeisenbank Obermain Nord');
-INSERT INTO static_bic_de VALUES ('17283', '0', '77061425', 'Raiffeisen-Volksbank');
-INSERT INTO static_bic_de VALUES ('17293', '0', '77062014', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17299', '0', '77062139', 'Raiffeisen-Volksbank Bad Staffelstein');
-INSERT INTO static_bic_de VALUES ('17303', '0', '77063048', 'Raiffeisenbank Hallstadt -alt-');
-INSERT INTO static_bic_de VALUES ('17304', '0', '77065141', 'Raiffeisenbank Stegaurach');
-INSERT INTO static_bic_de VALUES ('17308', '0', '77069042', 'Raiffeisenbank Gößweinstein -alt-');
-INSERT INTO static_bic_de VALUES ('17309', '0', '77069044', 'Raiffeisenbank Küps-Mitwitz-Stockheim');
-INSERT INTO static_bic_de VALUES ('17314', '0', '77069051', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17316', '0', '77069052', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17318', '0', '77069084', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('17319', '0', '77069091', 'Raiffeisenbank Ebrachgrund');
-INSERT INTO static_bic_de VALUES ('17325', '0', '77069110', 'Raiffeisenbank Pretzfeld -alt-');
-INSERT INTO static_bic_de VALUES ('17326', '0', '77069128', 'Raiffeisenbank Scheßlitz-Zapfendorf -alt-');
-INSERT INTO static_bic_de VALUES ('17327', '0', '77069461', 'Vereinigte Raiffeisenbanken');
-INSERT INTO static_bic_de VALUES ('17341', '0', '77069556', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17346', '0', '77069739', 'Raiffeisenbank Thurnauer Land');
-INSERT INTO static_bic_de VALUES ('17350', '0', '77069746', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17352', '0', '77069764', 'Raiffeisenbank Kemnather Land - Steinwald');
-INSERT INTO static_bic_de VALUES ('17363', '0', '77069782', 'Raiffeisenbank am Kulm');
-INSERT INTO static_bic_de VALUES ('17366', '0', '77069836', 'Raiffeisenbank Berg-Bad Steben');
-INSERT INTO static_bic_de VALUES ('17373', '0', '77069868', 'Raiffeisenbank Oberland');
-INSERT INTO static_bic_de VALUES ('17378', '0', '77069870', 'Raiffeisenbank Frankenwald Ost-Oberkotzau');
-INSERT INTO static_bic_de VALUES ('17385', '0', '77069879', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('17387', '0', '77069893', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17389', '0', '77069906', 'Raiffeisenbank Wüstenselbitz');
-INSERT INTO static_bic_de VALUES ('17391', '0', '77069908', 'Raiffeisenbank Sparneck-Stammbach-Zell');
-INSERT INTO static_bic_de VALUES ('17395', '0', '77091800', 'Raiffeisen-Volksbank Lichtenfels-Itzgrund');
-INSERT INTO static_bic_de VALUES ('17403', '0', '77120073', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17405', '0', '77140061', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('17406', '0', '77150000', 'Sparkasse Kulmbach-Kronach');
-INSERT INTO static_bic_de VALUES ('17442', '0', '77151640', 'Sparkasse Kronach-Ludwigsstadt -alt-');
-INSERT INTO static_bic_de VALUES ('17443', '0', '77190000', 'Kulmbacher Bank');
-INSERT INTO static_bic_de VALUES ('17458', '0', '77300000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('17459', '0', '77320072', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17462', '0', '77340076', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('17467', '0', '77350110', 'Sparkasse Bayreuth');
-INSERT INTO static_bic_de VALUES ('17489', '0', '77361600', 'Raiffeisen-Volksbank Kronach-Ludwigsstadt');
-INSERT INTO static_bic_de VALUES ('17502', '0', '77363749', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17507', '0', '77365792', 'Raiffeisenbank Hollfeld-Waischenfeld-Aufseß');
-INSERT INTO static_bic_de VALUES ('17513', '0', '77390000', 'Volksbank-Raiffeisenbank Bayreuth');
-INSERT INTO static_bic_de VALUES ('17540', '0', '77390500', 'Sparda-Bank Nürnberg');
-INSERT INTO static_bic_de VALUES ('17541', '0', '77390628', 'apoBank');
-INSERT INTO static_bic_de VALUES ('17542', '0', '78000000', 'Bundesbank eh Hof');
-INSERT INTO static_bic_de VALUES ('17543', '0', '78020070', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17550', '0', '78020429', 'Bayer Hypo- und Vereinsbank Ndl 128 Hof');
-INSERT INTO static_bic_de VALUES ('17551', '0', '78030080', 'Archon Capital Bank Deutschland');
-INSERT INTO static_bic_de VALUES ('17552', '0', '78030081', 'Archon Capital Bank Deutschland Servicing');
-INSERT INTO static_bic_de VALUES ('17553', '0', '78040081', 'Commerzbank Hof Saale');
-INSERT INTO static_bic_de VALUES ('17563', '0', '78050000', 'Kreis- und Stadtsparkasse Hof');
-INSERT INTO static_bic_de VALUES ('17587', '0', '78055050', 'Sparkasse Fichtelgebirge');
-INSERT INTO static_bic_de VALUES ('17606', '0', '78060896', 'VR Bank Hof');
-INSERT INTO static_bic_de VALUES ('17630', '0', '78062488', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('17631', '0', '78090000', 'Ver VB Hof-Helmbrechts-Münchberg -alt-');
-INSERT INTO static_bic_de VALUES ('17632', '0', '78140000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('17652', '0', '78151080', 'Sparkasse Tirschenreuth -alt-');
-INSERT INTO static_bic_de VALUES ('17653', '0', '78160069', 'VR-Bank Fichtelgebirge');
-INSERT INTO static_bic_de VALUES ('17665', '0', '78161232', 'VR-Bank Marktredwitz -alt-');
-INSERT INTO static_bic_de VALUES ('17666', '0', '78161575', 'Raiffeisenbank im Stiftland');
-INSERT INTO static_bic_de VALUES ('17678', '0', '78320076', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17682', '0', '78330111', 'Bankhaus Max Flessa');
-INSERT INTO static_bic_de VALUES ('17684', '0', '78340091', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('17686', '0', '78350000', 'Sparkasse Coburg-Lichtenfels');
-INSERT INTO static_bic_de VALUES ('17715', '0', '78360000', 'VR-Bank Coburg');
-INSERT INTO static_bic_de VALUES ('17731', '0', '78390000', 'VR-Bank Coburg');
-INSERT INTO static_bic_de VALUES ('17738', '0', '79000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('17739', '0', '79010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('17741', '0', '79020076', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('17749', '0', '79020325', 'Bayer Hypo- und Vereinsbank Ndl 149 Wzb');
-INSERT INTO static_bic_de VALUES ('17750', '0', '79020700', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('17751', '0', '79030001', 'Fürstlich Castellsche Bank Credit-Casse');
-INSERT INTO static_bic_de VALUES ('17766', '0', '79032038', 'Bank Schilling & Co');
-INSERT INTO static_bic_de VALUES ('17782', '0', '79040047', 'Commerzbank Würzburg');
-INSERT INTO static_bic_de VALUES ('17784', '0', '79050000', 'Sparkasse Mainfranken Würzburg');
-INSERT INTO static_bic_de VALUES ('17882', '0', '79061000', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17893', '0', '79061153', 'Raiffeisenbank Lohr, Main');
-INSERT INTO static_bic_de VALUES ('17905', '0', '79062106', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17912', '0', '79063060', 'Raiffeisenbank Estenfeld-Bergtheim');
-INSERT INTO static_bic_de VALUES ('17919', '0', '79063122', 'Raiffeisenbank Höchberg');
-INSERT INTO static_bic_de VALUES ('17931', '0', '79065028', 'VR-Bank Bad Kissingen-Bad Brückenau');
-INSERT INTO static_bic_de VALUES ('17951', '0', '79065160', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17961', '0', '79066082', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('17963', '0', '79069001', 'Raiffeisenbank Volkach-Wiesentheid');
-INSERT INTO static_bic_de VALUES ('17974', '0', '79069010', 'Raiffeisenbank Schweinfurt');
-INSERT INTO static_bic_de VALUES ('17983', '0', '79069031', 'Raiffeisenbank Bütthard-Gaukönigshofen');
-INSERT INTO static_bic_de VALUES ('17989', '0', '79069078', 'Raiffeisenbank Geiselwind -alt-');
-INSERT INTO static_bic_de VALUES ('17991', '0', '79069090', 'Raiffeisenbank Ulsenheim-Gollhofen -alt-');
-INSERT INTO static_bic_de VALUES ('17992', '0', '79069110', 'Raiffeisenkasse Hendungen-Rappershausen -alt-');
-INSERT INTO static_bic_de VALUES ('17994', '0', '79069145', 'Raiffeisenbank Kreuzwertheim-Hasloch -alt-');
-INSERT INTO static_bic_de VALUES ('17995', '0', '79069150', 'Raiffeisenbank Karlstadt-Gemünden');
-INSERT INTO static_bic_de VALUES ('18012', '0', '79069165', 'Genobank Rhön-Grabfeld');
-INSERT INTO static_bic_de VALUES ('18026', '0', '79069181', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18028', '0', '79069188', 'Raiffeisenbank Obereßfeld-Römhild');
-INSERT INTO static_bic_de VALUES ('18030', '0', '79069192', 'Raiffeisenbank Obernbreit und Umgebung');
-INSERT INTO static_bic_de VALUES ('18031', '0', '79069199', 'Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('18032', '0', '79069213', 'Raiffeisenbank Maßbach');
-INSERT INTO static_bic_de VALUES ('18038', '0', '79069271', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18040', '0', '79070016', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('18043', '0', '79070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('18046', '0', '79080052', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18049', '0', '79080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('18050', '0', '79090000', 'Volksbank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18067', '0', '79090624', 'apoBank');
-INSERT INTO static_bic_de VALUES ('18068', '0', '79161058', 'Raiffeisenbank Fränkisches Weinland');
-INSERT INTO static_bic_de VALUES ('18073', '0', '79161499', 'Raiffeisenbank Kitzinger Land');
-INSERT INTO static_bic_de VALUES ('18081', '0', '79190000', 'VR Bank Kitzingen');
-INSERT INTO static_bic_de VALUES ('18093', '0', '79300000', 'Bundesbank eh Schweinfurt');
-INSERT INTO static_bic_de VALUES ('18094', '0', '79320075', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18106', '0', '79320432', 'Bayer Hypo- und Vereinsbank Ndl 137 Schft');
-INSERT INTO static_bic_de VALUES ('18107', '0', '79330111', 'Bankhaus Max Flessa');
-INSERT INTO static_bic_de VALUES ('18121', '0', '79340054', 'Commerzbank Schweinfurt');
-INSERT INTO static_bic_de VALUES ('18123', '0', '79350000', 'Städtische Sparkasse Schweinfurt');
-INSERT INTO static_bic_de VALUES ('18124', '0', '79350101', 'Sparkasse Schweinfurt');
-INSERT INTO static_bic_de VALUES ('18150', '0', '79351010', 'Sparkasse Bad Kissingen');
-INSERT INTO static_bic_de VALUES ('18163', '0', '79351730', 'Sparkasse Ostunterfranken');
-INSERT INTO static_bic_de VALUES ('18181', '0', '79353090', 'Sparkasse Bad Neustadt a d Saale');
-INSERT INTO static_bic_de VALUES ('18200', '0', '79360255', 'Genossenschaftsbank Schweinfurt');
-INSERT INTO static_bic_de VALUES ('18201', '0', '79362081', 'VR-Bank Gerolzhofen');
-INSERT INTO static_bic_de VALUES ('18208', '0', '79362425', 'Raiffeisenbank Werneck');
-INSERT INTO static_bic_de VALUES ('18209', '0', '79363016', 'VR-Bank Rhön-Grabfeld');
-INSERT INTO static_bic_de VALUES ('18225', '0', '79363151', 'Raiffeisen-Volksbank Haßberge');
-INSERT INTO static_bic_de VALUES ('18240', '0', '79364069', 'Raiffeisenbank Frankenwinheim und Umgebung');
-INSERT INTO static_bic_de VALUES ('18244', '0', '79364406', 'VR-Bank Schweinfurt Land');
-INSERT INTO static_bic_de VALUES ('18262', '0', '79380051', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18264', '0', '79500000', 'Bundesbank eh Aschaffenburg');
-INSERT INTO static_bic_de VALUES ('18265', '0', '79510111', 'SEB');
-INSERT INTO static_bic_de VALUES ('18266', '0', '79520070', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18273', '0', '79520533', 'Bayer Hypo- und Vereinsbank Ndl 125 Aschb');
-INSERT INTO static_bic_de VALUES ('18274', '0', '79540049', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('18275', '0', '79550000', 'Sparkasse Aschaffenburg Alzenau');
-INSERT INTO static_bic_de VALUES ('18308', '0', '79561348', 'Raiffeisenbank Bachgau');
-INSERT INTO static_bic_de VALUES ('18312', '0', '79562225', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18314', '0', '79562514', 'Raiffeisenbank Aschaffenburg');
-INSERT INTO static_bic_de VALUES ('18324', '0', '79565568', 'Raiffeisenbank Waldaschaff-Heigenbrücken');
-INSERT INTO static_bic_de VALUES ('18331', '0', '79566545', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18334', '0', '79567531', 'RV-Bank');
-INSERT INTO static_bic_de VALUES ('18339', '0', '79568518', 'Raiffeisenbank Haibach-Obernau');
-INSERT INTO static_bic_de VALUES ('18343', '0', '79570024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('18345', '0', '79570051', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('18347', '0', '79580099', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18348', '0', '79589402', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('18349', '0', '79590000', 'Volksbank Aschaffenburg');
-INSERT INTO static_bic_de VALUES ('18354', '0', '79650000', 'Sparkasse Miltenberg-Obernburg');
-INSERT INTO static_bic_de VALUES ('18385', '0', '79662558', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18392', '0', '79665540', 'Raiffeisenbank Elsavatal');
-INSERT INTO static_bic_de VALUES ('18396', '0', '79666548', 'Raiffeisenbank Obernburg');
-INSERT INTO static_bic_de VALUES ('18404', '0', '79668509', 'Raiffeisenbank Eichenbühl und Umgebung');
-INSERT INTO static_bic_de VALUES ('18407', '0', '79690000', 'Raiffeisen-Volksbank Miltenberg');
-INSERT INTO static_bic_de VALUES ('18431', '0', '80000000', 'Bundesbank eh Halle');
-INSERT INTO static_bic_de VALUES ('18432', '0', '80020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18436', '0', '80020087', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18438', '0', '80020130', 'ZV Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('18439', '0', '80040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('18445', '0', '80050500', 'Kreissparkasse Merseburg-Querfurt -alt-');
-INSERT INTO static_bic_de VALUES ('18446', '0', '80053000', 'Sparkasse Burgenlandkreis');
-INSERT INTO static_bic_de VALUES ('18461', '0', '80053502', 'Kreissparkasse Quedlinburg -alt-');
-INSERT INTO static_bic_de VALUES ('18462', '0', '80053552', 'Kreissparkasse Sangerhausen -alt-');
-INSERT INTO static_bic_de VALUES ('18463', '0', '80053572', 'Stadtsparkasse Dessau');
-INSERT INTO static_bic_de VALUES ('18464', '0', '80053612', 'Kreissparkasse Bernburg -alt-');
-INSERT INTO static_bic_de VALUES ('18465', '0', '80053622', 'Kreissparkasse Köthen');
-INSERT INTO static_bic_de VALUES ('18466', '0', '80053722', 'Kreissparkasse Anhalt-Bitterfeld');
-INSERT INTO static_bic_de VALUES ('18467', '0', '80053762', 'Saalesparkasse');
-INSERT INTO static_bic_de VALUES ('18468', '0', '80054000', 'Kreissparkasse Weißenfels -alt-');
-INSERT INTO static_bic_de VALUES ('18469', '0', '80055008', 'Sparkasse Mansfeld-Südharz');
-INSERT INTO static_bic_de VALUES ('18470', '0', '80055500', 'Salzlandsparkasse');
-INSERT INTO static_bic_de VALUES ('18471', '0', '80062608', 'Volksbank Elsterland');
-INSERT INTO static_bic_de VALUES ('18473', '0', '80063508', 'Ostharzer Volksbank');
-INSERT INTO static_bic_de VALUES ('18475', '0', '80063558', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('18477', '0', '80063598', 'Volksbank Wittenberg');
-INSERT INTO static_bic_de VALUES ('18479', '0', '80063628', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('18487', '0', '80063648', 'Volks- und Raiffeisenbank Saale-Unstrut');
-INSERT INTO static_bic_de VALUES ('18491', '0', '80063678', 'VR-Bank Zeitz');
-INSERT INTO static_bic_de VALUES ('18493', '0', '80063718', 'Volks- und Raiffeisenbank Eisleben');
-INSERT INTO static_bic_de VALUES ('18495', '0', '80080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18511', '0', '80093574', 'Volksbank Dessau-Anhalt');
-INSERT INTO static_bic_de VALUES ('18527', '0', '80093784', 'Volksbank Halle, Saale');
-INSERT INTO static_bic_de VALUES ('18529', '0', '80500000', 'Bundesbank eh Dessau');
-INSERT INTO static_bic_de VALUES ('18530', '0', '80550101', 'Sparkasse Wittenberg');
-INSERT INTO static_bic_de VALUES ('18533', '0', '80550200', 'Kreissparkasse Anhalt-Zerbst -alt-');
-INSERT INTO static_bic_de VALUES ('18534', '0', '81000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('18535', '0', '81010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('18537', '0', '81020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('18538', '0', '81020886', 'Bayer Hypo- und Vereinsbank (ehem. Hypo)');
-INSERT INTO static_bic_de VALUES ('18539', '0', '81040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('18549', '0', '81050000', 'Kreissparkasse Aschersleben-Staßfurt -alt-');
-INSERT INTO static_bic_de VALUES ('18550', '0', '81050555', 'Kreissparkasse Stendal');
-INSERT INTO static_bic_de VALUES ('18565', '0', '81051000', 'Bördesparkasse Oschersleben -alt-');
-INSERT INTO static_bic_de VALUES ('18566', '0', '81052000', 'Harzsparkasse');
-INSERT INTO static_bic_de VALUES ('18567', '0', '81053112', 'Kreissparkasse Wernigerode -alt-');
-INSERT INTO static_bic_de VALUES ('18568', '0', '81053132', 'Kreissparkasse Halberstadt -alt-');
-INSERT INTO static_bic_de VALUES ('18569', '0', '81053242', 'Kreissparkasse Schönebeck -alt-');
-INSERT INTO static_bic_de VALUES ('18570', '0', '81053272', 'Stadtsparkasse Magdeburg');
-INSERT INTO static_bic_de VALUES ('18571', '0', '81054000', 'Sparkasse Jerichower Land');
-INSERT INTO static_bic_de VALUES ('18573', '0', '81055000', 'Kreissparkasse Börde');
-INSERT INTO static_bic_de VALUES ('18574', '0', '81055555', 'Sparkasse Altmark West');
-INSERT INTO static_bic_de VALUES ('18575', '0', '81063028', 'Raiffeisenbank Kalbe-Bismark');
-INSERT INTO static_bic_de VALUES ('18578', '0', '81063198', 'Haldensleber Bank-Raiffeisenbank -alt-');
-INSERT INTO static_bic_de VALUES ('18580', '0', '81063238', 'Volksbank Jerichower Land');
-INSERT INTO static_bic_de VALUES ('18582', '0', '81068106', 'KD-Bank-die Bank für Kirche und Diakonie-Gf SoPr Magdeburg');
-INSERT INTO static_bic_de VALUES ('18583', '0', '81069048', 'Volksbank Jerichower Land');
-INSERT INTO static_bic_de VALUES ('18585', '0', '81069052', 'Volksbank Börde-Bernburg');
-INSERT INTO static_bic_de VALUES ('18587', '0', '81070000', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('18601', '0', '81070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('18615', '0', '81080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18617', '0', '81093034', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('18619', '0', '81093044', 'Volksbank Osterburg-Lüchow-Dannenberg -alt-');
-INSERT INTO static_bic_de VALUES ('18620', '0', '81093054', 'Volksbank Stendal');
-INSERT INTO static_bic_de VALUES ('18623', '0', '81093274', 'Volksbank Magdeburg');
-INSERT INTO static_bic_de VALUES ('18629', '0', '82000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('18630', '0', '82010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('18631', '0', '82020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18632', '0', '82020087', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18633', '0', '82020088', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18634', '0', '82040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('18649', '0', '82050000', 'Landesbank Hessen-Thür Girozentrale Erfurt');
-INSERT INTO static_bic_de VALUES ('18650', '0', '82051000', 'Sparkasse Mittelthüringen');
-INSERT INTO static_bic_de VALUES ('18676', '0', '82052020', 'Kreissparkasse Gotha');
-INSERT INTO static_bic_de VALUES ('18689', '0', '82054052', 'Kreissparkasse Nordhausen');
-INSERT INTO static_bic_de VALUES ('18694', '0', '82054112', 'Kreissparkasse Sömmerda -alt-');
-INSERT INTO static_bic_de VALUES ('18695', '0', '82054222', 'Sparkasse Erfurt -alt-');
-INSERT INTO static_bic_de VALUES ('18696', '0', '82055000', 'Kyffhäusersparkasse');
-INSERT INTO static_bic_de VALUES ('18703', '0', '82056060', 'Sparkasse Unstrut-Hainich');
-INSERT INTO static_bic_de VALUES ('18705', '0', '82057070', 'Kreissparkasse Eichsfeld');
-INSERT INTO static_bic_de VALUES ('18706', '0', '82060197', 'Pax-Bank');
-INSERT INTO static_bic_de VALUES ('18707', '0', '82060800', 'Evangelische Kreditgenossenschaft -Filiale Eisenach-');
-INSERT INTO static_bic_de VALUES ('18708', '0', '82064038', 'VR Bank Westthüringen');
-INSERT INTO static_bic_de VALUES ('18724', '0', '82064088', 'Volksbank und Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('18726', '0', '82064168', 'Raiffeisenbank Gotha');
-INSERT INTO static_bic_de VALUES ('18734', '0', '82064188', 'VR Bank Weimar');
-INSERT INTO static_bic_de VALUES ('18745', '0', '82064228', 'Erfurter Bank');
-INSERT INTO static_bic_de VALUES ('18754', '0', '82070000', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('18783', '0', '82070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('18812', '0', '82080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18827', '0', '82094004', 'Volksbank Heiligenstadt');
-INSERT INTO static_bic_de VALUES ('18832', '0', '82094054', 'Nordthüringer Volksbank');
-INSERT INTO static_bic_de VALUES ('18857', '0', '82094224', 'Volksbank Erfurt -alt-');
-INSERT INTO static_bic_de VALUES ('18859', '0', '83000000', 'Bundesbank eh Gera');
-INSERT INTO static_bic_de VALUES ('18860', '0', '83020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18862', '0', '83020087', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18863', '0', '83020088', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('18864', '0', '83040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('18870', '0', '83050000', 'Sparkasse Gera-Greiz');
-INSERT INTO static_bic_de VALUES ('18888', '0', '83050200', 'Sparkasse Altenburger Land');
-INSERT INTO static_bic_de VALUES ('18900', '0', '83050303', 'Kreissparkasse Saalfeld-Rudolstadt');
-INSERT INTO static_bic_de VALUES ('18918', '0', '83050505', 'Kreissparkasse Saale-Orla');
-INSERT INTO static_bic_de VALUES ('18936', '0', '83053030', 'Sparkasse Jena-Saale-Holzland');
-INSERT INTO static_bic_de VALUES ('18951', '0', '83064488', 'Raiffeisen-Volksbank Hermsdorfer Kreuz');
-INSERT INTO static_bic_de VALUES ('18956', '0', '83064568', 'Geraer Bank');
-INSERT INTO static_bic_de VALUES ('18964', '0', '83065408', 'VR-Bank Altenburger Land');
-INSERT INTO static_bic_de VALUES ('18976', '0', '83065410', 'Deutsche Skatbank Zndl VR Bank Altenburger Land');
-INSERT INTO static_bic_de VALUES ('18977', '0', '83080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('18978', '0', '83094444', 'Raiffeisen-Volksbank Saale-Orla');
-INSERT INTO static_bic_de VALUES ('18992', '0', '83094454', 'Volksbank Saaletal');
-INSERT INTO static_bic_de VALUES ('19010', '0', '83094494', 'Volksbank Eisenberg');
-INSERT INTO static_bic_de VALUES ('19016', '0', '83094495', 'EthikBank, Zndl der Volksbank Eisenberg');
-INSERT INTO static_bic_de VALUES ('19017', '0', '83095424', 'Volksbank Altenburg -alt-');
-INSERT INTO static_bic_de VALUES ('19018', '0', '84000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('19019', '0', '84020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19020', '0', '84020087', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19021', '0', '84030111', 'Bankhaus Max Flessa');
-INSERT INTO static_bic_de VALUES ('19026', '0', '84040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('19027', '0', '84050000', 'Rhön-Rennsteig-Sparkasse');
-INSERT INTO static_bic_de VALUES ('19050', '0', '84051010', 'Sparkasse Arnstadt-Ilmenau');
-INSERT INTO static_bic_de VALUES ('19071', '0', '84054040', 'Kreissparkasse Hildburghausen');
-INSERT INTO static_bic_de VALUES ('19087', '0', '84054722', 'Sparkasse Sonneberg');
-INSERT INTO static_bic_de VALUES ('19102', '0', '84055050', 'Wartburg-Sparkasse');
-INSERT INTO static_bic_de VALUES ('19129', '0', '84064798', 'Genobank Rhön-Grabfeld');
-INSERT INTO static_bic_de VALUES ('19130', '0', '84069065', 'Raiffeisenbank Schleusingen');
-INSERT INTO static_bic_de VALUES ('19136', '0', '84080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('19139', '0', '84094754', 'VR-Bank Bad Salzungen Schmalkalden');
-INSERT INTO static_bic_de VALUES ('19158', '0', '84094764', 'Volksbank Ilmenau -alt-');
-INSERT INTO static_bic_de VALUES ('19160', '0', '84094814', 'VR Bank Südthüringen');
-INSERT INTO static_bic_de VALUES ('19177', '0', '85000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('19178', '0', '85010500', 'Sächsische Aufbaubank -Förderbank-');
-INSERT INTO static_bic_de VALUES ('19179', '0', '85020030', 'ZV Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('19180', '0', '85020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19183', '0', '85020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('19184', '0', '85020890', 'Bayer Hypo- und Vereinsbank Ndl 536 Dre');
-INSERT INTO static_bic_de VALUES ('19185', '0', '85040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('19193', '0', '85050100', 'Sparkasse Oberlausitz-Niederschlesien');
-INSERT INTO static_bic_de VALUES ('19228', '0', '85050200', 'Kreissparkasse Riesa-Großenhain -alt-');
-INSERT INTO static_bic_de VALUES ('19229', '0', '85050300', 'Ostsächsische Sparkasse Dresden');
-INSERT INTO static_bic_de VALUES ('19276', '0', '85050333', 'Ostsächsische Sparkasse Dresden Gf  -Stg Pirna-');
-INSERT INTO static_bic_de VALUES ('19277', '0', '85055000', 'Sparkasse Meißen');
-INSERT INTO static_bic_de VALUES ('19289', '0', '85055142', 'Stadtsparkasse Dresden -alt-');
-INSERT INTO static_bic_de VALUES ('19290', '0', '85060000', 'Volksbank Pirna');
-INSERT INTO static_bic_de VALUES ('19297', '0', '85065028', 'Raiffeisenbank Neustadt, Sachs');
-INSERT INTO static_bic_de VALUES ('19301', '0', '85080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('19316', '0', '85080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('19317', '0', '85080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('19318', '0', '85080200', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('19319', '0', '85089270', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('19320', '0', '85090000', 'Dresdner Volksbank Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('19322', '0', '85094984', 'Volksbank Riesa');
-INSERT INTO static_bic_de VALUES ('19334', '0', '85095004', 'Volksbank Raiffeisenbank Meißen Großenhain');
-INSERT INTO static_bic_de VALUES ('19337', '0', '85095164', 'Landeskirchliche Kredit-Genossenschaft Sachsen');
-INSERT INTO static_bic_de VALUES ('19339', '0', '85550000', 'Kreissparkasse Bautzen');
-INSERT INTO static_bic_de VALUES ('19358', '0', '85550200', 'Kreissparkasse Löbau-Zittau -alt-');
-INSERT INTO static_bic_de VALUES ('19359', '0', '85550500', 'Sparkasse Westlausitz -alt-');
-INSERT INTO static_bic_de VALUES ('19360', '0', '85590000', 'Volksbank Bautzen');
-INSERT INTO static_bic_de VALUES ('19384', '0', '85590100', 'Volksbank Löbau-Zittau');
-INSERT INTO static_bic_de VALUES ('19399', '0', '85591000', 'Volksbank Raiffeisenbank Niederschlesien');
-INSERT INTO static_bic_de VALUES ('19417', '0', '85595500', 'Volksbank Westlausitz -alt-');
-INSERT INTO static_bic_de VALUES ('19418', '0', '86000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('19419', '0', '86010090', 'Postbank');
-INSERT INTO static_bic_de VALUES ('19420', '0', '86010111', 'SEB');
-INSERT INTO static_bic_de VALUES ('19424', '0', '86010424', 'Aareal Bank');
-INSERT INTO static_bic_de VALUES ('19425', '0', '86020030', 'ZV Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('19426', '0', '86020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19427', '0', '86020200', 'BHF-BANK');
-INSERT INTO static_bic_de VALUES ('19428', '0', '86020500', 'Bank für Sozialwirtschaft');
-INSERT INTO static_bic_de VALUES ('19430', '0', '86020600', 'Hanseatic Bank');
-INSERT INTO static_bic_de VALUES ('19431', '0', '86020880', 'Bayer Hypo- und Vereinsbank Ndl 508 Lei');
-INSERT INTO static_bic_de VALUES ('19432', '0', '86040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('19439', '0', '86050000', 'ZV Landesbank Baden-Württemberg');
-INSERT INTO static_bic_de VALUES ('19440', '0', '86050200', 'Sparkasse Muldental');
-INSERT INTO static_bic_de VALUES ('19454', '0', '86050600', 'Kreissparkasse Torgau-Oschatz -alt-');
-INSERT INTO static_bic_de VALUES ('19456', '0', '86055002', 'Sparkasse Delitzsch-Eilenburg');
-INSERT INTO static_bic_de VALUES ('19458', '0', '86055462', 'Kreissparkasse Döbeln');
-INSERT INTO static_bic_de VALUES ('19464', '0', '86055592', 'Stadt- und Kreissparkasse Leipzig');
-INSERT INTO static_bic_de VALUES ('19465', '0', '86065448', 'VR Bank Leipziger Land');
-INSERT INTO static_bic_de VALUES ('19467', '0', '86065468', 'Volksbank Raiffeisenbank Döbeln');
-INSERT INTO static_bic_de VALUES ('19469', '0', '86065483', 'Raiffeisenbank Grimma');
-INSERT INTO static_bic_de VALUES ('19471', '0', '86065548', 'Wurzener Bank (Raiffeisen-Volksbank) -alt-');
-INSERT INTO static_bic_de VALUES ('19472', '0', '86069070', 'Raiffeisenbank');
-INSERT INTO static_bic_de VALUES ('19482', '0', '86070000', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('19512', '0', '86070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('19542', '0', '86080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('19547', '0', '86080055', 'Commerzbank vormals Dresdner Bank Zw 55');
-INSERT INTO static_bic_de VALUES ('19548', '0', '86080057', 'Commerzbank vormals Dresdner Bank Gf ZW 57');
-INSERT INTO static_bic_de VALUES ('19549', '0', '86080085', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1');
-INSERT INTO static_bic_de VALUES ('19550', '0', '86080086', 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2');
-INSERT INTO static_bic_de VALUES ('19551', '0', '86089280', 'Commerzbank vormals Dresdner Bank ITGK');
-INSERT INTO static_bic_de VALUES ('19552', '0', '86095484', 'Volks- und Raiffeisenbank Muldental');
-INSERT INTO static_bic_de VALUES ('19561', '0', '86095554', 'Volksbank Delitzsch');
-INSERT INTO static_bic_de VALUES ('19564', '0', '86095604', 'Volksbank Leipzig');
-INSERT INTO static_bic_de VALUES ('19566', '0', '87000000', 'Bundesbank');
-INSERT INTO static_bic_de VALUES ('19567', '0', '87020086', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19569', '0', '87020087', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19570', '0', '87020088', 'Bayer Hypo- und Vereinsbank');
-INSERT INTO static_bic_de VALUES ('19571', '0', '87040000', 'Commerzbank');
-INSERT INTO static_bic_de VALUES ('19591', '0', '87050000', 'Sparkasse Chemnitz');
-INSERT INTO static_bic_de VALUES ('19606', '0', '87051000', 'Kreissparkasse Mittweida');
-INSERT INTO static_bic_de VALUES ('19620', '0', '87052000', 'Kreissparkasse Freiberg');
-INSERT INTO static_bic_de VALUES ('19643', '0', '87053000', 'Sparkasse Mittleres Erzgebirge');
-INSERT INTO static_bic_de VALUES ('19665', '0', '87054000', 'Sparkasse Erzgebirge');
-INSERT INTO static_bic_de VALUES ('19696', '0', '87055000', 'Sparkasse Zwickau');
-INSERT INTO static_bic_de VALUES ('19713', '0', '87056000', 'Kreissparkasse Aue-Schwarzenberg');
-INSERT INTO static_bic_de VALUES ('19731', '0', '87057000', 'Kreissparkasse Annaberg -alt-');
-INSERT INTO static_bic_de VALUES ('19732', '0', '87058000', 'Sparkasse Vogtland');
-INSERT INTO static_bic_de VALUES ('19770', '0', '87065893', 'Volksbank Erzgebirge -alt-');
-INSERT INTO static_bic_de VALUES ('19771', '0', '87065918', 'Raiffeisenbank Werdau-Zwickau');
-INSERT INTO static_bic_de VALUES ('19772', '0', '87069075', 'Volksbank Mittleres Erzgebirge');
-INSERT INTO static_bic_de VALUES ('19788', '0', '87069077', 'Vereinigte Raiffeisenbank Burgstädt');
-INSERT INTO static_bic_de VALUES ('19795', '0', '87070000', 'Deutsche Bank');
-INSERT INTO static_bic_de VALUES ('19838', '0', '87070024', 'Deutsche Bank Privat und Geschäftskunden');
-INSERT INTO static_bic_de VALUES ('19881', '0', '87080000', 'Commerzbank vormals Dresdner Bank');
-INSERT INTO static_bic_de VALUES ('19890', '0', '87095824', 'Volksbank Vogtland');
-INSERT INTO static_bic_de VALUES ('19909', '0', '87095934', 'Volksbank Zwickau');
-INSERT INTO static_bic_de VALUES ('19914', '0', '87095974', 'Volksbank-Raiffeisenbank Glauchau');
-INSERT INTO static_bic_de VALUES ('19922', '0', '87096034', 'Volksbank Erzgebirge');
-INSERT INTO static_bic_de VALUES ('19939', '0', '87096074', 'Freiberger Bank');
-INSERT INTO static_bic_de VALUES ('19951', '0', '87096124', 'Volksbank');
-INSERT INTO static_bic_de VALUES ('19962', '0', '87096214', 'Volksbank Chemnitz');
+INSERT INTO `static_bic_de` (`uid`, `pid`, `bank_ic`, `bank_name`, `bank_bic`)
+VALUES
+	(1, 0, 10000000, 'Bundesbank', 'MARKDEF1100'),
+	(2, 0, 10010010, 'Postbank', 'PBNKDEFFXXX'),
+	(3, 0, 10010111, 'SEB', 'ESSEDE5F100'),
+	(4, 0, 10010222, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFBER'),
+	(5, 0, 10010424, 'Aareal Bank', 'AARBDE5W100'),
+	(6, 0, 10019610, 'Dexia Kommunalbank Deutschland', 'DXIADEBBXXX'),
+	(7, 0, 10020200, 'BHF-BANK', 'BHFBDEFF100'),
+	(8, 0, 10020500, 'Bank für Sozialwirtschaft', 'BFSWDE33BER'),
+	(9, 0, 10020890, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM488'),
+	(10, 0, 10030200, 'Berlin-Hannoversche Hypothekenbank', 'BHYPDEB2XXX'),
+	(11, 0, 10030400, 'ABK-Kreditbank', 'ABKBDEB1XXX'),
+	(12, 0, 10030500, 'Bankhaus Löbbecke', 'LOEBDEBBXXX'),
+	(13, 0, 10030600, 'North Channel Bank', 'GENODEF1OGK'),
+	(14, 0, 10030700, 'Eurocity Bank', 'DLGHDEB1XXX'),
+	(15, 0, 10033300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(16, 0, 10040000, 'Commerzbank Berlin (West)', 'COBADEBBXXX'),
+	(17, 0, 10040010, 'Commerzbank, CC SP', 'COBADEFFS01'),
+	(18, 0, 10040048, 'Commerzbank GF-B48', 'COBADEFF910'),
+	(19, 0, 10040060, 'Commerzbank Gf 160', 'COBADEFF060'),
+	(20, 0, 10040061, 'Commerzbank Gf 161', 'COBADEFF061'),
+	(21, 0, 10040062, 'Commerzbank CC', 'COBADEFF102'),
+	(22, 0, 10040063, 'Commerzbank CC', 'COBADEFF103'),
+	(23, 0, 10040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(24, 0, 10045050, 'Commerzbank Service-BZ', 'COBADEFFBZB'),
+	(25, 0, 10050000, 'Landesbank Berlin - Berliner Sparkasse', 'BELADEBEXXX'),
+	(26, 0, 10050005, 'Landesbank Berlin - E 1 -', 'BELADEB1DB5'),
+	(27, 0, 10050006, 'Landesbank Berlin - E 2 -', 'BELADEB1DB6'),
+	(28, 0, 10050007, 'Landesbank Berlin - E 3 -', 'BELADEB1DB7'),
+	(29, 0, 10050008, 'Landesbank Berlin - E 4 -', 'BELADEB1DB8'),
+	(30, 0, 10050020, 'LBB S-Kreditpartner, Berlin', 'SKPADEB1XXX'),
+	(31, 0, 10050021, 'LBB S-Kreditpartner Bad Homburg v d Höhe', 'SKPADEB1HOM'),
+	(32, 0, 10050500, 'LBS Ost Berlin', 'LBSODEB1BLN'),
+	(33, 0, 10050600, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADEBBXXX'),
+	(34, 0, 10050999, 'DekaBank Berlin', 'DGZFDEFFBER'),
+	(35, 0, 10060198, 'Pax-Bank', 'GENODED1PA6'),
+	(36, 0, 10060237, 'Evangelische Darlehnsgenossenschaft', 'GENODEF1EDG'),
+	(37, 0, 10061006, 'Bank für Kirche und Diakonie - KD-Bank Gf Sonder-BLZ', 'GENODED1KDB'),
+	(38, 0, 10070000, 'Deutsche Bank Fil Berlin', 'DEUTDEBBXXX'),
+	(39, 0, 10070024, 'Deutsche Bank Privat und Geschäftskunden F 700', 'DEUTDEDBBER'),
+	(40, 0, 10070100, 'Deutsche Bank Fil Berlin II', 'DEUTDEBB101'),
+	(41, 0, 10070124, 'Deutsche Bank Privat und Geschäftskd Berlin II', 'DEUTDEDB101'),
+	(42, 0, 10070848, 'Berliner Bank Niederlassung der Deutsche Bank PGK', 'DEUTDEDB110'),
+	(43, 0, 10077777, 'norisbank', 'NORSDE51XXX'),
+	(44, 0, 10080000, 'Commerzbank vormals Dresdner Bank Filiale Berlin I', 'DRESDEFF100'),
+	(45, 0, 10080005, 'Commerzbank vormals Dresdner Bank Zw A', 'DRESDEFFI26'),
+	(46, 0, 10080006, 'Commerzbank vormals Dresdner Bank Zw B', 'DRESDEFFXXX'),
+	(47, 0, 10080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF112'),
+	(48, 0, 10080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF114'),
+	(49, 0, 10080085, 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 3', 'DRESDEFFI53'),
+	(50, 0, 10080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFI71'),
+	(51, 0, 10080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFI72'),
+	(52, 0, 10080088, 'Commerzbank vormals Dresdner Bank IBLZ', 'DRESDEFFXXX'),
+	(53, 0, 10080089, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6', 'DRESDEFFI73'),
+	(54, 0, 10080900, 'Commerzbank vormals Dresdner Bank Filiale Berlin III', 'DRESDEFF199'),
+	(55, 0, 10089260, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI14'),
+	(56, 0, 10089999, 'Commerzbank vormals Dresdner Bank ITGK 2', 'DRESDEFFI99'),
+	(57, 0, 10090000, 'Berliner Volksbank', 'BEVODEBBXXX'),
+	(58, 0, 10090300, 'Bank für Schiffahrt (BFS) Fil d Ostfr VB Leer', 'GENODEF1BSB'),
+	(59, 0, 10090603, 'apoBank', 'DAAEDED1003'),
+	(60, 0, 10090900, 'PSD Bank Berlin-Brandenburg', 'GENODEF1P01'),
+	(61, 0, 10110300, 'Bankhaus Dr. Masel', 'MACODEB1XXX'),
+	(62, 0, 10110400, 'Investitionsbank Berlin', 'IBBBDEBBXXX'),
+	(63, 0, 10110600, 'quirin bank', 'QUBKDEBBXXX'),
+	(64, 0, 10120100, 'Weberbank', 'WELADED1WBB'),
+	(65, 0, 10120600, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(66, 0, 10120760, 'UniCredit Bank - HypoVereinsbank Ndl 260 BIn', 'HYVEDEM1079'),
+	(67, 0, 10120800, 'VON ESSEN Bankgesellschaft', 'VONEDE33BLN'),
+	(68, 0, 10130600, 'Isbank Fil Berlin', 'ISBKDEFXBER'),
+	(69, 0, 10130800, 'BIW Bank', 'BIWBDE33XXX'),
+	(70, 0, 10220500, 'Bank of Scotland Ndl Berlin', 'BOFSDEB1XXX'),
+	(71, 0, 10220600, 'Sydbank Filiale Berlin', 'SYBKDE22BER'),
+	(72, 0, 10310600, 'Tradegate Wertpapierhandelsbank Berlin', 'TRDADEB1XXX'),
+	(73, 0, 12016836, 'KfW Kreditanstalt für Wiederaufbau', 'KFWIDEFF100'),
+	(74, 0, 12030000, 'Deutsche Kreditbank Berlin', 'BYLADEM1001'),
+	(75, 0, 12030900, 'Merck Finck & Co', 'MEFIDEMM100'),
+	(76, 0, 12040000, 'Commerzbank Berlin Ost', 'COBADEBB120'),
+	(77, 0, 12050555, 'NLB FinanzIT', 'NOLADE21DVS'),
+	(78, 0, 12060000, 'DZ BANK', 'GENODEFF120'),
+	(79, 0, 12070000, 'Deutsche Bank Ld Brandenburg', 'DEUTDEBB160'),
+	(80, 0, 12070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB160'),
+	(81, 0, 12070070, 'Deutsche Bank (Gf intern)', 'DEUTDEFFVAC'),
+	(82, 0, 12070088, 'Deutsche Bank (Gf intern)', 'DEUTDEDBPAL'),
+	(83, 0, 12080000, 'Commerzbank vormals Dresdner Bank Filiale Berlin II', 'DRESDEFF120'),
+	(84, 0, 12090640, 'apoBank', 'DAAEDED1040'),
+	(85, 0, 12096597, 'Sparda-Bank Berlin', 'GENODEF1S10'),
+	(86, 0, 13000000, 'Bundesbank', 'MARKDEF1130'),
+	(87, 0, 13010111, 'SEB', 'ESSEDE5F130'),
+	(88, 0, 13040000, 'Commerzbank', 'COBADEFF130'),
+	(89, 0, 13050000, 'Ostseesparkasse Rostock', 'NOLADE21ROS'),
+	(90, 0, 13051042, 'Sparkasse Vorpommern auf Rügen', 'NOLADE21RUE'),
+	(91, 0, 13061008, 'Volksbank Wolgast', 'GENODEF1WOG'),
+	(92, 0, 13061028, 'Volksbank Raiffeisenbank ehem VB Greifswald', 'GENODEF1GW1'),
+	(93, 0, 13061078, 'Volks- und Raiffeisenbank', 'GENODEF1HWI'),
+	(94, 0, 13061088, 'Raiffeisenbank Wismar -alt-', 'GENODEF1HWR'),
+	(95, 0, 13061128, 'Raiffeisenbank', 'GENODEF1DBR'),
+	(96, 0, 13070000, 'Deutsche Bank', 'DEUTDEBRXXX'),
+	(97, 0, 13070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBROS'),
+	(98, 0, 13080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF130'),
+	(99, 0, 13090000, 'Rostocker Volks- und Raiffeisenbank', 'GENODEF1HR1'),
+	(100, 0, 13091054, 'Pommersche Volksbank', 'GENODEF1HST'),
+	(101, 0, 13091084, 'Volksbank Wismar -alt-', 'GENODEF1HWV'),
+	(102, 0, 14000000, 'Bundesbank eh Schwerin', 'MARKDEF1140'),
+	(103, 0, 14040000, 'Commerzbank', 'COBADEFF140'),
+	(104, 0, 14051000, 'Sparkasse Mecklenburg-Nordwest', 'NOLADE21WIS'),
+	(105, 0, 14051362, 'Sparkasse Parchim-Lübz', 'NOLADE21PCH'),
+	(106, 0, 14051462, 'Sparkasse Schwerin -alt-', 'NOLADE21SNS'),
+	(107, 0, 14052000, 'Sparkasse Mecklenburg-Schwerin', 'NOLADE21LWL'),
+	(108, 0, 14061308, 'Volks- und Raiffeisenbank', 'GENODEF1GUE'),
+	(109, 0, 14061438, 'Raiffeisen-Volksbank -alt-', 'GENODEF1GDB'),
+	(110, 0, 14080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF140'),
+	(111, 0, 14080011, 'Commerzbank vormals Dresdner Bank Zw W', 'DRESDEFFI27'),
+	(112, 0, 14091464, 'VR-Bank', 'GENODEF1SN1'),
+	(113, 0, 15000000, 'Bundesbank', 'MARKDEF1150'),
+	(114, 0, 15040068, 'Commerzbank', 'COBADEFF151'),
+	(115, 0, 15050100, 'Müritz-Sparkasse', 'NOLADE21WRN'),
+	(116, 0, 15050200, 'Sparkasse Neubrandenburg-Demmin', 'NOLADE21NBS'),
+	(117, 0, 15050400, 'Sparkasse Uecker-Randow', 'NOLADE21PSW'),
+	(118, 0, 15050500, 'Sparkasse Vorpommern', 'NOLADE21GRW'),
+	(119, 0, 15051732, 'Sparkasse Mecklenburg-Strelitz', 'NOLADE21MST'),
+	(120, 0, 15061618, 'Raiffeisenbank Mecklenburger Seenplatte', 'GENODEF1WRN'),
+	(121, 0, 15061638, 'Volksbank Raiffeisenbank', 'GENODEF1ANK'),
+	(122, 0, 15061698, 'Raiffeisenbank Malchin', 'GENODEF1MAL'),
+	(123, 0, 15080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF150'),
+	(124, 0, 15091674, 'Volksbank Demmin', 'GENODEF1DM1'),
+	(125, 0, 15091704, 'VR-Bank Uckermark-Randow', 'GENODEF1PZ1'),
+	(126, 0, 16000000, 'Bundesbank eh Potsdam', 'MARKDEF1160'),
+	(127, 0, 16010111, 'SEB', 'ESSEDE5F160'),
+	(128, 0, 16010300, 'Investitionsbank des Landes Brandenburg', 'ILBXDE8XXXX'),
+	(129, 0, 16020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM470'),
+	(130, 0, 16040000, 'Commerzbank', 'COBADEFF160'),
+	(131, 0, 16050000, 'Mittelbrandenburgische Sparkasse in Potsdam', 'WELADED1PMB'),
+	(132, 0, 16050101, 'Sparkasse Prignitz', 'WELADED1PRP'),
+	(133, 0, 16050202, 'Sparkasse Ostprignitz-Ruppin', 'WELADED1OPR'),
+	(134, 0, 16050500, 'LBS Ostdeutsche Landesbausparkasse', 'LBSODEB1XXX'),
+	(135, 0, 16060122, 'Volks- und Raiffeisenbank Prignitz', 'GENODEF1PER'),
+	(136, 0, 16061938, 'Raiffeisenbank Ostprignitz-Ruppin', 'GENODEF1NPP'),
+	(137, 0, 16062008, 'VR-Bank Fläming', 'GENODEF1LUK'),
+	(138, 0, 16062073, 'Brandenburger Bank', 'GENODEF1BRB'),
+	(139, 0, 16080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF160'),
+	(140, 0, 16091994, 'Volksbank Rathenow', 'GENODEF1RN1'),
+	(141, 0, 17000000, 'Bundesbank eh Frankfurt (Oder)', 'MARKDEF1170'),
+	(142, 0, 17020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM471'),
+	(143, 0, 17040000, 'Commerzbank', 'COBADEFF170'),
+	(144, 0, 17052000, 'Sparkasse Barnim', 'WELADED1GZE'),
+	(145, 0, 17052302, 'Stadtsparkasse Schwedt', 'WELADED1UMX'),
+	(146, 0, 17054040, 'Sparkasse Märkisch-Oderland', 'WELADED1MOL'),
+	(147, 0, 17055050, 'Sparkasse Oder-Spree', 'WELADED1LOS'),
+	(148, 0, 17056060, 'Sparkasse Uckermark', 'WELADED1UMP'),
+	(149, 0, 17062428, 'Raiffeisenbank-Volksbank Oder-Spree', 'GENODEF1BKW'),
+	(150, 0, 17080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF170'),
+	(151, 0, 17092404, 'VR Bank Fürstenwalde Seelow Wriezen', 'GENODEF1FW1'),
+	(152, 0, 18000000, 'Bundesbank eh Cottbus', 'MARKDEF1180'),
+	(153, 0, 18020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM472'),
+	(154, 0, 18040000, 'Commerzbank', 'COBADEFF180'),
+	(155, 0, 18050000, 'Sparkasse Spree-Neiße', 'WELADED1CBN'),
+	(156, 0, 18051000, 'Sparkasse Elbe-Elster', 'WELADED1EES'),
+	(157, 0, 18055000, 'Sparkasse Niederlausitz', 'WELADED1OSL'),
+	(158, 0, 18062678, 'VR Bank Lausitz', 'GENODEF1FWA'),
+	(159, 0, 18062758, 'VR Bank Forst', 'GENODEF1FOR'),
+	(160, 0, 18080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF180'),
+	(161, 0, 18092684, 'Spreewaldbank', 'GENODEF1LN1'),
+	(162, 0, 18092744, 'Volksbank Spree-Neiße', 'GENODEF1SPM'),
+	(163, 0, 20000000, 'Bundesbank', 'MARKDEF1200'),
+	(164, 0, 20010020, 'Postbank (Giro)', 'PBNKDEFFXXX'),
+	(165, 0, 20010111, 'SEB', 'ESSEDE5F200'),
+	(166, 0, 20010424, 'Aareal Bank', 'AARBDE5W200'),
+	(167, 0, 20020200, 'SEB Merchant Bank Hamburg', 'ESSEDEFFHAM'),
+	(168, 0, 20020500, 'Jyske Bank Fil Hamburg', 'JYBADEHHXXX'),
+	(169, 0, 20020900, 'Signal Iduna Bauspar', 'SIBSDEHHXXX'),
+	(170, 0, 20030000, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM300'),
+	(171, 0, 20030133, 'Varengold Bank', 'VGAGDEHHXXX'),
+	(172, 0, 20030300, 'DONNER & REUSCHEL', 'CHDBDEHHXXX'),
+	(173, 0, 20030400, 'Marcard, Stein & Co Bankiers', 'MCRDDEHHXXX'),
+	(174, 0, 20030600, 'Sydbank Fil Hamburg', 'SYBKDE22HAM'),
+	(175, 0, 20030700, 'Merck Finck & Co', 'MEFIDEMM200'),
+	(176, 0, 20030900, 'Bankhaus Wölbern & Co', 'WOELDEHHXXX'),
+	(177, 0, 20040000, 'Commerzbank', 'COBADEHHXXX'),
+	(178, 0, 20040020, 'Commerzbank, CC SP', 'COBADEFFS02'),
+	(179, 0, 20040040, 'Commerzbank GF RME', 'COBADEFFRME'),
+	(180, 0, 20040048, 'Commerzbank GF-H48', 'COBADEFF920'),
+	(181, 0, 20040050, 'Commerzbank GF COC', 'COBADEFF208'),
+	(182, 0, 20040060, 'Commerzbank Gf 260', 'COBADEFF062'),
+	(183, 0, 20040061, 'Commerzbank Gf 261', 'COBADEFF063'),
+	(184, 0, 20040062, 'Commerzbank CC', 'COBADEFF074'),
+	(185, 0, 20040063, 'Commerzbank CC', 'COBADEFF075'),
+	(186, 0, 20041111, 'comdirect bank', 'COBADEHDXXX'),
+	(187, 0, 20041133, 'comdirect bank', 'COBADEHD001'),
+	(188, 0, 20041144, 'comdirect bank', 'COBADEHD044'),
+	(189, 0, 20041155, 'comdirect bank', 'COBADEHD055'),
+	(190, 0, 20050000, 'HSH Nordbank Hamburg', 'HSHNDEHH200'),
+	(191, 0, 20050550, 'Hamburger Sparkasse', 'HASPDEHHXXX'),
+	(192, 0, 20060000, 'DZ BANK', 'GENODEFF200'),
+	(193, 0, 20069111, 'Norderstedter Bank', 'GENODEF1NDR'),
+	(194, 0, 20069125, 'Kaltenkirchener Bank', 'GENODEF1KLK'),
+	(195, 0, 20069130, 'Raiffeisenbank', 'GENODEF1BBR'),
+	(196, 0, 20069144, 'Raiffeisenbank', 'GENODEF1SST'),
+	(197, 0, 20069177, 'Raiffeisenbank Südstormarn Mölln', 'GENODEF1GRS'),
+	(198, 0, 20069232, 'Raiffeisenbank', 'GENODEF1STV'),
+	(199, 0, 20069641, 'Raiffeisenbank Owschlag', 'GENODEF1OWS'),
+	(200, 0, 20069780, 'Volksbank Ahlerstedt', 'GENODEF1AST'),
+	(201, 0, 20069782, 'Volksbank Geest', 'GENODEF1APE'),
+	(202, 0, 20069786, 'Volksbank Kehdingen', 'GENODEF1DRO'),
+	(203, 0, 20069800, 'Spar- und Kreditbank', 'GENODEF1HAA'),
+	(204, 0, 20069812, 'Volksbank Fredenbeck-Oldendorf', 'GENODEF1FRB'),
+	(205, 0, 20069815, 'Volksbank', 'GENODEF1815'),
+	(206, 0, 20069861, 'Raiffeisenbank', 'GENODEF1RRZ'),
+	(207, 0, 20069882, 'Raiffeisenbank Travemünde -alt-', 'GENODEF1RLT'),
+	(208, 0, 20069965, 'Volksbank Winsener Marsch', 'GENODEF1WIM'),
+	(209, 0, 20069989, 'Volksbank Wulfsen', 'GENODEF1WUL'),
+	(210, 0, 20070000, 'Deutsche Bank', 'DEUTDEHHXXX'),
+	(211, 0, 20070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBHAM'),
+	(212, 0, 20080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF200'),
+	(213, 0, 20080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF207'),
+	(214, 0, 20080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF208'),
+	(215, 0, 20080085, 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 2', 'DRESDEFFI56'),
+	(216, 0, 20080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3', 'DRESDEFFI63'),
+	(217, 0, 20080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFI64'),
+	(218, 0, 20080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFI74'),
+	(219, 0, 20080089, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6', 'DRESDEFFI75'),
+	(220, 0, 20080091, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7', 'DRESDEFFJ33'),
+	(221, 0, 20080092, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8', 'DRESDEFFJ34'),
+	(222, 0, 20080093, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9', 'DRESDEFFJ35'),
+	(223, 0, 20080094, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10', 'DRESDEFFJ36'),
+	(224, 0, 20080095, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11', 'DRESDEFFJ37'),
+	(225, 0, 20089200, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI06'),
+	(226, 0, 20090400, 'Deutsche Genossenschafts-Hypothekenbank', 'DGHYDEH1XXX'),
+	(227, 0, 20090500, 'netbank', 'GENODEF1S15'),
+	(228, 0, 20090602, 'apoBank', 'DAAEDED1002'),
+	(229, 0, 20090700, 'Edekabank', 'EDEKDEHHXXX'),
+	(230, 0, 20090745, 'EBANK Gf Cash', 'EDECDEH1XXX'),
+	(231, 0, 20090900, 'PSD Bank Nord', 'GENODEF1P08'),
+	(232, 0, 20110022, 'Postbank (Spar)', 'PBNKDEFFXXX'),
+	(233, 0, 20110401, 'Hypothekenbank Frankfurt -alt-', ''),
+	(234, 0, 20110700, 'Bank of Tokyo-Mitsubishi UFJ, The -', 'BOTKDEH1XXX'),
+	(235, 0, 20110800, 'Bank of China Fil Hamburg', 'BKCHDEFFHMB'),
+	(236, 0, 20120000, 'Joh. Berenberg, Gossler & Co', 'BEGODEHHXXX'),
+	(237, 0, 20120100, 'Warburg, M.M.- Bank', 'WBWCDEHHXXX'),
+	(238, 0, 20120200, 'BHF-BANK', 'BHFBDEFF200'),
+	(239, 0, 20120400, 'Deutscher Ring Bausparkasse', 'DRBKDEH1XXX'),
+	(240, 0, 20120600, 'Goyer & Göppel', 'GOGODEH1XXX'),
+	(241, 0, 20120700, 'Hanseatic Bank', 'HSTBDEHHXXX'),
+	(242, 0, 20120701, 'Hanseatic Bank Zw Nord', 'HSTBDEH1OV1'),
+	(243, 0, 20120744, 'Hanseatic Bank Filiale Ost', 'HSTBDEH1NKO'),
+	(244, 0, 20120766, 'Hanseatic Bank Filiale Süd', 'HSTBDEH1NKS'),
+	(245, 0, 20130400, 'GRENKE BANK', 'GREBDEH1XXX'),
+	(246, 0, 20130412, 'GRENKE BANK Asset Backed Securities', ''),
+	(247, 0, 20130600, 'Barclaycard Barclays Bank', 'BARCDEHAXXX'),
+	(248, 0, 20133300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(249, 0, 20190003, 'Hamburger Volksbank', 'GENODEF1HH2'),
+	(250, 0, 20190109, 'Volksbank Stormarn', 'GENODEF1HH4'),
+	(251, 0, 20190206, 'Volksbank Hamburg Ost-West -alt-', 'GENODEF1HH1'),
+	(252, 0, 20190301, 'Vierländer Volksbank', 'GENODEF1HH3'),
+	(253, 0, 20190800, 'MKB Mittelstandskreditbank', 'GENODEF1MKB'),
+	(254, 0, 20210200, 'Bank Melli Iran', ''),
+	(255, 0, 20210300, 'Bank Saderat Iran', ''),
+	(256, 0, 20220100, 'DNB Bank ASA - Filiale Deutschland', 'DNBADEHXXXX'),
+	(257, 0, 20220400, 'Warburg, M.M. - Hypothekenbank', 'MMWHDEH1XXX'),
+	(258, 0, 20230300, 'Schröder, Otto M. - Bank', 'OSCBDEH1XXX'),
+	(259, 0, 20230600, 'Isbank Fil Hamburg', 'ISBKDEFXHAM'),
+	(260, 0, 20230800, 'Max Heinr. Sutor', 'MHSBDEHBXXX'),
+	(261, 0, 20310300, 'Europäisch-Iranische Handelsbank', ''),
+	(262, 0, 20310600, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFHAM'),
+	(263, 0, 20320500, 'Danske Bank', 'DABADEHHXXX'),
+	(264, 0, 20350000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADEHHXXX'),
+	(265, 0, 20690500, 'Sparda-Bank Hamburg', 'GENODEF1S11'),
+	(266, 0, 20730000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM314'),
+	(267, 0, 20730001, 'UniCredit Bank - HVB Settlement EAC01', 'HYVEDEMME01'),
+	(268, 0, 20730002, 'UniCredit Bank - HVB Settlement EAC02', 'HYVEDEMME02'),
+	(269, 0, 20730003, 'UniCredit Bank - HVB Settlement EAC03', 'HYVEDEMME03'),
+	(270, 0, 20730004, 'UniCredit Bank - HVB Settlement EAC04', 'HYVEDEMME04'),
+	(271, 0, 20730005, 'UniCredit Bank - HVB Settlement EAC05', 'HYVEDEMME05'),
+	(272, 0, 20730006, 'UniCredit Bank - HVB Settlement EAC06', 'HYVEDEMME06'),
+	(273, 0, 20730007, 'UniCredit Bank - HVB Settlement EAC07', 'HYVEDEMME07'),
+	(274, 0, 20730008, 'UniCredit Bank - HVB Settlement EAC08', 'HYVEDEMME08'),
+	(275, 0, 20730009, 'UniCredit Bank - HVB Settlement EAC09', 'HYVEDEMME09'),
+	(276, 0, 20730010, 'UniCredit Bank - HVB Settlement EAC10', 'HYVEDEMME10'),
+	(277, 0, 20730011, 'UniCredit Bank - HVB Settlement EAC11', 'HYVEDEMME11'),
+	(278, 0, 20730012, 'UniCredit Bank - HVB Settlement EAC12', 'HYVEDEMME12'),
+	(279, 0, 20730013, 'UniCredit Bank - HVB Settlement EAC13', 'HYVEDEMME13'),
+	(280, 0, 20730014, 'UniCredit Bank - HVB Settlement EAC14', 'HYVEDEMME14'),
+	(281, 0, 20730015, 'UniCredit Bank - HVB Settlement EAC15', 'HYVEDEMME15'),
+	(282, 0, 20730016, 'UniCredit Bank - HVB Settlement EAC16', 'HYVEDEMME16'),
+	(283, 0, 20730017, 'UniCredit Bank - HVB Settlement EAC17', 'HYVEDEMME17'),
+	(284, 0, 20730018, 'UniCredit Bank - HVB Settlement EAC18', 'HYVEDEMME18'),
+	(285, 0, 20730019, 'UniCredit Bank - HVB Settlement EAC19', 'HYVEDEMME19'),
+	(286, 0, 20730020, 'UniCredit Bank - HVB Settlement EAC20', 'HYVEDEMME20'),
+	(287, 0, 20730021, 'UniCredit Bank - HVB Settlement EAC21', 'HYVEDEMME21'),
+	(288, 0, 20730022, 'UniCredit Bank - HVB Settlement EAC22', 'HYVEDEMME22'),
+	(289, 0, 20730023, 'UniCredit Bank - HVB Settlement EAC23', 'HYVEDEMME23'),
+	(290, 0, 20730024, 'UniCredit Bank - HVB Settlement EAC24', 'HYVEDEMME24'),
+	(291, 0, 20730025, 'UniCredit Bank - HVB Settlement EAC25', 'HYVEDEMME25'),
+	(292, 0, 20730026, 'UniCredit Bank - HVB Settlement EAC26', 'HYVEDEMME26'),
+	(293, 0, 20730027, 'UniCredit Bank - HVB Settlement EAC27', 'HYVEDEMME27'),
+	(294, 0, 20730028, 'UniCredit Bank - HVB Settlement EAC28', 'HYVEDEMME28'),
+	(295, 0, 20730029, 'UniCredit Bank - HVB Settlement EAC29', 'HYVEDEMME29'),
+	(296, 0, 20730030, 'UniCredit Bank - HVB Settlement EAC30', 'HYVEDEMME30'),
+	(297, 0, 20730031, 'UniCredit Bank - HVB Settlement EAC31', 'HYVEDEMME31'),
+	(298, 0, 20730032, 'UniCredit Bank - HVB Settlement EAC32', 'HYVEDEMME32'),
+	(299, 0, 20730033, 'UniCredit Bank - HVB Settlement EAC33', 'HYVEDEMME33'),
+	(300, 0, 20730034, 'UniCredit Bank - HVB Settlement EAC34', 'HYVEDEMME34'),
+	(301, 0, 20730035, 'UniCredit Bank - HVB Settlement EAC35', 'HYVEDEMME35'),
+	(302, 0, 20730036, 'UniCredit Bank - HVB Settlement EAC36', 'HYVEDEMME36'),
+	(303, 0, 20730037, 'UniCredit Bank - HVB Settlement EAC37', 'HYVEDEMME37'),
+	(304, 0, 20730038, 'UniCredit Bank - HVB Settlement EAC38', 'HYVEDEMME38'),
+	(305, 0, 20730039, 'UniCredit Bank - HVB Settlement EAC39', 'HYVEDEMME39'),
+	(306, 0, 20730040, 'UniCredit Bank - HVB Settlement EAC40', 'HYVEDEMME40'),
+	(307, 0, 20730051, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM316'),
+	(308, 0, 20730053, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM330'),
+	(309, 0, 20730054, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM324'),
+	(310, 0, 20750000, 'Sparkasse Harburg-Buxtehude', 'NOLADE21HAM'),
+	(311, 0, 21000000, 'Bundesbank', 'MARKDEF1210'),
+	(312, 0, 21010111, 'SEB', 'ESSEDE5F210'),
+	(313, 0, 21020600, 'Sydbank Filiale Kiel', 'SYBKDE22KIE'),
+	(314, 0, 21030000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM372'),
+	(315, 0, 21030092, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM373'),
+	(316, 0, 21030093, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM379'),
+	(317, 0, 21030094, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM382'),
+	(318, 0, 21030095, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM375'),
+	(319, 0, 21040010, 'Commerzbank', 'COBADEFF210'),
+	(320, 0, 21042076, 'Commerzbank', 'COBADEFF245'),
+	(321, 0, 21050000, 'HSH Nordbank Hamburg, Kiel', 'HSHNDEHHXXX'),
+	(322, 0, 21050170, 'Förde Sparkasse', 'NOLADE21KIE'),
+	(323, 0, 21051275, 'Bordesholmer Sparkasse', 'NOLADE21BOR'),
+	(324, 0, 21051580, 'Sparkasse Kreis Plön -alt-', 'NOLADE21PLN'),
+	(325, 0, 21052090, 'Sparkasse Eckernförde -alt-', 'NOLADE21ECK'),
+	(326, 0, 21060237, 'Evangelische Darlehnsgenossenschaft', 'GENODEF1EDG'),
+	(327, 0, 21070020, 'Deutsche Bank', 'DEUTDEHH210'),
+	(328, 0, 21070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB210'),
+	(329, 0, 21080050, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF210'),
+	(330, 0, 21089201, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI07'),
+	(331, 0, 21090007, 'Kieler Volksbank', 'GENODEF1KIL'),
+	(332, 0, 21090619, 'apoBank', 'DAAEDED1019'),
+	(333, 0, 21090900, 'PSD Bank Kiel', 'GENODEF1P11'),
+	(334, 0, 21092023, 'Eckernförder Bank Volksbank-Raiffeisenbank', 'GENODEF1EFO'),
+	(335, 0, 21210111, 'SEB', 'ESSEDE5F212'),
+	(336, 0, 21230085, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM380'),
+	(337, 0, 21230086, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM384'),
+	(338, 0, 21240040, 'Commerzbank', 'COBADEFF212'),
+	(339, 0, 21241540, 'Commerzbank', 'COBADEFF225'),
+	(340, 0, 21261089, 'Raiffeisenbank -alt-', 'GENODEF1WAS'),
+	(341, 0, 21261227, 'Raiffbk Kl-Kummerfeld -alt-', 'GENODEF1BOO'),
+	(342, 0, 21270020, 'Deutsche Bank', 'DEUTDEHH212'),
+	(343, 0, 21270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB212'),
+	(344, 0, 21280002, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF212'),
+	(345, 0, 21290016, 'VR Bank Neumünster', 'GENODEF1NMS'),
+	(346, 0, 21340010, 'Commerzbank', 'COBADEFF226'),
+	(347, 0, 21352240, 'Sparkasse Holstein', 'NOLADE21HOL'),
+	(348, 0, 21390008, 'VR Bank Ostholstein Nord-Plön', 'GENODEF1NSH'),
+	(349, 0, 21392218, 'Volksbank Eutin Raiffeisenbank', 'GENODEF1EUT'),
+	(350, 0, 21430070, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM387'),
+	(351, 0, 21440045, 'Commerzbank', 'COBADEFF214'),
+	(352, 0, 21450000, 'Sparkasse Mittelholstein Rendsburg', 'NOLADE21RDB'),
+	(353, 0, 21451205, 'Sparkasse Büdelsdorf -alt-', 'NOLADE21BDF'),
+	(354, 0, 21452030, 'Sparkasse Hohenwestedt', 'NOLADE21HWS'),
+	(355, 0, 21463603, 'Volksbank-Raiffeisenbank im Kreis Rendsburg', 'GENODEF1NTO'),
+	(356, 0, 21464671, 'Raiffeisenbank', 'GENODEF1TOB'),
+	(357, 0, 21480003, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF214'),
+	(358, 0, 21500000, 'Bundesbank eh Flensburg', 'MARKDEF1215'),
+	(359, 0, 21510600, 'Sydbank Filiale Flensburg', 'SYBKDE22XXX'),
+	(360, 0, 21520100, 'Union-Bank Flensburg', 'UNBNDE21XXX'),
+	(361, 0, 21530080, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM334'),
+	(362, 0, 21540060, 'Commerzbank', 'COBADEFF215'),
+	(363, 0, 21550050, 'Nord-Ostsee Sparkasse', 'NOLADE21FLS'),
+	(364, 0, 21565316, 'Raiffeisenbank', 'GENODEF1HDW'),
+	(365, 0, 21566356, 'Volks- und Raiffeisenbank', 'GENODEF1SBR'),
+	(366, 0, 21567360, 'Raiffeisenbank Kleinjörl -alt-', 'GENODEF1KJO'),
+	(367, 0, 21570011, 'Deutsche Bank', 'DEUTDEHH215'),
+	(368, 0, 21570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB215'),
+	(369, 0, 21580000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF215'),
+	(370, 0, 21630060, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM393'),
+	(371, 0, 21630061, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM394'),
+	(372, 0, 21630062, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM395'),
+	(373, 0, 21630063, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM397'),
+	(374, 0, 21650110, 'Sparkasse Schleswig-Flensburg -alt-', 'NOLADE21SLN'),
+	(375, 0, 21661719, 'VR Bank Flensburg-Schleswig', 'GENODEF1RSL'),
+	(376, 0, 21690020, 'Schleswiger Volksbank, Volksbank Raiffeisenbank', 'GENODEF1SLW'),
+	(377, 0, 21700000, 'Bundesbank eh Husum', 'MARKDEF1217'),
+	(378, 0, 21730040, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM348'),
+	(379, 0, 21730042, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM353'),
+	(380, 0, 21730043, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM355'),
+	(381, 0, 21730044, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM358'),
+	(382, 0, 21730045, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM359'),
+	(383, 0, 21730046, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM361'),
+	(384, 0, 21740043, 'Commerzbank', 'COBADEFF217'),
+	(385, 0, 21741674, 'Commerzbank', 'COBADEFF211'),
+	(386, 0, 21741825, 'Commerzbank', 'COBADEFF220'),
+	(387, 0, 21750000, 'Nord-Ostsee Sparkasse', 'NOLADE21NOS'),
+	(388, 0, 21751230, 'Spar- und Leihkasse zu Bredstedt -alt-', 'NOLADE21BRD'),
+	(389, 0, 21762550, 'Husumer Volksbank', 'GENODEF1HUM'),
+	(390, 0, 21763542, 'VR Bank', 'GENODEF1BDS'),
+	(391, 0, 21770011, 'Deutsche Bank', 'DEUTDEHH217'),
+	(392, 0, 21770024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB217'),
+	(393, 0, 21791805, 'Sylter Bank', 'GENODEF1SYL'),
+	(394, 0, 21791906, 'Föhr-Amrumer Bank', 'GENODEF1WYK'),
+	(395, 0, 21830030, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM340'),
+	(396, 0, 21830032, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM341'),
+	(397, 0, 21830033, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM342'),
+	(398, 0, 21830034, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM343'),
+	(399, 0, 21830035, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM346'),
+	(400, 0, 21840078, 'Commerzbank', 'COBADEFF218'),
+	(401, 0, 21841328, 'Commerzbank', 'COBADEFF219'),
+	(402, 0, 21851720, 'Alte Marner Sparkasse -alt-', 'NOLADE21MRN'),
+	(403, 0, 21851830, 'Verbandssparkasse Meldorf -alt-', 'NOLADE21MLD'),
+	(404, 0, 21852310, 'Sparkasse Hennstedt-Wesselburen', 'NOLADE21WEB'),
+	(405, 0, 21860418, 'Raiffeisenbank Heide', 'GENODEF1RHE'),
+	(406, 0, 21890022, 'Dithmarscher Volks- und Raiffeisenbank', 'GENODEF1DVR'),
+	(407, 0, 22130075, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM331'),
+	(408, 0, 22140028, 'Commerzbank', 'COBADEFF221'),
+	(409, 0, 22141028, 'Commerzbank', 'COBADEFF224'),
+	(410, 0, 22141428, 'Commerzbank', 'COBADEFF206'),
+	(411, 0, 22141628, 'Commerzbank', 'COBADEFF223'),
+	(412, 0, 22150000, 'Sparkasse Elmshorn', 'NOLADE21ELH'),
+	(413, 0, 22151730, 'Stadtsparkasse Wedel', 'NOLADE21WED'),
+	(414, 0, 22163114, 'Raiffeisenbank Elbmarsch', 'GENODEF1HTE'),
+	(415, 0, 22180000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF221'),
+	(416, 0, 22181400, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF206'),
+	(417, 0, 22190030, 'Volksbank Elmshorn', 'GENODEF1ELM'),
+	(418, 0, 22191405, 'VR Bank Pinneberg', 'GENODEF1PIN'),
+	(419, 0, 22200000, 'Bundesbank eh Itzehoe', 'MARKDEF1222'),
+	(420, 0, 22230020, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM370'),
+	(421, 0, 22230022, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM363'),
+	(422, 0, 22230023, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM367'),
+	(423, 0, 22230025, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM369'),
+	(424, 0, 22240073, 'Commerzbank', 'COBADEFF222'),
+	(425, 0, 22250020, 'Sparkasse Westholstein', 'NOLADE21WHO'),
+	(426, 0, 22251580, 'Landsparkasse Schenefeld -alt-', 'NOLADE21SHF'),
+	(427, 0, 22260136, 'Raiffeisenbank -alt-', 'GENODEF1RIT'),
+	(428, 0, 22280000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF201'),
+	(429, 0, 22290031, 'Volksbank Raiffeisenbank Itzehoe', 'GENODEF1VIT'),
+	(430, 0, 23000000, 'Bundesbank', 'MARKDEF1230'),
+	(431, 0, 23010111, 'SEB', 'ESSEDE5F230'),
+	(432, 0, 23030000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM237'),
+	(433, 0, 23040022, 'Commerzbank', 'COBADEFF230'),
+	(434, 0, 23050000, 'HSH Nordbank Lübeck', 'HSHNDEHH230'),
+	(435, 0, 23050101, 'Sparkasse zu Lübeck', 'NOLADE21SPL'),
+	(436, 0, 23051030, 'Sparkasse Südholstein', 'NOLADE21SHO'),
+	(437, 0, 23051610, 'Sparkasse Stormarn -alt-', 'NOLADE21STO'),
+	(438, 0, 23052750, 'Kreissparkasse Herzogtum Lauenburg', 'NOLADE21RZB'),
+	(439, 0, 23061220, 'Raiffeisenbank Leezen', 'GENODEF1LZN'),
+	(440, 0, 23062124, 'Raiffeisenbank', 'GENODEF1BAR'),
+	(441, 0, 23062807, 'Volks- und Raiffeisenbank Mölln -alt-', 'GENODEF1MOE'),
+	(442, 0, 23063129, 'Raiffeisenbank', 'GENODEF1RLB'),
+	(443, 0, 23064107, 'Raiffeisenbank', 'GENODEF1BCH'),
+	(444, 0, 23070700, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB237'),
+	(445, 0, 23070710, 'Deutsche Bank', 'DEUTDEHH222'),
+	(446, 0, 23080040, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF230'),
+	(447, 0, 23089201, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI08'),
+	(448, 0, 23090142, 'Volksbank Lübeck', 'GENODEF1HLU'),
+	(449, 0, 23092502, 'Volksbank Lauenburg -alt-', 'GENODEF1VLB'),
+	(450, 0, 23092620, 'apoBank', 'DAAEDED1020'),
+	(451, 0, 24000000, 'Bundesbank eh Lüneburg', 'MARKDEF1240'),
+	(452, 0, 24030000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM318'),
+	(453, 0, 24040000, 'Commerzbank', 'COBADEFF240'),
+	(454, 0, 24050110, 'Sparkasse Lüneburg', 'NOLADE21LBG'),
+	(455, 0, 24060300, 'Volksbank Lüneburger Heide', 'GENODEF1NBU'),
+	(456, 0, 24061392, 'Volksbank Bleckede-Dahlenburg -alt-', 'GENODEF1DAB'),
+	(457, 0, 24070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB240'),
+	(458, 0, 24070075, 'Deutsche Bank', 'DEUTDE2H240'),
+	(459, 0, 24080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF240'),
+	(460, 0, 24090041, 'Volksbank Lüneburg -alt-', 'GENODEF1LUE'),
+	(461, 0, 24121000, 'Ritterschaftliches Kreditinstitut Stade', 'GENODED1RKI'),
+	(462, 0, 24130000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM327'),
+	(463, 0, 24140041, 'Commerzbank', 'COBADEFF241'),
+	(464, 0, 24150001, 'Stadtsparkasse Cuxhaven', 'BRLADE21CUX'),
+	(465, 0, 24151005, 'Sparkasse Stade-Altes Land', 'NOLADE21STS'),
+	(466, 0, 24151116, 'Kreissparkasse Stade', 'NOLADE21STK'),
+	(467, 0, 24151235, 'Sparkasse Rotenburg-Bremervörde', 'BRLADE21ROB'),
+	(468, 0, 24161594, 'Zevener Volksbank', 'GENODEF1SIT'),
+	(469, 0, 24162898, 'Spar- u Darlehnskasse Börde Lamstedt-Hechthausen', 'GENODEF1LAS'),
+	(470, 0, 24180000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF242'),
+	(471, 0, 24180001, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF241'),
+	(472, 0, 24191015, 'Volksbank Stade-Cuxhaven', 'GENODEF1SDE'),
+	(473, 0, 25000000, 'Bundesbank', 'MARKDEF1250'),
+	(474, 0, 25010030, 'Postbank', 'PBNKDEFFXXX'),
+	(475, 0, 25010111, 'SEB', 'ESSEDE5F250'),
+	(476, 0, 25010424, 'Aareal Bank', 'AARBDE5W250'),
+	(477, 0, 25010600, 'Deutsche Hypothekenbank', 'DEHYDE2HXXX'),
+	(478, 0, 25010700, 'Berlin-Hannoversche Hypothekenbank', 'BHYPDEB1HAN'),
+	(479, 0, 25010900, 'Calenberger Kreditverein', 'CKVHDE21XXX'),
+	(480, 0, 25020200, 'BHF-BANK', 'BHFBDEFF250'),
+	(481, 0, 25020600, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(482, 0, 25020700, 'Hanseatic Bank', 'HSTBDEH1HAN'),
+	(483, 0, 25030000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM210'),
+	(484, 0, 25040060, 'Commerzbank CC', 'COBADEFF076'),
+	(485, 0, 25040061, 'Commerzbank CC', 'COBADEFF077'),
+	(486, 0, 25040066, 'Commerzbank', 'COBADEFF250'),
+	(487, 0, 25050000, 'Norddeutsche Landesbank Girozentrale', 'NOLADE2HXXX'),
+	(488, 0, 25050055, 'ZVA Norddeutsche Landesbank SH', 'NOLADE21CSH'),
+	(489, 0, 25050180, 'Sparkasse Hannover', 'SPKHDE2HXXX'),
+	(490, 0, 25050299, 'Sparkasse Hannover -alt-', ''),
+	(491, 0, 25055500, 'LBS-Norddeutsche Landesbausparkasse', 'NOLADE21LBS'),
+	(492, 0, 25060000, 'DZ BANK', 'GENODEFF250'),
+	(493, 0, 25060180, 'Bankhaus Hallbaum', 'HALLDE2HXXX'),
+	(494, 0, 25060701, 'Evangelische Kreditgenossenschaft -Filiale Hannover-', 'GENODEF1EK3'),
+	(495, 0, 25069168, 'Volks- und Raiffeisenbank Leinebergland', 'GENODEF1DES'),
+	(496, 0, 25069262, 'Raiffeisen-Volksbank Neustadt', 'GENODEF1NST'),
+	(497, 0, 25069270, 'Volksbank Aller-Oker', 'GENODEF1MUA'),
+	(498, 0, 25069370, 'Volksbank Vechelde-Wendeburg', 'GENODEF1WBU'),
+	(499, 0, 25069503, 'Volksbank Diepholz-Barnstorf', 'GENODEF1BNT'),
+	(500, 0, 25070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBHAN'),
+	(501, 0, 25070066, 'Deutsche Bank', 'DEUTDE2H265'),
+	(502, 0, 25070070, 'Deutsche Bank', 'DEUTDE2HXXX'),
+	(503, 0, 25070077, 'Deutsche Bank', 'DEUTDE2H256'),
+	(504, 0, 25070084, 'Deutsche Bank', 'DEUTDE2H258'),
+	(505, 0, 25070086, 'Deutsche Bank', 'DEUTDE2H251'),
+	(506, 0, 25080020, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF250'),
+	(507, 0, 25080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFI65'),
+	(508, 0, 25089220, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI09'),
+	(509, 0, 25090300, 'Bank für Schiffahrt (BFS) Fil d Ostfr VB Leer', 'GENODEF1BFS'),
+	(510, 0, 25090500, 'Sparda-Bank Hannover', 'GENODEF1S09'),
+	(511, 0, 25090608, 'apoBank', 'DAAEDED1008'),
+	(512, 0, 25090900, 'PSD Bank', 'GENODEF1P09'),
+	(513, 0, 25120510, 'Bank für Sozialwirtschaft', 'BFSWDE33HAN'),
+	(514, 0, 25151270, 'Stadtsparkasse Barsinghausen', 'NOLADE21BAH'),
+	(515, 0, 25151371, 'Stadtsparkasse Burgdorf', 'NOLADE21BUF'),
+	(516, 0, 25152375, 'Kreissparkasse Fallingbostel in Walsrode', 'NOLADE21WAL'),
+	(517, 0, 25152490, 'Stadtsparkasse Wunstorf', 'NOLADE21WST'),
+	(518, 0, 25190001, 'Hannoversche Volksbank', 'VOHADE2HXXX'),
+	(519, 0, 25193331, 'Volksbank', 'GENODEF1PAT'),
+	(520, 0, 25250001, 'Kreissparkasse Peine', 'NOLADE21PEI'),
+	(521, 0, 25260010, 'Volksbank Peine', 'GENODEF1PEV'),
+	(522, 0, 25400000, 'Bundesbank eh Hameln', 'MARKDEF1254'),
+	(523, 0, 25410111, 'SEB', 'ESSEDE5F254'),
+	(524, 0, 25410200, 'BHW Bausparkasse', 'BHWBDE2HXXX'),
+	(525, 0, 25410300, 'BHW Allgemeine Bausparkasse -alt-', 'BHWBDE2HXXX'),
+	(526, 0, 25430000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM217'),
+	(527, 0, 25440047, 'Commerzbank', 'COBADEFF254'),
+	(528, 0, 25450001, 'Stadtsparkasse Hameln', 'NOLADE21HMS'),
+	(529, 0, 25450110, 'Sparkasse Weserbergland', 'NOLADE21SWB'),
+	(530, 0, 25451345, 'Stadtsparkasse Bad Pyrmont', 'NOLADE21PMT'),
+	(531, 0, 25451450, 'Sparkasse Weserbergland', 'NOLADE21BOW'),
+	(532, 0, 25451655, 'Sparkasse Weserbergland', 'NOLADE21HEO'),
+	(533, 0, 25462160, 'Volksbank Hameln-Stadthagen', 'GENODEF1HMP'),
+	(534, 0, 25462680, 'Volksbank im Wesertal', 'GENODEF1COP'),
+	(535, 0, 25470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB254'),
+	(536, 0, 25470073, 'Deutsche Bank', 'DEUTDE2H254'),
+	(537, 0, 25471024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB264'),
+	(538, 0, 25471073, 'Deutsche Bank', 'DEUTDE2H264'),
+	(539, 0, 25480021, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF254'),
+	(540, 0, 25491273, 'Volksbank Aerzen -alt-', 'GENODED1AEZ'),
+	(541, 0, 25491744, 'Volksbank Bad Münder', 'GENODED1BMU'),
+	(542, 0, 25541426, 'Commerzbank', 'COBADEFF275'),
+	(543, 0, 25551480, 'Sparkasse Schaumburg', 'NOLADE21SHG'),
+	(544, 0, 25591413, 'Volksbank in Schaumburg', 'GENODEF1BCK'),
+	(545, 0, 25621327, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(546, 0, 25641302, 'Commerzbank', 'COBADEFF256'),
+	(547, 0, 25650106, 'Sparkasse Nienburg', 'NOLADE21NIB'),
+	(548, 0, 25651325, 'Kreissparkasse Grafschaft Diepholz', 'BRLADE21DHZ'),
+	(549, 0, 25662540, 'Volksbank', 'GENODEF1STY'),
+	(550, 0, 25663584, 'Volksbank Aller-Weser', 'GENODEF1HOY'),
+	(551, 0, 25690009, 'Volksbank Nienburg', 'GENODEF1NIN'),
+	(552, 0, 25691633, 'Volksbank Sulingen', 'GENODEF1SUL'),
+	(553, 0, 25700000, 'Bundesbank eh Celle', 'MARKDEF1257'),
+	(554, 0, 25730000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM211'),
+	(555, 0, 25740061, 'Commerzbank', 'COBADEFF257'),
+	(556, 0, 25750001, 'Sparkasse Celle', 'NOLADE21CEL'),
+	(557, 0, 25761894, 'Volksbank Wittingen-Klötze', 'GENODEF1WIK'),
+	(558, 0, 25770024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB257'),
+	(559, 0, 25770069, 'Deutsche Bank', 'DEUTDE2H257'),
+	(560, 0, 25780022, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF257'),
+	(561, 0, 25791516, 'Volksbank Hankensbüttel-Wahrenholz', 'GENODEF1HKB'),
+	(562, 0, 25791635, 'Volksbank Südheide', 'GENODEF1HMN'),
+	(563, 0, 25800000, 'Bundesbank eh Uelzen', 'MARKDEF1258'),
+	(564, 0, 25840048, 'Commerzbank', 'COBADEFF249'),
+	(565, 0, 25841403, 'Commerzbank', 'COBADEFF244'),
+	(566, 0, 25841708, 'Commerzbank', 'COBADEFF239'),
+	(567, 0, 25850110, 'Sparkasse Uelzen Lüchow-Dannenberg', 'NOLADE21UEL'),
+	(568, 0, 25851335, 'Sparkasse Uelzen Lüchow-Dannenberg -alt-', 'NOLADE21DAN'),
+	(569, 0, 25851660, 'Kreissparkasse Soltau', 'NOLADE21SOL'),
+	(570, 0, 25861395, 'Volksbank Dannenberg -alt-', 'GENODEF1DAN'),
+	(571, 0, 25861990, 'Volksbank Clenze-Hitzacker', 'GENODEF1CLZ'),
+	(572, 0, 25862292, 'Volksbank Uelzen-Salzwedel', 'GENODEF1EUB'),
+	(573, 0, 25863489, 'Volksbank Osterburg-Lüchow-Dannenberg', 'GENODEF1WOT'),
+	(574, 0, 25891483, 'Volksbank Osterburg-Lüchow-Dannenberg -alt-', 'GENODEF1LCH'),
+	(575, 0, 25891636, 'Volksbank Lüneburger Heide -alt-', 'GENODEF1SOL'),
+	(576, 0, 25900000, 'Bundesbank eh Hildesheim', 'MARKDEF1259'),
+	(577, 0, 25910111, 'SEB', 'ESSEDE5F259'),
+	(578, 0, 25930000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM214'),
+	(579, 0, 25940033, 'Commerzbank', 'COBADEFF259'),
+	(580, 0, 25950001, 'Stadtsparkasse Hildesheim -alt-', 'NOLADE21HIS'),
+	(581, 0, 25950130, 'Sparkasse Hildesheim', 'NOLADE21HIK'),
+	(582, 0, 25970024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB259'),
+	(583, 0, 25970074, 'Deutsche Bank', 'DEUTDE2H259'),
+	(584, 0, 25971024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB253'),
+	(585, 0, 25971071, 'Deutsche Bank', 'DEUTDE2H253'),
+	(586, 0, 25980027, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF259'),
+	(587, 0, 25990011, 'Volksbank Hildesheim', 'GENODEF1HIH'),
+	(588, 0, 25991528, 'Volksbank Hildesheimer Börde', 'GENODEF1SLD'),
+	(589, 0, 25991911, 'Volksbank Sarstedt -alt-', 'GENODEF1SAR'),
+	(590, 0, 26000000, 'Bundesbank', 'MARKDEF1260'),
+	(591, 0, 26010111, 'SEB', 'ESSEDE5F260'),
+	(592, 0, 26030000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM213'),
+	(593, 0, 26040030, 'Commerzbank', 'COBADEFF260'),
+	(594, 0, 26050001, 'Sparkasse Göttingen', 'NOLADE21GOE'),
+	(595, 0, 26051260, 'Sparkasse Duderstadt', 'NOLADE21DUD'),
+	(596, 0, 26051450, 'Kreis- und Stadtsparkasse Münden', 'NOLADE21HMU'),
+	(597, 0, 26061291, 'Volksbank Mitte', 'GENODEF1DUD'),
+	(598, 0, 26061556, 'Volksbank', 'GENODEF1ADE'),
+	(599, 0, 26062433, 'VR-Bank in Südniedersachsen', 'GENODEF1DRA'),
+	(600, 0, 26062575, 'Raiffeisenbank', 'GENODEF1RDO'),
+	(601, 0, 26070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB260'),
+	(602, 0, 26070072, 'Deutsche Bank', 'DEUTDE2H260'),
+	(603, 0, 26080024, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF260'),
+	(604, 0, 26090050, 'Volksbank Göttingen', 'GENODEF1GOE'),
+	(605, 0, 26240039, 'Commerzbank', 'COBADEFF264'),
+	(606, 0, 26250001, 'Kreis-Sparkasse Northeim', 'NOLADE21NOM'),
+	(607, 0, 26251425, 'Sparkasse Einbeck', 'NOLADE21EIN'),
+	(608, 0, 26261396, 'Volksbank Dassel', 'GENODEF1VDA'),
+	(609, 0, 26261492, 'Volksbank Einbeck', 'GENODEF1EIN'),
+	(610, 0, 26261693, 'Volksbank Solling', 'GENODEF1HDG'),
+	(611, 0, 26271424, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB262'),
+	(612, 0, 26271471, 'Deutsche Bank', 'DEUTDE2H262'),
+	(613, 0, 26280020, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF261'),
+	(614, 0, 26281420, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF262'),
+	(615, 0, 26340056, 'Commerzbank', 'COBADEFF263'),
+	(616, 0, 26341072, 'Commerzbank', 'COBADEFF278'),
+	(617, 0, 26350001, 'Stadtsparkasse Osterode', 'NOLADE21OHA'),
+	(618, 0, 26351015, 'Sparkasse Osterode am Harz', 'NOLADE21HZB'),
+	(619, 0, 26351445, 'Stadtsparkasse Bad Sachsa', 'NOLADE21SAC'),
+	(620, 0, 26361299, 'Volksbank Oberharz -alt-', 'GENODEF1GOH'),
+	(621, 0, 26500000, 'Bundesbank', 'MARKDEF1265'),
+	(622, 0, 26510111, 'SEB', 'ESSEDE5F265'),
+	(623, 0, 26520017, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(624, 0, 26521703, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(625, 0, 26522319, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(626, 0, 26540070, 'Commerzbank', 'COBADEFF265'),
+	(627, 0, 26550105, 'Sparkasse Osnabrück', 'NOLADE22XXX'),
+	(628, 0, 26551540, 'Kreissparkasse Bersenbrück', 'NOLADE21BEB'),
+	(629, 0, 26552286, 'Kreissparkasse Melle', 'NOLADE21MEL'),
+	(630, 0, 26560625, 'apoBank', 'DAAEDED1025'),
+	(631, 0, 26562490, 'Volksbank Bad Laer-Borgloh-Hilter-Melle', 'GENODEF1HTR'),
+	(632, 0, 26562694, 'Volksbank Wittlage -alt-', 'GENODEF1WTB'),
+	(633, 0, 26563960, 'Volksbank Bramgau-Wittlage', 'GENODEF1WHO'),
+	(634, 0, 26565928, 'Volksbank GMHütte-Hagen-Bissendorf', 'GENODEF1HGM'),
+	(635, 0, 26566939, 'Volksbank Osnabrücker Nordland', 'GENODEF1MRZ'),
+	(636, 0, 26567943, 'VR-Bank im Altkreis Bersenbrück', 'GENODEF1NOP'),
+	(637, 0, 26570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB265'),
+	(638, 0, 26570090, 'Deutsche Bank', 'DEUTDE3B265'),
+	(639, 0, 26580070, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF265'),
+	(640, 0, 26589210, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI10'),
+	(641, 0, 26590025, 'Volksbank Osnabrück', 'GENODEF1OSV'),
+	(642, 0, 26600000, 'Bundesbank eh Lingen (Ems)', 'MARKDEF1266'),
+	(643, 0, 26620010, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(644, 0, 26621413, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(645, 0, 26640049, 'Commerzbank', 'COBADEFF266'),
+	(646, 0, 26650001, 'Sparkasse Emsland', 'NOLADE21EMS'),
+	(647, 0, 26660060, 'Volksbank Lingen', 'GENODEF1LIG'),
+	(648, 0, 26661380, 'Volksbank Haselünne', 'GENODEF1HLN'),
+	(649, 0, 26661494, 'Emsländische Volksbank Meppen', 'GENODEF1MEP'),
+	(650, 0, 26661912, 'Volksbank Süd-Emsland -alt-', ''),
+	(651, 0, 26662932, 'Volksbank', 'GENODEF1LEN'),
+	(652, 0, 26691213, 'Volksbank Haren Fil d Ostfriesischen VB', 'GENODEF1HAR'),
+	(653, 0, 26720028, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(654, 0, 26740044, 'Commerzbank', 'COBADEFF267'),
+	(655, 0, 26750001, 'Kreissparkasse Grafschaft Bentheim zu Nordhorn', 'NOLADE21NOH'),
+	(656, 0, 26760005, 'Raiffeisen- und Volksbank Nordhorn -alt-', 'GENODEF1NDH'),
+	(657, 0, 26770024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB267'),
+	(658, 0, 26770095, 'Deutsche Bank', 'DEUTDE3B267'),
+	(659, 0, 26800000, 'Bundesbank eh Halberstadt', 'MARKDEF1268'),
+	(660, 0, 26840032, 'Commerzbank', 'COBADEFF268'),
+	(661, 0, 26850001, 'Sparkasse Goslar/Harz', 'NOLADE21GSL'),
+	(662, 0, 26851410, 'Kreissparkasse Clausthal-Zellerfeld', 'NOLADE21CLZ'),
+	(663, 0, 26851620, 'Sparkasse Salzgitter', 'NOLADE21SZG'),
+	(664, 0, 26870024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB268'),
+	(665, 0, 26870032, 'Deutsche Bank', 'DEUTDE2H268'),
+	(666, 0, 26880063, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF268'),
+	(667, 0, 26890019, 'Volksbank Nordharz', 'GENODEF1VNH'),
+	(668, 0, 26891484, 'Volksbank im Harz', 'GENODEF1OHA'),
+	(669, 0, 26941053, 'Commerzbank Wolfsburg', 'COBADEFF269'),
+	(670, 0, 26951311, 'Sparkasse Gifhorn-Wolfsburg', 'NOLADE21GFW'),
+	(671, 0, 26971024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB269'),
+	(672, 0, 26971038, 'Deutsche Bank', 'DEUTDE2H269'),
+	(673, 0, 26981062, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF269'),
+	(674, 0, 26989221, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI11'),
+	(675, 0, 26991066, 'Volksbank Braunschweig Wolfsburg', 'GENODEF1WOB'),
+	(676, 0, 27000000, 'Bundesbank eh Braunschweig', 'MARKDEF1270'),
+	(677, 0, 27010111, 'SEB', 'ESSEDE5F270'),
+	(678, 0, 27010200, 'VON ESSEN Bankgesellschaft', 'VONEDE33BRA'),
+	(679, 0, 27020000, 'Volkswagen Bank', 'VOWADE2BXXX'),
+	(680, 0, 27020001, 'Audi Bank Zndl d Volkswagen Bank', 'AUDFDE21XXX'),
+	(681, 0, 27020003, 'Skoda Bank', 'SKODDE21XXX'),
+	(682, 0, 27020004, 'AutoEuropa Bank', 'ECBKDE21XXX'),
+	(683, 0, 27020800, 'Seat Bank Zndl d Volkswagen Bank', 'SEATDE21XXX'),
+	(684, 0, 27030000, 'UniCredit Bank - HypoVereinsbank (ex VereinWest)', 'HYVEDEMM212'),
+	(685, 0, 27032500, 'Bankhaus C. L. Seeliger', 'BCLSDE21XXX'),
+	(686, 0, 27040080, 'Commerzbank', 'COBADEFF270'),
+	(687, 0, 27062290, 'Volksbank Börßum-Hornburg', 'GENODEF1BOH'),
+	(688, 0, 27070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB270'),
+	(689, 0, 27070030, 'Deutsche Bank', 'DEUTDE2H270'),
+	(690, 0, 27070031, 'Deutsche Bank', 'DEUTDE2H271'),
+	(691, 0, 27070034, 'Deutsche Bank', 'DEUTDE2H274'),
+	(692, 0, 27070041, 'Deutsche Bank', 'DEUTDE2H279'),
+	(693, 0, 27070042, 'Deutsche Bank', 'DEUTDE2H272'),
+	(694, 0, 27070043, 'Deutsche Bank', 'DEUTDE2H273'),
+	(695, 0, 27070079, 'Deutsche Bank', 'DEUTDE2H275'),
+	(696, 0, 27072524, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB277'),
+	(697, 0, 27072537, 'Deutsche Bank', 'DEUTDE2H277'),
+	(698, 0, 27072724, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB276'),
+	(699, 0, 27072736, 'Deutsche Bank', 'DEUTDE2H276'),
+	(700, 0, 27080060, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF270'),
+	(701, 0, 27089221, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI12'),
+	(702, 0, 27090077, 'Volksbank Braunschweig -alt-', 'GENODEF1BSG'),
+	(703, 0, 27090618, 'apoBank', 'DAAEDED1018'),
+	(704, 0, 27090900, 'PSD Bank', 'GENODEF1P02'),
+	(705, 0, 27092555, 'Volksbank Wolfenbüttel-Salzgitter', 'GENODEF1WFV'),
+	(706, 0, 27131300, 'Bankhaus Rautenschlein', 'GENODEF1RTS'),
+	(707, 0, 27190082, 'Volksbank Helmstedt', 'GENODEF1HMS'),
+	(708, 0, 27240004, 'Commerzbank', 'COBADEFF251'),
+	(709, 0, 27290087, 'Volksbank Weserbergland', 'GENODEF1HMV'),
+	(710, 0, 27893215, 'Vereinigte Volksbank', 'GENODEF1BHA'),
+	(711, 0, 27893359, 'Volksbank Braunlage', 'GENODEF1BLG'),
+	(712, 0, 27893760, 'Volksbank', 'GENODEF1SES'),
+	(713, 0, 28000000, 'Bundesbank', 'MARKDEF1280'),
+	(714, 0, 28010111, 'SEB', 'ESSEDE5F280'),
+	(715, 0, 28020050, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(716, 0, 28021002, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(717, 0, 28021301, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(718, 0, 28021504, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(719, 0, 28021623, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(720, 0, 28021705, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(721, 0, 28021906, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(722, 0, 28022015, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(723, 0, 28022412, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(724, 0, 28022511, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(725, 0, 28022620, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(726, 0, 28022822, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(727, 0, 28023224, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(728, 0, 28023325, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(729, 0, 28030300, 'Bankhaus W. Fortmann & Söhne', 'FORTDEH4XXX'),
+	(730, 0, 28040046, 'Commerzbank', 'COBADEFF286'),
+	(731, 0, 28042865, 'Commerzbank', 'COBADEFF281'),
+	(732, 0, 28050100, 'Landessparkasse zu Oldenburg', 'BRLADE21LZO'),
+	(733, 0, 28060228, 'Raiffeisenbank Oldenburg', 'GENODEF1OL2'),
+	(734, 0, 28061410, 'Raiffeisenbank Wesermarsch-Süd', 'GENODEF1BRN'),
+	(735, 0, 28061501, 'Volksbank Cloppenburg', 'GENODEF1CLP'),
+	(736, 0, 28061679, 'Volksbank Dammer Berge', 'GENODEF1DAM'),
+	(737, 0, 28061822, 'Volksbank Oldenburg', 'GENODEF1EDE'),
+	(738, 0, 28062165, 'Raiffeisenbank Rastede', 'GENODEF1RSE'),
+	(739, 0, 28062249, 'Volksbank Ganderkesee-Hude', 'GENODEF1HUD'),
+	(740, 0, 28062560, 'Volksbank Lohne-Mühlen', 'GENODEF1LON'),
+	(741, 0, 28062740, 'Volksbank Bookholzberg-Lemwerder', 'GENODEF1GBH'),
+	(742, 0, 28062913, 'Volksbank Bösel', 'GENODEF1BSL'),
+	(743, 0, 28063253, 'Volksbank Westerstede', 'GENODEF1WRE'),
+	(744, 0, 28063526, 'Volksbank Essen-Cappeln', 'GENODEF1ESO'),
+	(745, 0, 28063607, 'Volksbank Bakum', 'GENODEF1BAM'),
+	(746, 0, 28064090, 'VR Bank Dinklage-Steinfeld -alt-', 'GENODEF1SEI'),
+	(747, 0, 28064179, 'Volksbank Vechta', 'GENODEF1VEC'),
+	(748, 0, 28064241, 'Raiffeisen-Volksbank Varel-Nordenham', 'GENODEF1NHE'),
+	(749, 0, 28065061, 'Volksbank Löningen', 'GENODEF1LOG'),
+	(750, 0, 28065108, 'VR-Bank Dinklage-Steinfeld', 'GENODEF1DIK'),
+	(751, 0, 28065286, 'Raiffeisenbank Scharrel', 'GENODEF1SAN'),
+	(752, 0, 28066103, 'Volksbank Visbek', 'GENODEF1VIS'),
+	(753, 0, 28066214, 'Volksbank Wildeshauser Geest', 'GENODEF1WDH'),
+	(754, 0, 28066620, 'Spar- und Darlehnskasse Friesoythe', 'GENODEF1FOY'),
+	(755, 0, 28067068, 'Volksbank Neuenkirchen-Vörden', 'GENODEF1NEO'),
+	(756, 0, 28067170, 'Volksbank Delmenhorst Schierbrok', 'GENODEF1GSC'),
+	(757, 0, 28067257, 'Volksbank Lastrup', 'GENODEF1LAP'),
+	(758, 0, 28068218, 'Raiffeisenbank Butjadingen-Abbehausen', 'GENODEF1BUT'),
+	(759, 0, 28069052, 'Raiffeisenbank Strücklingen-Idafehn', 'GENODEF1ORF'),
+	(760, 0, 28069092, 'VR Bank Oldenburg Land West', 'GENODEF1HAT'),
+	(761, 0, 28069109, 'Volksbank Emstek', 'GENODEF1EMK'),
+	(762, 0, 28069128, 'Raiffeisenbank Garrel', 'GENODEF1GRR'),
+	(763, 0, 28069138, 'VR Bank Oldenburg Land West', 'GENODEF1VAG'),
+	(764, 0, 28069293, 'Volksbank Obergrafschaft -alt-', 'GENODEF1BBH'),
+	(765, 0, 28069381, 'Hümmlinger Volksbank', 'GENODEF1WLT'),
+	(766, 0, 28069706, 'Volksbank Nordhümmling', 'GENODEF1BOG'),
+	(767, 0, 28069755, 'Raiffeisenbank Oldersum', 'GENODEF1MLO'),
+	(768, 0, 28069773, 'Raiffeisenbank Wiesedermeer-Wiesede-Marcardsm', 'GENODEF1WWM'),
+	(769, 0, 28069878, 'Raiffeisenbank Emsland-Mitte', 'GENODEF1KBL'),
+	(770, 0, 28069926, 'Volksbank Niedergrafschaft', 'GENODEF1HOO'),
+	(771, 0, 28069930, 'Volksbank Langen-Gersten', 'GENODEF1LAG'),
+	(772, 0, 28069935, 'Raiffeisenbank Lorup', 'GENODEF1LRU'),
+	(773, 0, 28069955, 'Volksbank Uelsen', 'GENODEF1UEL'),
+	(774, 0, 28069956, 'Grafschafter Volksbank', 'GENODEF1NEV'),
+	(775, 0, 28069991, 'Volksbank Emstal', 'GENODEF1LTH'),
+	(776, 0, 28069994, 'Volksbank Süd-Emsland', 'GENODEF1SPL'),
+	(777, 0, 28070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB280'),
+	(778, 0, 28070057, 'Deutsche Bank', 'DEUTDEHB280'),
+	(779, 0, 28090633, 'apoBank', 'DAAEDED1033'),
+	(780, 0, 28200000, 'Bundesbank eh Wilhelmshaven', 'MARKDEF1282'),
+	(781, 0, 28220026, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(782, 0, 28222208, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(783, 0, 28222621, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(784, 0, 28240023, 'Commerzbank', 'COBADEFF282'),
+	(785, 0, 28250110, 'Sparkasse Wilhelmshaven', 'BRLADE21WHV'),
+	(786, 0, 28252760, 'Kreissparkasse Wittmund', 'BRLADE21WTM'),
+	(787, 0, 28262254, 'Volksbank Jever', 'GENODEF1JEV'),
+	(788, 0, 28262673, 'Raiffeisen-Volksbank Varel-Nordenham', 'GENODEF1VAR'),
+	(789, 0, 28270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB282'),
+	(790, 0, 28270056, 'Deutsche Bank', 'DEUTDEHB282'),
+	(791, 0, 28280012, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF282'),
+	(792, 0, 28290063, 'Volksbank Wilhelmshaven', 'GENODEF1WHV'),
+	(793, 0, 28291551, 'Volksbank Esens', 'GENODEF1ESE'),
+	(794, 0, 28320014, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(795, 0, 28321816, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(796, 0, 28350000, 'Sparkasse Aurich-Norden', 'BRLADE21ANO'),
+	(797, 0, 28361592, 'Raiffeisen-Volksbank Fresena', 'GENODEF1MAR'),
+	(798, 0, 28420007, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(799, 0, 28421030, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(800, 0, 28440037, 'Commerzbank', 'COBADEFF284'),
+	(801, 0, 28450000, 'Sparkasse Emden', 'BRLADE21EMD'),
+	(802, 0, 28470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB284'),
+	(803, 0, 28470091, 'Deutsche Bank', 'DEUTDEHB284'),
+	(804, 0, 28500000, 'Bundesbank eh Leer', 'MARKDEF1285'),
+	(805, 0, 28520009, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(806, 0, 28521518, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(807, 0, 28540034, 'Commerzbank', 'COBADEFF285'),
+	(808, 0, 28550000, 'Sparkasse LeerWittmund', 'BRLADE21LER'),
+	(809, 0, 28562297, 'Raiffeisen-Volksbank', 'GENODEF1UPL'),
+	(810, 0, 28562716, 'Raiffeisenbank Flachsmeer', 'GENODEF1WEF'),
+	(811, 0, 28562863, 'Raiffeisenbank Moormerland', 'GENODEF1HTL'),
+	(812, 0, 28563749, 'Raiffeisenbank', 'GENODEF1MML'),
+	(813, 0, 28570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB285'),
+	(814, 0, 28570092, 'Deutsche Bank', 'DEUTDEHB285'),
+	(815, 0, 28590075, 'Ostfriesische Volksbank Leer', 'GENODEF1LER'),
+	(816, 0, 28591579, 'Volksbank Papenburg Fil d. Ostfries. VB Leer', 'GENODEF1PAP'),
+	(817, 0, 28591654, 'Volksbank Westrhauderfehn', 'GENODEF1WRH'),
+	(818, 0, 29000000, 'Bundesbank', 'MARKDEF1290'),
+	(819, 0, 29010111, 'SEB', 'ESSEDE5F290'),
+	(820, 0, 29010400, 'Deutsche Schiffsbank', 'DESBDE22XXX'),
+	(821, 0, 29020000, 'Bankhaus Neelmeyer', 'NEELDE22XXX'),
+	(822, 0, 29020100, 'KBC Bank Deutschland', 'BANVDEHBXXX'),
+	(823, 0, 29020200, 'NordFinanz Bank', 'NFHBDE21XXX'),
+	(824, 0, 29020400, 'Deutsche Factoring Bank', 'DFABDE21XXX'),
+	(825, 0, 29030400, 'Bankhaus Carl F. Plump & CO', 'PLUMDE29XXX'),
+	(826, 0, 29040060, 'Commerzbank CC', 'COBADEFF072'),
+	(827, 0, 29040061, 'Commerzbank CC', 'COBADEFF073'),
+	(828, 0, 29040090, 'Commerzbank', 'COBADEFF290'),
+	(829, 0, 29050000, 'Bremer Landesbank', 'BRLADE22XXX'),
+	(830, 0, 29050101, 'Sparkasse Bremen', 'SBREDE22XXX'),
+	(831, 0, 29070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBBRE'),
+	(832, 0, 29070050, 'Deutsche Bank', 'DEUTDEHBXXX'),
+	(833, 0, 29070051, 'Deutsche Bank', 'DEUTDEHB292'),
+	(834, 0, 29070052, 'Deutsche Bank', 'DEUTDEHB294'),
+	(835, 0, 29070058, 'Deutsche Bank', 'DEUTDEHB293'),
+	(836, 0, 29070059, 'Deutsche Bank', 'DEUTDEHB290'),
+	(837, 0, 29080010, 'Commerzbank vormals Bremer Bank (Dresdner Bank)', 'DRESDEFF290'),
+	(838, 0, 29089210, 'Commerzbank vormals Bremer Bank (Dresdner Bank) ITGK', 'DRESDEFFI13'),
+	(839, 0, 29090605, 'apoBank', 'DAAEDED1005'),
+	(840, 0, 29090900, 'PSD Bank Nord', 'GENODEF1P03'),
+	(841, 0, 29121731, 'Oldenburgische Landesbank AG', 'OLBODEH2XXX'),
+	(842, 0, 29151700, 'Kreissparkasse Syke', 'BRLADE21SYK'),
+	(843, 0, 29152300, 'Kreissparkasse Osterholz', 'BRLADE21OHZ'),
+	(844, 0, 29152550, 'Zweckverbandssparkasse Scheeßel', 'BRLADE21SHL'),
+	(845, 0, 29152670, 'Kreissparkasse Verden', 'BRLADE21VER'),
+	(846, 0, 29162394, 'Volksbank', 'GENODEF1OHZ'),
+	(847, 0, 29162453, 'Volksbank Schwanewede', 'GENODEF1SWW'),
+	(848, 0, 29162697, 'Volksbank Aller-Weser', 'GENODEF1VER'),
+	(849, 0, 29165545, 'Volksbank Oyten', 'GENODEF1OYT'),
+	(850, 0, 29165681, 'Volksbank Sottrum', 'GENODEF1SUM'),
+	(851, 0, 29166568, 'Volksbank', 'GENODEF1WOP'),
+	(852, 0, 29167624, 'Volksbank Syke', 'GENODEF1SHR'),
+	(853, 0, 29172624, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB291'),
+	(854, 0, 29172655, 'Deutsche Bank', 'DEUTDEHB291'),
+	(855, 0, 29190024, 'Bremische Volksbank', 'GENODEF1HB1'),
+	(856, 0, 29190330, 'Volksbank Bremen-Nord', 'GENODEF1HB2'),
+	(857, 0, 29200000, 'Bundesbank eh Bremerhaven', 'MARKDEF1292'),
+	(858, 0, 29210111, 'SEB', 'ESSEDE5F292'),
+	(859, 0, 29240024, 'Commerzbank', 'COBADEFF292'),
+	(860, 0, 29250000, 'Sparkasse Bremerhaven', 'BRLADE21BRS'),
+	(861, 0, 29250150, 'Kreissparkasse Wesermünde-Hadeln', 'BRLADE21BRK'),
+	(862, 0, 29262722, 'Volksbank Geeste-Nord', 'GENODEF1BRV'),
+	(863, 0, 29265747, 'Volksbank Bremerhaven-Cuxland', 'GENODEF1BEV'),
+	(864, 0, 29280011, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF292'),
+	(865, 0, 29290034, 'Volksbank Bremerhaven-Wesermünde -alt-', 'GENODEF1HBV'),
+	(866, 0, 30000000, 'Bundesbank', 'MARKDEF1300'),
+	(867, 0, 30010111, 'SEB', 'ESSEDE5F300'),
+	(868, 0, 30010400, 'IKB Deutsche Industriebank', 'IKBDDEDDXXX'),
+	(869, 0, 30010444, 'IKB Privatkunden - IKB Deutsche Industriebank', 'IKBDDEDDDIR'),
+	(870, 0, 30010700, 'The Bank of Tokyo-Mitsubishi UFJ', 'BOTKDEDXXXX'),
+	(871, 0, 30020300, 'Santander Consumer Bank', 'CCBADE31RBS'),
+	(872, 0, 30020500, 'BHF-BANK', 'BHFBDEFF300'),
+	(873, 0, 30020700, 'Mizuho Bank Filiale Düsseldorf', 'MHCBDEDDXXX'),
+	(874, 0, 30020900, 'TARGOBANK', 'CMCIDEDDXXX'),
+	(875, 0, 30022000, 'NRW.BANK', 'NRWBDEDMXXX'),
+	(876, 0, 30025500, 'Portigon', 'PORTDEDDXXX'),
+	(877, 0, 30030100, 'S Broker Wiesbaden', 'PULSDEDDXXX'),
+	(878, 0, 30030400, 'FXdirekt Bank', 'FXDBDE31XXX'),
+	(879, 0, 30030500, 'Bank11direkt', 'CUABDED1XXX'),
+	(880, 0, 30030600, 'ETRIS Bank', 'ETRIDE31XXX'),
+	(881, 0, 30030880, 'HSBC Trinkaus & Burkhardt', 'TUBDDEDDXXX'),
+	(882, 0, 30030900, 'Merck Finck & Co', 'MEFIDEMM300'),
+	(883, 0, 30040000, 'Commerzbank', 'COBADEDDXXX'),
+	(884, 0, 30040048, 'Commerzbank GF-D48', 'COBADEFF930'),
+	(885, 0, 30040060, 'Commerzbank Gf 660', 'COBADEFF064'),
+	(886, 0, 30040061, 'Commerzbank Gf 661', 'COBADEFF065'),
+	(887, 0, 30040062, 'Commerzbank CC', 'COBADEFF084'),
+	(888, 0, 30040063, 'Commerzbank CC', 'COBADEFF085'),
+	(889, 0, 30050000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADEDDXXX'),
+	(890, 0, 30050110, 'Stadtsparkasse Düsseldorf', 'DUSSDEDDXXX'),
+	(891, 0, 30060010, 'WGZ Bank', 'GENODEDDXXX'),
+	(892, 0, 30060601, 'apoBank', 'DAAEDEDDXXX'),
+	(893, 0, 30060992, 'PSD Bank Rhein-Ruhr', 'GENODEF1P05'),
+	(894, 0, 30070010, 'Deutsche Bank', 'DEUTDEDDXXX'),
+	(895, 0, 30070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBDUE'),
+	(896, 0, 30080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF300'),
+	(897, 0, 30080005, 'Commerzbank vormals Dresdner Bank Zw 05', 'DRESDEFFXXX'),
+	(898, 0, 30080022, 'Commerzbank vormals Dresdner Bank Ztv 22', 'DRESDEFFI28'),
+	(899, 0, 30080038, 'Commerzbank vormals Dresdner Bank Zw 38', 'DRESDEFFXXX'),
+	(900, 0, 30080041, 'Commerzbank vormals Dresdner Bank Zw 41', 'DRESDEFFI29'),
+	(901, 0, 30080053, 'Commerzbank vormals Dresdner Bank Zw 53', 'DRESDEFFI30'),
+	(902, 0, 30080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF309'),
+	(903, 0, 30080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF316'),
+	(904, 0, 30080061, 'Commerzbank vormals Dresdner Bank Zw 61', 'DRESDEFFI31'),
+	(905, 0, 30080074, 'Commerzbank vormals Dresdner Bank Zw 74', 'DRESDEFFI32'),
+	(906, 0, 30080080, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3', 'DRESDEFFI76'),
+	(907, 0, 30080081, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFI77'),
+	(908, 0, 30080082, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFI78'),
+	(909, 0, 30080083, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6', 'DRESDEFFI79'),
+	(910, 0, 30080084, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7', 'DRESDEFFI80'),
+	(911, 0, 30080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8', 'DRESDEFFI81'),
+	(912, 0, 30080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9', 'DRESDEFFI82'),
+	(913, 0, 30080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10', 'DRESDEFFI83'),
+	(914, 0, 30080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11', 'DRESDEFFI84'),
+	(915, 0, 30080089, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 12', 'DRESDEFFI85'),
+	(916, 0, 30080095, 'Commerzbank vormals Dresdner Bank Zw 95', 'DRESDEFFI33'),
+	(917, 0, 30089300, 'Commerzbank vormals Dresdner Bank ITGK I', 'DRESDEFFI02'),
+	(918, 0, 30089302, 'Commerzbank vormals Dresdner Bank ITGK II', 'DRESDEFFI03'),
+	(919, 0, 30110300, 'Sumitomo Mitsui Banking Corporation', 'SMBCDEDDXXX'),
+	(920, 0, 30120400, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFDUS'),
+	(921, 0, 30120500, 'KBC Bank Deutschland', 'BANVDEHB300'),
+	(922, 0, 30120764, 'UniCredit Bank - HypoVereinsbank Ndl 450 Düs', 'HYVEDEM1086'),
+	(923, 0, 30130100, 'Demir-Halk Bank (Nederland)', 'DHBNDEDDXXX'),
+	(924, 0, 30130200, 'GarantiBank International', 'UGBIDEDDXXX'),
+	(925, 0, 30130600, 'Isbank Fil Düsseldorf', 'ISBKDEFXDUS'),
+	(926, 0, 30130800, 'Düsseldorfer Hypothekenbank', 'DHYPDEDDXXX'),
+	(927, 0, 30150001, 'Helaba Düsseldorf Gf Verrechnung FI-Dus', ''),
+	(928, 0, 30150200, 'Kreissparkasse Düsseldorf', 'WELADED1KSD'),
+	(929, 0, 30160213, 'Volksbank Düsseldorf Neuss', 'GENODED1DNE'),
+	(930, 0, 30220190, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM414'),
+	(931, 0, 30330800, 'BIW Bank für Investments und Wertpapiere', 'BIWBDE33303'),
+	(932, 0, 30351220, 'Stadt-Sparkasse Haan', 'WELADED1HAA'),
+	(933, 0, 30520000, 'RCI Banque Niederlassung Deutschland', 'RCIDDE3NXXX'),
+	(934, 0, 30520037, 'RCI Banque Direkt', 'RCIDDE3NPAY'),
+	(935, 0, 30530000, 'Bankhaus Werhahn', 'WERHDED1XXX'),
+	(936, 0, 30530500, 'Bank11 für Privatkunden und Handel, Neuss', 'WEFZDED1XXX'),
+	(937, 0, 30550000, 'Sparkasse Neuss', 'WELADEDNXXX'),
+	(938, 0, 30551240, 'Stadtsparkasse Kaarst-Büttgen -alt-', 'WELADED1KST'),
+	(939, 0, 30560090, 'Volksbank Neuss -alt-', 'GENODED1NSS'),
+	(940, 0, 30560548, 'VR Bank', 'GENODED1NLD'),
+	(941, 0, 31000000, 'Bundesbank eh Mönchengladbach', 'MARKDEF1310'),
+	(942, 0, 31010111, 'SEB', 'ESSEDE5F310'),
+	(943, 0, 31010833, 'Santander Consumer Bank', 'CCBADE31XXX'),
+	(944, 0, 31040015, 'Commerzbank', 'COBADEFF310'),
+	(945, 0, 31040060, 'Commerzbank CC', 'COBADEFF088'),
+	(946, 0, 31040061, 'Commerzbank CC', 'COBADEFF089'),
+	(947, 0, 31050000, 'Stadtsparkasse Mönchengladbach', 'MGLSDE33XXX'),
+	(948, 0, 31060181, 'Gladbacher Bank von 1922', 'GENODED1GBM'),
+	(949, 0, 31060517, 'Volksbank Mönchengladbach', 'GENODED1MRB'),
+	(950, 0, 31062154, 'Volksbank Brüggen-Nettetal', 'GENODED1KBN'),
+	(951, 0, 31062553, 'Volksbank Schwalmtal', 'GENODED1NKR'),
+	(952, 0, 31070001, 'Deutsche Bank', 'DEUTDEDD310'),
+	(953, 0, 31070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB310'),
+	(954, 0, 31080015, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF310'),
+	(955, 0, 31080061, 'Commerzbank vormals Dresdner Bank Zw 61', 'DRESDEFFI34'),
+	(956, 0, 31251220, 'Kreissparkasse Heinsberg in Erkelenz', 'WELADED1ERK'),
+	(957, 0, 31261282, 'Volksbank Erkelenz', 'GENODED1EHE'),
+	(958, 0, 31263359, 'Raiffeisenbank Erkelenz', 'GENODED1LOE'),
+	(959, 0, 31460290, 'Volksbank Viersen', 'GENODED1VSN'),
+	(960, 0, 31470004, 'Deutsche Bank', 'DEUTDEDD314'),
+	(961, 0, 31470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB314'),
+	(962, 0, 32000000, 'Bundesbank eh Krefeld', 'MARKDEF1320'),
+	(963, 0, 32040024, 'Commerzbank', 'COBADEFF320'),
+	(964, 0, 32050000, 'Sparkasse Krefeld', 'SPKRDE33XXX'),
+	(965, 0, 32051996, 'Sparkasse der Stadt Straelen', 'WELADED1STR'),
+	(966, 0, 32060362, 'Volksbank Krefeld', 'GENODED1HTK'),
+	(967, 0, 32061384, 'Volksbank an der Niers', 'GENODED1GDL'),
+	(968, 0, 32061414, 'Volksbank Kempen-Grefrath', 'GENODED1KMP'),
+	(969, 0, 32070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB320'),
+	(970, 0, 32070080, 'Deutsche Bank', 'DEUTDEDD320'),
+	(971, 0, 32080010, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF320'),
+	(972, 0, 32250050, 'Verbandssparkasse Goch', 'WELADED1GOC'),
+	(973, 0, 32400000, 'Bundesbank eh Kleve, Niederrhein', 'MARKDEF1324'),
+	(974, 0, 32440023, 'Commerzbank', 'COBADEFF324'),
+	(975, 0, 32450000, 'Sparkasse Kleve', 'WELADED1KLE'),
+	(976, 0, 32460422, 'Volksbank Kleverland', 'GENODED1KLL'),
+	(977, 0, 32470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB324'),
+	(978, 0, 32470077, 'Deutsche Bank', 'DEUTDEDD324'),
+	(979, 0, 33000000, 'Bundesbank eh Wuppertal', 'MARKDEF1330'),
+	(980, 0, 33010111, 'SEB', 'ESSEDE5F330'),
+	(981, 0, 33020000, 'akf bank', 'AKFBDE31XXX'),
+	(982, 0, 33020190, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM809'),
+	(983, 0, 33030000, 'GEFA', 'GGABDE31XXX'),
+	(984, 0, 33040001, 'Commerzbank', 'COBADEFF330'),
+	(985, 0, 33040310, 'Commerzbank Zw 117', 'COBADEDHXXX'),
+	(986, 0, 33050000, 'Stadtsparkasse Wuppertal', 'WUPSDE33XXX'),
+	(987, 0, 33060098, 'Credit- und Volksbank Wuppertal', 'GENODED1CVW'),
+	(988, 0, 33060592, 'Sparda-Bank West', 'GENODED1SPW'),
+	(989, 0, 33060616, 'apoBank', 'DAAEDED1016'),
+	(990, 0, 33070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBWUP'),
+	(991, 0, 33070090, 'Deutsche Bank', 'DEUTDEDWXXX'),
+	(992, 0, 33080001, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFI86'),
+	(993, 0, 33080030, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF332'),
+	(994, 0, 33080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFI87'),
+	(995, 0, 33080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3', 'DRESDEFFI88'),
+	(996, 0, 33080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFI89'),
+	(997, 0, 33080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFI90'),
+	(998, 0, 33440035, 'Commerzbank', 'COBADEFF334'),
+	(999, 0, 33450000, 'Sparkasse Hilden-Ratingen-Velbert', 'WELADED1VEL'),
+	(1000, 0, 33451220, 'Sparkasse Heiligenhaus -alt-', 'WELADED1HGH'),
+	(1001, 0, 34040049, 'Commerzbank', 'COBADEFF340'),
+	(1002, 0, 34050000, 'Stadtsparkasse Remscheid', 'WELADEDRXXX'),
+	(1003, 0, 34051350, 'Sparkasse Radevormwald-Hückeswagen', 'WELADED1RVW'),
+	(1004, 0, 34051570, 'Stadtsparkasse Wermelskirchen', 'WELADED1WMK'),
+	(1005, 0, 34060094, 'Volksbank Remscheid-Solingen Remscheid-Lennep', 'VBRSDE33XXX'),
+	(1006, 0, 34070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB340'),
+	(1007, 0, 34070093, 'Deutsche Bank', 'DEUTDEDW340'),
+	(1008, 0, 34080031, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF340'),
+	(1009, 0, 34240050, 'Commerzbank', 'COBADEFF342'),
+	(1010, 0, 34250000, 'Stadt-Sparkasse Solingen', 'SOLSDE33XXX'),
+	(1011, 0, 34270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB342'),
+	(1012, 0, 34270094, 'Deutsche Bank', 'DEUTDEDW342'),
+	(1013, 0, 34280032, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF342'),
+	(1014, 0, 35000000, 'Bundesbank eh Duisburg', 'MARKDEF1350'),
+	(1015, 0, 35010111, 'SEB', 'ESSEDE5F350'),
+	(1016, 0, 35020030, 'National-Bank -alt-', 'NBAGDE3EXXX'),
+	(1017, 0, 35040038, 'Commerzbank', 'COBADEFF350'),
+	(1018, 0, 35040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(1019, 0, 35050000, 'Sparkasse Duisburg', 'DUISDE33XXX'),
+	(1020, 0, 35060190, 'Bank für Kirche und Diakonie - KD-Bank', 'GENODED1DKD'),
+	(1021, 0, 35060386, 'Volksbank Rhein-Ruhr', 'GENODED1VRR'),
+	(1022, 0, 35060632, 'apoBank', 'DAAEDED1032'),
+	(1023, 0, 35070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB350'),
+	(1024, 0, 35070030, 'Deutsche Bank', 'DEUTDEDE350'),
+	(1025, 0, 35080070, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF350'),
+	(1026, 0, 35080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFI91'),
+	(1027, 0, 35080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFI92'),
+	(1028, 0, 35080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3', 'DRESDEFFI93'),
+	(1029, 0, 35080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFI94'),
+	(1030, 0, 35080089, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFI95'),
+	(1031, 0, 35090300, 'Bank für Schiffahrt (BFS) Fil d Ostfr VB Leer', 'GENODEF1BSD'),
+	(1032, 0, 35211012, 'SEB', 'ESSEDE5F352'),
+	(1033, 0, 35251000, 'Sparkasse Dinslaken-Voerde-Hünxe', 'WELADED1DIN'),
+	(1034, 0, 35261248, 'Volksbank Dinslaken', 'GENODED1DLK'),
+	(1035, 0, 35450000, 'Sparkasse am Niederrhein', 'WELADED1MOR'),
+	(1036, 0, 35451460, 'Sparkasse Neukirchen-Vluyn -alt-', 'WELADED1NVL'),
+	(1037, 0, 35451775, 'Sparkasse Rheinberg -alt-', 'WELADED1RHB'),
+	(1038, 0, 35461106, 'Volksbank Niederrhein', 'GENODED1NRH'),
+	(1039, 0, 35600000, 'Bundesbank eh Wesel', 'MARKDEF1356'),
+	(1040, 0, 35640064, 'Commerzbank', 'COBADEFF356'),
+	(1041, 0, 35650000, 'Verbands-Sparkasse Wesel', 'WELADED1WES'),
+	(1042, 0, 35660599, 'Volksbank Rhein-Lippe', 'GENODED1RLW'),
+	(1043, 0, 35850000, 'Stadtsparkasse Emmerich-Rees', 'WELADED1EMR'),
+	(1044, 0, 35860245, 'Volksbank Emmerich-Rees', 'GENODED1EMR'),
+	(1045, 0, 36000000, 'Bundesbank', 'MARKDEF1360'),
+	(1046, 0, 36010043, 'Postbank', 'PBNKDEFFXXX'),
+	(1047, 0, 36010111, 'SEB', 'ESSEDE5F360'),
+	(1048, 0, 36010200, 'VON ESSEN Bankgesellschaft', 'VONEDE33XXX'),
+	(1049, 0, 36010424, 'Aareal Bank', 'AARBDE5W360'),
+	(1050, 0, 36010600, 'GALLINAT-BANK', 'GABKDE31XXX'),
+	(1051, 0, 36010699, 'Gallinat - Bank Asset Backed Securities', 'GABKDE31699'),
+	(1052, 0, 36020030, 'National-Bank Essen', 'NBAGDE3EXXX'),
+	(1053, 0, 36020186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM360'),
+	(1054, 0, 36020700, 'Hanseatic Bank', 'HSTBDEH1ESS'),
+	(1055, 0, 36033300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(1056, 0, 36036000, 'VALOVIS Bank', 'VABKDE3EXXX'),
+	(1057, 0, 36040039, 'Commerzbank', 'COBADEFF360'),
+	(1058, 0, 36040060, 'Commerzbank CC', 'COBADEFF082'),
+	(1059, 0, 36040061, 'Commerzbank CC', 'COBADEFF083'),
+	(1060, 0, 36040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(1061, 0, 36050000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADE3EXXX'),
+	(1062, 0, 36050105, 'Sparkasse Essen', 'SPESDE3EXXX'),
+	(1063, 0, 36060192, 'Pax-Bank', 'GENODED1PA2'),
+	(1064, 0, 36060295, 'Bank im Bistum Essen', 'GENODED1BBE'),
+	(1065, 0, 36060488, 'GENO BANK ESSEN', 'GENODEM1GBE'),
+	(1066, 0, 36060591, 'Sparda-Bank West', 'GENODED1SPE'),
+	(1067, 0, 36060610, 'apoBank', 'DAAEDED1010'),
+	(1068, 0, 36070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBESS'),
+	(1069, 0, 36070050, 'Deutsche Bank', 'DEUTDEDEXXX'),
+	(1070, 0, 36080080, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF360'),
+	(1071, 0, 36080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK  2', 'DRESDEFFI66'),
+	(1072, 0, 36089321, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI17'),
+	(1073, 0, 36200000, 'Bundesbank eh Mülheim an der Ruhr', 'MARKDEF1362'),
+	(1074, 0, 36210111, 'SEB', 'ESSEDE5F362'),
+	(1075, 0, 36220030, 'National-Bank -alt-', 'NBAGDE3EXXX'),
+	(1076, 0, 36240045, 'Commerzbank', 'COBADEFF362'),
+	(1077, 0, 36250000, 'Sparkasse Mülheim an der Ruhr', 'SPMHDE3EXXX'),
+	(1078, 0, 36270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB362'),
+	(1079, 0, 36270048, 'Deutsche Bank', 'DEUTDEDE362'),
+	(1080, 0, 36280071, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF362'),
+	(1081, 0, 36500000, 'Bundesbank eh Oberhausen', 'MARKDEF1365'),
+	(1082, 0, 36520030, 'National-Bank -alt-', 'NBAGDE3EXXX'),
+	(1083, 0, 36540046, 'Commerzbank', 'COBADEFF365'),
+	(1084, 0, 36550000, 'Stadtsparkasse Oberhausen', 'WELADED1OBH'),
+	(1085, 0, 36570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB365'),
+	(1086, 0, 36570049, 'Deutsche Bank', 'DEUTDEDE365'),
+	(1087, 0, 36580072, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF365'),
+	(1088, 0, 37000000, 'Bundesbank', 'MARKDEF1370'),
+	(1089, 0, 37010050, 'Postbank', 'PBNKDEFFXXX'),
+	(1090, 0, 37010111, 'SEB', 'ESSEDE5F370'),
+	(1091, 0, 37010222, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFKOE'),
+	(1092, 0, 37010600, 'Fortis Bank Ndl Deutschland', 'GEBADE33XXX'),
+	(1093, 0, 37011000, 'Deutsche Postbank Easytrade', 'PBNKDEFFXXX'),
+	(1094, 0, 37013030, 'Deutsche Post Zahlungsdienste', 'DEZMDE31XXX'),
+	(1095, 0, 37020090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM429'),
+	(1096, 0, 37020200, 'AXA Bank', 'AXABDE31XXX'),
+	(1097, 0, 37020400, 'TOYOTA Kreditbank', 'TOBADE33XXX'),
+	(1098, 0, 37020500, 'Bank für Sozialwirtschaft', 'BFSWDE33XXX'),
+	(1099, 0, 37020599, 'Bank für Sozialwirtschaft Köln Gf', 'BFSWDE33BEK'),
+	(1100, 0, 37020600, 'Santander Consumer Bank MG', 'AKBCDE31XXX'),
+	(1101, 0, 37020900, 'Ford Bank Ndl. der FCE Bank', 'FDBADE3KXXX'),
+	(1102, 0, 37021100, 'Mazda Bank Niederlassung der FCE Bank', 'MAZDDED1XXX'),
+	(1103, 0, 37021200, 'Volvo Auto Bank', 'VOLVDE31XXX'),
+	(1104, 0, 37021201, 'Volvo Auto Bank - Direktbank', 'VOLVDE3K001'),
+	(1105, 0, 37021300, 'Jaguar Financial Services Ndl der FCE Bank', 'JAGUDE31XXX'),
+	(1106, 0, 37021400, 'Land Rover Financial Services Ndl der FCE Bank', 'LRFSDE31XXX'),
+	(1107, 0, 37030200, 'Oppenheim, Sal - jr & Cie', 'SOPPDE3KXXX'),
+	(1108, 0, 37030700, 'abcbank', 'WWBADE31XXX'),
+	(1109, 0, 37030800, 'Isbank Fil Köln', 'ISBKDEFXKOL'),
+	(1110, 0, 37040037, 'Commerzbank, CC SP', 'COBADEFFS03'),
+	(1111, 0, 37040044, 'Commerzbank', 'COBADEFF370'),
+	(1112, 0, 37040048, 'Commerzbank GF-K48', 'COBADEFF937'),
+	(1113, 0, 37040060, 'Commerzbank CC', 'COBADEFF086'),
+	(1114, 0, 37040061, 'Commerzbank CC', 'COBADEFF087'),
+	(1115, 0, 37050198, 'Sparkasse KölnBonn', 'COLSDE33XXX'),
+	(1116, 0, 37050299, 'Kreissparkasse Köln', 'COKSDE33XXX'),
+	(1117, 0, 37060120, 'Pax-Bank Gf MHD', 'GENODED1PA7'),
+	(1118, 0, 37060193, 'Pax-Bank', 'GENODED1PAX'),
+	(1119, 0, 37060590, 'Sparda-Bank West', 'GENODED1SPK'),
+	(1120, 0, 37060615, 'apoBank', 'DAAEDED1015'),
+	(1121, 0, 37060993, 'PSD Bank Köln', 'GENODEF1P13'),
+	(1122, 0, 37062124, 'Bensberger Bank', 'GENODED1BGL'),
+	(1123, 0, 37062365, 'Raiffeisenbank Frechen-Hürth', 'GENODED1FHH'),
+	(1124, 0, 37062600, 'VR Bank Bergisch Gladbach', 'GENODED1PAF'),
+	(1125, 0, 37063367, 'Raiffeisenbank Fischenich-Kendenich', 'GENODED1FKH'),
+	(1126, 0, 37069101, 'Spar- und Darlehnskasse Aegidienberg', 'GENODED1AEG'),
+	(1127, 0, 37069103, 'Raiffeisenbank Aldenhoven', 'GENODED1ALD'),
+	(1128, 0, 37069125, 'Raiffeisenbank Kürten-Odenthal', 'GENODED1RKO'),
+	(1129, 0, 37069153, 'Spar- und Darlehnskasse Brachelen -alt-', 'GENODED1HCK'),
+	(1130, 0, 37069164, 'Volksbank Meerbusch', 'GENODED1MBU'),
+	(1131, 0, 37069252, 'Volksbank Erft', 'GENODED1ERE'),
+	(1132, 0, 37069302, 'Raiffeisenbank', 'GENODED1GLK'),
+	(1133, 0, 37069303, 'Volksbank Gemünd-Kall -alt-', 'GENODED1GKK'),
+	(1134, 0, 37069306, 'Raiffeisenbank Grevenbroich', 'GENODED1GRB'),
+	(1135, 0, 37069322, 'Raiffeisenbank Gymnich', 'GENODED1EGY'),
+	(1136, 0, 37069330, 'Volksbank Haaren', 'GENODED1HAW'),
+	(1137, 0, 37069331, 'Raiffeisenbank von 1895 Zw Horrem -alt-', 'GENODED1KHO'),
+	(1138, 0, 37069342, 'Volksbank Heimbach', 'GENODED1HMB'),
+	(1139, 0, 37069354, 'Raiffeisenbank Selfkant Zw -alt-', 'GENODED1SEG'),
+	(1140, 0, 37069355, 'Spar- und Darlehnskasse Hoengen', 'GENODED1AHO'),
+	(1141, 0, 37069381, 'VR-Bank Rur-Wurm', 'GENODED1IMM'),
+	(1142, 0, 37069401, 'Raiffeisenbank Junkersdorf', 'GENODED1JUK'),
+	(1143, 0, 37069405, 'Raiffeisenbank Kaarst', 'GENODED1KAA'),
+	(1144, 0, 37069412, 'Raiffeisenbank', 'GENODED1HRB'),
+	(1145, 0, 37069427, 'Volksbank Dünnwald-Holweide', 'GENODED1DHK'),
+	(1146, 0, 37069429, 'Volksbank Köln-Nord', 'GENODED1KNL'),
+	(1147, 0, 37069472, 'Raiffeisenbk Erftstadt -alt-', 'GENODED1ERF'),
+	(1148, 0, 37069520, 'VR-Bank Rhein-Sieg', 'GENODED1RST'),
+	(1149, 0, 37069521, 'Raiffeisenbank Rhein-Berg', 'GENODED1MNH'),
+	(1150, 0, 37069524, 'Raiffeisenbank Much-Ruppichteroth', 'GENODED1MUC'),
+	(1151, 0, 37069577, 'Raiffeisenbank Odenthal -alt-', 'GENODED1ODT'),
+	(1152, 0, 37069627, 'Raiffeisenbank Rheinbach Voreifel', 'GENODED1RBC'),
+	(1153, 0, 37069639, 'Rosbacher Raiffeisenbank', 'GENODED1WND'),
+	(1154, 0, 37069642, 'Raiffeisenbank', 'GENODED1SMR'),
+	(1155, 0, 37069707, 'Raiffeisenbank Sankt Augustin', 'GENODED1SAM'),
+	(1156, 0, 37069720, 'VR-Bank Nordeifel', 'GENODED1SLE'),
+	(1157, 0, 37069805, 'Volksbank Wachtberg', 'GENODED1WVI'),
+	(1158, 0, 37069833, 'Raiffeisenbk Wesseling -alt-', 'GENODED1WSL'),
+	(1159, 0, 37069840, 'Volksbank Wipperfürth-Lindlar', 'GENODED1WPF'),
+	(1160, 0, 37069991, 'Brühler Bank', 'GENODED1BRL'),
+	(1161, 0, 37070000, 'Deutsche Bank - Kontoservice für Kunden Sal. Oppenheim', 'DEUTDEDK402'),
+	(1162, 0, 37070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBKOE'),
+	(1163, 0, 37070060, 'Deutsche Bank', 'DEUTDEDKXXX'),
+	(1164, 0, 37080040, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF370'),
+	(1165, 0, 37080085, 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 1', 'DRESDEFFI51'),
+	(1166, 0, 37080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFI67'),
+	(1167, 0, 37080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFI96'),
+	(1168, 0, 37080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6', 'DRESDEFFI97'),
+	(1169, 0, 37080089, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7', 'DRESDEFFI98'),
+	(1170, 0, 37080090, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 8', 'DRESDEFFJ01'),
+	(1171, 0, 37080091, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 9', 'DRESDEFFJ02'),
+	(1172, 0, 37080092, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 10', 'DRESDEFFJ03'),
+	(1173, 0, 37080093, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 11', 'DRESDEFFJ04'),
+	(1174, 0, 37080094, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 12', 'DRESDEFFJ05'),
+	(1175, 0, 37080095, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 13', 'DRESDEFFJ06'),
+	(1176, 0, 37080096, 'Commerzbank vormals Dresdner Bank Zw 96', 'DRESDEFFXXX'),
+	(1177, 0, 37080097, 'Commerzbank vormals Dresdner Bank Zw 97', 'DRESDEFFXXX'),
+	(1178, 0, 37080098, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 14', 'DRESDEFFJ07'),
+	(1179, 0, 37080099, 'Commerzbank vormals Dresdner Bank Zw 99', 'DRESDEFFI36'),
+	(1180, 0, 37089340, 'Commerzbank vormals Dresdner Bank ITGK I', 'DRESDEFFI04'),
+	(1181, 0, 37089342, 'Commerzbank vormals Dresdner Bank ITGK II', 'DRESDEFFI05'),
+	(1182, 0, 37160087, 'Kölner Bank', 'GENODED1CGN'),
+	(1183, 0, 37161289, 'VR-Bank Rhein-Erft', 'GENODED1BRH'),
+	(1184, 0, 37540050, 'Commerzbank', 'COBADEFF375'),
+	(1185, 0, 37551020, 'Stadt-Sparkasse Leichlingen', 'WELADED1LEI'),
+	(1186, 0, 37551440, 'Sparkasse Leverkusen', 'WELADEDLLEV'),
+	(1187, 0, 37551670, 'Stadtsparkasse Düsseldorf - Filiale Monheim', 'DUSSDED1MON'),
+	(1188, 0, 37551780, 'Stadt-Sparkasse Langenfeld', 'WELADED1LAF'),
+	(1189, 0, 37560092, 'Volksbank Rhein-Wupper', 'GENODED1RWL'),
+	(1190, 0, 37570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB375'),
+	(1191, 0, 37570064, 'Deutsche Bank', 'DEUTDEDK375'),
+	(1192, 0, 38000000, 'Bundesbank eh Bonn', 'MARKDEF1380'),
+	(1193, 0, 38010053, 'Postbank Zentrale', 'PBNKDEFF380'),
+	(1194, 0, 38010111, 'SEB', 'ESSEDE5F380'),
+	(1195, 0, 38010700, 'DSL Bank', 'PBNKDEFFDSL'),
+	(1196, 0, 38010900, 'KfW Ndl Bonn', 'DTABDED1XXX'),
+	(1197, 0, 38010999, 'KfW Ausbildungsförderung Bonn', 'DTABDED1AUS'),
+	(1198, 0, 38011000, 'VÖB-ZVD Processing', 'VZVDDED1XXX'),
+	(1199, 0, 38011001, 'VÖB-ZVD Processing', 'VZVDDED1001'),
+	(1200, 0, 38011002, 'VÖB-ZVD Processing', 'VZVDDED1002'),
+	(1201, 0, 38011003, 'VÖB-ZVD Processing', 'VZVDDED1003'),
+	(1202, 0, 38011004, 'VÖB-ZVD Processing', 'VZVDDED1004'),
+	(1203, 0, 38011005, 'VÖB-ZVD Processing', 'VZVDDED1005'),
+	(1204, 0, 38011006, 'VÖB-ZVD Processing', 'VZVDDED1006'),
+	(1205, 0, 38011007, 'VÖB-ZVD Processing', 'VZVDDED1007'),
+	(1206, 0, 38011008, 'VÖB-ZVD Processing', 'VZVDDED1008'),
+	(1207, 0, 38020090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM402'),
+	(1208, 0, 38040007, 'Commerzbank', 'COBADEFF380'),
+	(1209, 0, 38050000, 'Sparkasse Bonn -alt-', 'COLSDE33BON'),
+	(1210, 0, 38051290, 'Stadtsparkasse Bad Honnef', 'WELADED1HON'),
+	(1211, 0, 38060186, 'Volksbank Bonn Rhein-Sieg', 'GENODED1BRS'),
+	(1212, 0, 38070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB380'),
+	(1213, 0, 38070059, 'Deutsche Bank', 'DEUTDEDK380'),
+	(1214, 0, 38070724, 'Deutsche Bank Privat und Geschäftskunden F 950', 'DEUTDEDBXXX'),
+	(1215, 0, 38077724, 'Deutsche Bank Privat und Geschäftskunden F 950', 'DEUTDEDB383'),
+	(1216, 0, 38080055, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF380'),
+	(1217, 0, 38160220, 'VR-Bank Bonn', 'GENODED1HBO'),
+	(1218, 0, 38250110, 'Kreissparkasse Euskirchen', 'WELADED1EUS'),
+	(1219, 0, 38260082, 'Volksbank Euskirchen', 'GENODED1EVB'),
+	(1220, 0, 38440016, 'Commerzbank', 'COBADEFF384'),
+	(1221, 0, 38450000, 'Sparkasse Gummersbach-Bergneustadt', 'WELADED1GMB'),
+	(1222, 0, 38452490, 'Sparkasse der Homburgischen Gemeinden', 'WELADED1WIE'),
+	(1223, 0, 38462135, 'Volksbank Oberberg', 'GENODED1WIL'),
+	(1224, 0, 38470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB384'),
+	(1225, 0, 38470091, 'Deutsche Bank', 'DEUTDEDW384'),
+	(1226, 0, 38600000, 'Bundesbank eh Siegburg', 'MARKDEF1386'),
+	(1227, 0, 38621500, 'Steyler Bank', 'GENODED1STB'),
+	(1228, 0, 38650000, 'Kreissparkasse Siegburg', 'WELADED1SGB'),
+	(1229, 0, 38651390, 'Sparkasse Hennef', 'WELADED1HEN'),
+	(1230, 0, 39000000, 'Bundesbank eh Aachen', 'MARKDEF1390'),
+	(1231, 0, 39010111, 'SEB', 'ESSEDE5F390'),
+	(1232, 0, 39020000, 'Aachener Bausparkasse', 'AABSDE31XXX'),
+	(1233, 0, 39040013, 'Commerzbank', 'COBADEFF390'),
+	(1234, 0, 39050000, 'Sparkasse Aachen', 'AACSDE33XXX'),
+	(1235, 0, 39060180, 'Aachener Bank', 'GENODED1AAC'),
+	(1236, 0, 39060630, 'apoBank', 'DAAEDED1030'),
+	(1237, 0, 39061981, 'Heinsberger Volksbank', 'GENODED1HNB'),
+	(1238, 0, 39070020, 'Deutsche Bank', 'DEUTDEDK390'),
+	(1239, 0, 39070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB390'),
+	(1240, 0, 39080005, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF390'),
+	(1241, 0, 39080098, 'Commerzbank vormals Dresdner Bank Zw 98', 'DRESDEFFI37'),
+	(1242, 0, 39080099, 'Commerzbank vormals Dresdner Bank Zw 99', 'DRESDEFFI38'),
+	(1243, 0, 39160191, 'Pax-Bank', 'GENODED1PA1'),
+	(1244, 0, 39161490, 'Volksbank Aachen Süd', 'GENODED1AAS'),
+	(1245, 0, 39162980, 'VR-Bank', 'GENODED1WUR'),
+	(1246, 0, 39362254, 'Raiffeisen-Bank Eschweiler', 'GENODED1RSC'),
+	(1247, 0, 39500000, 'Bundesbank eh Düren', 'MARKDEF1395'),
+	(1248, 0, 39540052, 'Commerzbank', 'COBADEFF395'),
+	(1249, 0, 39550110, 'Sparkasse Düren', 'SDUEDE33XXX'),
+	(1250, 0, 39560201, 'Volksbank Düren', 'GENODED1DUE'),
+	(1251, 0, 39570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB395'),
+	(1252, 0, 39570061, 'Deutsche Bank', 'DEUTDEDK395'),
+	(1253, 0, 39580041, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF395'),
+	(1254, 0, 40000000, 'Bundesbank eh Münster', 'MARKDEF1400'),
+	(1255, 0, 40010111, 'SEB', 'ESSEDE5F400'),
+	(1256, 0, 40022000, 'NRW.BANK', 'NRWBDEDMMST'),
+	(1257, 0, 40030000, 'Münsterländische Bank Thie & Co', 'MLBKDE3MXXX'),
+	(1258, 0, 40040028, 'Commerzbank', 'COBADEFF400'),
+	(1259, 0, 40050000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADE3MXXX'),
+	(1260, 0, 40050150, 'Sparkasse Münsterland Ost', 'WELADED1MST'),
+	(1261, 0, 40055555, 'LBS Westdeutsche Landesbausparkasse', 'LBSWDE31XXX'),
+	(1262, 0, 40060000, 'WGZ Bank', 'GENODEMSXXX'),
+	(1263, 0, 40060265, 'DKM Darlehnskasse Münster', 'GENODEM1DKM'),
+	(1264, 0, 40060300, 'WL BANK Westfälische Landschaft Bodenkreditbank', 'GENODEM1WLM'),
+	(1265, 0, 40060560, 'Sparda-Bank Münster', 'GENODEF1S08'),
+	(1266, 0, 40060614, 'apoBank', 'DAAEDED1014'),
+	(1267, 0, 40061238, 'Volksbank Greven', 'GENODEM1GRV'),
+	(1268, 0, 40069226, 'Volksbank Lette-Darup-Rorup', 'GENODEM1CND'),
+	(1269, 0, 40069266, 'Volksbank Marsberg', 'GENODEM1MAS'),
+	(1270, 0, 40069283, 'Volksbank Schlangen', 'GENODEM1SLN'),
+	(1271, 0, 40069348, 'Volksbank Medebach -alt-', 'GENODEM1MDB'),
+	(1272, 0, 40069362, 'Volksbank', 'GENODEM1SAE'),
+	(1273, 0, 40069363, 'Volksbank Schermbeck', 'GENODEM1SMB'),
+	(1274, 0, 40069371, 'Volksbank Thülen', 'GENODEM1BTH'),
+	(1275, 0, 40069408, 'Volksbank Baumberge', 'GENODEM1BAU'),
+	(1276, 0, 40069462, 'Volksbank Sprakel', 'GENODEM1MSS'),
+	(1277, 0, 40069477, 'Volksbank Wulfen -alt-', 'GENODEM1DWU'),
+	(1278, 0, 40069546, 'Volksbank Senden', 'GENODEM1SDN'),
+	(1279, 0, 40069600, 'Volksbank Amelsbüren', 'GENODEM1MAB'),
+	(1280, 0, 40069601, 'Volksbank Ascheberg-Herbern', 'GENODEM1CAN'),
+	(1281, 0, 40069606, 'Volksbank Erle', 'GENODEM1ERR'),
+	(1282, 0, 40069622, 'Volksbank Seppenrade', 'GENODEM1LSP'),
+	(1283, 0, 40069636, 'Volksbank Lette -alt-', 'GENODEM1CLE'),
+	(1284, 0, 40069709, 'Volksbank Lembeck-Rhade', 'GENODEM1DLR'),
+	(1285, 0, 40069716, 'Volksbank Südkirchen-Capelle-Nordkirchen', 'GENODEM1SCN'),
+	(1286, 0, 40070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB400'),
+	(1287, 0, 40070080, 'Deutsche Bank', 'DEUTDE3B400'),
+	(1288, 0, 40080040, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF400'),
+	(1289, 0, 40080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFI68'),
+	(1290, 0, 40090900, 'PSD Bank Westfalen-Lippe', 'GENODEF1P15'),
+	(1291, 0, 40150001, 'Helaba Düsseldorf Gf Verrechnung FI-Münster', ''),
+	(1292, 0, 40153768, 'Verbundsparkasse Emsdetten Ochtrup', 'WELADED1EMS'),
+	(1293, 0, 40154006, 'Sparkasse Gronau', 'WELADED1GRO'),
+	(1294, 0, 40154476, 'Stadtsparkasse Lengerich', 'WELADED1LEN'),
+	(1295, 0, 40154530, 'Sparkasse Westmünsterland', 'WELADE3WXXX'),
+	(1296, 0, 40154702, 'Stadtsparkasse Stadtlohn', 'WELADED1STL'),
+	(1297, 0, 40160050, 'Volksbank Münster', 'GENODEM1MSC'),
+	(1298, 0, 40163720, 'Volksbank Nordmünsterland -alt-', 'GENODEM1SEE'),
+	(1299, 0, 40164024, 'Volksbank Gronau-Ahaus', 'GENODEM1GRN'),
+	(1300, 0, 40164256, 'Volksbank Laer-Horstmar-Leer', 'GENODEM1LAE'),
+	(1301, 0, 40164352, 'Volksbank Nottuln', 'GENODEM1CNO'),
+	(1302, 0, 40164528, 'Volksbank Lüdinghausen-Olfen', 'GENODEM1LHN'),
+	(1303, 0, 40164618, 'Volksbank', 'GENODEM1OTR'),
+	(1304, 0, 40164901, 'Volksbank Gescher', 'GENODEM1GE1'),
+	(1305, 0, 40165366, 'Volksbank Selm-Bork', 'GENODEM1SEM'),
+	(1306, 0, 40166439, 'Volksbank Lengerich/Lotte -alt-', 'GENODEM1LLE'),
+	(1307, 0, 40166800, 'Volksbank Buldern -alt-', 'GENODEM1BUL'),
+	(1308, 0, 40300000, 'Bundesbank eh Rheine', 'MARKDEF1403'),
+	(1309, 0, 40340030, 'Commerzbank', 'COBADEFF403'),
+	(1310, 0, 40350005, 'Stadtsparkasse Rheine', 'WELADED1RHN'),
+	(1311, 0, 40351060, 'Kreissparkasse Steinfurt', 'WELADED1STF'),
+	(1312, 0, 40351220, 'Sparkasse Steinfurt -alt-', 'WELADED1IBB'),
+	(1313, 0, 40361627, 'Volksbank Westerkappeln-Wersen', 'GENODEM1WKP'),
+	(1314, 0, 40361906, 'VR-Bank Kreis Steinfurt', 'GENODEM1IBB'),
+	(1315, 0, 40363433, 'Volksbank Hörstel -alt-', 'GENODEM1HRL'),
+	(1316, 0, 40370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB403'),
+	(1317, 0, 40370079, 'Deutsche Bank', 'DEUTDE3B403'),
+	(1318, 0, 41000000, 'Bundesbank eh Hamm', 'MARKDEF1410'),
+	(1319, 0, 41010111, 'SEB', 'ESSEDE5F410'),
+	(1320, 0, 41040018, 'Commerzbank', 'COBADEFF410'),
+	(1321, 0, 41041000, 'ZTB der Commerzbank', 'COBADEFFZTB'),
+	(1322, 0, 41050095, 'Sparkasse Hamm', 'WELADED1HAM'),
+	(1323, 0, 41051605, 'Stadtsparkasse Werne', 'WELADED1WRN'),
+	(1324, 0, 41051845, 'Sparkasse Bergkamen-Bönen', 'WELADED1BGK'),
+	(1325, 0, 41060120, 'Volksbank Hamm -alt-', 'GENODEM1HMM'),
+	(1326, 0, 41061011, 'Spar- und Darlehnskasse Bockum-Hövel', 'GENODEM1HBH'),
+	(1327, 0, 41061903, 'BAG Bankaktiengesellschaft', 'GENODEM1BAG'),
+	(1328, 0, 41062215, 'Volksbank Bönen', 'GENODEM1BO1'),
+	(1329, 0, 41070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB410'),
+	(1330, 0, 41070049, 'Deutsche Bank', 'DEUTDEDE410'),
+	(1331, 0, 41240048, 'Commerzbank', 'COBADEFF941'),
+	(1332, 0, 41250035, 'Sparkasse Beckum-Wadersloh', 'WELADED1BEK'),
+	(1333, 0, 41260006, 'Volksbank Beckum', 'GENODEM1BEK'),
+	(1334, 0, 41261324, 'Volksbank Enniger-Ostenfelde-Westkirchen', 'GENODEM1EOW'),
+	(1335, 0, 41261419, 'Volksbank Oelde-Ennigerloh-Neubeckum', 'GENODEM1OEN'),
+	(1336, 0, 41262501, 'Volksbank Ahlen-Sassenberg-Warendorf', 'GENODEM1AHL'),
+	(1337, 0, 41262621, 'Vereinigte Volksbank Telgte', 'GENODEM1SDH'),
+	(1338, 0, 41280043, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF413'),
+	(1339, 0, 41440018, 'Commerzbank', 'COBADEFF414'),
+	(1340, 0, 41450075, 'Sparkasse Soest', 'WELADED1SOS'),
+	(1341, 0, 41451750, 'Sparkasse Werl', 'WELADED1WRL'),
+	(1342, 0, 41460116, 'Volksbank Hellweg', 'GENODEM1SOE'),
+	(1343, 0, 41462295, 'Volksbank Wickede (Ruhr)', 'GENODEM1WRU'),
+	(1344, 0, 41650001, 'Sparkasse Lippstadt', 'WELADED1LIP'),
+	(1345, 0, 41651770, 'Sparkasse Hochsauerland', 'WELADED1HSL'),
+	(1346, 0, 41651815, 'Sparkasse Erwitte-Anröchte', 'WELADED1ERW'),
+	(1347, 0, 41651965, 'Sparkasse Geseke', 'WELADED1GES'),
+	(1348, 0, 41652560, 'Sparkasse Warstein-Rüthen -alt-', 'WELADED1WAR'),
+	(1349, 0, 41660124, 'Volksbank Lippstadt', 'GENODEM1LPS'),
+	(1350, 0, 41661206, 'Volksbank Anröchte', 'GENODEM1ANR'),
+	(1351, 0, 41661504, 'Volksbank Benninghausen -alt-', 'GENODEM1LBH'),
+	(1352, 0, 41661719, 'Volksbank Brilon -alt-', 'GENODEM1BRI'),
+	(1353, 0, 41662465, 'Volksbank Störmede', 'GENODEM1SGE'),
+	(1354, 0, 41662557, 'Volksbank Warstein-Belecke -alt-', 'GENODEM1WST'),
+	(1355, 0, 41663335, 'Volksbank Hörste', 'GENODEM1HOE'),
+	(1356, 0, 41670024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB416'),
+	(1357, 0, 41670027, 'Deutsche Bank', 'DEUTDE3B416'),
+	(1358, 0, 41670028, 'Deutsche Bank', 'DEUTDE3B417'),
+	(1359, 0, 41670029, 'Deutsche Bank', 'DEUTDE3B414'),
+	(1360, 0, 41670030, 'Deutsche Bank', 'DEUTDE3B418'),
+	(1361, 0, 42000000, 'Bundesbank eh Gelsenkirchen', 'MARKDEF1420'),
+	(1362, 0, 42010111, 'SEB', 'ESSEDE5F420'),
+	(1363, 0, 42030600, 'Isbank Fil Gelsenkirchen', 'ISBKDEFXGEL'),
+	(1364, 0, 42040040, 'Commerzbank', 'COBADEFF420'),
+	(1365, 0, 42050001, 'Sparkasse Gelsenkirchen', 'WELADED1GEK'),
+	(1366, 0, 42070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB420'),
+	(1367, 0, 42070062, 'Deutsche Bank', 'DEUTDEDE420'),
+	(1368, 0, 42080082, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF420'),
+	(1369, 0, 42260001, 'Volksbank Ruhr Mitte', 'GENODEM1GBU'),
+	(1370, 0, 42450040, 'Stadtsparkasse Gladbeck', 'WELADED1GLA'),
+	(1371, 0, 42451220, 'Sparkasse Bottrop', 'WELADED1BOT'),
+	(1372, 0, 42461435, 'Volksbank Kirchhellen', 'GENODEM1KIH'),
+	(1373, 0, 42600000, 'Bundesbank eh Recklinghausen', 'MARKDEF1426'),
+	(1374, 0, 42610112, 'SEB', 'ESSEDE5F426'),
+	(1375, 0, 42640048, 'Commerzbank', 'COBADEFF426'),
+	(1376, 0, 42650150, 'Sparkasse Vest Recklinghausen', 'WELADED1REK'),
+	(1377, 0, 42651315, 'Stadtsparkasse Haltern am See', 'WELADED1HAT'),
+	(1378, 0, 42661008, 'Volksbank Marl-Recklinghausen', 'GENODEM1MRL'),
+	(1379, 0, 42661330, 'Volksbank Haltern', 'GENODEM1HLT'),
+	(1380, 0, 42661522, 'Volksbank Herten-Westerholt -alt-', 'GENODEM1HWE'),
+	(1381, 0, 42661717, 'Volksbank Waltrop', 'GENODEM1WLW'),
+	(1382, 0, 42662320, 'Volksbank Dorsten', 'GENODEM1DST'),
+	(1383, 0, 42680081, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF426'),
+	(1384, 0, 42840005, 'Commerzbank', 'COBADEFF428'),
+	(1385, 0, 42850035, 'Stadtsparkasse Bocholt', 'WELADED1BOH'),
+	(1386, 0, 42860003, 'Volksbank Bocholt', 'GENODEM1BOH'),
+	(1387, 0, 42861239, 'Spar- und Darlehnskasse', 'GENODEM1RKN'),
+	(1388, 0, 42861387, 'VR-Bank Westmünsterland', 'GENODEM1BOB'),
+	(1389, 0, 42861416, 'Volksbank -alt-', 'GENODEM1HDI'),
+	(1390, 0, 42861515, 'Volksbank Gemen', 'GENODEM1BOG'),
+	(1391, 0, 42861608, 'Volksbank Heiden', 'GENODEM1HEI'),
+	(1392, 0, 42861814, 'Volksbank Rhede', 'GENODEM1RHD'),
+	(1393, 0, 42862451, 'Volksbank Raesfeld', 'GENODEM1RAE'),
+	(1394, 0, 42870024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB428'),
+	(1395, 0, 42870077, 'Deutsche Bank', 'DEUTDE3B428'),
+	(1396, 0, 43000000, 'Bundesbank', 'MARKDEF1430'),
+	(1397, 0, 43010111, 'SEB', 'ESSEDE5F430'),
+	(1398, 0, 43040036, 'Commerzbank', 'COBADEFF430'),
+	(1399, 0, 43050001, 'Sparkasse Bochum', 'WELADED1BOC'),
+	(1400, 0, 43051040, 'Sparkasse Hattingen', 'WELADED1HTG'),
+	(1401, 0, 43060129, 'Volksbank Bochum Witten', 'GENODEM1BOC'),
+	(1402, 0, 43060967, 'GLS Gemeinschaftsbank', 'GENODEM1GLS'),
+	(1403, 0, 43070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB430'),
+	(1404, 0, 43070061, 'Deutsche Bank', 'DEUTDEDE430'),
+	(1405, 0, 43080083, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF430'),
+	(1406, 0, 43250030, 'Herner Sparkasse', 'WELADED1HRN'),
+	(1407, 0, 44000000, 'Bundesbank', 'MARKDEF1440'),
+	(1408, 0, 44010046, 'Postbank', 'PBNKDEFFXXX'),
+	(1409, 0, 44010111, 'SEB', 'ESSEDE5F440'),
+	(1410, 0, 44010200, 'BHW Bausparkasse', 'BHWXDE31XXX'),
+	(1411, 0, 44010300, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFDOR'),
+	(1412, 0, 44020090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM808'),
+	(1413, 0, 44040037, 'Commerzbank', 'COBADEFF440'),
+	(1414, 0, 44040060, 'Commerzbank CC', 'COBADEFF080'),
+	(1415, 0, 44040061, 'Commerzbank CC', 'COBADEFF081'),
+	(1416, 0, 44040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(1417, 0, 44050000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADE3DXXX'),
+	(1418, 0, 44050199, 'Sparkasse Dortmund', 'DORTDE33XXX'),
+	(1419, 0, 44060122, 'Volksbank Dortmund-Nordwest', 'GENODEM1DNW'),
+	(1420, 0, 44060604, 'apoBank', 'DAAEDED1004'),
+	(1421, 0, 44064406, 'Bank für Kirche und Diakonie - KD-Bank Gf Sonder-BLZ', 'GENODED1KDD'),
+	(1422, 0, 44070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB440'),
+	(1423, 0, 44070050, 'Deutsche Bank', 'DEUTDEDE440'),
+	(1424, 0, 44080050, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF440'),
+	(1425, 0, 44080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF446'),
+	(1426, 0, 44080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF447'),
+	(1427, 0, 44080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFI69'),
+	(1428, 0, 44089320, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI18'),
+	(1429, 0, 44090920, 'PSD Bank Dortmund -alt-', 'GENODEF1P04'),
+	(1430, 0, 44152370, 'Sparkasse Lünen', 'WELADED1LUN'),
+	(1431, 0, 44152490, 'Stadtsparkasse Schwerte', 'WELADED1SWT'),
+	(1432, 0, 44160014, 'Dortmunder Volksbank', 'GENODEM1DOR'),
+	(1433, 0, 44340037, 'Commerzbank', 'COBADEFF443'),
+	(1434, 0, 44350060, 'Sparkasse UnnaKamen', 'WELADED1UNN'),
+	(1435, 0, 44351380, 'Sparkasse Kamen -alt-', 'WELADED1KAM'),
+	(1436, 0, 44351740, 'Sparkasse Fröndenberg', 'WELADED1FRN'),
+	(1437, 0, 44360002, 'Volksbank Unna Schwerte -alt-', 'GENODEM1UNA'),
+	(1438, 0, 44361342, 'Volksbank Kamen-Werne', 'GENODEM1KWK'),
+	(1439, 0, 44540022, 'Commerzbank', 'COBADEFF445'),
+	(1440, 0, 44550045, 'Sparkasse der Stadt Iserlohn', 'WELADED1ISL'),
+	(1441, 0, 44551210, 'Sparkasse Märkisches Sauerland Hemer-Menden', 'WELADED1HEM'),
+	(1442, 0, 44570004, 'Deutsche Bank', 'DEUTDEDW445'),
+	(1443, 0, 44570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB445'),
+	(1444, 0, 44580070, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF445'),
+	(1445, 0, 44580085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFI70'),
+	(1446, 0, 44750065, 'Sparkasse Menden -alt-', 'WELADED1MEN'),
+	(1447, 0, 44761312, 'Mendener Bank', 'GENODEM1MEN'),
+	(1448, 0, 44761534, 'Volksbank im Märkischen Kreis', 'GENODEM1NRD'),
+	(1449, 0, 45000000, 'Bundesbank', 'MARKDEF1450'),
+	(1450, 0, 45040042, 'Commerzbank', 'COBADEFF450'),
+	(1451, 0, 45050001, 'Sparkasse Hagen', 'WELADE3HXXX'),
+	(1452, 0, 45051485, 'Stadtsparkasse Herdecke', 'WELADED1HER'),
+	(1453, 0, 45060009, 'Märkische Bank', 'GENODEM1HGN'),
+	(1454, 0, 45061524, 'Volksbank Hohenlimburg', 'GENODEM1HLH'),
+	(1455, 0, 45070002, 'Deutsche Bank', 'DEUTDEDW450'),
+	(1456, 0, 45070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB450'),
+	(1457, 0, 45080060, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF450'),
+	(1458, 0, 45240056, 'Commerzbank', 'COBADEFF452'),
+	(1459, 0, 45250035, 'Sparkasse Witten', 'WELADED1WTN'),
+	(1460, 0, 45251480, 'Stadtsparkasse Wetter', 'WELADED1WET'),
+	(1461, 0, 45251515, 'Stadtsparkasse Sprockhövel', 'SPSHDE31XXX'),
+	(1462, 0, 45260041, 'Volksbank Witten -alt-', 'GENODEM1WTN'),
+	(1463, 0, 45260475, 'Spar- u Kreditbank d Bundes Fr ev Gemeinden', 'GENODEM1BFG'),
+	(1464, 0, 45261547, 'Volksbank Sprockhövel', 'GENODEM1SPO'),
+	(1465, 0, 45450050, 'Stadtsparkasse Gevelsberg', 'WELADED1GEV'),
+	(1466, 0, 45451060, 'Sparkasse Ennepetal-Breckerfeld', 'WELADED1ENE'),
+	(1467, 0, 45451555, 'Städtische Sparkasse zu Schwelm', 'WELADED1SLM'),
+	(1468, 0, 45660029, 'Volksbank Altena -alt-', 'GENODEM1ALA'),
+	(1469, 0, 45840026, 'Commerzbank', 'COBADEFF458'),
+	(1470, 0, 45841031, 'Commerzbank', 'COBADEFF459'),
+	(1471, 0, 45850005, 'Sparkasse Lüdenscheid', 'WELADED1LSD'),
+	(1472, 0, 45851020, 'Vereinigte Sparkasse im Märkischen Kreis', 'WELADED1PLB'),
+	(1473, 0, 45851665, 'Sparkasse Kierspe-Meinerzhagen', 'WELADED1KMZ'),
+	(1474, 0, 45860033, 'Volksbank Lüdenscheid -alt-', 'GENODEM1LHA'),
+	(1475, 0, 45861434, 'Volksbank Kierspe', 'GENODEM1KIE'),
+	(1476, 0, 45861617, 'Volksbank Meinerzhagen -alt-', 'GENODEM1MOM'),
+	(1477, 0, 46000000, 'Bundesbank eh Siegen', 'MARKDEF1460'),
+	(1478, 0, 46010111, 'SEB', 'ESSEDE5F460'),
+	(1479, 0, 46040033, 'Commerzbank', 'COBADEFF460'),
+	(1480, 0, 46050001, 'Sparkasse Siegen', 'WELADED1SIE'),
+	(1481, 0, 46051240, 'Sparkasse Burbach-Neunkirchen', 'WELADED1BUB'),
+	(1482, 0, 46051733, 'Stadtsparkasse Freudenberg', 'WELADED1FRE'),
+	(1483, 0, 46051875, 'Stadtsparkasse Hilchenbach', 'WELADED1HIL'),
+	(1484, 0, 46052855, 'Stadtsparkasse Schmallenberg', 'WELADED1SMB'),
+	(1485, 0, 46053480, 'Sparkasse Wittgenstein', 'WELADED1BEB'),
+	(1486, 0, 46060040, 'Volksbank Siegerland', 'GENODEM1SNS'),
+	(1487, 0, 46061724, 'VR-Bank Freudenberg-Niederfischbach', 'GENODEM1FRF'),
+	(1488, 0, 46062817, 'Volksbank Bigge-Lenne', 'GENODEM1SMA'),
+	(1489, 0, 46063405, 'Volksbank Wittgenstein', 'GENODEM1BB1'),
+	(1490, 0, 46070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB460'),
+	(1491, 0, 46070090, 'Deutsche Bank', 'DEUTDEDK460'),
+	(1492, 0, 46080010, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF460'),
+	(1493, 0, 46240016, 'Commerzbank', 'COBADEFF462'),
+	(1494, 0, 46250049, 'Sparkasse Olpe-Drolshagen-Wenden', 'WELADED1OPE'),
+	(1495, 0, 46251590, 'Sparkasse Finnentrop', 'WELADED1FTR'),
+	(1496, 0, 46251630, 'Sparkasse Attendorn-Lennestadt-Kirchhundem', 'WELADED1ALK'),
+	(1497, 0, 46260023, 'Volksbank Olpe -alt-', 'GENODEM1OLP'),
+	(1498, 0, 46261306, 'Volksbank Attendorn -alt-', 'GENODEM1ATT'),
+	(1499, 0, 46261607, 'Volksbank Grevenbrück', 'GENODEM1GLG'),
+	(1500, 0, 46261822, 'Volksbank Olpe-Wenden-Drolshagen', 'GENODEM1WDD'),
+	(1501, 0, 46262456, 'Volksbank Bigge-Lenne -alt-', 'GENODEM1HUL'),
+	(1502, 0, 46400000, 'Bundesbank eh Arnsberg', 'MARKDEF1464'),
+	(1503, 0, 46441003, 'Commerzbank', 'COBADEFF468'),
+	(1504, 0, 46451012, 'Zweckverbandssparkasse Meschede', 'WELADED1MES'),
+	(1505, 0, 46451250, 'Sparkasse Bestwig -alt-', 'WELADED1BST'),
+	(1506, 0, 46461126, 'Volksbank Sauerland -alt-', 'GENODEM1SRL'),
+	(1507, 0, 46462271, 'Spar- und Darlehnskasse Oeventrop', 'GENODEM1ANO'),
+	(1508, 0, 46464453, 'Volksbank Reiste-Eslohe', 'GENODEM1RET'),
+	(1509, 0, 46640018, 'Commerzbank', 'COBADEFF466'),
+	(1510, 0, 46650005, 'Sparkasse Arnsberg-Sundern', 'WELADED1ARN'),
+	(1511, 0, 46660022, 'Volksbank Sauerland', 'GENODEM1NEH'),
+	(1512, 0, 46670007, 'Deutsche Bank', 'DEUTDEDW466'),
+	(1513, 0, 46670024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB961'),
+	(1514, 0, 47200000, 'Bundesbank eh Paderborn', 'MARKDEF1472'),
+	(1515, 0, 47240047, 'Commerzbank', 'COBADEFF472'),
+	(1516, 0, 47250101, 'Sparkasse Paderborn -alt-', 'WELADED1PBN'),
+	(1517, 0, 47251550, 'Sparkasse Höxter', 'WELADED1HXB'),
+	(1518, 0, 47251740, 'Stadtsparkasse Delbrück', 'WELADED1DEL'),
+	(1519, 0, 47260121, 'Volksbank Paderborn-Höxter-Detmold', 'DGPBDE3MXXX'),
+	(1520, 0, 47260234, 'Volksbank Elsen-Wewer-Borchen', 'GENODEM1EWB'),
+	(1521, 0, 47260307, 'Bank für Kirche und Caritas', 'GENODEM1BKC'),
+	(1522, 0, 47261429, 'Volksbank Haaren -alt-', 'GENODEM1WNH'),
+	(1523, 0, 47261603, 'Volksbank Brilon-Büren-Salzkotten', 'GENODEM1BUS'),
+	(1524, 0, 47262626, 'Volksbank Westenholz', 'GENODEM1WDE'),
+	(1525, 0, 47262703, 'Volksbank Delbrück-Hövelhof', 'GENODEM1DLB'),
+	(1526, 0, 47263472, 'Volksbank Westerloh-Westerwiehe -alt-', 'GENODEM1WWW'),
+	(1527, 0, 47264367, 'Vereinigte Volksbank', 'GENODEM1STM'),
+	(1528, 0, 47265383, 'Volksbank Wewelsburg-Ahden', 'GENODEM1WAH'),
+	(1529, 0, 47267216, 'Volksbank Borgentreich -alt-', 'GENODEM1BOT'),
+	(1530, 0, 47270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB472'),
+	(1531, 0, 47270029, 'Deutsche Bank', 'DEUTDE3B472'),
+	(1532, 0, 47460028, 'Volksbank Warburger Land -alt-', 'GENODEM1WBG'),
+	(1533, 0, 47640051, 'Commerzbank', 'COBADEFF476'),
+	(1534, 0, 47650130, 'Sparkasse Paderborn-Detmold', 'WELADE3LXXX'),
+	(1535, 0, 47651225, 'Stadtsparkasse Blomberg', 'WELADED1BLO'),
+	(1536, 0, 47670023, 'Deutsche Bank', 'DEUTDE3B476'),
+	(1537, 0, 47670024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB476'),
+	(1538, 0, 47691200, 'Volksbank', 'GENODEM1OLB'),
+	(1539, 0, 47800000, 'Bundesbank eh Gütersloh', 'MARKDEF1478'),
+	(1540, 0, 47840065, 'Commerzbank', 'COBADEFF478'),
+	(1541, 0, 47840080, 'Commerzbank Zw 80', 'COBADEFF470'),
+	(1542, 0, 47850065, 'Sparkasse Gütersloh', 'WELADED1GTL'),
+	(1543, 0, 47852760, 'Sparkasse Rietberg', 'WELADED1RTG'),
+	(1544, 0, 47853355, 'Stadtsparkasse Versmold', 'WELADED1VSM'),
+	(1545, 0, 47853520, 'Kreissparkasse Wiedenbrück', 'WELADED1WDB'),
+	(1546, 0, 47860125, 'Volksbank Gütersloh', 'GENODEM1GTL'),
+	(1547, 0, 47861317, 'Volksbank im Ostmünsterland', 'GENODEM1CLL'),
+	(1548, 0, 47861518, 'Volksbank Harsewinkel -alt-', 'GENODEM1HWI'),
+	(1549, 0, 47861806, 'Volksbank Kaunitz', 'GENODEM1VKA'),
+	(1550, 0, 47861907, 'Volksbank Langenberg -alt-', 'GENODEM1LNB'),
+	(1551, 0, 47862261, 'Volksbank Marienfeld -alt-', 'GENODEM1MFD'),
+	(1552, 0, 47862447, 'Volksbank Rietberg', 'GENODEM1RNE'),
+	(1553, 0, 47863373, 'Volksbank Versmold', 'GENODEM1VMD'),
+	(1554, 0, 47880031, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF478'),
+	(1555, 0, 48000000, 'Bundesbank', 'MARKDEF1480'),
+	(1556, 0, 48010111, 'SEB', 'ESSEDE5F480'),
+	(1557, 0, 48020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM344'),
+	(1558, 0, 48020151, 'Bankhaus Lampe', 'LAMPDEDDXXX'),
+	(1559, 0, 48021900, 'Bankverein Werther Zw Ndl der VB Paderborn-Höxter-Detmold', 'DGPBDE3MBVW'),
+	(1560, 0, 48040035, 'Commerzbank', 'COBADEFF480'),
+	(1561, 0, 48040060, 'Commerzbank CC', 'COBADEFF078'),
+	(1562, 0, 48040061, 'Commerzbank CC', 'COBADEFF079'),
+	(1563, 0, 48050000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADE3BXXX'),
+	(1564, 0, 48050161, 'Sparkasse Bielefeld', 'SPBIDE3BXXX'),
+	(1565, 0, 48051580, 'Kreissparkasse Halle', 'WELADED1HAW'),
+	(1566, 0, 48060036, 'Bielefelder Volksbank', 'GENODEM1BIE'),
+	(1567, 0, 48062051, 'Volksbank Halle/Westf', 'GENODEM1HLW'),
+	(1568, 0, 48062466, 'Spar-u Darlehnskasse Schloß Holte-Stukenbrock', 'GENODEM1SHS'),
+	(1569, 0, 48070020, 'Deutsche Bank', 'DEUTDE3BXXX'),
+	(1570, 0, 48070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBBIE'),
+	(1571, 0, 48070040, 'Deutsche Bank', 'DEUTDE3B480'),
+	(1572, 0, 48070042, 'Deutsche Bank', 'DEUTDE3B484'),
+	(1573, 0, 48070043, 'Deutsche Bank', 'DEUTDE3B489'),
+	(1574, 0, 48070044, 'Deutsche Bank', 'DEUTDE3B487'),
+	(1575, 0, 48070045, 'Deutsche Bank', 'DEUTDE3B413'),
+	(1576, 0, 48070050, 'Deutsche Bank', 'DEUTDE3B481'),
+	(1577, 0, 48070052, 'Deutsche Bank', 'DEUTDE3B492'),
+	(1578, 0, 48080020, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF480'),
+	(1579, 0, 48089350, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI19'),
+	(1580, 0, 48091315, 'Volksbank Brackwede -alt-', 'GENODEM1BRA'),
+	(1581, 0, 48250110, 'Sparkasse Lemgo', 'WELADED1LEM'),
+	(1582, 0, 48262248, 'Volksbank Nordlippe -alt-', 'GENODEM1NLE'),
+	(1583, 0, 48291490, 'Volksbank Bad Salzuflen', 'GENODEM1BSU'),
+	(1584, 0, 49000000, 'Bundesbank eh Minden', 'MARKDEF1490'),
+	(1585, 0, 49040043, 'Commerzbank', 'COBADEFF490'),
+	(1586, 0, 49050101, 'Sparkasse Minden-Lübbecke', 'WELADED1MIN'),
+	(1587, 0, 49051065, 'Stadtsparkasse Rahden', 'WELADED1RHD'),
+	(1588, 0, 49051285, 'Stadtsparkasse Bad Oeynhausen', 'WELADED1OEH'),
+	(1589, 0, 49051990, 'Stadtsparkasse Porta Westfalica', 'WELADED1PWF'),
+	(1590, 0, 49060127, 'Volksbank Mindener Land', 'GENODEM1MPW'),
+	(1591, 0, 49060392, 'Volksbank Minden', 'GENODEM1MND'),
+	(1592, 0, 49061298, 'Volksbank Bad Oeynhausen -alt-', 'GENODEM1UBO'),
+	(1593, 0, 49061470, 'Volksbank Stemweder Berg -alt-', 'GENODEM1STR'),
+	(1594, 0, 49061510, 'Volksbank Eisbergen -alt-', 'GENODEM1EPW'),
+	(1595, 0, 49070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB490'),
+	(1596, 0, 49070028, 'Deutsche Bank', 'DEUTDE3B490'),
+	(1597, 0, 49080025, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF491'),
+	(1598, 0, 49092650, 'Volksbank Lübbecker Land', 'GENODEM1LUB'),
+	(1599, 0, 49240096, 'Commerzbank', 'COBADEFF492'),
+	(1600, 0, 49262364, 'Volksbank Schnathorst', 'GENODEM1SNA'),
+	(1601, 0, 49440043, 'Commerzbank', 'COBADEFF494'),
+	(1602, 0, 49450120, 'Sparkasse Herford', 'WLAHDE44XXX'),
+	(1603, 0, 49461323, 'Volksbank Enger-Spenge -alt-', 'GENODEM1ESP'),
+	(1604, 0, 49490070, 'Volksbank Bad Oeynhausen-Herford', 'GENODEM1HFV'),
+	(1605, 0, 50000000, 'Bundesbank', 'MARKDEF1500'),
+	(1606, 0, 50010060, 'Postbank', 'PBNKDEFFXXX'),
+	(1607, 0, 50010111, 'SEB', 'ESSEDE5FXXX'),
+	(1608, 0, 50010200, 'AKBANK', 'AKBKDEFFXXX'),
+	(1609, 0, 50010424, 'Aareal Bank', 'AARBDE5W500'),
+	(1610, 0, 50010517, 'ING-DiBa', 'INGDDEFFXXX'),
+	(1611, 0, 50010700, 'Degussa Bank', 'DEGUDEFFXXX'),
+	(1612, 0, 50010900, 'Bank of America', 'BOFADEFXXXX'),
+	(1613, 0, 50010910, 'Bank of America, Filiale Frankfurt', 'BOFADEFXVAM'),
+	(1614, 0, 50012800, 'ALTE LEIPZIGER Bauspar', 'ALTEDEFAXXX'),
+	(1615, 0, 50020160, 'UniCredit Bank - HypoVereinsbank Ndl 427 Ffm', 'HYVEDEM1084'),
+	(1616, 0, 50020200, 'BHF-BANK', 'BHFBDEFF500'),
+	(1617, 0, 50020300, 'KBC Bank Deutschland', 'BANVDEHB500'),
+	(1618, 0, 50020400, 'KfW Kreditanstalt für Wiederaufbau Frankfurt', 'KFWIDEFFXXX'),
+	(1619, 0, 50020500, 'Landwirtschaftliche Rentenbank', 'LAREDEFFXXX'),
+	(1620, 0, 50020700, 'Credit Europe Bank Ndl. Deutschland', 'FBHLDEFFXXX'),
+	(1621, 0, 50020800, 'Intesa Sanpaolo Frankfurt', 'BCITDEFFXXX'),
+	(1622, 0, 50020900, 'COREALCREDIT BANK', 'AHYBDEFFXXX'),
+	(1623, 0, 50021000, 'ING Bank', 'INGBDEFFXXX'),
+	(1624, 0, 50021100, 'FIL Fondsbank', 'FFBKDEFFXXX'),
+	(1625, 0, 50021120, 'FIL Fondsbank', 'FFBKDEFFTHK'),
+	(1626, 0, 50023400, 'Bank of Beirut Ndl Frankfurt', 'BABEDEFFXXX'),
+	(1627, 0, 50030000, 'Banque PSA Finance Deutschland', 'PSADDEF1XXX'),
+	(1628, 0, 50030100, 'HKB Bank Frankfurt', 'HKBBDEF1FRA'),
+	(1629, 0, 50030500, 'BNP PARIBAS Securities Services', 'PARBDEFFXXX'),
+	(1630, 0, 50030600, 'Deutsche WertpapierService Bank', 'DWPBDEFFXXX'),
+	(1631, 0, 50030700, 'DenizBank (Wien) Zw Frankfurt', 'ESBKDEFFXXX'),
+	(1632, 0, 50030900, 'Lehman Brothers Bankhaus Frankfurt', ''),
+	(1633, 0, 50031000, 'Triodos Bank Deutschland', 'TRODDEF1XXX'),
+	(1634, 0, 50033300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(1635, 0, 50040000, 'Commerzbank', 'COBADEFFXXX'),
+	(1636, 0, 50040033, 'Commerzbank Gf BRS', 'COBADEF1BRS'),
+	(1637, 0, 50040038, 'Commerzbank, MBP', 'COBADEFFMBP'),
+	(1638, 0, 50040040, 'Commerzbank Gf ZRK', 'COBADEFFZRK'),
+	(1639, 0, 50040048, 'Commerzbank GF-F48', 'COBADEFF950'),
+	(1640, 0, 50040050, 'Commerzbank, CC SP', 'COBADEFFS05'),
+	(1641, 0, 50040051, 'Commerzbank Center Dresdner Bank Frankfurt', 'COBADEFF070'),
+	(1642, 0, 50040052, 'Commerzbank Service - BZ Frankfurt', 'COBADEFF071'),
+	(1643, 0, 50040060, 'Commerzbank Gf 460', 'COBADEFF066'),
+	(1644, 0, 50040061, 'Commerzbank Gf 461', 'COBADEFF067'),
+	(1645, 0, 50040062, 'Commerzbank CC', 'COBADEFF090'),
+	(1646, 0, 50040063, 'Commerzbank CC', 'COBADEFF091'),
+	(1647, 0, 50040075, 'Commerzbank Gf ZCM', 'COBADEFFZCM'),
+	(1648, 0, 50040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(1649, 0, 50040086, 'Commerzbank, GF Web-K CMTS', 'COBADEFFXXX'),
+	(1650, 0, 50040088, 'Commerzbank, INT 1', 'COBADEFFINT'),
+	(1651, 0, 50040099, 'Commerzbank INT', 'COBADEFFINT'),
+	(1652, 0, 50042500, 'Commerzbank Zw 425 - keine Auslandsbanken', 'COBADEFFTUI'),
+	(1653, 0, 50044444, 'Commerzbank Vermögensverwaltung', 'COBADEFFZAM'),
+	(1654, 0, 50047010, 'Commerzbank Service - BZ', 'COBADEFFBZF'),
+	(1655, 0, 50050000, 'Landesbank Hessen-Thür Girozentrale', 'HELADEFFXXX'),
+	(1656, 0, 50050201, 'Frankfurter Sparkasse', 'HELADEF1822'),
+	(1657, 0, 50050222, 'Frankfurter Sparkasse GF 1822direkt', 'HELADEF1822'),
+	(1658, 0, 50050999, 'DekaBank Frankfurt', 'DGZFDEFFXXX'),
+	(1659, 0, 50060000, 'DZ Bank', 'GENODE55XXX'),
+	(1660, 0, 50060400, 'DZ BANK', 'GENODEFFXXX'),
+	(1661, 0, 50060411, 'First Cash DZ BANK Frankfurt', 'GENODEF1FCS'),
+	(1662, 0, 50060412, 'DZ BANK Gf vK', 'GENODEF1VK1'),
+	(1663, 0, 50060413, 'DZ BANK Gf VK 2', 'GENODEF1VK2'),
+	(1664, 0, 50060414, 'DZ BANK Gf VK 3', 'GENODEF1VK3'),
+	(1665, 0, 50060500, 'Evangelische Kreditgenossenschaft -Filiale Frankfurt-', 'GENODEF1EK4'),
+	(1666, 0, 50061741, 'Raiffeisenbank Oberursel', 'GENODE51OBU'),
+	(1667, 0, 50069126, 'Raiffeisenbank Alzey-Land', 'GENODE51ABO'),
+	(1668, 0, 50069146, 'Volksbank Grebenhain', 'GENODE51GRC'),
+	(1669, 0, 50069187, 'Volksbank Egelsbach -alt-', 'GENODE51EGE'),
+	(1670, 0, 50069241, 'Raiffeisenkasse Erbes-Büdesheim und Umgebung', 'GENODE51ERB'),
+	(1671, 0, 50069345, 'Raiffeisenbank', 'GENODE51GWB'),
+	(1672, 0, 50069455, 'Hüttenberger Bank', 'GENODE51HUT'),
+	(1673, 0, 50069464, 'Volksbank Inheiden-Villingen -alt-', 'GENODE51HUI'),
+	(1674, 0, 50069477, 'Raiffeisenbank Kirtorf', 'GENODE51KIF'),
+	(1675, 0, 50069693, 'Raiffeisenbank Bad Homburg Ndl d FrankfurterVB', 'GENODE51BH1'),
+	(1676, 0, 50069828, 'Raiffeisenbank Mücke -alt-', 'GENODE51MRU'),
+	(1677, 0, 50069842, 'Raiffeisen Volksbank', 'GENODE51SWB'),
+	(1678, 0, 50069976, 'Volksbank Wißmar', 'GENODE51WWI'),
+	(1679, 0, 50070010, 'Deutsche Bank Filiale', 'DEUTDEFFXXX'),
+	(1680, 0, 50070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBFRA'),
+	(1681, 0, 50073019, 'Deutsche Bank', 'DEUTDEFF502'),
+	(1682, 0, 50073024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB502'),
+	(1683, 0, 50073081, 'Projektgesellschaft DB Europe', 'DEUTDE5XXXX'),
+	(1684, 0, 50080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFFXXX'),
+	(1685, 0, 50080015, 'Commerzbank vormals Dresdner Bank Zw 15', 'DRESDEFFI39'),
+	(1686, 0, 50080025, 'Commerzbank vormals Dresdner Bank Zw 25', 'DRESDEFFXXX'),
+	(1687, 0, 50080035, 'Commerzbank vormals Dresdner Bank Zw 35', 'DRESDEFFI40'),
+	(1688, 0, 50080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF516'),
+	(1689, 0, 50080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF522'),
+	(1690, 0, 50080060, 'Commerzbank vormals Dresdner Bank Gf DrKW', 'DRESDEFFXXX'),
+	(1691, 0, 50080061, 'Commerzbank vormals Dresdner Bank Gf DrKWSL', 'DRESDEFFLDG'),
+	(1692, 0, 50080077, 'Commerzbank, GF Wüstenrot BSPK', 'DRESDEFFBSP'),
+	(1693, 0, 50080079, 'Commerzbank vormals Dresdner Bank ESOP', 'DRESDEFFXXX'),
+	(1694, 0, 50080080, 'Commerzbank vormals Dresdner Bank Bs 80', 'DRESDEFFI41'),
+	(1695, 0, 50080082, 'Commerzbank vormals Dresdner Bank Gf AVB', 'DRESDEFFAVB'),
+	(1696, 0, 50080086, 'Commerzbank vormals Dresdner Bank ITGK 3', 'DRESDEFFI49'),
+	(1697, 0, 50080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFJ08'),
+	(1698, 0, 50080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFJ09'),
+	(1699, 0, 50080089, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6', 'DRESDEFFJ10'),
+	(1700, 0, 50080091, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 7', 'DRESDEFFJ11'),
+	(1701, 0, 50080092, 'Commerzbank vormals Dresdner Bank Finance and Controlling', 'DRESDEFFFCO'),
+	(1702, 0, 50080099, 'Commerzbank vormals Dresdner Bank Zw 99', 'DRESDEFFI42'),
+	(1703, 0, 50080300, 'Commerzbank vormals Dresdner Bank Private Banking Inland', 'DRESDEFF500'),
+	(1704, 0, 50083007, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF502'),
+	(1705, 0, 50083838, 'Commerzbank vormals Dresdner Bank in Frankfurt MBP', 'DRESDEFFMBP'),
+	(1706, 0, 50089400, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI01'),
+	(1707, 0, 50090200, 'VR DISKONTBANK', 'VRDIDEFFXXX'),
+	(1708, 0, 50090500, 'Sparda-Bank Hessen', 'GENODEF1S12'),
+	(1709, 0, 50090607, 'apoBank', 'DAAEDED1007'),
+	(1710, 0, 50090900, 'PSD Bank Hessen-Thüringen', 'GENODEF1P06'),
+	(1711, 0, 50092100, 'Spar- u Kreditbank ev-freikirchl Gemeinden', 'GENODE51BH2'),
+	(1712, 0, 50092200, 'Volksbank Main-Taunus -alt-', 'GENODE51KEL'),
+	(1713, 0, 50092900, 'Volksbank Usinger Land Ndl d Frankfurter VB', 'GENODE51USI'),
+	(1714, 0, 50093000, 'Rüsselsheimer Volksbank', 'GENODE51RUS'),
+	(1715, 0, 50093010, 'Rüsselsheimer Volksbank GAA', 'GENODE51GAA'),
+	(1716, 0, 50093400, 'Volksbank Kelsterbach Ndl d Frankfurter VB', 'GENODE51KBH'),
+	(1717, 0, 50110200, 'Industrial and Commercial Bank of China', 'ICBKDEFFXXX'),
+	(1718, 0, 50110300, 'DVB Bank', 'DVKBDEFFXXX'),
+	(1719, 0, 50110400, 'AKA Ausfuhrkredit GmbH', 'AUSKDEFFXXX'),
+	(1720, 0, 50110500, 'NATIXIS Zweigniederlassung Deutschland', 'NATXDEFFXXX'),
+	(1721, 0, 50110636, 'DTC Standard Chartered Bank Germany Branch', 'SCBLDEF1DTC'),
+	(1722, 0, 50110700, 'Frankfurter Bankgesellschaft (Deutschland)', 'FBGADEF1XXX'),
+	(1723, 0, 50110800, 'J.P. Morgan', 'CHASDEFXXXX'),
+	(1724, 0, 50110801, 'J.P. Morgan, Internal Reference', 'CHASDEFXVR1'),
+	(1725, 0, 50110855, 'J.P. Morgan', 'JPMGDEFFXXX'),
+	(1726, 0, 50110900, 'Bank of America N.A. Military Bank', 'MNBIDEF1XXX'),
+	(1727, 0, 50120000, 'MainFirst Bank', 'MAIFDEFFXXX'),
+	(1728, 0, 50120100, 'ICICI Bank UK Ndl Frankfurt am Main', 'ICICDEFFXXX'),
+	(1729, 0, 50120383, 'Bethmann Bank', 'DELBDE33XXX'),
+	(1730, 0, 50120500, 'Credit Suisse (Deutschland)', 'CRESDE55XXX'),
+	(1731, 0, 50120600, 'Bank of Communications Frankfurt branch', 'COMMDEFFXXX'),
+	(1732, 0, 50120900, 'VakifBank International Wien Zndl Frankfurt', 'TVBADEFFXXX'),
+	(1733, 0, 50123400, 'VTB Bank (Austria), Zndl', 'DOBADEF1XXX'),
+	(1734, 0, 50130000, 'National Bank of Pakistan Zndl Frankfurt', 'NBPADEFFXXX'),
+	(1735, 0, 50130100, 'BethmannMaffei Bank -alt-', 'DELBDE33XXX'),
+	(1736, 0, 50130200, 'Oppenheim, Sal - jr & Cie', 'SOPPDEFFXXX'),
+	(1737, 0, 50130300, 'First International Bank', 'MASFDEF1XXX'),
+	(1738, 0, 50130400, 'Merck Finck & Co', 'MEFIDEMM501'),
+	(1739, 0, 50130600, 'UBS Deutschland', 'UBSWDEFFXXX'),
+	(1740, 0, 50131000, 'Vietnam Joint Stock Commercial Bank for Industry and Trade', 'ICBVDEFFXXX'),
+	(1741, 0, 50150000, 'Landesbank Hessen-Thüringen Girozentrale NL. Düsseldorf', 'WELADEFFXXX'),
+	(1742, 0, 50190000, 'Frankfurter Volksbank', 'FFVBDEFFXXX'),
+	(1743, 0, 50190300, 'Volksbank Höchst', 'GENODE51FHC'),
+	(1744, 0, 50190400, 'Volksbank Griesheim', 'GENODE51FGH'),
+	(1745, 0, 50210111, 'SEB TZN Clearing', 'ESSEDE51SCH'),
+	(1746, 0, 50210112, 'SEB TZN MB Frankfurt', 'ESSEDE51TZN'),
+	(1747, 0, 50210130, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1748, 0, 50210131, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1749, 0, 50210132, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1750, 0, 50210133, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1751, 0, 50210134, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1752, 0, 50210135, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1753, 0, 50210136, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1754, 0, 50210137, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1755, 0, 50210138, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1756, 0, 50210139, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1757, 0, 50210140, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1758, 0, 50210141, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1759, 0, 50210142, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1760, 0, 50210143, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1761, 0, 50210144, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1762, 0, 50210145, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1763, 0, 50210146, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1764, 0, 50210147, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1765, 0, 50210148, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1766, 0, 50210149, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1767, 0, 50210150, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1768, 0, 50210151, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1769, 0, 50210152, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1770, 0, 50210153, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1771, 0, 50210154, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1772, 0, 50210155, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1773, 0, 50210156, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1774, 0, 50210157, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1775, 0, 50210158, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1776, 0, 50210159, 'SEB TZN MB Ffm.', 'ESSEDE5FXXX'),
+	(1777, 0, 50210160, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1778, 0, 50210161, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1779, 0, 50210162, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1780, 0, 50210163, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1781, 0, 50210164, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1782, 0, 50210165, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1783, 0, 50210166, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1784, 0, 50210167, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1785, 0, 50210168, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1786, 0, 50210169, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1787, 0, 50210170, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1788, 0, 50210171, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1789, 0, 50210172, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1790, 0, 50210173, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1791, 0, 50210174, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1792, 0, 50210175, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1793, 0, 50210176, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1794, 0, 50210177, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1795, 0, 50210178, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1796, 0, 50210179, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1797, 0, 50210180, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1798, 0, 50210181, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1799, 0, 50210182, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1800, 0, 50210183, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1801, 0, 50210184, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1802, 0, 50210185, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1803, 0, 50210186, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1804, 0, 50210187, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1805, 0, 50210188, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1806, 0, 50210189, 'SEB TZN MB Frankfurt', 'ESSEDE5FXXX'),
+	(1807, 0, 50210200, 'Rabobank International Frankfurt Branch', 'RABODEFFTAR'),
+	(1808, 0, 50210212, 'RaboDirect', 'RABODEFFDIR'),
+	(1809, 0, 50210295, 'Rabobank International Frankfurt Branch', 'RABODEFFXXX'),
+	(1810, 0, 50210300, 'Hypothekenbank Frankfurt ehem. Eurohypo', 'EHYPDEFFXXX'),
+	(1811, 0, 50210400, 'Hypothekenbank Frankfurt -alt-', ''),
+	(1812, 0, 50210600, 'equinet Bank', 'EQUNDEFFXXX'),
+	(1813, 0, 50210800, 'ProCredit Bank, Frankfurt am Main', 'PRCBDEFFXXX'),
+	(1814, 0, 50210900, 'Citigroup Global Markets Deutschland', 'CITIDEFFXXX'),
+	(1815, 0, 50220085, 'UBS Deutschland', 'SMHBDEFFXXX'),
+	(1816, 0, 50220200, 'Bethmann Bank (Vormals LGT Bank Deutschland)', 'DELBDE33XXX'),
+	(1817, 0, 50220500, 'Bank of Scotland', 'BOFSDEF1XXX'),
+	(1818, 0, 50220900, 'Hauck & Aufhäuser Privatbankiers', 'HAUKDEFFXXX'),
+	(1819, 0, 50230000, 'ABC International Bank Frankfurt am Main', 'ABCADEFFXXX'),
+	(1820, 0, 50230100, 'Morgan Stanley Bank Internaional', 'MSPCDEF1XXX'),
+	(1821, 0, 50230300, 'FCB Firmen-Credit Bank', 'FCFBDEFFXXX'),
+	(1822, 0, 50230400, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFFRA'),
+	(1823, 0, 50230600, 'Isbank', 'ISBKDEFXXXX'),
+	(1824, 0, 50230700, 'Metzler, B. - seel Sohn & Co', 'METZDEFFXXX'),
+	(1825, 0, 50230800, 'Ikano Bank', 'PLFGDE5AXXX'),
+	(1826, 0, 50250200, 'Deutsche Leasing Finance', 'DLFGDE51XXX'),
+	(1827, 0, 50310400, 'Barclays Bank Frankfurt', 'BARCDEFFXXX'),
+	(1828, 0, 50310455, 'Reiseschecks - Barclays Bank Frankfurt', 'BARCDEF1TCS'),
+	(1829, 0, 50310900, 'China Construction Bank Ndl Frankfurt', 'PCBCDEFFXXX'),
+	(1830, 0, 50320000, 'VTB Bank (Deutschland)', 'OWHBDEFFXXX'),
+	(1831, 0, 50320191, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM430'),
+	(1832, 0, 50320500, 'Banco Santander Filiale Frankfurt', 'BSCHDEFFXXX'),
+	(1833, 0, 50320600, 'Attijariwafa bank Europa ZNdl. Frankfurt', 'BCMADEFFXXX'),
+	(1834, 0, 50320900, 'Pictet & Cie (Europe) Ndl Frankfurt am Main', 'PICTDEFFXXX'),
+	(1835, 0, 50324000, 'ABN AMRO Bank, Frankfurt Branch', 'FTSBDEFAXXX'),
+	(1836, 0, 50324040, 'ABN AMRO Bank, MoneYou', 'FTSBDEFAMYO'),
+	(1837, 0, 50330000, 'State Bank of India', 'SBINDEFFXXX'),
+	(1838, 0, 50330200, 'MHB-Bank', 'MHBFDEFFXXX'),
+	(1839, 0, 50330300, 'The Bank of New York Mellon', 'IRVTDEFXXXX'),
+	(1840, 0, 50330500, 'BANQUE CHAABI DU MAROC Agentur Frankfurt Ndl. Deutschland', 'BCDMDEF1XXX'),
+	(1841, 0, 50330600, 'Bank Sepah-Iran', ''),
+	(1842, 0, 50330700, 'Valovis Bank', 'VCBADEF1XXX'),
+	(1843, 0, 50334400, 'The Bank of New York Mellon NL Frankfurt', 'BNYMDEF1XXX'),
+	(1844, 0, 50400000, 'Bundesbank Zentrale', 'MARKDEFFXXX'),
+	(1845, 0, 50510111, 'SEB', 'ESSEDE5F505'),
+	(1846, 0, 50510120, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1847, 0, 50510121, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1848, 0, 50510122, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1849, 0, 50510123, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1850, 0, 50510124, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1851, 0, 50510125, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1852, 0, 50510126, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1853, 0, 50510127, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1854, 0, 50510128, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1855, 0, 50510129, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1856, 0, 50510130, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1857, 0, 50510131, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1858, 0, 50510132, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1859, 0, 50510133, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1860, 0, 50510134, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1861, 0, 50510135, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1862, 0, 50510136, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1863, 0, 50510137, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1864, 0, 50510138, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1865, 0, 50510139, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1866, 0, 50510140, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1867, 0, 50510141, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1868, 0, 50510142, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1869, 0, 50510143, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1870, 0, 50510144, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1871, 0, 50510145, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1872, 0, 50510146, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1873, 0, 50510147, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1874, 0, 50510148, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1875, 0, 50510149, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1876, 0, 50510150, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1877, 0, 50510151, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1878, 0, 50510152, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1879, 0, 50510153, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1880, 0, 50510154, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1881, 0, 50510155, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1882, 0, 50510156, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1883, 0, 50510157, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1884, 0, 50510158, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1885, 0, 50510159, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1886, 0, 50510160, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1887, 0, 50510161, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1888, 0, 50510162, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1889, 0, 50510163, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1890, 0, 50510164, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1891, 0, 50510165, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1892, 0, 50510166, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1893, 0, 50510167, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1894, 0, 50510168, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1895, 0, 50510169, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1896, 0, 50510170, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1897, 0, 50510171, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1898, 0, 50510172, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1899, 0, 50510173, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1900, 0, 50510174, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1901, 0, 50510175, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1902, 0, 50510176, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1903, 0, 50510177, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1904, 0, 50510178, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1905, 0, 50510179, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1906, 0, 50510180, 'SEB TZN MB Ffm', 'ESSEDE5FXXX'),
+	(1907, 0, 50520190, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM467'),
+	(1908, 0, 50522222, 'FIDOR Bank Zndl Frankfurt am Main', 'FDORDEF1XXX'),
+	(1909, 0, 50530000, 'Cronbank', 'GENODE51CRO'),
+	(1910, 0, 50540028, 'Commerzbank', 'COBADEFF505'),
+	(1911, 0, 50550020, 'Städtische Sparkasse Offenbach', 'HELADEF1OFF'),
+	(1912, 0, 50560102, 'Raiffeisenbank Offenbach/M.-Bieber', 'GENODE51OF2'),
+	(1913, 0, 50561315, 'Vereinigte Volksbank Maingau', 'GENODE51OBH'),
+	(1914, 0, 50570018, 'Deutsche Bank', 'DEUTDEFF505'),
+	(1915, 0, 50570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB505'),
+	(1916, 0, 50580005, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF505'),
+	(1917, 0, 50580085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ12'),
+	(1918, 0, 50590000, 'Offenbacher Volksbank -alt-', 'GENODE51OF1'),
+	(1919, 0, 50592200, 'Volksbank Dreieich', 'GENODE51DRE'),
+	(1920, 0, 50600000, 'Bundesbank eh Hanau', 'MARKDEF1506'),
+	(1921, 0, 50620700, 'Hanseatic Bank', 'HSTBDEH1HAU'),
+	(1922, 0, 50640015, 'Commerzbank', 'COBADEFF506'),
+	(1923, 0, 50650023, 'SPARKASSE HANAU', 'HELADEF1HAN'),
+	(1924, 0, 50652124, 'Sparkasse Langen-Seligenstadt', 'HELADEF1SLS'),
+	(1925, 0, 50661639, 'VR Bank Main-Kinzig-Büdingen', 'GENODEF1LSR'),
+	(1926, 0, 50661816, 'Volksbank Heldenbergen Ndl d Frankfurter VB', 'GENODE51NIH'),
+	(1927, 0, 50662299, 'Raiffeisenbank Bruchköbel -alt-', 'GENODEF1BKO'),
+	(1928, 0, 50662669, 'Raiffeisenbank Maintal Ndl d Frankfurter VB', 'RBMFDEF1XXX'),
+	(1929, 0, 50663699, 'Raiffeisenbank', 'GENODEF1RDB'),
+	(1930, 0, 50670009, 'Deutsche Bank', 'DEUTDEFF506'),
+	(1931, 0, 50670024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB506'),
+	(1932, 0, 50680002, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF506'),
+	(1933, 0, 50680085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ13'),
+	(1934, 0, 50690000, 'Volksbank Raiffeisenbank Hanau Ndl d Frankf VB', 'GENODEF1HUV'),
+	(1935, 0, 50691300, 'DZB BANK', 'DZBMDEF1XXX'),
+	(1936, 0, 50692100, 'Volksbank Seligenstadt', 'GENODE51SEL'),
+	(1937, 0, 50740048, 'Commerzbank', 'COBADEFF955'),
+	(1938, 0, 50750094, 'Kreissparkasse Gelnhausen', 'HELADEF1GEL'),
+	(1939, 0, 50761333, 'Volksbank -alt-', 'GENODE51BUE'),
+	(1940, 0, 50761613, 'Volksbank Büdingen -alt-', 'GENODE51NID'),
+	(1941, 0, 50763319, 'Raiffeisenbank Vogelsberg -alt-', 'GENODEF1BIR'),
+	(1942, 0, 50780006, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF524'),
+	(1943, 0, 50790000, 'VR Bank Bad Orb-Gelnhausen', 'GENODE51GEL'),
+	(1944, 0, 50793300, 'Birsteiner Volksbank', 'GENODE51BIV'),
+	(1945, 0, 50794300, 'VR Bank Wächtersbach/Bad Soden-Salmünster -alt', 'GENODE51WBH'),
+	(1946, 0, 50800000, 'Bundesbank eh Darmstadt', 'MARKDEF1508'),
+	(1947, 0, 50810900, 'Deutsche Bausparkasse Badenia (ehem. DBS Bausparkasse)', 'BBSPDE6KXXX'),
+	(1948, 0, 50820292, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM487'),
+	(1949, 0, 50835800, 'MCE Bank', 'MKGMDE51XXX'),
+	(1950, 0, 50840005, 'Commerzbank', 'COBADEFF508'),
+	(1951, 0, 50850049, 'Landesbank Hessen-Thür Girozentrale', 'HELADEFF508'),
+	(1952, 0, 50850150, 'Stadt- und Kreis-Sparkasse Darmstadt', 'HELADEF1DAS'),
+	(1953, 0, 50851952, 'Sparkasse Odenwaldkreis', 'HELADEF1ERB'),
+	(1954, 0, 50852553, 'Kreissparkasse Groß-Gerau', 'HELADEF1GRG'),
+	(1955, 0, 50852651, 'Sparkasse Dieburg', 'HELADEF1DIE'),
+	(1956, 0, 50861393, 'Spar- und Darlehnskasse Zell -alt-', 'GENODE51BKZ'),
+	(1957, 0, 50861501, 'Raiffeisenbank Nördliche Bergstraße', 'GENODE51ABH'),
+	(1958, 0, 50862311, 'Volksbank Gräfenhausen -alt-', 'GENODE51WGH'),
+	(1959, 0, 50862408, 'Vereinigte Volksbank Griesheim-Weiterstadt -alt-', 'GENODE51GRI'),
+	(1960, 0, 50862703, 'Volksbank Gersprenztal-Otzberg', 'GENODE51REI'),
+	(1961, 0, 50862835, 'Raiffeisenbank Schaafheim', 'GENODE51SHM'),
+	(1962, 0, 50862903, 'Volksbank Mainspitze', 'GENODE51GIN'),
+	(1963, 0, 50863317, 'Volksbank Seeheim-Jugenheim', 'GENODE51SJ1'),
+	(1964, 0, 50863513, 'Volksbank Odenwald', 'GENODE51MIC'),
+	(1965, 0, 50863906, 'Volksbank Modautal Modau', 'GENODE51ORM'),
+	(1966, 0, 50864322, 'Volksbank Modau', 'GENODE51ORA'),
+	(1967, 0, 50864808, 'Volksbank Seeheim-Jugenheim', 'GENODE51SJ2'),
+	(1968, 0, 50865224, 'VB Mörfelden-Walldorf Ndl d Frankfurter VB', 'GENODE51MWA'),
+	(1969, 0, 50865503, 'Volksbank', 'GENODE51EPT'),
+	(1970, 0, 50870005, 'Deutsche Bank', 'DEUTDEFF508'),
+	(1971, 0, 50870024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB508'),
+	(1972, 0, 50880050, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF508'),
+	(1973, 0, 50880085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ14'),
+	(1974, 0, 50880086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFJ15'),
+	(1975, 0, 50890000, 'Volksbank Darmstadt - Südhessen', 'GENODEF1VBD'),
+	(1976, 0, 50890634, 'apoBank', 'DAAEDED1034'),
+	(1977, 0, 50892500, 'Groß-Gerauer Volksbank -alt-', 'GENODE51GG1'),
+	(1978, 0, 50950068, 'Sparkasse Bensheim', 'HELADEF1BEN'),
+	(1979, 0, 50951469, 'Sparkasse Starkenburg', 'HELADEF1HEP'),
+	(1980, 0, 50961206, 'Raiffeisenbank Ried', 'GENODE51RBU'),
+	(1981, 0, 50961312, 'Raiffeisenbank Groß-Rohrheim', 'GENODE51GRM'),
+	(1982, 0, 50961592, 'Volksbank Weschnitztal', 'GENODE51FHO'),
+	(1983, 0, 50961685, 'Volksbank Überwald-Gorxheimertal', 'GENODE51ABT'),
+	(1984, 0, 50970004, 'Deutsche Bank', 'DEUTDEFF509'),
+	(1985, 0, 50970024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB509'),
+	(1986, 0, 51000000, 'Bundesbank eh Wiesbaden', 'MARKDEF1510'),
+	(1987, 0, 51010111, 'SEB', 'ESSEDE5F510'),
+	(1988, 0, 51010400, 'Aareal Bank', 'AARBDE5WXXX'),
+	(1989, 0, 51010800, 'Aareal Bank Zw L', 'AARBDE5W108'),
+	(1990, 0, 51020000, 'BHF-BANK', 'BHFBDEFF510'),
+	(1991, 0, 51020186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM478'),
+	(1992, 0, 51040038, 'Commerzbank', 'COBADEFF510'),
+	(1993, 0, 51050015, 'Nassauische Sparkasse', 'NASSDE55XXX'),
+	(1994, 0, 51051000, 'S Broker Wiesbaden', 'PULSDE5WXXX'),
+	(1995, 0, 51070021, 'Deutsche Bank', 'DEUTDEFF510'),
+	(1996, 0, 51070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB510'),
+	(1997, 0, 51080060, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF510'),
+	(1998, 0, 51080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ16'),
+	(1999, 0, 51080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK2', 'DRESDEFFJ17'),
+	(2000, 0, 51089410, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI20'),
+	(2001, 0, 51090000, 'Wiesbadener Volksbank', 'WIBADE5WXXX'),
+	(2002, 0, 51090636, 'apoBank', 'DAAEDED1036'),
+	(2003, 0, 51091400, 'Volksbank Eltville -alt-', 'GENODE51ELV'),
+	(2004, 0, 51091500, 'Rheingauer Volksbank', 'GENODE51RGG'),
+	(2005, 0, 51091700, 'vr bank Untertaunus', 'VRBUDE51XXX'),
+	(2006, 0, 51091711, 'Bank f Orden u Mission Zndl vr bk Untertaunus', 'BFOMDE51XXX'),
+	(2007, 0, 51140029, 'Commerzbank', 'COBADEFF511'),
+	(2008, 0, 51150018, 'Kreissparkasse Limburg', 'HELADEF1LIM'),
+	(2009, 0, 51151919, 'Kreissparkasse Weilburg', 'HELADEF1WEI'),
+	(2010, 0, 51161606, 'Volksbank Langendernbach', 'GENODE51LDD'),
+	(2011, 0, 51170010, 'Deutsche Bank', 'DEUTDEFF511'),
+	(2012, 0, 51170024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB511'),
+	(2013, 0, 51180041, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF511'),
+	(2014, 0, 51190000, 'Vereinigte Volksbank Limburg', 'GENODE51LIM'),
+	(2015, 0, 51191200, 'Volksbank Goldner Grund', 'GENODE51CAM'),
+	(2016, 0, 51191800, 'Volksbank Schupbach', 'GENODE51SBH'),
+	(2017, 0, 51192200, 'Volks- und Raiffeisenbank Weilmünster -alt-', 'GENODE51WEM'),
+	(2018, 0, 51210600, 'BNP PARIBAS Ndl Frankfurt, Main', 'BNPADEFFXXX'),
+	(2019, 0, 51210700, 'NIBC Bank Zndl Frankfurt am Main', 'NZFMDEF1XXX'),
+	(2020, 0, 51210800, 'Societe Generale', 'SOGEDEFFXXX'),
+	(2021, 0, 51211000, 'NATIXIS Pfandbriefbank', 'NATXDEFPXXX'),
+	(2022, 0, 51220200, 'SEB Merchant Banking', 'ESSEDEFFXXX'),
+	(2023, 0, 51220211, 'SEB Frankfurt SAP', 'ESSEDE5F512'),
+	(2024, 0, 51220400, 'Bank Saderat Iran', ''),
+	(2025, 0, 51220700, 'ZIRAAT BANK International', 'TCZBDEFFXXX'),
+	(2026, 0, 51220800, 'Banco do Brasil', 'BRASDEFFXXX'),
+	(2027, 0, 51220900, 'Morgan Stanley Bank', 'MSFFDEFPXXX'),
+	(2028, 0, 51220910, 'Morgan Stanley Bank', 'MSFFDEFXCND'),
+	(2029, 0, 51230100, 'Hypothekenbank Frankfurt -alt-', ''),
+	(2030, 0, 51230400, 'RBS ( Deutschland ) Frankfurt am Main', 'ABNADE55FRA'),
+	(2031, 0, 51230500, 'Standard Chartered Bank Germany Branch, Frankfurt', 'SCBLDEFXXXX'),
+	(2032, 0, 51230502, 'ETC Standard Chartered Bank Germany Branch', 'SCBLDEF1ETC'),
+	(2033, 0, 51230555, 'Standard Chartered Bank Germany Branch, Frankfurt', 'SCBLDEF1CBG'),
+	(2034, 0, 51230600, 'Europe ARAB Bank', 'ARABDEFFXXX'),
+	(2035, 0, 51230800, 'Wirecard Bank', 'WIREDEMMXXX'),
+	(2036, 0, 51230801, 'Wirecard Bank', ''),
+	(2037, 0, 51230802, 'Wirecard Bank', ''),
+	(2038, 0, 51230805, 'Wirecard Bank', ''),
+	(2039, 0, 51250000, 'Taunus-Sparkasse', 'HELADEF1TSK'),
+	(2040, 0, 51300000, 'Bundesbank', 'MARKDEF1513'),
+	(2041, 0, 51310111, 'SEB', 'ESSEDE5F513'),
+	(2042, 0, 51340013, 'Commerzbank', 'COBADEFF513'),
+	(2043, 0, 51343224, 'Commerzbank', 'COBADEFF514'),
+	(2044, 0, 51350025, 'Sparkasse Gießen', 'SKGIDE5FXXX'),
+	(2045, 0, 51351526, 'Sparkasse Grünberg', 'HELADEF1GRU'),
+	(2046, 0, 51352227, 'Sparkasse Laubach-Hungen', 'HELADEF1LAU'),
+	(2047, 0, 51361021, 'Volksbank Heuchelheim', 'GENODE51HHE'),
+	(2048, 0, 51361704, 'Volksbank Holzheim -alt-', 'GENODE51PLH'),
+	(2049, 0, 51362514, 'VR Bank Mücke -alt-', 'GENODE51MNO'),
+	(2050, 0, 51363407, 'Volksbank Garbenteich -alt-', 'GENODE51PMG'),
+	(2051, 0, 51370008, 'Deutsche Bank', 'DEUTDEFF513'),
+	(2052, 0, 51370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB513'),
+	(2053, 0, 51380040, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF513'),
+	(2054, 0, 51380085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ18'),
+	(2055, 0, 51390000, 'Volksbank Mittelhessen', 'VBMHDE5FXXX'),
+	(2056, 0, 51410111, 'SEB', 'ESSEDE5F514'),
+	(2057, 0, 51410600, 'Merrill Lynch International Bank Limited Zndl Frankfurt', 'MELBDEF1XXX'),
+	(2058, 0, 51410700, 'Bank of China', 'BKCHDEFFXXX'),
+	(2059, 0, 51410800, 'OnVista Bank', 'BOURDEFFXXX'),
+	(2060, 0, 51420200, 'Misr Bank-Europe', 'MIBEDEFFXXX'),
+	(2061, 0, 51420300, 'Bank Julius Bär Europe', 'BAERDEF1XXX'),
+	(2062, 0, 51420600, 'Svenska Handelsbanken Deutschland', 'HANDDEFFXXX'),
+	(2063, 0, 51430300, 'Nordea Bank Finland', 'NDEADEFFXXX'),
+	(2064, 0, 51430321, 'Nordea Bank Finland', 'NDEADEFF321'),
+	(2065, 0, 51430400, 'Goldman Sachs', 'GOLDDEFFXXX'),
+	(2066, 0, 51540037, 'Commerzbank', 'COBADEFF515'),
+	(2067, 0, 51550035, 'Sparkasse Wetzlar', 'HELADEF1WET'),
+	(2068, 0, 51560231, 'Volksbank Wetzlar-Weilburg -alt-', 'GENODE51WZ1'),
+	(2069, 0, 51570008, 'Deutsche Bank', 'DEUTDEFF515'),
+	(2070, 0, 51570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB515'),
+	(2071, 0, 51580044, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF515'),
+	(2072, 0, 51591300, 'Volksbank Brandoberndorf', 'GENODE51WBO'),
+	(2073, 0, 51640043, 'Commerzbank', 'COBADEFF516'),
+	(2074, 0, 51650045, 'Sparkasse Dillenburg', 'HELADEF1DIL'),
+	(2075, 0, 51690000, 'Volksbank Dill VB und Raiffbk', 'GENODE51DIL'),
+	(2076, 0, 51691500, 'Volksbank Herborn-Eschenburg', 'GENODE51HER'),
+	(2077, 0, 51752267, 'Sparkasse Battenberg', 'HELADEF1BAT'),
+	(2078, 0, 51762434, 'VR Bank Biedenkopf-Gladenbach', 'GENODE51BIK'),
+	(2079, 0, 51850079, 'Sparkasse Oberhessen', 'HELADEF1FRI'),
+	(2080, 0, 51861325, 'BVB Volksbank Ndl d Frankfurter Volksbank', 'GENODEF1BVB'),
+	(2081, 0, 51861403, 'Volksbank Butzbach', 'GENODE51BUT'),
+	(2082, 0, 51861616, 'Landbank Horlofftal', 'GENODE51REW'),
+	(2083, 0, 51861806, 'Volksbank Ober-Mörlen', 'GENODE51OBM'),
+	(2084, 0, 51961023, 'Volksbank', 'GENODE51ULR'),
+	(2085, 0, 51961515, 'Spar- und Darlehnskasse Stockhausen', 'GENODE51HSH'),
+	(2086, 0, 51961801, 'Volksbank Feldatal', 'GENODE51FEL'),
+	(2087, 0, 51990000, 'Volksbank Lauterbach-Schlitz', 'GENODE51LB1'),
+	(2088, 0, 52000000, 'Bundesbank eh Kassel', 'MARKDEF1520'),
+	(2089, 0, 52010111, 'SEB', 'ESSEDE5F520'),
+	(2090, 0, 52040021, 'Commerzbank', 'COBADEFF520'),
+	(2091, 0, 52050000, 'Landeskreditkasse Kassel', 'HELADEFF520'),
+	(2092, 0, 52050353, 'Kasseler Sparkasse', 'HELADEF1KAS'),
+	(2093, 0, 52051373, 'Stadtsparkasse Borken (Hessen)', 'HELADEF1BOR'),
+	(2094, 0, 52051555, 'Stadtsparkasse Felsberg', 'HELADEF1FEL'),
+	(2095, 0, 52051877, 'Stadtsparkasse Grebenstein', 'HELADEF1GRE'),
+	(2096, 0, 52052154, 'Kreissparkasse Schwalm-Eder', 'HELADEF1MEG'),
+	(2097, 0, 52053458, 'Stadtsparkasse Schwalmstadt', 'HELADEF1SWA'),
+	(2098, 0, 52060000, 'DZ BANK', 'GENODEFF520'),
+	(2099, 0, 52060208, 'Kurhessische Landbank', 'GENODEF1KS2'),
+	(2100, 0, 52060400, 'Evangelische Kreditgenossenschaft Gf', 'EKKBDE52XXX'),
+	(2101, 0, 52060410, 'Evangelische Kreditgenossenschaft', 'GENODEF1EK1'),
+	(2102, 0, 52061303, 'Raiffeisenbank Borken', 'GENODEF1BOR'),
+	(2103, 0, 52062200, 'VR-Bank Chattengau', 'GENODEF1GUB'),
+	(2104, 0, 52062601, 'VR-Bank Schwalm-Eder', 'GENODEF1HRV'),
+	(2105, 0, 52063369, 'VR-Bank Spangenberg-Morschen', 'GENODEF1SPB'),
+	(2106, 0, 52063550, 'Raiffeisenbank', 'GENODEF1WOH'),
+	(2107, 0, 52064156, 'Raiffeisenbank', 'GENODEF1BTA'),
+	(2108, 0, 52065220, 'Raiffeisenbank', 'GENODEF1CAL'),
+	(2109, 0, 52069013, 'Raiffeisenbank Burghaun', 'GENODEF1BHN'),
+	(2110, 0, 52069029, 'Spar-u. Kredit-Bank', 'GENODEF1GMD'),
+	(2111, 0, 52069065, 'Raiffeisenbank Langenschwarz', 'GENODEF1BUR'),
+	(2112, 0, 52069103, 'Raiffeisenbank Trendelburg', 'GENODEF1TBG'),
+	(2113, 0, 52069149, 'Raiffeisenbank Volkmarsen', 'GENODEF1VLM'),
+	(2114, 0, 52069503, 'Raiffeisenbank Ulmbach -alt-', 'GENODEF1STU'),
+	(2115, 0, 52069519, 'Frankenberger Bank Raiffeisenbank', 'GENODEF1FBK'),
+	(2116, 0, 52070012, 'Deutsche Bank', 'DEUTDEFF520'),
+	(2117, 0, 52070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB520'),
+	(2118, 0, 52071212, 'Deutsche Bank', 'DEUTDEFF521'),
+	(2119, 0, 52071224, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB521'),
+	(2120, 0, 52080080, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF520'),
+	(2121, 0, 52080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK1', 'DRESDEFFJ19'),
+	(2122, 0, 52090000, 'Kasseler Bank', 'GENODE51KS1'),
+	(2123, 0, 52090611, 'apoBank', 'DAAEDED1011'),
+	(2124, 0, 52240006, 'Commerzbank', 'COBADEFF522'),
+	(2125, 0, 52250030, 'Sparkasse Werra-Meißner', 'HELADEF1ESW'),
+	(2126, 0, 52260385, 'VR-Bank Werra-Meißner', 'GENODEF1ESW'),
+	(2127, 0, 52270012, 'Deutsche Bank', 'DEUTDEFF522'),
+	(2128, 0, 52270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB522'),
+	(2129, 0, 52350005, 'Sparkasse Waldeck-Frankenberg', 'HELADEF1KOR'),
+	(2130, 0, 52360059, 'Waldecker Bank', 'GENODEF1KBW'),
+	(2131, 0, 52410300, 'ReiseBank', 'RBAGDEF1XXX'),
+	(2132, 0, 52410310, 'ReiseBank Gf2', 'RBAGDEF1CMI'),
+	(2133, 0, 52410400, 'Korea Exchange Bank (Deutschland)', 'KOEXDEFAXXX'),
+	(2134, 0, 52410700, 'ABN AMRO Clearing Bank, Frankfurt Branch', 'FTSBDEFFXXX'),
+	(2135, 0, 52410900, 'Maple Bank', 'MPBKDEFFXXX'),
+	(2136, 0, 52411000, 'Cash Express Gesellschaft f Finanz-u Reisedienstleistungen', 'CAGBDEF1XXX'),
+	(2137, 0, 52411010, 'Cash Express Gesellschaft f.Finanz-u.Reisedienstleistungen', 'CAGBDEF1CMI'),
+	(2138, 0, 52420000, 'Credit Agricole CIB Deutschland', 'BSUIDEFFXXX'),
+	(2139, 0, 52420300, 'SHINHAN BANK EUROPE', 'SHBKDEFFXXX'),
+	(2140, 0, 52420600, 'Piraeus Bank Frankfurt Branch', 'ABGRDEFFXXX'),
+	(2141, 0, 52420700, 'SECB Swiss Euro Clearing Bank', 'SECGDEFFXXX'),
+	(2142, 0, 52430000, 'Credit Mutuel - BECM - Ndl Deutschland', 'CMCIDEF1XXX'),
+	(2143, 0, 52430100, 'Banque Federative Credit Mutuel Ndl Deutschl', 'CMCIDEFFXXX'),
+	(2144, 0, 53000000, 'Bundesbank eh Fulda', 'MARKDEF1530'),
+	(2145, 0, 53040012, 'Commerzbank', 'COBADEFF530'),
+	(2146, 0, 53050180, 'Sparkasse Fulda', 'HELADEF1FDS'),
+	(2147, 0, 53051396, 'Kreissparkasse Schlüchtern', 'HELADEF1SLU'),
+	(2148, 0, 53060180, 'VR Genossenschaftsbank Fulda', 'GENODE51FUL'),
+	(2149, 0, 53061230, 'VR-Bank NordRhön', 'GENODEF1HUE'),
+	(2150, 0, 53061313, 'VR Bank Schlüchtern-Birstein', 'GENODE51SLU'),
+	(2151, 0, 53062035, 'Raiffeisenbank', 'GENODEF1GLU'),
+	(2152, 0, 53062350, 'Raiffeisenbank Biebergrund-Petersberg', 'GENODEF1PBG'),
+	(2153, 0, 53064023, 'Raiffeisenbank', 'GENODEF1FLN'),
+	(2154, 0, 53070007, 'Deutsche Bank', 'DEUTDEFF530'),
+	(2155, 0, 53070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB530'),
+	(2156, 0, 53080030, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF530'),
+	(2157, 0, 53093200, 'VR Bank HessenLand', 'GENODE51ALS'),
+	(2158, 0, 53093255, 'AgrarBank', 'GENODE51AGR'),
+	(2159, 0, 53200000, 'Bundesbank eh Bad Hersfeld', 'MARKDEF1532'),
+	(2160, 0, 53240048, 'Commerzbank', 'COBADEFF532'),
+	(2161, 0, 53250000, 'Sparkasse Bad Hersfeld-Rotenburg', 'HELADEF1HER'),
+	(2162, 0, 53260145, 'Raiffeisenbank Asbach-Sorga', 'GENODEF1HFA'),
+	(2163, 0, 53261202, 'Bankverein Bebra', 'GENODEF1BEB'),
+	(2164, 0, 53261342, 'Raiffeisenbank Werratal-Landeck', 'GENODEF1RAW'),
+	(2165, 0, 53261700, 'Raiffeisenbank Aulatal -alt-', 'GENODEF1OAU'),
+	(2166, 0, 53262073, 'Raiffeisenbank Haunetal', 'GENODEF1HNT'),
+	(2167, 0, 53262455, 'Raiffeisenbank Ronshausen-Marksuhl', 'GENODEF1ROH'),
+	(2168, 0, 53270012, 'Deutsche Bank', 'DEUTDEFF532'),
+	(2169, 0, 53270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB518'),
+	(2170, 0, 53280081, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF532'),
+	(2171, 0, 53290000, 'VR-Bank Bad Hersfeld-Rotenburg', 'GENODE51BHE'),
+	(2172, 0, 53340024, 'Commerzbank', 'COBADEFF533'),
+	(2173, 0, 53350000, 'Sparkasse Marburg-Biedenkopf', 'HELADEF1MAR'),
+	(2174, 0, 53361724, 'Raiffeisenbank', 'GENODEF1EBG'),
+	(2175, 0, 53370008, 'Deutsche Bank', 'DEUTDEFF533'),
+	(2176, 0, 53370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB533'),
+	(2177, 0, 53380042, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF533'),
+	(2178, 0, 53381843, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF568'),
+	(2179, 0, 53390635, 'apoBank', 'DAAEDED1035'),
+	(2180, 0, 54000000, 'Bundesbank eh Kaiserslautern', 'MARKDEF1540'),
+	(2181, 0, 54020090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM482'),
+	(2182, 0, 54020474, 'UniCredit Bank - HypoVereinsbank Ndl 697 Kais', 'HYVEDEM1105'),
+	(2183, 0, 54030011, 'Service Credit Union Overseas Headquarters', 'SCRUDE51XXX'),
+	(2184, 0, 54040042, 'Commerzbank', 'COBADEFF540'),
+	(2185, 0, 54050110, 'Stadtsparkasse Kaiserslautern', 'MALADE51KLS'),
+	(2186, 0, 54050220, 'Kreissparkasse Kaiserslautern', 'MALADE51KLK'),
+	(2187, 0, 54051550, 'Kreissparkasse Kusel', 'MALADE51KUS'),
+	(2188, 0, 54051660, 'Stadtsparkasse Landstuhl -alt-', 'MALADE51LAS'),
+	(2189, 0, 54051990, 'Sparkasse Donnersberg', 'MALADE51ROK'),
+	(2190, 0, 54061650, 'VR-Bank Westpfalz', 'GENODE61LAN'),
+	(2191, 0, 54062027, 'Raiffeisenbank Donnersberg -alt-', 'GENODE61ALB'),
+	(2192, 0, 54070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB540'),
+	(2193, 0, 54070092, 'Deutsche Bank', 'DEUTDESM540'),
+	(2194, 0, 54080021, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF540'),
+	(2195, 0, 54090000, 'Volksbank Kaiserslautern-Nordwestpfalz', 'GENODE61KL1'),
+	(2196, 0, 54091700, 'Volksbank Lauterecken', 'GENODE61LEK'),
+	(2197, 0, 54091800, 'VR Bank Nordwestpfalz -alt-', 'GENODE61OB1'),
+	(2198, 0, 54092400, 'Volksbank Glan-Münchweiler', 'GENODE61GLM'),
+	(2199, 0, 54210111, 'SEB', 'ESSEDE5F542'),
+	(2200, 0, 54220091, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM485'),
+	(2201, 0, 54220576, 'UniCredit Bank - HypoVereinsbank Ndl 358 Pirm', 'HYVEDEM1081'),
+	(2202, 0, 54240032, 'Commerzbank', 'COBADEFF542'),
+	(2203, 0, 54250010, 'Sparkasse Südwestpfalz', 'MALADE51SWP'),
+	(2204, 0, 54261700, 'VR-Bank Südwestpfalz', 'GENODE61ROA'),
+	(2205, 0, 54262330, 'Raiffeisenbank Vinningen -alt-', 'GENODE61VIN'),
+	(2206, 0, 54270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB542'),
+	(2207, 0, 54270096, 'Deutsche Bank', 'DEUTDESM542'),
+	(2208, 0, 54280023, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF542'),
+	(2209, 0, 54290000, 'VR-Bank Pirmasens', 'GENODE61PS1'),
+	(2210, 0, 54291200, 'Raiffeisen- u Volksbank Dahn', 'GENODE61DAH'),
+	(2211, 0, 54500000, 'Bundesbank', 'MARKDEF1545'),
+	(2212, 0, 54510067, 'Postbank', 'PBNKDEFFXXX'),
+	(2213, 0, 54520071, 'UniCredit Bank - HypoVereinsbank Ndl 650 Lu', 'HYVEDEM1094'),
+	(2214, 0, 54520194, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM483'),
+	(2215, 0, 54540033, 'Commerzbank', 'COBADEFF545'),
+	(2216, 0, 54550010, 'Sparkasse Vorderpfalz', 'LUHSDE6AXXX'),
+	(2217, 0, 54550120, 'Kreissparkasse Rhein-Pfalz', 'MALADE51LUH'),
+	(2218, 0, 54561310, 'RV Bank Rhein-Haardt', 'GENODE61LBS'),
+	(2219, 0, 54570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB545'),
+	(2220, 0, 54570094, 'Deutsche Bank', 'DEUTDESM545'),
+	(2221, 0, 54580020, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF545'),
+	(2222, 0, 54620093, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM620'),
+	(2223, 0, 54620574, 'UniCredit Bank - HypoVereinsbank Ndl 660 Ne/W', 'HYVEDEM1096'),
+	(2224, 0, 54640035, 'Commerzbank', 'COBADEFF546'),
+	(2225, 0, 54651240, 'Sparkasse Rhein-Haardt', 'MALADE51DKH'),
+	(2226, 0, 54661800, 'Raiffeisenbank Freinsheim', 'GENODE61FSH'),
+	(2227, 0, 54663270, 'Raiffeisenbank Friedelsheim-Rödersheim', 'GENODE61FHR'),
+	(2228, 0, 54670024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB546'),
+	(2229, 0, 54670095, 'Deutsche Bank', 'DEUTDESM546'),
+	(2230, 0, 54680022, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF546'),
+	(2231, 0, 54690623, 'apoBank', 'DAAEDED1023'),
+	(2232, 0, 54691200, 'VR Bank Mittelhaardt', 'GENODE61DUW'),
+	(2233, 0, 54750010, 'Kreis- und Stadtsparkasse Speyer', 'MALADE51SPY'),
+	(2234, 0, 54760900, 'Evangelische Kreditgenossenschaft - Filiale Speyer-', 'GENODEF1EK6'),
+	(2235, 0, 54761411, 'Raiffeisenbank Schifferstadt -alt-', 'GENODE61SFS'),
+	(2236, 0, 54790000, 'Volksbank Kur- und Rheinpfalz', 'GENODE61SPE'),
+	(2237, 0, 54820674, 'UniCredit Bank - HypoVereinsbank Ndl 659 LanP', 'HYVEDEM1095'),
+	(2238, 0, 54850010, 'Sparkasse Südliche Weinstraße in Landau', 'SOLADES1SUW'),
+	(2239, 0, 54851440, 'Sparkasse Germersheim-Kandel', 'MALADE51KAD'),
+	(2240, 0, 54861190, 'Raiffeisenbank Oberhaardt-Gäu -alt-', 'GENODE61EDH'),
+	(2241, 0, 54862390, 'Raiffeisenbank', 'GENODE61HXH'),
+	(2242, 0, 54862500, 'VR Bank Südpfalz', 'GENODE61SUW'),
+	(2243, 0, 54891300, 'VR Bank Südliche Weinstraße', 'GENODE61BZA'),
+	(2244, 0, 55000000, 'Bundesbank', 'MARKDEF1550'),
+	(2245, 0, 55010111, 'SEB', 'ESSEDE5F550'),
+	(2246, 0, 55010400, 'Aareal Bank GF - BK01 -', 'AARBDE5WDOM'),
+	(2247, 0, 55010424, 'Aareal Bank', 'AARBDE5W550'),
+	(2248, 0, 55010625, 'Aareal Bank Clearing Wiesbaden', 'AARBDE5WCLE'),
+	(2249, 0, 55010800, 'Investitions- und Strukturbank RP', 'ISBRDE55XXX'),
+	(2250, 0, 55020000, 'BHF-BANK', 'BHFBDEFF550'),
+	(2251, 0, 55020100, 'Bausparkasse Mainz', 'BKMZDE51XXX'),
+	(2252, 0, 55020486, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM486'),
+	(2253, 0, 55020500, 'Bank für Sozialwirtschaft', 'BFSWDE33MNZ'),
+	(2254, 0, 55020600, 'Westdeutsche Immobilien Bank', 'IMMODE5MXXX'),
+	(2255, 0, 55020700, 'Süd-West-Kreditbank Finanzierung', 'SUFGDE51XXX'),
+	(2256, 0, 55030500, 'GE Capital Bank', 'CPLADE55XXX'),
+	(2257, 0, 55030533, 'GE Capital Direkt', 'CPDIDE51XXX'),
+	(2258, 0, 55033300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(2259, 0, 55040022, 'Commerzbank', 'COBADEFF550'),
+	(2260, 0, 55040060, 'Commerzbank CC', 'COBADEFF092'),
+	(2261, 0, 55040061, 'Commerzbank CC', 'COBADEFF093'),
+	(2262, 0, 55050000, 'ZV Landesbank Baden-Württemberg', 'SOLADEST550'),
+	(2263, 0, 55050120, 'Sparkasse Mainz', 'MALADE51MNZ'),
+	(2264, 0, 55060321, 'VR-Bank Mainz', 'GENODE51MZ4'),
+	(2265, 0, 55060417, 'VR-Bank Mainz', 'GENODE51MZ2'),
+	(2266, 0, 55060611, 'Genobank Mainz', 'GENODE51MZ6'),
+	(2267, 0, 55060831, 'apoBank', 'DAAEDED1031'),
+	(2268, 0, 55061303, 'Budenheimer Volksbank', 'GENODE51BUD'),
+	(2269, 0, 55061507, 'VR-Bank Mainz', 'GENODE51HDS'),
+	(2270, 0, 55061907, 'Volksbank Rhein-Selz -alt-', 'GENODE51NIS'),
+	(2271, 0, 55070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBMAI'),
+	(2272, 0, 55070040, 'Deutsche Bank', 'DEUTDE5MXXX'),
+	(2273, 0, 55080044, 'Commerzbank, TF MZ 1', 'COBADEFF555'),
+	(2274, 0, 55080065, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF550'),
+	(2275, 0, 55080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ20'),
+	(2276, 0, 55080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFJ21'),
+	(2277, 0, 55080088, 'Commerzbank, TF MZ 2', 'DRESDEFF555'),
+	(2278, 0, 55090500, 'Sparda-Bank Südwest', 'GENODEF1S01'),
+	(2279, 0, 55091200, 'Volksbank Alzey-Worms', 'GENODE61AZY'),
+	(2280, 0, 55150098, 'Clearingkonto LRP-SI', 'MALADE51EMZ'),
+	(2281, 0, 55160195, 'Pax-Bank', 'GENODED1PA4'),
+	(2282, 0, 55190000, 'Mainzer Volksbank', 'MVBMDE55XXX'),
+	(2283, 0, 55190028, 'Mainzer Volksbank -alt-', 'MVBMDE51028'),
+	(2284, 0, 55190050, 'Mainzer Volksbank -alt-', 'MVBMDE51050'),
+	(2285, 0, 55190064, 'Mainzer Volksbank -alt-', 'MVBMDE51064'),
+	(2286, 0, 55190065, 'Mainzer Volksbank -alt-', 'MVBMDE51065'),
+	(2287, 0, 55190068, 'Mainzer Volksbank -alt-', 'MVBMDE51068'),
+	(2288, 0, 55190088, 'Mainzer Volksbank -alt-', 'MVBMDE51088'),
+	(2289, 0, 55190094, 'Mainzer Volksbank -alt-', 'MVBMDE51094'),
+	(2290, 0, 55340041, 'Commerzbank', 'COBADEFF553'),
+	(2291, 0, 55350010, 'Sparkasse Worms-Alzey-Ried', 'MALADE51WOR'),
+	(2292, 0, 55361202, 'VR Bank', 'GENODE51AHM'),
+	(2293, 0, 55362071, 'Volksbank Bechtheim -alt-', 'GENODE51BEC'),
+	(2294, 0, 55390000, 'Volksbank Worms-Wonnegau -alt-', 'GENODE61WO1'),
+	(2295, 0, 56000000, 'Bundesbank eh Bad Kreuznach', 'MARKDEF1560'),
+	(2296, 0, 56020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM515'),
+	(2297, 0, 56050180, 'Sparkasse Rhein-Nahe', 'MALADE51KRE'),
+	(2298, 0, 56051790, 'Kreissparkasse Rhein-Hunsrück', 'MALADE51SIM'),
+	(2299, 0, 56061151, 'Raiffeisenbank Kastellaun', 'GENODED1KSL'),
+	(2300, 0, 56061472, 'Volksbank Hunsrück-Nahe', 'GENODED1KHK'),
+	(2301, 0, 56062227, 'Volksbank', 'GENODED1RBO'),
+	(2302, 0, 56062577, 'Vereinigte Raiffeisenkassen -alt-', 'GENODED1VRK'),
+	(2303, 0, 56070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB560'),
+	(2304, 0, 56070040, 'Deutsche Bank', 'DEUTDE5M560'),
+	(2305, 0, 56090000, 'Volksbank Rhein-Nahe-Hunsrück', 'GENODE51KRE'),
+	(2306, 0, 56240050, 'Commerzbank', 'COBADEFF562'),
+	(2307, 0, 56250030, 'Kreissparkasse Birkenfeld', 'BILADE55XXX'),
+	(2308, 0, 56261735, 'Raiffeisenbank Nahe', 'GENODED1FIN'),
+	(2309, 0, 56270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB562'),
+	(2310, 0, 56270044, 'Deutsche Bank', 'DEUTDE5M562'),
+	(2311, 0, 56290000, 'Volksbank-Raiffeisenbank Naheland -alt-', 'GENODE51IDO'),
+	(2312, 0, 57000000, 'Bundesbank', 'MARKDEF1570'),
+	(2313, 0, 57010111, 'SEB', 'ESSEDE5F570'),
+	(2314, 0, 57020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM401'),
+	(2315, 0, 57020301, 'MKB Mittelrheinische Bank', 'MKBKDE51XXX'),
+	(2316, 0, 57020500, 'Oyak Anker Bank', 'OYAKDE5KXXX'),
+	(2317, 0, 57020600, 'Debeka Bausparkasse', 'DEBKDE51XXX'),
+	(2318, 0, 57040044, 'Commerzbank', 'COBADEFF570'),
+	(2319, 0, 57050120, 'Sparkasse Koblenz', 'MALADE51KOB'),
+	(2320, 0, 57051001, 'Kreissparkasse Westerwald', 'MALADE51BMB'),
+	(2321, 0, 57051870, 'Kreissparkasse Cochem-Zell -alt-', 'MALADE51COC'),
+	(2322, 0, 57060000, 'WGZ Bank', 'GENODEDD570'),
+	(2323, 0, 57060612, 'apoBank', 'DAAEDED1012'),
+	(2324, 0, 57062675, 'Raiffeisenbank', 'GENODE51NWA'),
+	(2325, 0, 57063478, 'Volksbank Vallendar-Niederwerth', 'GENODED1VAN'),
+	(2326, 0, 57064221, 'Volksbank Mülheim-Kärlich', 'GENODED1MKA'),
+	(2327, 0, 57069067, 'Raiffeisenbank Lutzerather Höhe', 'GENODED1LUH'),
+	(2328, 0, 57069081, 'Raiffeisenbank Moselkrampen', 'GENODED1MOK'),
+	(2329, 0, 57069144, 'Raiffeisenbank Kaisersesch', 'GENODED1KAI'),
+	(2330, 0, 57069238, 'Raiffeisenbank Neustadt', 'GENODED1ASN'),
+	(2331, 0, 57069257, 'Raiffeisenbank Untermosel', 'GENODED1UMO'),
+	(2332, 0, 57069315, 'Raiffeisenbank Straßenhaus -alt-', 'GENODED1SRH'),
+	(2333, 0, 57069361, 'Raiffeisenbank Welling', 'GENODED1WLG'),
+	(2334, 0, 57069526, 'Raiffeisenbank Idarwald -alt-', 'GENODED1IDW'),
+	(2335, 0, 57069727, 'Raiffeisenbank Irrel', 'GENODED1IRR'),
+	(2336, 0, 57069806, 'VR-Bank Hunsrück-Mosel', 'GENODED1MBA'),
+	(2337, 0, 57070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB570'),
+	(2338, 0, 57070045, 'Deutsche Bank', 'DEUTDE5M570'),
+	(2339, 0, 57080070, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF570'),
+	(2340, 0, 57090000, 'Volksbank Koblenz Mittelrhein', 'GENODE51KOB'),
+	(2341, 0, 57090900, 'PSD Bank Koblenz', 'GENODEF1P12'),
+	(2342, 0, 57091000, 'Volksbank Montabaur-Höhr-Grenzhausen', 'GENODE51MON'),
+	(2343, 0, 57091100, 'Volksbank Höhr-Grenzhausen -alt-', 'GENODE51HGR'),
+	(2344, 0, 57092800, 'Volksbank Rhein-Lahn', 'GENODE51DIE'),
+	(2345, 0, 57263015, 'Raiffeisenbank Unterwesterwald', 'GENODE51ARZ'),
+	(2346, 0, 57351030, 'Kreissparkasse Altenkirchen', 'MALADE51AKI'),
+	(2347, 0, 57361476, 'Volksbank Gebhardshain', 'GENODED1GBS'),
+	(2348, 0, 57363243, 'Raiffeisenbank Niederfischbach -alt-', 'GENODED1NFB'),
+	(2349, 0, 57391200, 'Volksbank Daaden', 'GENODE51DAA'),
+	(2350, 0, 57391500, 'Volksbank Hamm, Sieg', 'GENODE51HAM'),
+	(2351, 0, 57391800, 'Westerwald Bank', 'GENODE51WW1'),
+	(2352, 0, 57400000, 'Bundesbank eh Neuwied', 'MARKDEF1574'),
+	(2353, 0, 57450120, 'Sparkasse Neuwied', 'MALADE51NWD'),
+	(2354, 0, 57460117, 'Volks- und Raiffeisenbank Neuwied-Linz', 'GENODED1NWD'),
+	(2355, 0, 57461759, 'Raiffeisenbank Mittelrhein', 'GENODED1MRW'),
+	(2356, 0, 57470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB574'),
+	(2357, 0, 57470047, 'Deutsche Bank', 'DEUTDE5M574'),
+	(2358, 0, 57650010, 'Kreissparkasse Mayen', 'MALADE51MYN'),
+	(2359, 0, 57661253, 'Raiffeisenbank', 'GENODED1KEH'),
+	(2360, 0, 57662263, 'VR Bank Rhein-Mosel', 'GENODED1MPO'),
+	(2361, 0, 57751310, 'Kreissparkasse Ahrweiler', 'MALADE51AHR'),
+	(2362, 0, 57761591, 'Volksbank RheinAhrEifel', 'GENODED1BNA'),
+	(2363, 0, 57762265, 'Raiffeisenbank Grafschaft-Wachtberg', 'GENODED1GRO'),
+	(2364, 0, 58500000, 'Bundesbank eh Trier', 'MARKDEF1585'),
+	(2365, 0, 58510111, 'SEB', 'ESSEDE5F585'),
+	(2366, 0, 58520086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM437'),
+	(2367, 0, 58540035, 'Commerzbank', 'COBADEFF585'),
+	(2368, 0, 58550130, 'Sparkasse Trier', 'TRISDE55XXX'),
+	(2369, 0, 58560103, 'Volksbank Trier', 'GENODED1TVB'),
+	(2370, 0, 58560294, 'Pax-Bank', 'GENODED1PA3'),
+	(2371, 0, 58561250, 'Volksbank Hermeskeil -alt-', 'GENODED1HER'),
+	(2372, 0, 58561626, 'Volksbank Saarburg -alt-', 'GENODED1SRB'),
+	(2373, 0, 58561771, 'Raiffeisenbank Mehring-Leiwen', 'GENODED1MLW'),
+	(2374, 0, 58564788, 'Volksbank Hochwald-Saarburg', 'GENODED1HWM'),
+	(2375, 0, 58570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB585'),
+	(2376, 0, 58570048, 'Deutsche Bank', 'DEUTDE5M585'),
+	(2377, 0, 58580074, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF585'),
+	(2378, 0, 58590900, 'PSD Bank Trier Ndl der PSD Bank Köln', 'GENODEF1P21'),
+	(2379, 0, 58650030, 'Kreissparkasse Bitburg-Prüm', 'MALADE51BIT'),
+	(2380, 0, 58651240, 'Kreissparkasse Vulkaneifel', 'MALADE51DAU'),
+	(2381, 0, 58660101, 'Volksbank Bitburg', 'GENODED1BIT'),
+	(2382, 0, 58661901, 'Raiffeisenbank Westeifel', 'GENODED1WSC'),
+	(2383, 0, 58662653, 'Raiffeisenbank östl Südeifel', 'GENODED1OSE'),
+	(2384, 0, 58668818, 'Raiffeisenbank Neuerburg-Land -alt-', 'GENODED1NBL'),
+	(2385, 0, 58691500, 'Volksbank Eifel Mitte', 'GENODED1PRU'),
+	(2386, 0, 58751230, 'Sparkasse Mittelmosel-Eifel Mosel Hunsrück', 'MALADE51BKS'),
+	(2387, 0, 58760954, 'Vereinigte Volksbank Raiffeisenbank', 'GENODED1WTL'),
+	(2388, 0, 58761343, 'Raiffeisenbank Zeller Land', 'GENODED1BPU'),
+	(2389, 0, 58771224, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB587'),
+	(2390, 0, 58771242, 'Deutsche Bank', 'DEUTDE5M587'),
+	(2391, 0, 59000000, 'Bundesbank', 'MARKDEF1590'),
+	(2392, 0, 59010011, 'ZVC Postbank Gf FK 11', 'PBNKDEFFXXX'),
+	(2393, 0, 59010012, 'ZVC Postbank Gf FK 12', 'PBNKDEFFXXX'),
+	(2394, 0, 59010013, 'ZVC Postbank Gf FK 13', 'PBNKDEFFXXX'),
+	(2395, 0, 59010014, 'ZVC Postbank Gf FK 14', 'PBNKDEFFXXX'),
+	(2396, 0, 59010015, 'ZVC Postbank Gf FK 15', 'PBNKDEFFXXX'),
+	(2397, 0, 59010016, 'ZVC Postbank Gf FK 16', 'PBNKDEFFXXX'),
+	(2398, 0, 59010017, 'ZVC Postbank Gf FK 17', 'PBNKDEFFXXX'),
+	(2399, 0, 59010018, 'ZVC Postbank Gf FK 18', 'PBNKDEFFXXX'),
+	(2400, 0, 59010019, 'ZVC Postbank Gf FK 19', 'PBNKDEFFXXX'),
+	(2401, 0, 59010020, 'ZVC Postbank GF FK 20', 'PBNKDEFFXXX'),
+	(2402, 0, 59010021, 'ZVC Postbank GF FK 21', 'PBNKDEFFXXX'),
+	(2403, 0, 59010022, 'ZVC Postbank GF FK 22', 'PBNKDEFFXXX'),
+	(2404, 0, 59010023, 'ZVC Postbank GF FK 23', 'PBNKDEFFXXX'),
+	(2405, 0, 59010024, 'ZVC Postbank GF FK 24', 'PBNKDEFFXXX'),
+	(2406, 0, 59010025, 'ZVC Postbank GF FK 25', 'PBNKDEFFXXX'),
+	(2407, 0, 59010026, 'ZVC Postbank GF FK 26', 'PBNKDEFFXXX'),
+	(2408, 0, 59010027, 'ZVC Postbank Gf FK 27', 'PBNKDEFFXXX'),
+	(2409, 0, 59010028, 'ZVC Postbank Gf FK 28', 'PBNKDEFFXXX'),
+	(2410, 0, 59010029, 'ZVC Postbank Gf FK 29', 'PBNKDEFFXXX'),
+	(2411, 0, 59010031, 'ZVC Postbank Gf FK 31', 'PBNKDEFFXXX'),
+	(2412, 0, 59010032, 'ZVC Postbank Gf FK 32', 'PBNKDEFFXXX'),
+	(2413, 0, 59010033, 'ZVC Postbank Gf FK 33', 'PBNKDEFFXXX'),
+	(2414, 0, 59010034, 'ZVC Postbank Gf FK 34', 'PBNKDEFFXXX'),
+	(2415, 0, 59010035, 'ZVC Postbank Gf FK 35', 'PBNKDEFFXXX'),
+	(2416, 0, 59010036, 'ZVC Postbank Gf FK 36', 'PBNKDEFFXXX'),
+	(2417, 0, 59010037, 'ZVC Postbank Gf FK 37', 'PBNKDEFFXXX'),
+	(2418, 0, 59010038, 'ZVC Postbank Gf FK 38', 'PBNKDEFFXXX'),
+	(2419, 0, 59010039, 'ZVC Postbank Gf FK 39', 'PBNKDEFFXXX'),
+	(2420, 0, 59010040, 'ZVC Postbank Gf FK 40', 'PBNKDEFFXXX'),
+	(2421, 0, 59010041, 'ZVC Postbank Gf FK 41', 'PBNKDEFFXXX'),
+	(2422, 0, 59010042, 'ZVC Postbank Gf FK 42', 'PBNKDEFFXXX'),
+	(2423, 0, 59010044, 'ZVC Postbank Gf FK 44', 'PBNKDEFFXXX'),
+	(2424, 0, 59010045, 'ZVC Postbank Gf FK 45', 'PBNKDEFFXXX'),
+	(2425, 0, 59010047, 'ZVC Postbank Gf FK 47', 'PBNKDEFFXXX'),
+	(2426, 0, 59010048, 'ZVC Postbank Gf FK 48', 'PBNKDEFFXXX'),
+	(2427, 0, 59010049, 'ZVC Postbank Gf FK 49', 'PBNKDEFFXXX'),
+	(2428, 0, 59010066, 'Postbank', 'PBNKDEFFXXX'),
+	(2429, 0, 59010111, 'SEB', 'ESSEDE5F590'),
+	(2430, 0, 59010400, 'Saarl Investitionskreditbank', 'SIKBDE55XXX'),
+	(2431, 0, 59020090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM432'),
+	(2432, 0, 59020700, 'Hanseatic Bank', 'HSTBDEH1SAA'),
+	(2433, 0, 59040000, 'Commerzbank', 'COBADEFF590'),
+	(2434, 0, 59050000, 'Landesbank Saar', 'SALADE55XXX'),
+	(2435, 0, 59050101, 'Sparkasse Saarbrücken', 'SAKSDE55XXX'),
+	(2436, 0, 59051090, 'Stadtsparkasse Völklingen', 'SALADE51VKS'),
+	(2437, 0, 59052020, 'SKG BANK', 'SALADE51SKG'),
+	(2438, 0, 59070000, 'Deutsche Bank Saarbruecken', 'DEUTDE5M555'),
+	(2439, 0, 59070070, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB595'),
+	(2440, 0, 59080090, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF590'),
+	(2441, 0, 59090626, 'apoBank', 'DAAEDED1026'),
+	(2442, 0, 59090900, 'PSD Bank RheinNeckarSaar', 'GENODEF1P19'),
+	(2443, 0, 59091500, 'Volksbank Sulzbachtal -alt-', 'GENODE51SUZ'),
+	(2444, 0, 59091800, 'Volksbank Quierschied -alt-', 'GENODE51QUI'),
+	(2445, 0, 59092000, 'Vereinigte Volksbank Dillingen Dudweiler Sulzbach/Saar', 'GENODE51SB2'),
+	(2446, 0, 59099530, 'Raiffeisenkasse Wiesbach -alt-', 'GENODE51EWI'),
+	(2447, 0, 59099550, 'Volksbank Nahe-Schaumberg', 'GENODE51NOH'),
+	(2448, 0, 59190000, 'Bank 1 Saar', 'SABADE5SXXX'),
+	(2449, 0, 59190100, 'VVBS Ver. Volksbanken Saarbrücken-St Ingbert', 'GENODE51SB1'),
+	(2450, 0, 59190200, 'Volksbank Saar-West', 'GENODE51SLS'),
+	(2451, 0, 59251020, 'Kreissparkasse St. Wendel', 'SALADE51WND'),
+	(2452, 0, 59252046, 'Sparkasse Neunkirchen', 'SALADE51NKS'),
+	(2453, 0, 59290100, 'Volksbank Neunkirchen', 'GENODE51NES'),
+	(2454, 0, 59291000, 'St. Wendeler Volksbank', 'GENODE51WEN'),
+	(2455, 0, 59291200, 'Volksbank Saarpfalz', 'GENODE51BEX'),
+	(2456, 0, 59291300, 'Volksbank Spiesen-Elversberg -alt-', 'GENODE51SPI'),
+	(2457, 0, 59292400, 'Eppelborner Volksbank -alt-', 'GENODE51EPP'),
+	(2458, 0, 59300000, 'Bundesbank eh Saarlouis', 'MARKDEF1593'),
+	(2459, 0, 59320087, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM838'),
+	(2460, 0, 59350110, 'Kreissparkasse Saarlouis', 'KRSADE55XXX'),
+	(2461, 0, 59351040, 'Sparkasse Merzig-Wadern', 'MERZDE55XXX'),
+	(2462, 0, 59390100, 'Volksbank Saarlouis', 'GENODE51SLF'),
+	(2463, 0, 59391200, 'Volksbank Überherrn', 'GENODE51UBH'),
+	(2464, 0, 59392000, 'Volksbank Dillingen -alt-', 'GENODE51DSA'),
+	(2465, 0, 59392200, 'Volksbank Untere Saar', 'GENODE51LOS'),
+	(2466, 0, 59393000, 'levoBank', 'GENODE51LEB'),
+	(2467, 0, 59450010, 'Kreissparkasse Saarpfalz', 'SALADE51HOM'),
+	(2468, 0, 59491114, 'VR Bank Saarpfalz', 'GENODE51HOM'),
+	(2469, 0, 59491300, 'VR Bank Saarpfalz', 'GENODE51MBT'),
+	(2470, 0, 60000000, 'Bundesbank', 'MARKDEF1600'),
+	(2471, 0, 60010070, 'Postbank', 'PBNKDEFFXXX'),
+	(2472, 0, 60010111, 'SEB', 'ESSEDE5F600'),
+	(2473, 0, 60010424, 'Aareal Bank', 'AARBDE5W600'),
+	(2474, 0, 60010700, 'Landeskreditbank Baden-Württemberg Förderbank -alt-', 'LKBWDE6K600'),
+	(2475, 0, 60020030, 'Baden-Württembergische Bank', 'SOLADEST601'),
+	(2476, 0, 60020100, 'Schwäbische Bank', 'SCHWDESSXXX'),
+	(2477, 0, 60020290, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM473'),
+	(2478, 0, 60020300, 'VON ESSEN Bankgesellschaft', 'VONEDE33STG'),
+	(2479, 0, 60020700, 'Hanseatic Bank', 'HSTBDEH1STU'),
+	(2480, 0, 60030000, 'Mercedes-Benz Bank', 'MEBEDE6SDCB'),
+	(2481, 0, 60030100, 'Bankhaus Bauer, Stuttgart', 'BHBADES1XXX'),
+	(2482, 0, 60030200, 'Bankhaus Ellwanger & Geiger', 'ELGEDES1XXX'),
+	(2483, 0, 60030600, 'CreditPlus Bank', 'CPLUDES1XXX'),
+	(2484, 0, 60030666, 'CreditPlus Bank', 'CPLUDES1XXX'),
+	(2485, 0, 60030700, 'AKTIVBANK', 'AKBADES1XXX'),
+	(2486, 0, 60030900, 'Isbank Fil Stuttgart', 'ISBKDEFXSTU'),
+	(2487, 0, 60033000, 'Wüstenrot Bausparkasse', 'BSWLDE61XXX'),
+	(2488, 0, 60035810, 'IBM Deutschland Kreditbank', 'IBKBDES1XXX'),
+	(2489, 0, 60040060, 'Commerzbank CC', 'COBADEFF096'),
+	(2490, 0, 60040061, 'Commerzbank CC', 'COBADEFF097'),
+	(2491, 0, 60040071, 'Commerzbank', 'COBADEFF600'),
+	(2492, 0, 60050000, 'Landesbank Baden-Württemberg', 'SOLADESTXXX'),
+	(2493, 0, 60050009, 'ZV Landesbank Baden-Württemberg ISE', ''),
+	(2494, 0, 60050101, 'Landesbank Baden-Württemberg/Baden-Württembergische Bank', 'SOLADEST600'),
+	(2495, 0, 60060000, 'DZ BANK', 'GENODESGXXX'),
+	(2496, 0, 60060202, 'DZ PRIVATBANK Ndl. Stuttgart', 'GENODESTXXX'),
+	(2497, 0, 60060396, 'Untertürkheimer Volksbank', 'GENODES1UTV'),
+	(2498, 0, 60060606, 'Evangelische Kreditgenossenschaft -Filiale Stuttgart-', 'GENODES1EK2'),
+	(2499, 0, 60060893, 'VR-Bank Stuttgart -alt-', 'GENODES1FIL'),
+	(2500, 0, 60062775, 'Echterdinger Bank', 'GENODES1ECH'),
+	(2501, 0, 60062909, 'Volksbank Strohgäu', 'GENODES1MCH'),
+	(2502, 0, 60069017, 'Raiffeisenbank Dellmensingen', 'GENODES1DMS'),
+	(2503, 0, 60069066, 'Raiffeisenbank Niedere Alb', 'GENODES1RBA'),
+	(2504, 0, 60069075, 'Raiffeisenbank Bühlertal', 'GENODES1RVG'),
+	(2505, 0, 60069126, 'Raiffeisenbank Römerstein -alt-', 'GENODES1ROM'),
+	(2506, 0, 60069147, 'Raiffeisenbank Sondelfingen', 'GENODES1RSF'),
+	(2507, 0, 60069158, 'Raiffeisenbank Steinheim', 'GENODES1SAA'),
+	(2508, 0, 60069206, 'Raiffeisenbank', 'GENODES1AID'),
+	(2509, 0, 60069224, 'Genossenschaftsbank Weil im Schönbuch', 'GENODES1GWS'),
+	(2510, 0, 60069235, 'Raiffeisenbank Zndl VB Nordschwarzwald -alt-', ''),
+	(2511, 0, 60069239, 'Bopfinger Bank Sechta-Ries', 'GENODES1BPF'),
+	(2512, 0, 60069242, 'Raiffeisenbank Gruibingen', 'GENODES1RGR'),
+	(2513, 0, 60069245, 'Raiffeisenbank Oberes Bühlertal', 'GENODES1ROB'),
+	(2514, 0, 60069251, 'Raiffeisenbank Donau-Iller', 'GENODES1RDI'),
+	(2515, 0, 60069302, 'Raiffeisenbank Erlenmoos', 'GENODES1ERM'),
+	(2516, 0, 60069303, 'Raiffeisenbank Bad Schussenried', 'GENODES1RBS'),
+	(2517, 0, 60069308, 'Raiffeisenbank', 'GENODES1RIN'),
+	(2518, 0, 60069315, 'Volksbank Freiberg und Umgebung', 'GENODES1MDH'),
+	(2519, 0, 60069325, 'Hegnacher Bank -alt-', 'GENODES1HEG'),
+	(2520, 0, 60069336, 'Raiffeisenbank Maitis', 'GENODES1RMA'),
+	(2521, 0, 60069343, 'Raiffeisenbank Rißtal', 'GENODES1RRI'),
+	(2522, 0, 60069346, 'Raiffeisenbank Ehingen-Hochsträß', 'GENODES1REH'),
+	(2523, 0, 60069350, 'Raiffeisenbank Reute-Gaisbeuren', 'GENODES1RRG'),
+	(2524, 0, 60069355, 'Ehninger Bank', 'GENODES1EHN'),
+	(2525, 0, 60069371, 'Raiffbk Neukirch Ndl d Volksbank Tettnang', 'GENODES1RNK'),
+	(2526, 0, 60069378, 'Volksbank Dettenhausen', 'GENODES1DEH'),
+	(2527, 0, 60069387, 'Dettinger Bank', 'GENODES1DBE'),
+	(2528, 0, 60069417, 'Raiffeisenbank Kirchheim-Walheim', 'GENODES1KIB'),
+	(2529, 0, 60069419, 'Uhlbacher Bank -alt-', 'GENODES1UHL'),
+	(2530, 0, 60069420, 'Raiffeisenbank Mittelbiberach', 'GENODES1MBI'),
+	(2531, 0, 60069431, 'Raiffeisenbank Oberessendorf', 'GENODES1OED'),
+	(2532, 0, 60069442, 'Raiffeisenbank Frankenhardt-Stimpfach', 'GENODES1RFS'),
+	(2533, 0, 60069455, 'Raiffeisenbank Vordersteinenberg', 'GENODES1RVS'),
+	(2534, 0, 60069457, 'Raiffeisenbank Ottenbach', 'GENODES1OTT'),
+	(2535, 0, 60069461, 'Raiffeisenbank Rottumtal', 'GENODES1RRE'),
+	(2536, 0, 60069462, 'Winterbacher Bank', 'GENODES1WBB'),
+	(2537, 0, 60069463, 'Raiffeisenbank Geislingen-Rosenfeld', 'GENODES1RKH'),
+	(2538, 0, 60069476, 'Raiffeisenbank Heidenheimer Alb', 'GENODES1DEA'),
+	(2539, 0, 60069485, 'Raiffeisenbank Oberer Wald', 'GENODES1ROW'),
+	(2540, 0, 60069505, 'Volksbank Murgtal', 'GENODES1VMT'),
+	(2541, 0, 60069517, 'Scharnhauser Bank', 'GENODES1SCA'),
+	(2542, 0, 60069520, 'Raiffeisenbank Ehingen-Hochsträß', 'GENODES1OMT'),
+	(2543, 0, 60069527, 'Volksbank Brenztal', 'GENODES1RNS'),
+	(2544, 0, 60069538, 'Löchgauer Bank', 'GENODES1LOC'),
+	(2545, 0, 60069544, 'Raiffeisenbank Westhausen', 'GENODES1RWN'),
+	(2546, 0, 60069545, 'Nufringer Bank -Raiffeisen-', 'GENODES1NUF'),
+	(2547, 0, 60069553, 'Raiffeisenbank Aichhalden-Hardt-Sulgen', 'GENODES1HAR'),
+	(2548, 0, 60069564, 'Raiffeisenbank Vordere Alb', 'GENODES1RVA'),
+	(2549, 0, 60069593, 'Raiffeisenbank Oberes Schlichemtal -alt-', 'GENODES1ROS'),
+	(2550, 0, 60069595, 'Raiffeisenbank Schrozberg-Rot am See', 'GENODES1SBB'),
+	(2551, 0, 60069639, 'Raiffeisenbank Ingersheim', 'GENODES1RIH'),
+	(2552, 0, 60069648, 'Raiffeisenbank', 'GENODES1EHZ'),
+	(2553, 0, 60069669, 'Erligheimer Bank -alt-', 'GENODES1EHB'),
+	(2554, 0, 60069670, 'Raiffeisenbank Ehingen-Hochsträß', 'GENODES1HOC'),
+	(2555, 0, 60069673, 'Abtsgmünder Bank -Raiffeisen-', 'GENODES1ABR'),
+	(2556, 0, 60069680, 'Raiffeisenbank Bretzfeld-Neuenstein', 'GENODES1BRZ'),
+	(2557, 0, 60069685, 'Raiffeisenbank', 'GENODES1RWA'),
+	(2558, 0, 60069692, 'Raiffeisenbank Enzberg', 'GENODES1ENZ'),
+	(2559, 0, 60069705, 'Raiffeisenbank Schlat -alt-', 'GENODES1SLA'),
+	(2560, 0, 60069706, 'Raiffeisenbank', 'GENODES1MEH'),
+	(2561, 0, 60069710, 'Raiffeisenbank Gammesfeld', 'GENODES1RGF'),
+	(2562, 0, 60069714, 'Raiffeisenbank Kocher-Jagst', 'GENODES1IBR'),
+	(2563, 0, 60069724, 'Raiffeisenbank Heroldstatt -alt-', 'GENODES1RHS'),
+	(2564, 0, 60069727, 'Raiffeisenbank', 'GENODES1ROF'),
+	(2565, 0, 60069738, 'Volksbank Freiberg und Umgebung', 'GENODES1FAN'),
+	(2566, 0, 60069766, 'Volks- und Raiffeisenbank Boll -alt-', 'GENODES1BBO'),
+	(2567, 0, 60069780, 'Genossenschaftsbank Grabenstetten', 'GENODES1GBG'),
+	(2568, 0, 60069795, 'Volksbank Freiberg und Umgebung', 'GENODES1HHB'),
+	(2569, 0, 60069798, 'Raiffeisenbank Horb', 'GENODES1RHB'),
+	(2570, 0, 60069817, 'Raiffeisenbank', 'GENODES1RMO'),
+	(2571, 0, 60069832, 'Raiffeisenbank Urbach', 'GENODES1URB'),
+	(2572, 0, 60069842, 'Darmsheimer Bank', 'GENODES1DHB'),
+	(2573, 0, 60069858, 'Enztalbank', 'GENODES1VAI'),
+	(2574, 0, 60069860, 'Federseebank', 'GENODES1FED'),
+	(2575, 0, 60069876, 'Raiffeisenbank Oberes Gäu Ergenzingen', 'GENODES1ROG'),
+	(2576, 0, 60069896, 'Volksbank Freiberg und Umgebung', 'GENODES1PLE'),
+	(2577, 0, 60069904, 'VR-Bank Alb', 'GENODES1RUW'),
+	(2578, 0, 60069905, 'Volksbank Remseck', 'GENODES1REM'),
+	(2579, 0, 60069911, 'Raiffeisenbank', 'GENODES1ERL'),
+	(2580, 0, 60069926, 'Volksbank Glatten-Wittendorf -alt-', 'GENODES1VBG'),
+	(2581, 0, 60069927, 'Berkheimer Bank', 'GENODES1BHB'),
+	(2582, 0, 60069931, 'Raiffeisenbank', 'GENODES1BGH'),
+	(2583, 0, 60069950, 'Raiffeisenbank Tüngental', 'GENODES1TUN'),
+	(2584, 0, 60069971, 'Raiffeisenbank Ehingen-Hochsträß', 'GENODES1ODD'),
+	(2585, 0, 60069976, 'Raiffeisenbank Böllingertal', 'GENODES1BOE'),
+	(2586, 0, 60069980, 'Raiffeisenbank Maselheim-Äpfingen', 'GENODES1RMH'),
+	(2587, 0, 60070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBSTG'),
+	(2588, 0, 60070070, 'Deutsche Bank', 'DEUTDESSXXX'),
+	(2589, 0, 60080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF600'),
+	(2590, 0, 60080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF608'),
+	(2591, 0, 60080057, 'Commerzbank vormals Dresdner Bank Gf Zw 57', 'DRESDEFF609'),
+	(2592, 0, 60080085, 'Commerzbank vormals Dresdner Bank ITGK 2', 'DRESDEFFI50'),
+	(2593, 0, 60080086, 'Commerzbank vormals Dresdner Bank Gf PCC-ITGK 3', 'DRESDEFFI54'),
+	(2594, 0, 60080087, 'Commerzbank vormals Dresdner Bank, PCC DC-ITGK 4', 'DRESDEFFI57'),
+	(2595, 0, 60080088, 'Commerzbank vormals Dresdner Bank, PCC DC-ITGK 5', 'DRESDEFFI58'),
+	(2596, 0, 60089450, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI21'),
+	(2597, 0, 60090100, 'Volksbank Stuttgart', 'VOBADESSXXX'),
+	(2598, 0, 60090300, 'Volksbank Zuffenhausen m Zndl Stammheimer VB', 'GENODES1ZUF'),
+	(2599, 0, 60090609, 'apoBank', 'DAAEDED1009'),
+	(2600, 0, 60090700, 'Südwestbank', 'SWBSDESSXXX'),
+	(2601, 0, 60090800, 'Sparda-Bank Baden-Württemberg', 'GENODEF1S02'),
+	(2602, 0, 60090900, 'PSD Bank RheinNeckarSaar', 'GENODEF1P20'),
+	(2603, 0, 60120050, 'UniCredit Bank - HypoVereinsbank Ndl 434 Stgt', 'HYVEDEM1085'),
+	(2604, 0, 60120200, 'BHF-BANK', 'BHFBDEFF600'),
+	(2605, 0, 60120500, 'Bank für Sozialwirtschaft', 'BFSWDE33STG'),
+	(2606, 0, 60130100, 'FFS Bank', 'GENODED1FFS'),
+	(2607, 0, 60133300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(2608, 0, 60200000, 'Bundesbank eh Waiblingen', 'MARKDEF1602'),
+	(2609, 0, 60220030, 'Baden-Württembergische Bank', 'SOLADEST602'),
+	(2610, 0, 60241074, 'Commerzbank', 'COBADEFF602'),
+	(2611, 0, 60250010, 'Kreissparkasse Waiblingen', 'SOLADES1WBN'),
+	(2612, 0, 60250184, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST820'),
+	(2613, 0, 60261329, 'Fellbacher Bank', 'GENODES1FBB'),
+	(2614, 0, 60261622, 'VR-Bank Weinstadt', 'GENODES1WNS'),
+	(2615, 0, 60261818, 'Raiffeisenbank Weissacher Tal', 'GENODES1RWT'),
+	(2616, 0, 60262063, 'Korber Bank', 'GENODES1KOR'),
+	(2617, 0, 60262693, 'Kerner Volksbank', 'GENODES1KRN'),
+	(2618, 0, 60270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB606'),
+	(2619, 0, 60270073, 'Deutsche Bank', 'DEUTDESS606'),
+	(2620, 0, 60290110, 'Volksbank Rems -alt-', 'GENODES1VWN'),
+	(2621, 0, 60291120, 'Volksbank Backnang', 'GENODES1VBK'),
+	(2622, 0, 60291510, 'Volksbank Winnenden -alt-', 'GENODES1WIN'),
+	(2623, 0, 60300000, 'Bundesbank eh Sindelfingen', 'MARKDEF1603'),
+	(2624, 0, 60320030, 'Baden-Württembergische Bank', 'SOLADEST607'),
+	(2625, 0, 60320291, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM858'),
+	(2626, 0, 60340071, 'Commerzbank Sindelfingen', 'COBADEFF606'),
+	(2627, 0, 60350130, 'Kreissparkasse Böblingen', 'BBKRDE6BXXX'),
+	(2628, 0, 60361923, 'Raiffeisenbank Weissach', 'GENODES1WES'),
+	(2629, 0, 60380002, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF601'),
+	(2630, 0, 60390000, 'Vereinigte Volksbank', 'GENODES1BBV'),
+	(2631, 0, 60390300, 'Volksbank Region Leonberg', 'GENODES1LEO'),
+	(2632, 0, 60391310, 'Volksbank Herrenberg-Rottenburg', 'GENODES1VBH'),
+	(2633, 0, 60391420, 'Volksbank Magstadt', 'GENODES1MAG'),
+	(2634, 0, 60400000, 'Bundesbank eh Ludwigsburg', 'MARKDEF1604'),
+	(2635, 0, 60410600, 'Wüstenrot Bank Pfandbriefbk ehe Wüstenrot Hypo', 'WUEHDE61XXX'),
+	(2636, 0, 60420000, 'Wüstenrot Bank Pfandbriefbank', 'WBAGDE61XXX'),
+	(2637, 0, 60420186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM860'),
+	(2638, 0, 60422000, 'RSB Retail+Service Bank', 'SABUDE6SXXX'),
+	(2639, 0, 60430060, 'Baden-Württembergische Bank', 'SOLADEST604'),
+	(2640, 0, 60431061, 'Baden-Württembergische Bank', 'SOLADEST605'),
+	(2641, 0, 60440073, 'Commerzbank', 'COBADEFF604'),
+	(2642, 0, 60450050, 'Kreissparkasse Ludwigsburg', 'SOLADES1LBG'),
+	(2643, 0, 60450193, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST800'),
+	(2644, 0, 60460142, 'Volksbank Freiberg und Umgebung', 'GENODES1EGL'),
+	(2645, 0, 60462808, 'VR-Bank Asperg-Markgröningen', 'GENODES1AMT'),
+	(2646, 0, 60470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB604'),
+	(2647, 0, 60470082, 'Deutsche Bank', 'DEUTDESS604'),
+	(2648, 0, 60480008, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF604'),
+	(2649, 0, 60490150, 'Volksbank Ludwigsburg', 'GENODES1LBG'),
+	(2650, 0, 60491430, 'VR-Bank Stromberg-Neckar', 'GENODES1VBB'),
+	(2651, 0, 60651070, 'Kreissparkasse Calw -alt-', 'PZHSDE66XXX'),
+	(2652, 0, 60661369, 'Raiffeisenbank -alt-', 'GENODES1BIF'),
+	(2653, 0, 60661906, 'Raiffeisenbank Wimsheim-Mönsheim', 'GENODES1WIM'),
+	(2654, 0, 60663084, 'Raiffeisenbank im Kreis Calw', 'GENODES1RCW'),
+	(2655, 0, 60670024, 'Deutsche Bank Privat- und Geschäftskunden', 'DEUTDEDB659'),
+	(2656, 0, 60670070, 'Deutsche Bank', 'DEUTDESS659'),
+	(2657, 0, 60691440, 'Volksbank Maulbronn-Oberderdingen -alt-', 'GENODES1VMB'),
+	(2658, 0, 61020030, 'Baden-Württembergische Bank', 'SOLADEST610'),
+	(2659, 0, 61030000, 'Bankhaus Gebr. Martin', 'MARBDE6GXXX'),
+	(2660, 0, 61040014, 'Commerzbank', 'COBADEFF610'),
+	(2661, 0, 61050000, 'Kreissparkasse Göppingen', 'GOPSDE6GXXX'),
+	(2662, 0, 61050181, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST870'),
+	(2663, 0, 61060500, 'Volksbank Göppingen', 'GENODES1VGP'),
+	(2664, 0, 61070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB610'),
+	(2665, 0, 61070078, 'Deutsche Bank', 'DEUTDESS610'),
+	(2666, 0, 61080006, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF610'),
+	(2667, 0, 61091200, 'Volksbank-Raiffeisenbank Deggingen', 'GENODES1DGG'),
+	(2668, 0, 61100000, 'Bundesbank eh Esslingen', 'MARKDEF1611'),
+	(2669, 0, 61120030, 'Baden-Württembergische Bank', 'SOLADEST611'),
+	(2670, 0, 61120286, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM859'),
+	(2671, 0, 61140071, 'Commerzbank', 'COBADEFF611'),
+	(2672, 0, 61150020, 'Kreissparkasse Esslingen-Nürtingen', 'ESSLDE66XXX'),
+	(2673, 0, 61150185, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST840'),
+	(2674, 0, 61161696, 'Volksbank Filder', 'GENODES1NHB'),
+	(2675, 0, 61170024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB611'),
+	(2676, 0, 61170076, 'Deutsche Bank', 'DEUTDESS611'),
+	(2677, 0, 61180004, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF611'),
+	(2678, 0, 61190110, 'Volksbank Esslingen', 'GENODES1ESS'),
+	(2679, 0, 61191310, 'Volksbank Plochingen', 'GENODES1VBP'),
+	(2680, 0, 61220030, 'Baden-Württembergische Bank', 'SOLADEST612'),
+	(2681, 0, 61240048, 'Commerzbank', 'COBADEFF965'),
+	(2682, 0, 61261213, 'Raiffeisenbank Teck', 'GENODES1TEC'),
+	(2683, 0, 61261339, 'Volksbank Hohenneuffen', 'GENODES1HON'),
+	(2684, 0, 61262258, 'Genossenschaftsbank Wolfschlugen', 'GENODES1WLF'),
+	(2685, 0, 61262345, 'Bernhauser Bank', 'GENODES1BBF'),
+	(2686, 0, 61281007, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF612'),
+	(2687, 0, 61290120, 'Volksbank Kirchheim-Nürtingen', 'GENODES1NUE'),
+	(2688, 0, 61340079, 'Commerzbank', 'COBADEFF613'),
+	(2689, 0, 61361722, 'Raiffeisenbank Rosenstein', 'GENODES1HEU'),
+	(2690, 0, 61361975, 'Raiffeisenbank Mutlangen', 'GENODES1RML'),
+	(2691, 0, 61370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB613'),
+	(2692, 0, 61370086, 'Deutsche Bank', 'DEUTDESS613'),
+	(2693, 0, 61390140, 'Volksbank Schwäbisch Gmünd', 'GENODES1VGD'),
+	(2694, 0, 61391410, 'Volksbank Welzheim', 'GENODES1WEL'),
+	(2695, 0, 61400000, 'Bundesbank eh Aalen', 'MARKDEF1614'),
+	(2696, 0, 61420086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM272'),
+	(2697, 0, 61430000, 'Baden-Württembergische Bank', 'SOLADEST614'),
+	(2698, 0, 61440086, 'Commerzbank', 'COBADEFF614'),
+	(2699, 0, 61450050, 'Kreissparkasse Ostalb', 'OASPDE6AXXX'),
+	(2700, 0, 61450191, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST420'),
+	(2701, 0, 61480001, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF614'),
+	(2702, 0, 61490150, 'VR-Bank Aalen', 'GENODES1AAV'),
+	(2703, 0, 61491010, 'VR-Bank Ellwangen', 'GENODES1ELL'),
+	(2704, 0, 62000000, 'Bundesbank eh Heilbronn', 'MARKDEF1620'),
+	(2705, 0, 62020000, 'Hoerner-Bank', 'HOEBDE61XXX'),
+	(2706, 0, 62020100, 'FGA Bank Germany', 'FBHNDE61XXX'),
+	(2707, 0, 62030050, 'Baden-Württembergische Bank', 'SOLADEST620'),
+	(2708, 0, 62030058, 'Baden-Württembergische Bank', 'SOLADEST624'),
+	(2709, 0, 62030059, 'Baden-Württembergische Bank', 'SOLADEST625'),
+	(2710, 0, 62030060, 'Baden-Württembergische Bank', 'SOLADEST626'),
+	(2711, 0, 62040060, 'Commerzbank', 'COBADEFF620'),
+	(2712, 0, 62050000, 'Kreissparkasse Heilbronn', 'HEISDE66XXX'),
+	(2713, 0, 62050181, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST400'),
+	(2714, 0, 62061991, 'Volksbank Sulmtal', 'GENODES1VOS'),
+	(2715, 0, 62062215, 'Volksbank Beilstein-Ilsfeld-Abstatt', 'GENODES1BIA'),
+	(2716, 0, 62062643, 'Volksbank Flein-Talheim', 'GENODES1VFT'),
+	(2717, 0, 62063263, 'VBU Volksbank im Unterland', 'GENODES1VLS'),
+	(2718, 0, 62070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB620'),
+	(2719, 0, 62070081, 'Deutsche Bank', 'DEUTDESS620'),
+	(2720, 0, 62080012, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF620'),
+	(2721, 0, 62090100, 'Volksbank Heilbronn', 'GENODES1VHN'),
+	(2722, 0, 62091400, 'Volksbank Brackenheim-Güglingen', 'GENODES1VBR'),
+	(2723, 0, 62091600, 'Volksbank Möckmühl-Neuenstadt', 'GENODES1VMN'),
+	(2724, 0, 62091800, 'Volksbank Hohenlohe', 'GENODES1VHL'),
+	(2725, 0, 62200000, 'Bundesbank eh Schwäbisch Hall', 'MARKDEF1622'),
+	(2726, 0, 62220000, 'Bausparkasse Schwäbisch Hall', 'BSHHDE61XXX'),
+	(2727, 0, 62230050, 'Baden-Württembergische Bank', 'SOLADEST622'),
+	(2728, 0, 62240048, 'Commerzbank', 'COBADEFF966'),
+	(2729, 0, 62250030, 'Sparkasse Schwäbisch Hall-Crailsheim', 'SOLADES1SHA'),
+	(2730, 0, 62250182, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST416'),
+	(2731, 0, 62251550, 'Sparkasse Hohenlohekreis', 'SOLADES1KUN'),
+	(2732, 0, 62280012, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF622'),
+	(2733, 0, 62290110, 'VR Bank Schwäbisch Hall-Crailsheim', 'GENODES1SHA'),
+	(2734, 0, 62291020, 'Crailsheimer Volksbank -alt-', 'GENODES1CRV'),
+	(2735, 0, 62361274, 'Creglinger Bank', 'GENODES1CRB'),
+	(2736, 0, 62391010, 'Volksbank Bad Mergentheim -alt-', 'GENODES1VBM'),
+	(2737, 0, 62391420, 'Volksbank Vorbach-Tauber', 'GENODES1VVT'),
+	(2738, 0, 63000000, 'Bundesbank', 'MARKDEF1630'),
+	(2739, 0, 63010111, 'SEB', 'ESSEDE5F630'),
+	(2740, 0, 63020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM461'),
+	(2741, 0, 63020130, 'Baden-Württembergische Bank', 'SOLADEST630'),
+	(2742, 0, 63020450, 'UniCredit Bank - HypoVereinsbank Ndl 274 Ulm', 'HYVEDEM1080'),
+	(2743, 0, 63040053, 'Commerzbank', 'COBADEFF630'),
+	(2744, 0, 63050000, 'Sparkasse Ulm', 'SOLADES1ULM'),
+	(2745, 0, 63050181, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST440'),
+	(2746, 0, 63061486, 'VR-Bank Langenau-Ulmer Alb', 'GENODES1LBK'),
+	(2747, 0, 63070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB630'),
+	(2748, 0, 63070088, 'Deutsche Bank', 'DEUTDESS630'),
+	(2749, 0, 63080015, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF630'),
+	(2750, 0, 63080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFI59'),
+	(2751, 0, 63090100, 'Volksbank Ulm-Biberach', 'ULMVDE66XXX'),
+	(2752, 0, 63091010, 'Ehinger Volksbank', 'GENODES1EHI'),
+	(2753, 0, 63091200, 'Volksbank Blaubeuren', 'GENODES1BLA'),
+	(2754, 0, 63091300, 'Volksbank Laichinger Alb', 'GENODES1LAI'),
+	(2755, 0, 63220090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM271'),
+	(2756, 0, 63240016, 'Commerzbank', 'COBADEFF632'),
+	(2757, 0, 63250030, 'Kreissparkasse Heidenheim', 'SOLADES1HDH'),
+	(2758, 0, 63290110, 'Heidenheimer Volksbank', 'GENODES1HDH'),
+	(2759, 0, 63291210, 'Giengener Volksbank -alt-', 'GENODES1GVB'),
+	(2760, 0, 64000000, 'Bundesbank', 'MARKDEF1640'),
+	(2761, 0, 64020030, 'Baden-Württembergische Bank', 'SOLADEST640'),
+	(2762, 0, 64020186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM374'),
+	(2763, 0, 64040033, 'Commerzbank', 'COBADEFF640'),
+	(2764, 0, 64040045, 'Commerzbank', 'COBADEFF645'),
+	(2765, 0, 64050000, 'Kreissparkasse Reutlingen', 'SOLADES1REU'),
+	(2766, 0, 64050181, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST460'),
+	(2767, 0, 64061854, 'VR Bank Steinlach-Wiesaz-Härten', 'GENODES1STW'),
+	(2768, 0, 64070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB640'),
+	(2769, 0, 64070085, 'Deutsche Bank', 'DEUTDESS640'),
+	(2770, 0, 64080014, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF640'),
+	(2771, 0, 64090100, 'Volksbank Reutlingen', 'VBRTDE6RXXX'),
+	(2772, 0, 64091200, 'Volksbank Metzingen-Bad Urach', 'GENODES1MTZ'),
+	(2773, 0, 64091300, 'Volksbank Münsingen', 'GENODES1MUN'),
+	(2774, 0, 64120030, 'Baden-Württembergische Bank', 'SOLADEST641'),
+	(2775, 0, 64140036, 'Commerzbank Tübingen', 'COBADEFF641'),
+	(2776, 0, 64150020, 'Kreissparkasse Tübingen', 'SOLADES1TUB'),
+	(2777, 0, 64150182, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST470'),
+	(2778, 0, 64161397, 'Volksbank Ammerbuch', 'GENODES1AMM'),
+	(2779, 0, 64161608, 'Raiffeisenbank Härten -alt-', 'GENODES1RHK'),
+	(2780, 0, 64161956, 'Volksbank Mössingen -alt-', 'GENODES1VMO'),
+	(2781, 0, 64163225, 'Volksbank Hohenzollern', 'GENODES1VHZ'),
+	(2782, 0, 64180014, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF641'),
+	(2783, 0, 64190110, 'Volksbank Tübingen', 'GENODES1TUE'),
+	(2784, 0, 64191030, 'Volksbank Nagoldtal', 'GENODES1NAG'),
+	(2785, 0, 64191210, 'Volksbank Altensteig -alt-', ''),
+	(2786, 0, 64191700, 'Volksbank Horb -alt-', 'GENODES1HOR'),
+	(2787, 0, 64232000, 'Bankhaus J. Faißt', ''),
+	(2788, 0, 64240048, 'Commerzbank', 'COBADEFF967'),
+	(2789, 0, 64240071, 'Commerzbank', 'COBADEFF642'),
+	(2790, 0, 64250040, 'Kreissparkasse Rottweil', 'SOLADES1RWL'),
+	(2791, 0, 64251060, 'Kreissparkasse Freudenstadt', 'SOLADES1FDS'),
+	(2792, 0, 64261363, 'Volksbank Baiersbronn Murgtal', 'GENODES1BAI'),
+	(2793, 0, 64261626, 'Murgtalbank Mitteltal - Obertal -alt-', 'GENODES1MMO'),
+	(2794, 0, 64261853, 'Volksbank Nordschwarzwald', 'GENODES1PGW'),
+	(2795, 0, 64262408, 'Volksbank Dornstetten', 'GENODES1VDS'),
+	(2796, 0, 64290120, 'Volksbank Rottweil', 'GENODES1VRW'),
+	(2797, 0, 64291010, 'Volksbank Horb-Freudenstadt', 'GENODES1FDS'),
+	(2798, 0, 64291420, 'Volksbank Deißlingen', 'GENODES1VDL'),
+	(2799, 0, 64292020, 'Volksbank Schwarzwald-Neckar', 'GENODES1SBG'),
+	(2800, 0, 64292310, 'Volksbank Trossingen', 'GENODES1TRO'),
+	(2801, 0, 64350070, 'Kreissparkasse Tuttlingen', 'SOLADES1TUT'),
+	(2802, 0, 64361359, 'Raiffeisenbank Donau-Heuberg', 'GENODES1RDH'),
+	(2803, 0, 64380011, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF643'),
+	(2804, 0, 64390130, 'Volksbank Donau-Neckar', 'GENODES1TUT'),
+	(2805, 0, 64420030, 'Baden-Württembergische Bank', 'SOLADEST644'),
+	(2806, 0, 64450288, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST480'),
+	(2807, 0, 65000000, 'Bundesbank eh Ravensburg', 'MARKDEF1650'),
+	(2808, 0, 65020030, 'Baden-Württembergische Bank', 'SOLADEST650'),
+	(2809, 0, 65020186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM588'),
+	(2810, 0, 65040073, 'Commerzbank', 'COBADEFF650'),
+	(2811, 0, 65050110, 'Kreissparkasse Ravensburg', 'SOLADES1RVB'),
+	(2812, 0, 65050281, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST450'),
+	(2813, 0, 65061219, 'Raiffeisenbank Aulendorf', 'GENODES1AUL'),
+	(2814, 0, 65062577, 'Raiffeisenbank Ravensburg', 'GENODES1RRV'),
+	(2815, 0, 65062793, 'Raiffeisenbank Vorallgäu -alt-', 'GENODES1AMZ'),
+	(2816, 0, 65063086, 'Raiffeisenbank Bad Saulgau', 'GENODES1SAG'),
+	(2817, 0, 65070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB650'),
+	(2818, 0, 65070084, 'Deutsche Bank', 'DEUTDESS650'),
+	(2819, 0, 65080009, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF650'),
+	(2820, 0, 65090100, 'Volksbank Ulm-Biberach -alt-', 'ULMVDE66001'),
+	(2821, 0, 65091040, 'Leutkircher Bank Raiffeisen- und Volksbank', 'GENODES1LEU'),
+	(2822, 0, 65091300, 'Bad Waldseer Bank -alt-', 'GENODES1BWB'),
+	(2823, 0, 65091400, 'Isnyer Volksbank -alt-', 'GENODES1ISN'),
+	(2824, 0, 65091600, 'Volksbank Weingarten', 'GENODES1VWG'),
+	(2825, 0, 65092010, 'Volksbank Allgäu-West', 'GENODES1WAN'),
+	(2826, 0, 65092200, 'Volksbank Altshausen', 'GENODES1VAH'),
+	(2827, 0, 65093020, 'Volksbank Bad Saulgau', 'GENODES1SLG'),
+	(2828, 0, 65110200, 'Internationales Bankhaus Bodensee', 'IBBFDE81XXX'),
+	(2829, 0, 65120091, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM586'),
+	(2830, 0, 65140072, 'Commerzbank', 'COBADEFF651'),
+	(2831, 0, 65161497, 'Genossenschaftsbank Meckenbeuren', 'GENODES1GMB'),
+	(2832, 0, 65162832, 'Raiffeisenbank', 'GENODES1OTE'),
+	(2833, 0, 65180005, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF651'),
+	(2834, 0, 65190110, 'Volksbank Friedrichshafen', 'GENODES1VFN'),
+	(2835, 0, 65191500, 'Volksbank Tettnang', 'GENODES1TET'),
+	(2836, 0, 65300000, 'Bundesbank eh Albstadt', 'MARKDEF1653'),
+	(2837, 0, 65310111, 'SEB', 'ESSEDE5F653'),
+	(2838, 0, 65340004, 'Commerzbank', 'COBADEFF653'),
+	(2839, 0, 65341204, 'Commerzbank', 'COBADEFF655'),
+	(2840, 0, 65350186, 'Baden-Württemb.Bank/Landesbank Baden-Württemb.', 'SOLADEST476'),
+	(2841, 0, 65351050, 'Hohenz Landesbank Kreissparkasse Sigmaringen', 'SOLADES1SIG'),
+	(2842, 0, 65351260, 'Sparkasse Zollernalb', 'SOLADES1BAL'),
+	(2843, 0, 65361469, 'Volksbank Heuberg', 'GENODES1HBM'),
+	(2844, 0, 65361898, 'Winterlinger Bank', 'GENODES1WLB'),
+	(2845, 0, 65361989, 'Onstmettinger Bank', 'GENODES1ONS'),
+	(2846, 0, 65362499, 'Raiffeisenbank Geislingen-Rosenfeld', 'GENODES1GEI'),
+	(2847, 0, 65370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB653'),
+	(2848, 0, 65370075, 'Deutsche Bank', 'DEUTDESS653'),
+	(2849, 0, 65380003, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF653'),
+	(2850, 0, 65390120, 'Volksbank Ebingen', 'GENODES1EBI'),
+	(2851, 0, 65391210, 'Volksbank Balingen', 'GENODES1BAL'),
+	(2852, 0, 65392030, 'Volksbank Tailfingen', 'GENODES1TAI'),
+	(2853, 0, 65440087, 'Commerzbank', 'COBADEFF654'),
+	(2854, 0, 65450070, 'Kreissparkasse Biberach', 'SBCRDE66XXX'),
+	(2855, 0, 65461878, 'Raiffeisenbank Risstal', 'GENODES1WAR'),
+	(2856, 0, 65462231, 'Raiffeisenbank Illertal', 'GENODES1ERO'),
+	(2857, 0, 65490130, 'Volksbank Ulm-Biberach', 'GENODES1VBC'),
+	(2858, 0, 65491320, 'Volksbank Laupheim', 'GENODES1VBL'),
+	(2859, 0, 65491510, 'Volksbank-Raiffeisenbank Riedlingen', 'GENODES1VRR'),
+	(2860, 0, 66000000, 'Bundesbank', 'MARKDEF1660'),
+	(2861, 0, 66010075, 'Postbank', 'PBNKDEFFXXX'),
+	(2862, 0, 66010111, 'SEB', 'ESSEDE5F660'),
+	(2863, 0, 66010200, 'Deutsche Bausparkasse Badenia', 'BBSPDE6KXXX'),
+	(2864, 0, 66010700, 'Landeskreditbank Baden-Württemberg Förderbank', 'LKBWDE6KXXX'),
+	(2865, 0, 66020020, 'Baden-Württembergische Bank', 'SOLADEST663'),
+	(2866, 0, 66020150, 'UniCredit Bank - HypoVereinsbank Ndl 145 Kruh', 'HYVEDEM1076'),
+	(2867, 0, 66020286, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM475'),
+	(2868, 0, 66020500, 'Bank für Sozialwirtschaft', 'BFSWDE33KRL'),
+	(2869, 0, 66030600, 'Isbank Fil Karlsruhe', 'ISBKDEFXKRL'),
+	(2870, 0, 66040018, 'Commerzbank', 'COBADEFF660'),
+	(2871, 0, 66040026, 'Commerzbank/Kreditcenter Badenia', 'COBADEFF661'),
+	(2872, 0, 66050000, 'Landesbank Baden-Württemberg', 'SOLADEST660'),
+	(2873, 0, 66050101, 'Sparkasse Karlsruhe Ettlingen', 'KARSDE66XXX'),
+	(2874, 0, 66051220, 'Sparkasse Ettlingen -alt-', 'SOLADES1ETT'),
+	(2875, 0, 66060000, 'DZ BANK', 'GENODE6KXXX'),
+	(2876, 0, 66060300, 'Spar- und Kreditbank', 'GENODE61KA3'),
+	(2877, 0, 66060800, 'Evangelische Kreditgenossenschaft -Filiale Karlsruhe-', 'GENODEF1EK5'),
+	(2878, 0, 66061059, 'Volksbank Stutensee Hardt -alt-', 'GENODE61SBA'),
+	(2879, 0, 66061407, 'Spar- und Kreditbank', 'GENODE61RH2'),
+	(2880, 0, 66061724, 'Volksbank Stutensee-Weingarten', 'GENODE61WGA'),
+	(2881, 0, 66062138, 'Spar- und Kreditbank Hardt', 'GENODE61EGG'),
+	(2882, 0, 66062366, 'Raiffeisenbank Hardt-Bruhrain', 'GENODE61DET'),
+	(2883, 0, 66069103, 'Raiffeisenbank Elztal', 'GENODE61ELZ'),
+	(2884, 0, 66069104, 'Spar- und Kreditbank', 'GENODE61DAC'),
+	(2885, 0, 66069342, 'Volksbank Krautheim', 'GENODE61KTH'),
+	(2886, 0, 66069573, 'Raiffeisenbank Sexau -alt-', 'GENODE61SEX'),
+	(2887, 0, 66070004, 'Deutsche Bank', 'DEUTDESM660'),
+	(2888, 0, 66070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB660'),
+	(2889, 0, 66080052, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF660'),
+	(2890, 0, 66090621, 'apoBank', 'DAAEDED1021'),
+	(2891, 0, 66090800, 'BBBank', 'GENODE61BBB'),
+	(2892, 0, 66090900, 'PSD Bank Karlsruhe-Neustadt', 'GENODEF1P10'),
+	(2893, 0, 66091200, 'Volksbank Ettlingen', 'GENODE61ETT'),
+	(2894, 0, 66190000, 'Volksbank Karlsruhe', 'GENODE61KA1'),
+	(2895, 0, 66190100, 'Volksbank Durlach -alt-', 'GENODE61KA2'),
+	(2896, 0, 66200000, 'Bundesbank eh Baden-Baden', 'MARKDEF1662'),
+	(2897, 0, 66220020, 'Baden-Württembergische Bank', 'SOLADEST662'),
+	(2898, 0, 66240002, 'Commerzbank', 'COBADEFF662'),
+	(2899, 0, 66250030, 'Sparkasse Baden-Baden Gaggenau', 'SOLADES1BAD'),
+	(2900, 0, 66251434, 'Sparkasse Bühl', 'SOLADES1BHL'),
+	(2901, 0, 66261092, 'Spar- und Kreditbank', 'GENODE61BHT'),
+	(2902, 0, 66261416, 'Raiffeisenbank Altschweier', 'GENODE61ALR'),
+	(2903, 0, 66270001, 'Deutsche Bank', 'DEUTDESM662'),
+	(2904, 0, 66270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB662'),
+	(2905, 0, 66280053, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF662'),
+	(2906, 0, 66290000, 'Volksbank Baden-Baden Rastatt', 'VBRADE6KXXX'),
+	(2907, 0, 66291300, 'Volksbank Achern', 'GENODE61ACH'),
+	(2908, 0, 66291400, 'Volksbank Bühl', 'GENODE61BHL'),
+	(2909, 0, 66340018, 'Commerzbank', 'COBADEFF663'),
+	(2910, 0, 66350036, 'Sparkasse Kraichgau Bruchsal-Bretten-Sinsheim', 'BRUSDE66XXX'),
+	(2911, 0, 66361178, 'Raiffeisenbank Kraich-Hardt -alt-', 'GENODE61FST'),
+	(2912, 0, 66361335, 'Volksbank Kirrlach -alt-', 'GENODE61WAG'),
+	(2913, 0, 66362345, 'Raiffeisenbank Kronau -alt-', 'GENODE61KRO'),
+	(2914, 0, 66363487, 'Raiffeisenbank Odenheim-Tiefenbach -alt-', 'GENODE61OOM'),
+	(2915, 0, 66390000, 'Volksbank Bruchsal-Bretten -alt-', 'GENODE61BRU'),
+	(2916, 0, 66391200, 'Volksbank Bruchsal-Bretten', 'GENODE61BTT'),
+	(2917, 0, 66391600, 'Volksbank Bruhrain-Kraich-Hardt', 'GENODE61ORH'),
+	(2918, 0, 66400000, 'Bundesbank eh Offenburg', 'MARKDEF1664'),
+	(2919, 0, 66420020, 'Baden-Württembergische Bank', 'SOLADEST664'),
+	(2920, 0, 66432700, 'Bankhaus J. Faißt', 'FAITDE66XXX'),
+	(2921, 0, 66440084, 'Commerzbank', 'COBADEFF664'),
+	(2922, 0, 66450050, 'Sparkasse Offenburg/Ortenau', 'SOLADES1OFG'),
+	(2923, 0, 66451346, 'Sparkasse Gengenbach', 'SOLADES1GEB'),
+	(2924, 0, 66451548, 'Sparkasse Haslach-Zell', 'SOLADES1HAL'),
+	(2925, 0, 66451862, 'Sparkasse Hanauerland', 'SOLADES1KEL'),
+	(2926, 0, 66452776, 'Sparkasse Wolfach', 'SOLADES1WOF'),
+	(2927, 0, 66470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB968'),
+	(2928, 0, 66470035, 'Deutsche Bank', 'DEUTDE6F664'),
+	(2929, 0, 66490000, 'Volksbank Offenburg', 'GENODE61OG1'),
+	(2930, 0, 66491800, 'Volksbank Bühl Fil Kehl', ''),
+	(2931, 0, 66492600, 'Volksbank Appenweier-Urloffen Appenweier -alt-', 'GENODE61APP'),
+	(2932, 0, 66492700, 'Volksbank Kinzigtal', 'GENODE61KZT'),
+	(2933, 0, 66550070, 'Sparkasse Rastatt-Gernsbach', 'SOLADES1RAS'),
+	(2934, 0, 66551290, 'Sparkasse Gaggenau-Kuppenheim -alt-', 'SOLADES1GAG'),
+	(2935, 0, 66562053, 'Raiffeisenbank Südhardt Durmersheim', 'GENODE61DUR'),
+	(2936, 0, 66562300, 'VR-Bank in Mittelbaden', 'GENODE61IFF'),
+	(2937, 0, 66600000, 'Bundesbank eh Pforzheim', 'MARKDEF1666'),
+	(2938, 0, 66610111, 'SEB', 'ESSEDE5F666'),
+	(2939, 0, 66620020, 'Baden-Württembergische Bank', 'SOLADEST666'),
+	(2940, 0, 66640035, 'Commerzbank', 'COBADEFF666'),
+	(2941, 0, 66650085, 'Sparkasse Pforzheim Calw', 'PZHSDE66XXX'),
+	(2942, 0, 66661244, 'Raiffeisenbank Bauschlott', 'GENODE61NBT'),
+	(2943, 0, 66661329, 'Raiffeisenbank Kieselbronn', 'GENODE61KBR'),
+	(2944, 0, 66661454, 'VR Bank im Enzkreis', 'GENODE61NFO'),
+	(2945, 0, 66662155, 'Raiffeisenbank Ersingen', 'GENODE61ERS'),
+	(2946, 0, 66662220, 'Volksbank Stein Eisingen', 'GENODE61KBS'),
+	(2947, 0, 66663439, 'Raiffeisen-Gebietsbank', 'GENODE61NHS'),
+	(2948, 0, 66670006, 'Deutsche Bank', 'DEUTDESM666'),
+	(2949, 0, 66670024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB666'),
+	(2950, 0, 66680013, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF666'),
+	(2951, 0, 66690000, 'Volksbank Pforzheim', 'VBPFDE66XXX'),
+	(2952, 0, 66692300, 'Volksbank Wilferdingen-Keltern', 'GENODE61WIR'),
+	(2953, 0, 66762332, 'Raiffeisenbank Kraichgau', 'GENODE61KIR'),
+	(2954, 0, 66762433, 'Raiffeisenbank Neudenau-Stein-Herbolzheim', 'GENODE61NEU'),
+	(2955, 0, 67000000, 'Bundesbank eh Mannheim', 'MARKDEF1670'),
+	(2956, 0, 67010111, 'SEB', 'ESSEDE5F670'),
+	(2957, 0, 67020020, 'Baden-Württembergische Bank', 'SOLADEST671'),
+	(2958, 0, 67020190, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM489'),
+	(2959, 0, 67020259, 'UniCredit Bank - HypoVereinsbank Ndl 681 Mnh', 'HYVEDEM1103'),
+	(2960, 0, 67040031, 'Commerzbank', 'COBADEFF670'),
+	(2961, 0, 67040060, 'Commerzbank CC', 'COBADEFF094'),
+	(2962, 0, 67040061, 'Commerzbank CC', 'COBADEFF095'),
+	(2963, 0, 67040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(2964, 0, 67050000, 'Landesbank Baden-Württemberg', 'SOLADEST670'),
+	(2965, 0, 67050505, 'Sparkasse Rhein Neckar Nord', 'MANSDE66XXX'),
+	(2966, 0, 67051203, 'Sparkasse Hockenheim', 'SOLADES1HOC'),
+	(2967, 0, 67060031, 'Volksbank Sandhofen', 'GENODE61MA3'),
+	(2968, 0, 67070010, 'Deutsche Bank', 'DEUTDESMXXX'),
+	(2969, 0, 67070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBMAN'),
+	(2970, 0, 67080050, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF670'),
+	(2971, 0, 67080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFI60'),
+	(2972, 0, 67080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 3', 'DRESDEFFI61'),
+	(2973, 0, 67089440, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI22'),
+	(2974, 0, 67090000, 'VR Bank Rhein-Neckar', 'GENODE61MA2'),
+	(2975, 0, 67090617, 'apoBank', 'DAAEDED1017'),
+	(2976, 0, 67091500, 'Volksbank Kurpfalz H+G Bank', 'GENODE61LDB'),
+	(2977, 0, 67092300, 'Volksbank Weinheim', 'GENODE61WNM'),
+	(2978, 0, 67210111, 'SEB', 'ESSEDE5F672'),
+	(2979, 0, 67220020, 'Baden-Württembergische Bank', 'SOLADEST672'),
+	(2980, 0, 67220286, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM479'),
+	(2981, 0, 67220464, 'UniCredit Bank - HypoVereinsbank Ndl 488 Hd', 'HYVEDEM1087'),
+	(2982, 0, 67230000, 'MLP Finanzdienstleistungen', 'MLPBDE61XXX'),
+	(2983, 0, 67230001, 'MLP Finanzdienstleistungen Zw CS', 'MLPBDE61001'),
+	(2984, 0, 67240039, 'Commerzbank', 'COBADEFF672'),
+	(2985, 0, 67250020, 'Sparkasse Heidelberg', 'SOLADES1HDB'),
+	(2986, 0, 67262243, 'Raiffeisen Privatbank', 'GENODE61WIB'),
+	(2987, 0, 67262550, 'Volksbank Rot', 'GENODE61LRO'),
+	(2988, 0, 67270003, 'Deutsche Bank', 'DEUTDESM672'),
+	(2989, 0, 67270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB672'),
+	(2990, 0, 67280051, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF672'),
+	(2991, 0, 67290000, 'Heidelberger Volksbank', 'GENODE61HD1'),
+	(2992, 0, 67290100, 'Volksbank Kurpfalz H+G Bank', 'GENODE61HD3'),
+	(2993, 0, 67291500, 'Volksbank f d Angelbachtal -alt-', 'GENODE61MHS'),
+	(2994, 0, 67291700, 'Volksbank Neckartal', 'GENODE61NGD'),
+	(2995, 0, 67291900, 'Volksbank Kraichgau -alt-', 'GENODE61SSH'),
+	(2996, 0, 67292200, 'Volksbank Kraichgau Wiesloch-Sinsheim', 'GENODE61WIE'),
+	(2997, 0, 67320020, 'Baden-Württembergische Bank', 'SOLADEST623'),
+	(2998, 0, 67332551, 'Baden-Württembergische Bank', 'SOLADEST675'),
+	(2999, 0, 67352565, 'Sparkasse Tauberfranken', 'SOLADES1TBB'),
+	(3000, 0, 67362560, 'Volksbank Tauber -alt-', 'GENODE61TBB'),
+	(3001, 0, 67390000, 'Volksbank Main-Tauber', 'GENODE61WTH'),
+	(3002, 0, 67450048, 'Sparkasse Neckartal-Odenwald', 'SOLADES1MOS'),
+	(3003, 0, 67460041, 'Volksbank Mosbach', 'GENODE61MOS'),
+	(3004, 0, 67461424, 'Volksbank Franken', 'GENODE61BUC'),
+	(3005, 0, 67461733, 'Volksbank Kirnau', 'GENODE61RNG'),
+	(3006, 0, 67462368, 'Volksbank Limbach', 'GENODE61LMB'),
+	(3007, 0, 67462480, 'Raiffeisenbank Schefflenz-Seckach -alt-', 'GENODE61SOB'),
+	(3008, 0, 68000000, 'Bundesbank', 'MARKDEF1680'),
+	(3009, 0, 68010111, 'SEB', 'ESSEDE5F680'),
+	(3010, 0, 68020020, 'Baden-Württembergische Bank', 'SOLADEST682'),
+	(3011, 0, 68020186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM357'),
+	(3012, 0, 68020460, 'UniCredit Bank - HypoVereinsbank Ndl 405 Frb', 'HYVEDEM1082'),
+	(3013, 0, 68030000, 'Bankhaus E. Mayer', 'BKMADE61XXX'),
+	(3014, 0, 68040007, 'Commerzbank', 'COBADEFF680'),
+	(3015, 0, 68050000, 'Landesbank Baden-Württemberg', 'SOLADEST680'),
+	(3016, 0, 68050101, 'Sparkasse Freiburg-Nördlicher Breisgau', 'FRSPDE66XXX'),
+	(3017, 0, 68051004, 'Sparkasse Hochschwarzwald', 'SOLADES1HSW'),
+	(3018, 0, 68051207, 'Sparkasse Bonndorf-Stühlingen', 'SOLADES1BND'),
+	(3019, 0, 68051310, 'Sparkasse Breisach -alt-', 'SOLADES1BRS'),
+	(3020, 0, 68052230, 'Sparkasse St. Blasien', 'SOLADES1STB'),
+	(3021, 0, 68052328, 'Sparkasse Staufen-Breisach', 'SOLADES1STF'),
+	(3022, 0, 68052863, 'Sparkasse Schönau-Todtnau', 'SOLADES1SCH'),
+	(3023, 0, 68061505, 'Volksbank Breisgau-Süd', 'GENODE61IHR'),
+	(3024, 0, 68062105, 'Raiffeisenbank Denzlingen-Sexau', 'GENODE61DEN'),
+	(3025, 0, 68062730, 'Raiffeisenbank Wyhl', 'GENODE61WYH'),
+	(3026, 0, 68063254, 'Spar- u Kreditbank Bad Krozingen-Heitersheim', 'GENODE61HHM'),
+	(3027, 0, 68063479, 'Raiffeisenbank Kaiserstuhl', 'GENODE61VOK'),
+	(3028, 0, 68064222, 'Raiffeisenbank', 'GENODE61GUN'),
+	(3029, 0, 68070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBFRE'),
+	(3030, 0, 68070030, 'Deutsche Bank', 'DEUTDE6FXXX'),
+	(3031, 0, 68080030, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF680'),
+	(3032, 0, 68080031, 'Commerzbank vormals Dresdner Bank Zw Münsterstraße', 'DRESDEFFI44'),
+	(3033, 0, 68080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFI62'),
+	(3034, 0, 68080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFJ22'),
+	(3035, 0, 68090000, 'Volksbank Freiburg', 'GENODE61FR1'),
+	(3036, 0, 68090622, 'apoBank', 'DAAEDED1022'),
+	(3037, 0, 68090900, 'PSD Bank RheinNeckarSaar', 'GENODEF1P07'),
+	(3038, 0, 68091900, 'Volksbank Müllheim', 'GENODE61MHL'),
+	(3039, 0, 68092000, 'Volksbank Breisgau Nord', 'GENODE61EMM'),
+	(3040, 0, 68092300, 'Volksbank Staufen', 'GENODE61STF'),
+	(3041, 0, 68270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB682'),
+	(3042, 0, 68270033, 'Deutsche Bank', 'DEUTDE6F682'),
+	(3043, 0, 68290000, 'Volksbank Lahr', 'GENODE61LAH'),
+	(3044, 0, 68300000, 'Bundesbank eh Lörrach', 'MARKDEF1683'),
+	(3045, 0, 68310111, 'SEB', 'ESSEDE5F683'),
+	(3046, 0, 68320020, 'Baden-Württembergische Bank', 'SOLADEST683'),
+	(3047, 0, 68340058, 'Commerzbank', 'COBADEFF683'),
+	(3048, 0, 68350048, 'Sparkasse Lörrach-Rheinfelden', 'SKLODE66XXX'),
+	(3049, 0, 68351557, 'Sparkasse Schopfheim-Zell', 'SOLADES1SFH'),
+	(3050, 0, 68351865, 'Sparkasse Markgräflerland', 'SOLADES1MGL'),
+	(3051, 0, 68351976, 'Sparkasse Zell i W -alt-', 'SOLADES1ZLW'),
+	(3052, 0, 68361394, 'Raiffeisenbank Maulburg -alt-', 'GENODE61MAU'),
+	(3053, 0, 68370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB683'),
+	(3054, 0, 68370034, 'Deutsche Bank', 'DEUTDE6F683'),
+	(3055, 0, 68390000, 'Volksbank Dreiländereck', 'VOLODE66XXX'),
+	(3056, 0, 68391500, 'VR Bank', 'GENODE61SPF'),
+	(3057, 0, 68452290, 'Sparkasse Hochrhein', 'SKHRDE6WXXX'),
+	(3058, 0, 68462427, 'Volksbank Klettgau-Wutöschingen', 'GENODE61WUT'),
+	(3059, 0, 68490000, 'Volksbank Rhein-Wehra', 'GENODE61BSK'),
+	(3060, 0, 68491500, 'Volksbank Jestetten -alt-', 'GENODE61JES'),
+	(3061, 0, 68492200, 'Volksbank Hochrhein', 'GENODE61WT1'),
+	(3062, 0, 69000000, 'Bundesbank eh Konstanz', 'MARKDEF1690'),
+	(3063, 0, 69010111, 'SEB', 'ESSEDE5F690'),
+	(3064, 0, 69020020, 'Baden-Württembergische Bank', 'SOLADEST690'),
+	(3065, 0, 69020190, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM591'),
+	(3066, 0, 69040045, 'Commerzbank', 'COBADEFF690'),
+	(3067, 0, 69050001, 'Sparkasse Bodensee', 'SOLADES1KNZ'),
+	(3068, 0, 69051410, 'Bezirkssparkasse Reichenau', 'SOLADES1REN'),
+	(3069, 0, 69051620, 'Sparkasse Pfullendorf-Meßkirch', 'SOLADES1PFD'),
+	(3070, 0, 69051725, 'Sparkasse Salem-Heiligenberg', 'SOLADES1SAL'),
+	(3071, 0, 69061800, 'Volksbank Überlingen', 'GENODE61UBE'),
+	(3072, 0, 69070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB690'),
+	(3073, 0, 69070032, 'Deutsche Bank', 'DEUTDE6F690'),
+	(3074, 0, 69091200, 'Hagnauer Volksbank', 'GENODE61HAG'),
+	(3075, 0, 69091600, 'Volksbank Pfullendorf', 'GENODE61PFD'),
+	(3076, 0, 69220020, 'Baden-Württembergische Bank', 'SOLADEST692'),
+	(3077, 0, 69220186, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM590'),
+	(3078, 0, 69240075, 'Commerzbank', 'COBADEFF692'),
+	(3079, 0, 69250035, 'Sparkasse Singen-Radolfzell', 'SOLADES1SNG'),
+	(3080, 0, 69251445, 'Sparkasse Engen-Gottmadingen', 'SOLADES1ENG'),
+	(3081, 0, 69251755, 'Sparkasse Stockach', 'SOLADES1STO'),
+	(3082, 0, 69270024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB692'),
+	(3083, 0, 69270038, 'Deutsche Bank', 'DEUTDE6F692'),
+	(3084, 0, 69280035, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF692'),
+	(3085, 0, 69290000, 'Volksbank Hegau -alt-', 'GENODE61SIN'),
+	(3086, 0, 69291000, 'Volksbank Konstanz', 'GENODE61RAD'),
+	(3087, 0, 69362032, 'Volksbank Meßkirch Raiffeisenbank', 'GENODE61MES'),
+	(3088, 0, 69400000, 'Bundesbank', 'MARKDEF1694'),
+	(3089, 0, 69421020, 'Baden-Württembergische Bank', 'SOLADEST694'),
+	(3090, 0, 69440007, 'Commerzbank Villingen u Schwenningen', 'COBADEFF694'),
+	(3091, 0, 69440060, 'Commerzbank CC', 'COBADEFF108'),
+	(3092, 0, 69450065, 'Sparkasse Schwarzwald-Baar', 'SOLADES1VSS'),
+	(3093, 0, 69451070, 'Sparkasse Donaueschingen -alt-', 'SOLADES1DOE'),
+	(3094, 0, 69470024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB694'),
+	(3095, 0, 69470039, 'Deutsche Bank Villingen u Schwenningen', 'DEUTDE6F694'),
+	(3096, 0, 69490000, 'Volksbank Schwarzwald Baar Hegau', 'GENODE61VS1'),
+	(3097, 0, 69491700, 'Volksbank Triberg', 'GENODE61TRI'),
+	(3098, 0, 70000000, 'Bundesbank', 'MARKDEF1700'),
+	(3099, 0, 70010080, 'Postbank (Giro)', 'PBNKDEFFXXX'),
+	(3100, 0, 70010111, 'SEB', 'ESSEDE5F700'),
+	(3101, 0, 70010424, 'Aareal Bank', 'AARBDE5W700'),
+	(3102, 0, 70010500, 'Deutsche Pfandbriefbank', 'REBMDEMMXXX'),
+	(3103, 0, 70010555, 'Deutsche Pfandbriefbank - Einlagengeschäfte', 'REBMDEMM555'),
+	(3104, 0, 70010570, 'Deutsche Pfandbriefbank', 'REBMDE7CXXX'),
+	(3105, 0, 70011100, 'Deutsche Kontor Privatbank', 'DEKTDE71001'),
+	(3106, 0, 70011110, 'Deutsche Kontor Privatbank Sofort Bank', 'DEKTDE71002'),
+	(3107, 0, 70011200, 'Bank Vontobel Europe', 'VONTDEM1XXX'),
+	(3108, 0, 70011300, 'Autobank', 'AUZDDEM1XXX'),
+	(3109, 0, 70011400, 'BfW - Bank für Wohnungswirtschaft', 'BFWODE71XXX'),
+	(3110, 0, 70011500, 'SIEMENS BANK', 'SIBADEMMXXX'),
+	(3111, 0, 70011700, 'Bankhaus von der Heydt', 'BVDHDEMMXXX'),
+	(3112, 0, 70011900, 'InterCard', 'ICRDDE71XXX'),
+	(3113, 0, 70011910, 'InterCard Cash Services 10', 'ICRDDE71010'),
+	(3114, 0, 70011920, 'InterCard Cash Services 20', 'ICRDDE71020'),
+	(3115, 0, 70012000, 'UniCredit Family Financing Bank, Ndl der UniCredit', 'CLABDEMMXXX'),
+	(3116, 0, 70012100, 'VEM Aktienbank', 'VEAKDEMMXXX'),
+	(3117, 0, 70012200, 'Bank Sarasin', 'SRRADEM1XXX'),
+	(3118, 0, 70012300, 'V-Bank', 'VBANDEMMXXX'),
+	(3119, 0, 70012400, 'flatex alpha', 'FLGMDE77XXX'),
+	(3120, 0, 70012600, 'Südtiroler Sparkasse Niederlassung München', 'SUSKDEM1XXX'),
+	(3121, 0, 70013000, 'European Bank for Financial Services', 'COBADEMXXXX'),
+	(3122, 0, 70013010, 'European Bank for Financial Services', 'EFSGDEM1XXX'),
+	(3123, 0, 70013100, 'net-m privatbank 1891', 'BVWBDE2WXXX'),
+	(3124, 0, 70013155, 'net-m privatbank 1891 (Gf TRAXPAY)', 'BVWBDE2TRAX'),
+	(3125, 0, 70013199, 'net-m privatbank 1891', 'BVWBDE2WXXX'),
+	(3126, 0, 70013500, 'Bankhaus Herzogpark', 'HERZDEM1XXX'),
+	(3127, 0, 70015000, 'transact Elektronische Zahlungssysteme', 'TEZGDEB1XXX'),
+	(3128, 0, 70015015, 'transact Elektronische Zahlungssysteme', 'TEZGDEB1001'),
+	(3129, 0, 70015025, 'transact Elektronische Zahlungssysteme', 'TEZGDEB1002'),
+	(3130, 0, 70015035, 'transact Elektronische Zahlungssysteme', 'TEZGDEB1003'),
+	(3131, 0, 70017000, 'PayCenter', 'PAGMDEM1XXX'),
+	(3132, 0, 70020001, 'UniCredit Bank - HypoVereinsbank Ndl 645 M', 'HYVEDEM1092'),
+	(3133, 0, 70020270, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMMXXX'),
+	(3134, 0, 70020300, 'Commerz Finanz', 'WKVBDEM1XXX'),
+	(3135, 0, 70020500, 'Bank für Sozialwirtschaft', 'BFSWDE33MUE'),
+	(3136, 0, 70020800, 'INTESA SANPAOLO', 'BCITDEFFMUC'),
+	(3137, 0, 70021180, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM418'),
+	(3138, 0, 70022200, 'Fidor Bank', 'FDDODEMMXXX'),
+	(3139, 0, 70025175, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM643'),
+	(3140, 0, 70030014, 'Fürst Fugger Privatbank', 'FUBKDE71MUC'),
+	(3141, 0, 70030111, 'Bankhaus Max Flessa', 'FLESDEMMXXX'),
+	(3142, 0, 70030300, 'Bankhaus Reuschel & Co', 'CHDBDEHHXXX'),
+	(3143, 0, 70030400, 'Merck Finck & Co', 'MEFIDEMMXXX'),
+	(3144, 0, 70030800, 'Bethmann Bank', 'DELBDE33XXX'),
+	(3145, 0, 70031000, 'Bankhaus Ludwig Sperrer', 'BHLSDEM1XXX'),
+	(3146, 0, 70032500, 'St. Galler Kantonalbank Deutschland', 'GAKDDEM1XXX'),
+	(3147, 0, 70033100, 'Baader Bank', 'BDWBDEMMXXX'),
+	(3148, 0, 70035000, 'Oldenburgische Landesbank (vormals Allianz Bank)', 'OLBODEH2700'),
+	(3149, 0, 70040041, 'Commerzbank', 'COBADEFF700'),
+	(3150, 0, 70040048, 'Commerzbank GF-M48', 'COBADEFF970'),
+	(3151, 0, 70040060, 'Commerzbank Gf 860', 'COBADEFF068'),
+	(3152, 0, 70040061, 'Commerzbank Gf 861', 'COBADEFF069'),
+	(3153, 0, 70040062, 'Commerzbank CC', 'COBADEFF098'),
+	(3154, 0, 70040063, 'Commerzbank CC', 'COBADEFF099'),
+	(3155, 0, 70040070, 'Commerzbank, CC SP', 'COBADEFFS07'),
+	(3156, 0, 70045050, 'Commerzbank Service-BZ', 'COBADEFFBZM'),
+	(3157, 0, 70050000, 'Bayerische Landesbank', 'BYLADEMMXXX'),
+	(3158, 0, 70051003, 'Sparkasse Freising', 'BYLADEM1FSI'),
+	(3159, 0, 70051540, 'Sparkasse Dachau', 'BYLADEM1DAH'),
+	(3160, 0, 70051805, 'Kreissparkasse München Starnberg Ebersberg', 'BYLADEM1EBE'),
+	(3161, 0, 70051995, 'Kreis- und Stadtsparkasse Erding-Dorfen', 'BYLADEM1ERD'),
+	(3162, 0, 70052060, 'Sparkasse Landsberg-Dießen', 'BYLADEM1LLD'),
+	(3163, 0, 70053070, 'Sparkasse Fürstenfeldbruck', 'BYLADEM1FFB'),
+	(3164, 0, 70054306, 'Sparkasse Bad Tölz-Wolfratshausen', 'BYLADEM1WOR'),
+	(3165, 0, 70070010, 'Deutsche Bank', 'DEUTDEMMXXX'),
+	(3166, 0, 70070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBMUC'),
+	(3167, 0, 70080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF700'),
+	(3168, 0, 70080056, 'Commerzbank vormals Dresdner Bank Zw 56', 'DRESDEFF714'),
+	(3169, 0, 70080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF724'),
+	(3170, 0, 70080085, 'Commerzbank vormals Dresdner Bank Gf PCC DCC-ITGK 3', 'DRESDEFFI55'),
+	(3171, 0, 70080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 4', 'DRESDEFFJ23'),
+	(3172, 0, 70080087, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 5', 'DRESDEFFJ24'),
+	(3173, 0, 70080088, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 6', 'DRESDEFFJ25'),
+	(3174, 0, 70089470, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI23'),
+	(3175, 0, 70089472, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI45'),
+	(3176, 0, 70090100, 'Hausbank München', 'GENODEF1M04'),
+	(3177, 0, 70090124, 'Hausbank München', 'GENODEF1MU4'),
+	(3178, 0, 70090500, 'Sparda-Bank München', 'GENODEF1S04'),
+	(3179, 0, 70090606, 'apoBank', 'DAAEDED1006'),
+	(3180, 0, 70091500, 'Volksbank Raiffeisenbank Dachau', 'GENODEF1DCA'),
+	(3181, 0, 70091600, 'VR-Bank Landsberg-Ammersee', 'GENODEF1DSS'),
+	(3182, 0, 70091900, 'VR-Bank Erding', 'GENODEF1EDV'),
+	(3183, 0, 70093200, 'VR-Bank Starnberg-Herrsching-Landsberg', 'GENODEF1STH'),
+	(3184, 0, 70093400, 'Volksbank Raiffeisenbank Ismaning', 'GENODEF1ISV'),
+	(3185, 0, 70110088, 'Postbank (Spar)', 'PBNKDEFFXXX'),
+	(3186, 0, 70110500, 'Münchener Hypothekenbank', 'MHYPDEMMXXX'),
+	(3187, 0, 70110600, 'UBI BANCA INTERNATIONAL - Ndl München', 'BEPODEMMXXX'),
+	(3188, 0, 70120100, 'State Street Bank', 'SBOSDEMXXXX'),
+	(3189, 0, 70120200, 'The Royal Bank of Scotland Niederlassung Frankfurt', 'ABNADEFFMUN'),
+	(3190, 0, 70120400, 'DAB bank', 'DABBDEMMXXX'),
+	(3191, 0, 70120500, 'CACEIS Bank Deutschland', 'FMBKDEMMXXX'),
+	(3192, 0, 70120600, 'Salzburg München Bank', 'RVSADEMXXXX'),
+	(3193, 0, 70120700, 'Oberbank Ndl Deutschland', 'OBKLDEMXXXX'),
+	(3194, 0, 70120900, 'UniCredit Bank - HypoVereinsbank Ndl BACA', 'HYVEDEM1107'),
+	(3195, 0, 70130700, 'Bankhaus August Lenz & Co', 'LENZDEM1XXX'),
+	(3196, 0, 70130799, 'Bankhaus August Lenz & Co Gf GAA', 'LENZDEM1XXX'),
+	(3197, 0, 70130800, 'Merkur Bank', 'GENODEF1M06'),
+	(3198, 0, 70133300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(3199, 0, 70150000, 'Stadtsparkasse München', 'SSKMDEMMXXX'),
+	(3200, 0, 70160000, 'DZ BANK', 'GENODEFF701'),
+	(3201, 0, 70160300, 'Raiffeisenbank München -alt-', 'GENODEF1M02'),
+	(3202, 0, 70163370, 'Volksbank Raiffeisenbank Fürstenfeldbruck', 'GENODEF1FFB'),
+	(3203, 0, 70166486, 'VR Bank München Land', 'GENODEF1OHC'),
+	(3204, 0, 70169132, 'Raiffeisenbank Griesstätt-Halfing', 'GENODEF1HFG'),
+	(3205, 0, 70169165, 'Raiffeisenbank Chiemgau-Nord - Obing', 'GENODEF1SBC'),
+	(3206, 0, 70169168, 'VR-Bank Chiemgau-Süd -alt-', 'GENODEF1RIW'),
+	(3207, 0, 70169186, 'Raiffeisenbank Pfaffenhofen a d Glonn', 'GENODEF1ODZ'),
+	(3208, 0, 70169190, 'Raiffeisenbank Tattenh-Großkarolinenf', 'GENODEF1GKT'),
+	(3209, 0, 70169191, 'Raiffeisenbank Rupertiwinkel', 'GENODEF1TEI'),
+	(3210, 0, 70169195, 'Raiffeisenbank Trostberg-Traunreut', 'GENODEF1TRU'),
+	(3211, 0, 70169310, 'Raiffeisenbank Alxing-Bruck', 'GENODEF1ALX'),
+	(3212, 0, 70169322, 'Raiffeisenbank Aufkirchen -alt-', 'GENODEF1AFK'),
+	(3213, 0, 70169331, 'Raiffeisenbank südöstl. Starnberger See', 'GENODEF1SSB'),
+	(3214, 0, 70169333, 'Raiffeisenbank Beuerberg-Eurasburg', 'GENODEF1EUR'),
+	(3215, 0, 70169351, 'Raiffeisenbank Nordkreis Landsberg', 'GENODEF1ELB'),
+	(3216, 0, 70169356, 'Raiffeisenbank Erding', 'GENODEF1EDR'),
+	(3217, 0, 70169382, 'Raiffeisenbank', 'GENODEF1GIL'),
+	(3218, 0, 70169383, 'Raiffeisenbank Gmund am Tegernsee', 'GENODEF1GMU'),
+	(3219, 0, 70169388, 'Raiffeisenbank Haag-Gars-Maitenbeth', 'GENODEF1HMA'),
+	(3220, 0, 70169402, 'Raiffeisenbank Höhenkirchen und Umgebung', 'GENODEF1HHK'),
+	(3221, 0, 70169410, 'Raiffeisenbank Holzkirchen-Otterfing', 'GENODEF1HZO'),
+	(3222, 0, 70169413, 'Raiffeisenbank Singoldtal', 'GENODEF1HUA'),
+	(3223, 0, 70169433, 'Raiffeisenbank Königsdorf-Gelting', 'GENODEF1KOG'),
+	(3224, 0, 70169444, 'Raiffeisenbank im Isarwinkel -alt-', 'GENODEF1LGR'),
+	(3225, 0, 70169450, 'Raiffeisen-Volksbank Ebersberg', 'GENODEF1ASG'),
+	(3226, 0, 70169459, 'Raiffeisenbank', 'GENODEF1MTW'),
+	(3227, 0, 70169460, 'Raiffeisenbank Westkreis Fürstenfeldbruck', 'GENODEF1MOO'),
+	(3228, 0, 70169464, 'Genossenschaftsbank München', 'GENODEF1M07'),
+	(3229, 0, 70169465, 'Raiffeisenbank München-Nord', 'GENODEF1M08'),
+	(3230, 0, 70169466, 'Raiffeisenbank München-Süd', 'GENODEF1M03'),
+	(3231, 0, 70169470, 'Raiffeisenbank München-Süd Gf GA', 'GENODEF1GAA'),
+	(3232, 0, 70169472, 'Raiffeisenbank Hallbergmoos-Neufahrn', 'GENODEF1NFA'),
+	(3233, 0, 70169474, 'Raiffbk Neumarkt-St. Veit - Niederbergkirchen -alt-', 'GENODEF1NSV'),
+	(3234, 0, 70169476, 'Raiffeisenbank -alt-', 'GENODEF1NBK'),
+	(3235, 0, 70169493, 'Raiffeisenbank Oberschleißheim -alt-', 'GENODEF1OBS'),
+	(3236, 0, 70169495, 'Raiffeisenbank Buchbach-Schwindegg -alt-', 'GENODEF1SGO'),
+	(3237, 0, 70169505, 'Raiffeisenbank Anzing-Forstern -alt-', 'GENODEF1FOA'),
+	(3238, 0, 70169509, 'Raiffeisenbank Pfaffenwinkel', 'GENODEF1PEI'),
+	(3239, 0, 70169521, 'Raiffeisenbank Raisting', 'GENODEF1RIG'),
+	(3240, 0, 70169524, 'Raiffeisenbank RSA', 'GENODEF1RME'),
+	(3241, 0, 70169530, 'Raiffeisenbank Neumarkt-St. Veit - Reischach', 'GENODEF1RWZ'),
+	(3242, 0, 70169538, 'Raiffeisenbank St. Wolfgang-Schwindkirchen', 'GENODEF1SWO'),
+	(3243, 0, 70169541, 'Raiffeisenbank Lech-Ammersee', 'GENODEF1THG'),
+	(3244, 0, 70169543, 'Raiffeisenbank Isar-Loisachtal', 'GENODEF1HHS'),
+	(3245, 0, 70169558, 'Raiffeisenbank', 'GENODEF1SGA'),
+	(3246, 0, 70169566, 'VR-Bank Taufkirchen-Dorfen', 'GENODEF1TAV'),
+	(3247, 0, 70169568, 'Raiffeisenbank Taufkirchen-Oberneukirchen', 'GENODEF1TAE'),
+	(3248, 0, 70169570, 'Raiffeisenbank Thalheim -alt-', 'GENODEF1FTH'),
+	(3249, 0, 70169571, 'Raiffeisenbank Tölzer Land', 'GENODEF1DTZ'),
+	(3250, 0, 70169575, 'Raiffeisenbank', 'GENODEF1TRH'),
+	(3251, 0, 70169576, 'Raiffeisen-Volksbank Tüßling-Unterneukirchen', 'GENODEF1TUS'),
+	(3252, 0, 70169585, 'Raiffeisenbank Unterschleißheim-Haimhn -alt-', 'GENODEF1UNS'),
+	(3253, 0, 70169596, 'Raiffeisenbank Walpertskirchen-Wörth-Hörlkofen -alt-', 'GENODEF1WWO'),
+	(3254, 0, 70169598, 'Raiffeisenbank im Oberland', 'GENODEF1MIB'),
+	(3255, 0, 70169599, 'Raiffeisenbank Weil u Umgebung', 'GENODEF1WEI'),
+	(3256, 0, 70169602, 'Raiffeisenbank Weilheim -alt-', 'GENODEF1WM1'),
+	(3257, 0, 70169605, 'Raiffeisen-Volksbank Isen-Sempt', 'GENODEF1ISE'),
+	(3258, 0, 70169614, 'Freisinger Bank Volksbank-Raiffeisenbank', 'GENODEF1FSR'),
+	(3259, 0, 70169619, 'Raiffeisenbank Zorneding', 'GENODEF1ZOR'),
+	(3260, 0, 70169653, 'Raiffeisenbank Aiglsbach', 'GENODEF1AIG'),
+	(3261, 0, 70169693, 'Raiffeisenbank Hallertau', 'GENODEF1RHT'),
+	(3262, 0, 70190000, 'Münchner Bank', 'GENODEF1M01'),
+	(3263, 0, 70190200, 'GLS Gemeinschaftsbank', 'GENODEF1M09'),
+	(3264, 0, 70220000, 'LfA Förderbank Bayern', 'LFFBDEMMXXX'),
+	(3265, 0, 70220200, 'BHF-BANK', 'BHFBDEFF700'),
+	(3266, 0, 70220300, 'BMW Bank', 'BMWBDEMUXXX'),
+	(3267, 0, 70220400, 'Hanseatic Bank', 'HSTBDEH1MUE'),
+	(3268, 0, 70220800, 'Vereinsbank Victoria Bauspar', 'VVAGDEM1XXX'),
+	(3269, 0, 70220900, 'Wüstenrot Bausparkasse', 'DRESDEFFBFC'),
+	(3270, 0, 70230600, 'Isbank Fil München', 'ISBKDEFXMUN'),
+	(3271, 0, 70250150, 'Kreissparkasse München Starnberg Ebersberg', 'BYLADEM1KMS'),
+	(3272, 0, 70300000, 'Bundesbank eh Garmisch-Partenkirchen', 'MARKDEF1703'),
+	(3273, 0, 70320090, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM654'),
+	(3274, 0, 70320305, 'UniCredit Bank - HypoVereinsbank Ndl 635 Gar', 'HYVEDEM1091'),
+	(3275, 0, 70321194, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM466'),
+	(3276, 0, 70322192, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM664'),
+	(3277, 0, 70350000, 'Kreissparkasse Garmisch-Partenkirchen', 'BYLADEM1GAP'),
+	(3278, 0, 70351030, 'Vereinigte Sparkassen im Landkreis Weilheim', 'BYLADEM1WHM'),
+	(3279, 0, 70362595, 'Raiffeisenbank Wallgau-Krün', 'GENODEF1WAK'),
+	(3280, 0, 70380006, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF703'),
+	(3281, 0, 70390000, 'VR-Bank Werdenfels', 'GENODEF1GAP'),
+	(3282, 0, 70391800, 'Volksbank-Raiffeisenbank Penzberg -alt-', 'GENODEF1PZB'),
+	(3283, 0, 71000000, 'Bundesbank eh Bad Reichenhall', 'MARKDEF1710'),
+	(3284, 0, 71020072, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM410'),
+	(3285, 0, 71021270, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM629'),
+	(3286, 0, 71022182, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM453'),
+	(3287, 0, 71023173, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM632'),
+	(3288, 0, 71050000, 'Sparkasse Berchtesgadener Land', 'BYLADEM1BGL'),
+	(3289, 0, 71051010, 'Kreissparkasse Altötting-Burghausen -alt-', 'BYLADEM1AOE'),
+	(3290, 0, 71052050, 'Kreissparkasse Traunstein-Trostberg', 'BYLADEM1TST'),
+	(3291, 0, 71061009, 'VR meine Raiffeisenbank', 'GENODEF1AOE'),
+	(3292, 0, 71062802, 'Raiffeisenbank', 'GENODEF1AGE'),
+	(3293, 0, 71090000, 'Volksbank Raiffeisenbank Oberbayern Südost', 'GENODEF1BGL'),
+	(3294, 0, 71100000, 'Bundesbank eh Rosenheim', 'MARKDEF1711'),
+	(3295, 0, 71120077, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM448'),
+	(3296, 0, 71120078, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM644'),
+	(3297, 0, 71121176, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM438'),
+	(3298, 0, 71122183, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM457'),
+	(3299, 0, 71140041, 'Commerzbank Rosenheim', 'COBADEFF711'),
+	(3300, 0, 71141041, 'Commerzbank', 'COBADEFF704'),
+	(3301, 0, 71142041, 'Commerzbank', 'COBADEFF712'),
+	(3302, 0, 71150000, 'Sparkasse Rosenheim-Bad Aibling', 'BYLADEM1ROS'),
+	(3303, 0, 71151020, 'Sparkasse Altötting-Mühldorf', 'BYLADEM1MDF'),
+	(3304, 0, 71151240, 'Kreissparkasse Bad Aibling -alt-', 'BYLADEM1BAB'),
+	(3305, 0, 71152570, 'Kreissparkasse Miesbach-Tegernsee', 'BYLADEM1MIB'),
+	(3306, 0, 71152680, 'Kreis- und Stadtsparkasse Wasserburg', 'BYLADEM1WSB'),
+	(3307, 0, 71160000, 'Volksbank Raiffeisenbank Rosenheim-Chiemsee', 'GENODEF1VRR'),
+	(3308, 0, 71160161, 'VR Bank Rosenheim-Chiemsee', 'GENODEF1ROR'),
+	(3309, 0, 71161964, 'Volksbank-Raiffeisenbank Chiemsee -alt-', 'GENODEF1PRV'),
+	(3310, 0, 71162355, 'Raiffeisenbank Oberaudorf', 'GENODEF1OBD'),
+	(3311, 0, 71162804, 'Raiffeisenbank Aschau-Samerberg', 'GENODEF1ASU'),
+	(3312, 0, 71165150, 'Raiffeisenbank Mangfalltal -alt-', 'GENODEF1AIB'),
+	(3313, 0, 71180005, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF711'),
+	(3314, 0, 71190000, 'Volksbank Rosenheim -alt-', 'GENODEF1ROV'),
+	(3315, 0, 71191000, 'VR-Bank Burghausen-Mühldorf', 'GENODEF1MUL'),
+	(3316, 0, 72000000, 'Bundesbank', 'MARKDEF1720'),
+	(3317, 0, 72010111, 'SEB', 'ESSEDE5F720'),
+	(3318, 0, 72012300, 'Bank für Tirol und Vorarlberg Deutschland', 'BTVADE61XXX'),
+	(3319, 0, 72020070, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM408'),
+	(3320, 0, 72020240, 'UniCredit Bank - HypoVereinsbank Ndl 677 Agsb', 'HYVEDEM1102'),
+	(3321, 0, 72020700, 'Augsburger Aktienbank', 'AUGBDE77XXX'),
+	(3322, 0, 72021271, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM236'),
+	(3323, 0, 72021876, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM259'),
+	(3324, 0, 72030014, 'Fürst Fugger Privatbank', 'FUBKDE71XXX'),
+	(3325, 0, 72030227, 'Bankhaus Anton Hafner', 'ANHODE77XXX'),
+	(3326, 0, 72040046, 'Commerzbank', 'COBADEFF720'),
+	(3327, 0, 72050000, 'Stadtsparkasse Augsburg', 'AUGSDE77XXX'),
+	(3328, 0, 72050101, 'Kreissparkasse Augsburg', 'BYLADEM1AUG'),
+	(3329, 0, 72051210, 'Stadtsparkasse Aichach', 'BYLADEM1AIC'),
+	(3330, 0, 72051840, 'Sparkasse Günzburg-Krumbach', 'BYLADEM1GZK'),
+	(3331, 0, 72060300, 'Handels- und Gewerbebank Augsburg -alt-', 'GENODEF1A03'),
+	(3332, 0, 72062152, 'VR-Bank Handels- und Gewerbebank', 'GENODEF1MTG'),
+	(3333, 0, 72069002, 'Raiffeisenbank Adelzhausen-Sielenbach', 'GENODEF1ADZ'),
+	(3334, 0, 72069005, 'Raiffeisenbank', 'GENODEF1AIL'),
+	(3335, 0, 72069034, 'Raiffeisenbank Bissingen', 'GENODEF1BSI'),
+	(3336, 0, 72069036, 'Raiffeisenbank', 'GENODEF1BOI'),
+	(3337, 0, 72069043, 'Raiffeisen-Volksbank Dillingen-Burgau', 'GENODEF1GZ2'),
+	(3338, 0, 72069081, 'Raiffeisenbank Gersthofen -alt-', 'GENODEF1GHF'),
+	(3339, 0, 72069090, 'Raiffeisenbank Bibertal-Kötz', 'GENODEF1KEZ'),
+	(3340, 0, 72069105, 'Raiffeisenbank', 'GENODEF1HTF'),
+	(3341, 0, 72069113, 'Raiffeisenbank Aschberg', 'GENODEF1HZH'),
+	(3342, 0, 72069114, 'Raiffeisenbank', 'GENODEF1HZR'),
+	(3343, 0, 72069119, 'Raiffeisenbank Ichenhausen', 'GENODEF1ICH'),
+	(3344, 0, 72069123, 'Raiffeisenbank Jettingen-Scheppach', 'GENODEF1JET'),
+	(3345, 0, 72069126, 'Raiffeisenbank Bibertal-Kötz', 'GENODEF1BBT'),
+	(3346, 0, 72069132, 'Raiffeisenbank Krumbach/Schwaben', 'GENODEF1KRR'),
+	(3347, 0, 72069135, 'Raiffeisenbank Stauden', 'GENODEF1LST'),
+	(3348, 0, 72069155, 'Raiffeisenbank Kissing-Mering', 'GENODEF1MRI'),
+	(3349, 0, 72069179, 'Raiffeisenbank Unteres Zusamtal', 'GENODEF1BWI'),
+	(3350, 0, 72069181, 'Raiffeisenbank', 'GENODEF1OFF'),
+	(3351, 0, 72069193, 'Raiffeisenbank', 'GENODEF1RLI'),
+	(3352, 0, 72069209, 'Raiffeisenbank', 'GENODEF1RGB'),
+	(3353, 0, 72069220, 'Raiffeisenbank', 'GENODEF1SMU'),
+	(3354, 0, 72069235, 'Raiffeisenbank', 'GENODEF1THS'),
+	(3355, 0, 72069263, 'Raiffeisenbank Wittislingen', 'GENODEF1WTS'),
+	(3356, 0, 72069274, 'Raiffeisenbank Augsburger Land West', 'GENODEF1ZUS'),
+	(3357, 0, 72069308, 'Raiffeisen-Volksbank Wemding', 'GENODEF1WDN'),
+	(3358, 0, 72069329, 'Raiffeisen-Volksbank Ries', 'GENODEF1NOE'),
+	(3359, 0, 72069736, 'Raiffeisenbank Iller-Roth-Günz', 'GENODEF1BLT'),
+	(3360, 0, 72069789, 'Raiffeisenbank Pfaffenhausen', 'GENODEF1PFA'),
+	(3361, 0, 72070001, 'Deutsche Bank', 'DEUTDEMM720'),
+	(3362, 0, 72070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB720'),
+	(3363, 0, 72080001, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF720'),
+	(3364, 0, 72090000, 'Augusta-Bank Raiffeisen-Volksbank', 'GENODEF1AUB'),
+	(3365, 0, 72090500, 'Sparda-Bank Augsburg', 'GENODEF1S03'),
+	(3366, 0, 72090900, 'PSD Bank München', 'GENODEF1P14'),
+	(3367, 0, 72091800, 'Volksbank Günzburg', 'GENODEF1GZ1'),
+	(3368, 0, 72100000, 'Bundesbank eh Ingolstadt', 'MARKDEF1721'),
+	(3369, 0, 72120078, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM426'),
+	(3370, 0, 72120079, 'UniCredit Bank - HypoVereinsbank', ''),
+	(3371, 0, 72120207, 'UniCredit Bank - HypoVereinsbank Ndl 648 Ing', 'HYVEDEM1093'),
+	(3372, 0, 72122181, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM665'),
+	(3373, 0, 72140052, 'Commerzbank', 'COBADEFF721'),
+	(3374, 0, 72150000, 'Sparkasse Ingolstadt', 'BYLADEM1ING'),
+	(3375, 0, 72151340, 'Sparkasse Eichstätt', 'BYLADEM1EIS'),
+	(3376, 0, 72151650, 'Sparkasse Pfaffenhofen', 'BYLADEM1PAF'),
+	(3377, 0, 72151880, 'Stadtsparkasse Schrobenhausen', 'BYLADEM1SSH'),
+	(3378, 0, 72152070, 'Sparkasse Neuburg-Rain', 'BYLADEM1NEB'),
+	(3379, 0, 72160818, 'Volksbank Raiffeisenbank Bayern Mitte', 'GENODEF1INP'),
+	(3380, 0, 72169013, 'Raiffeisenbank Aresing-Hörzhausen-Schiltberg -alt-', 'GENODEF1ARH'),
+	(3381, 0, 72169080, 'Raiffeisenbank Aresing-Gerolsbach', 'GENODEF1GSB'),
+	(3382, 0, 72169111, 'Raiffeisenbank Hohenwart -alt-', 'GENODEF1HHW'),
+	(3383, 0, 72169218, 'Schrobenhausener Bank', 'GENODEF1SBN'),
+	(3384, 0, 72169246, 'Raiffeisenbank Schrobenhausener Land', 'GENODEF1WFN'),
+	(3385, 0, 72169380, 'Raiffeisenbank Beilngries', 'GENODEF1BLN'),
+	(3386, 0, 72169733, 'Raiffeisenbank Berg im Gau-Langenmosen -alt-', 'GENODEF1LBE'),
+	(3387, 0, 72169745, 'Raiffeisenbank Ehekirchen-Oberhausen', 'GENODEF1WDF'),
+	(3388, 0, 72169753, 'Raiffeisenbank Ober-Unterhausen-Sinning -alt-', 'GENODEF1OUS'),
+	(3389, 0, 72169756, 'Raiffeisen-Volksbank Neuburg/Donau', 'GENODEF1ND2'),
+	(3390, 0, 72169764, 'Raiffeisenbank Donaumooser Land', 'GENODEF1WRI'),
+	(3391, 0, 72169812, 'Raiffeisenbank Gaimersheim-Buxheim', 'GENODEF1GAH'),
+	(3392, 0, 72169831, 'Raiffeisenbank Riedenburg-Lobsing', 'GENODEF1RBL'),
+	(3393, 0, 72170007, 'Deutsche Bank', 'DEUTDEMM721'),
+	(3394, 0, 72170024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB721'),
+	(3395, 0, 72180002, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF721'),
+	(3396, 0, 72191300, 'Volksbank Raiffeisenbank Eichstätt', 'GENODEF1EIH'),
+	(3397, 0, 72191600, 'Hallertauer Volksbank', 'GENODEF1PFI'),
+	(3398, 0, 72191800, 'Volksbank Schrobenhausen -alt-', 'GENODEF1SHV'),
+	(3399, 0, 72220074, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM255'),
+	(3400, 0, 72223182, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM263'),
+	(3401, 0, 72250000, 'Sparkasse Nördlingen', 'BYLADEM1NLG'),
+	(3402, 0, 72250160, 'Sparkasse Donauwörth', 'BYLADEM1DON'),
+	(3403, 0, 72251520, 'Kreis- und Stadtsparkasse Dillingen', 'BYLADEM1DLG'),
+	(3404, 0, 72261754, 'Raiffeisenbank Rain am Lech', 'GENODEF1RLH'),
+	(3405, 0, 72262401, 'Raiffeisen-Volksbank Dillingen -alt-', 'GENODEF1DLG'),
+	(3406, 0, 72262901, 'Genossenschaftsbank Wertingen -alt-', 'GENODEF1WTG'),
+	(3407, 0, 72290100, 'Raiffeisen-Volksbank Donauwörth', 'GENODEF1DON'),
+	(3408, 0, 73050000, 'Sparkasse Neu-Ulm-Illertissen', 'BYLADEM1NUL'),
+	(3409, 0, 73061191, 'VR-Bank Neu-Ulm/Weißenhorn', 'GENODEF1NU1'),
+	(3410, 0, 73090000, 'Volksbank Neu-Ulm', 'GENODEF1NUV'),
+	(3411, 0, 73100000, 'Bundesbank eh Memmingen', 'MARKDEF1731'),
+	(3412, 0, 73120075, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM436'),
+	(3413, 0, 73140046, 'Commerzbank Memmingen', 'COBADEFF731'),
+	(3414, 0, 73150000, 'Sparkasse Memmingen-Lindau-Mindelheim', 'BYLADEM1MLM'),
+	(3415, 0, 73160000, 'Genossenschaftsbank Unterallgäu', 'GENODEF1MIR'),
+	(3416, 0, 73180011, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF731'),
+	(3417, 0, 73190000, 'VR-Bank Memmingen', 'GENODEF1MM1'),
+	(3418, 0, 73191500, 'Volksbank Ulm-Biberach -alt-', 'ULMVDE66002'),
+	(3419, 0, 73300000, 'Bundesbank eh Kempten', 'MARKDEF1733'),
+	(3420, 0, 73311600, 'Vorarlberger Landes- und Hypothekenbank', 'HYPVDE71XXX'),
+	(3421, 0, 73320073, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM428'),
+	(3422, 0, 73320442, 'UniCredit Bank - HypoVereinsbank Ndl 669 Kpt', 'HYVEDEM1097'),
+	(3423, 0, 73321177, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM567'),
+	(3424, 0, 73322380, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM570'),
+	(3425, 0, 73331700, 'Gabler Saliter Bankgeschäft', 'GABLDE71XXX'),
+	(3426, 0, 73340046, 'Commerzbank Kempten Allgäu', 'COBADEFF733'),
+	(3427, 0, 73350000, 'Sparkasse Allgäu', 'BYLADEM1ALG'),
+	(3428, 0, 73351635, 'Sparkasse Riezlern, Kleinwalsertal', 'BYLADEM1ALR'),
+	(3429, 0, 73351840, 'Dornbirner Sparkasse', ''),
+	(3430, 0, 73361592, 'Walser Privatbank', ''),
+	(3431, 0, 73362421, 'Bankhaus Jungholz Zndl der Raiffeisenbank Reutte', 'RBRTDE71XXX'),
+	(3432, 0, 73362500, 'Raiffeisen-Landesbank Tirol', 'RZTIDE71XXX'),
+	(3433, 0, 73369264, 'Raiffeisenbank im Allgäuer Land', 'GENODEF1DTA'),
+	(3434, 0, 73369821, 'Raiffeisen-Bodenseebank', 'GENODEF1LBB'),
+	(3435, 0, 73369823, 'Raiffeisenbank Westallgäu', 'GENODEF1WWA'),
+	(3436, 0, 73369824, 'Raiffeisenbank Heimenkirch-Ellhofen -alt-', 'GENODEF1HKE'),
+	(3437, 0, 73369826, 'Volksbank', 'GENODEF1LIA'),
+	(3438, 0, 73369851, 'Raiffeisenbank Aitrang-Ruderatshofen', 'GENODEF1AIT'),
+	(3439, 0, 73369854, 'Raiffeisenbank Fuchstal-Denklingen', 'GENODEF1FCH'),
+	(3440, 0, 73369859, 'Raiffeisenbank', 'GENODEF1BIN'),
+	(3441, 0, 73369871, 'Raiffeisenbank Baisweil-Eggenthal-Friesenried', 'GENODEF1EGB'),
+	(3442, 0, 73369878, 'Raiffeisenbank Füssen-Pfronten-Nesselwang -alt-', 'GENODEF1FPN'),
+	(3443, 0, 73369881, 'Raiffeisenbank Haldenwang', 'GENODEF1HWG'),
+	(3444, 0, 73369888, 'Raiffeisenbank Irsee-Pforzen-Rieden -alt-', 'GENODEF1PIR'),
+	(3445, 0, 73369902, 'Raiffeisenbank', 'GENODEF1KM1'),
+	(3446, 0, 73369915, 'Raiffeisenbank Obergermaringen -alt-', 'GENODEF1GMG'),
+	(3447, 0, 73369918, 'Raiffeisenbank Kirchweihtal', 'GENODEF1OKI'),
+	(3448, 0, 73369920, 'Raiffeisenbank Oberallgäu-Süd', 'GENODEF1SFO'),
+	(3449, 0, 73369933, 'Raiffeisenbank Südliches Ostallgäu', 'GENODEF1RHP'),
+	(3450, 0, 73369936, 'Raiffeisenbank Seeg -alt-', 'GENODEF1SER'),
+	(3451, 0, 73369954, 'Raiffeisenbank Wald-Görisried', 'GENODEF1WGO'),
+	(3452, 0, 73370008, 'Deutsche Bank', 'DEUTDEMM733'),
+	(3453, 0, 73370024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB733'),
+	(3454, 0, 73380004, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF733'),
+	(3455, 0, 73390000, 'Allgäuer Volksbank Kempten-Sonthofen', 'GENODEF1KEV'),
+	(3456, 0, 73391600, 'Volksbank im Kleinwalsertal', 'VOVBDE71XXX'),
+	(3457, 0, 73392000, 'Volksbank Immenstadt', 'GENODEF1IMV'),
+	(3458, 0, 73392400, 'Volksbank Tirol Jungholz', 'VBOEDE71XXX'),
+	(3459, 0, 73420071, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM427'),
+	(3460, 0, 73420546, 'UniCredit Bank - HypoVereinsbank Ndl 693 Kaufb', 'HYVEDEM1104'),
+	(3461, 0, 73421478, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM666'),
+	(3462, 0, 73440048, 'Commerzbank', 'COBADEFF971'),
+	(3463, 0, 73450000, 'Kreis- und Stadtsparkasse Kaufbeuren', 'BYLADEM1KFB'),
+	(3464, 0, 73451450, 'Kreissparkasse Schongau', 'BYLADEM1SOG'),
+	(3465, 0, 73460046, 'VR Bank Kaufbeuren-Ostallgäu', 'GENODEF1KFB'),
+	(3466, 0, 73480013, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF734'),
+	(3467, 0, 73491300, 'Volksbank Ostallgäu -alt-', 'GENODEF1OAL'),
+	(3468, 0, 74000000, 'Bundesbank eh Passau', 'MARKDEF1740'),
+	(3469, 0, 74020074, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM445'),
+	(3470, 0, 74020100, 'Raiffeisenlandesbank OÖ Zndl Süddeutschland', 'RZOODE77XXX'),
+	(3471, 0, 74020150, 'Raiffeisenlandesbank OÖ Zndl Südde - für interne Zwecke', 'RZOODE77050'),
+	(3472, 0, 74020414, 'UniCredit Bank - HypoVereinsbank Ndl 672 Pass', 'HYVEDEM1100'),
+	(3473, 0, 74040082, 'Commerzbank Passau', 'COBADEFF740'),
+	(3474, 0, 74050000, 'Sparkasse Passau', 'BYLADEM1PAS'),
+	(3475, 0, 74051230, 'Sparkasse Freyung-Grafenau', 'BYLADEM1FRG'),
+	(3476, 0, 74061101, 'Raiffeisenbank Am Goldenen Steig', 'GENODEF1RGS'),
+	(3477, 0, 74061564, 'Raiffeisenbank Unteres Inntal', 'GENODEF1NUI'),
+	(3478, 0, 74061670, 'Raiffeisenbank Ortenburg-Kirchberg', 'GENODEF1ORT'),
+	(3479, 0, 74061813, 'VR-Bank Rottal-Inn', 'GENODEF1PFK'),
+	(3480, 0, 74062490, 'Raiffeisenbank Vilshofener Land', 'GENODEF1VIR'),
+	(3481, 0, 74062786, 'Raiffeisenbank i Lkr Passau-Nord', 'GENODEF1TIE'),
+	(3482, 0, 74064593, 'Raiffeisenbank', 'GENODEF1WSD'),
+	(3483, 0, 74065782, 'Raiffeisenbank Salzweg-Thyrnau', 'GENODEF1SZT'),
+	(3484, 0, 74066749, 'Raiffeisenbank im Südl Bayerischen Wald', 'GENODEF1HZN'),
+	(3485, 0, 74067000, 'Rottaler Raiffeisenbank', 'GENODEF1POC'),
+	(3486, 0, 74069744, 'Raiffeisenbank', 'GENODEF1GRT'),
+	(3487, 0, 74069752, 'Raiffeisenbank', 'GENODEF1HHU'),
+	(3488, 0, 74069758, 'Raiffeisenbank Kirchberg v. Wald', 'GENODEF1TKI'),
+	(3489, 0, 74069763, 'Raiffeisenbank Mauth', 'GENODEF1MTH'),
+	(3490, 0, 74069768, 'Raiffeisenbank am Dreisessel', 'GENODEF1NHD'),
+	(3491, 0, 74090000, 'VR-Bank Passau', 'GENODEF1PA1'),
+	(3492, 0, 74092400, 'Volksbank Vilshofen', 'GENODEF1VIV'),
+	(3493, 0, 74100000, 'Bundesbank eh Deggendorf', 'MARKDEF1741'),
+	(3494, 0, 74120071, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM415'),
+	(3495, 0, 74120514, 'UniCredit Bank - HypoVereinsbank 674 Dgdf', 'HYVEDEM1101'),
+	(3496, 0, 74131000, 'TEBA Kreditbank', 'TEKRDE71XXX'),
+	(3497, 0, 74140048, 'Commerzbank', 'COBADEFF977'),
+	(3498, 0, 74150000, 'Sparkasse Deggendorf', 'BYLADEM1DEG'),
+	(3499, 0, 74151450, 'Sparkasse Regen-Viechtach', 'BYLADEM1REG'),
+	(3500, 0, 74160025, 'Raiffeisenbank Deggendorf-Plattling', 'GENODEF1DEG'),
+	(3501, 0, 74161608, 'Raiffeisenbank Hengersberg-Schöllnach', 'GENODEF1HBW'),
+	(3502, 0, 74164149, 'VR-Bank', 'GENODEF1RGE'),
+	(3503, 0, 74165013, 'Raiffeisenbank Sonnenwald', 'GENODEF1AUS'),
+	(3504, 0, 74180009, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF741'),
+	(3505, 0, 74190000, 'GenoBank DonauWald', 'GENODEF1DGV'),
+	(3506, 0, 74191000, 'VR-Bank Landau', 'GENODEF1LND'),
+	(3507, 0, 74220075, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM452'),
+	(3508, 0, 74221170, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM675'),
+	(3509, 0, 74240062, 'Commerzbank Straubing', 'COBADEFF742'),
+	(3510, 0, 74250000, 'Sparkasse Niederbayern-Mitte', 'BYLADEM1SRG'),
+	(3511, 0, 74251020, 'Sparkasse im Landkreis Cham', 'BYLADEM1CHM'),
+	(3512, 0, 74260110, 'Raiffeisenbank', 'GENODEF1SR2'),
+	(3513, 0, 74261024, 'Raiffeisenbank Chamer Land', 'GENODEF1CHA'),
+	(3514, 0, 74290000, 'Volksbank Straubing', 'GENODEF1SR1'),
+	(3515, 0, 74290100, 'CB Bank', 'CBSRDE71XXX'),
+	(3516, 0, 74300000, 'Bundesbank eh Landshut', 'MARKDEF1743'),
+	(3517, 0, 74320073, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM433'),
+	(3518, 0, 74320307, 'UniCredit Bank - HypoVereinsbank Ndl 601 Ldsht', 'HYVEDEM1090'),
+	(3519, 0, 74340077, 'Commerzbank', 'COBADEFF743'),
+	(3520, 0, 74350000, 'Sparkasse Landshut', 'BYLADEM1LAH'),
+	(3521, 0, 74351310, 'Sparkasse Dingolfing-Landau -alt-', 'BYLADEM1DGF'),
+	(3522, 0, 74351430, 'Sparkasse Rottal-Inn', 'BYLADEM1EGF'),
+	(3523, 0, 74351740, 'Stadt- und Kreissparkasse Moosburg', 'BYLADEM1MSB'),
+	(3524, 0, 74361211, 'Raiffeisenbank Arnstorf', 'GENODEF1ARF'),
+	(3525, 0, 74362663, 'Raiffeisenbank Altdorf-Ergolding', 'GENODEF1ERG'),
+	(3526, 0, 74364689, 'Raiffeisenbank Pfeffenhausen-Rottenburg', 'GENODEF1PFF'),
+	(3527, 0, 74366666, 'Raiffeisenbank Geisenhausen', 'GENODEF1GSH'),
+	(3528, 0, 74369068, 'Raiffeisenbank Hofkirchen-Bayerbach', 'GENODEF1LWE'),
+	(3529, 0, 74369088, 'Raiffeisenbank Geiselhöring-Pfaffenberg', 'GENODEF1GPF'),
+	(3530, 0, 74369130, 'Raiffeisenbank Parkstetten', 'GENODEF1PST'),
+	(3531, 0, 74369146, 'Raiffeisenbank Rattiszell-Konzell', 'GENODEF1RZK'),
+	(3532, 0, 74369656, 'Raiffeisenbank Essenbach', 'GENODEF1ENA'),
+	(3533, 0, 74369662, 'Raiffeisenbank Buch-Eching', 'GENODEF1EBV'),
+	(3534, 0, 74369704, 'Raiffeisenbank Mengkofen-Loiching', 'GENODEF1MKO'),
+	(3535, 0, 74369709, 'Raiffeisenbank', 'GENODEF1WIG'),
+	(3536, 0, 74380007, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF743'),
+	(3537, 0, 74390000, 'VR-Bank Landshut', 'GENODEF1LH1'),
+	(3538, 0, 74391300, 'Volksbank-Raiffeisenbank Dingolfing', 'GENODEF1DGF'),
+	(3539, 0, 74391400, 'Rottaler Volksbank-Raiffeisenbank Eggenfelden', 'GENODEF1EGR'),
+	(3540, 0, 74392300, 'VR-Bank Vilsbiburg', 'GENODEF1VBV'),
+	(3541, 0, 75000000, 'Bundesbank', 'MARKDEF1750'),
+	(3542, 0, 75010111, 'SEB', 'ESSEDE5F750'),
+	(3543, 0, 75020073, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM447'),
+	(3544, 0, 75020314, 'UniCredit Bank - HypoVereinsbank Ndl 670 Rgsb', 'HYVEDEM1099'),
+	(3545, 0, 75021174, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM804'),
+	(3546, 0, 75040062, 'Commerzbank Regensburg', 'COBADEFF750'),
+	(3547, 0, 75050000, 'Sparkasse Regensburg', 'BYLADEM1RBG'),
+	(3548, 0, 75051040, 'Sparkasse im Landkreis Schwandorf', 'BYLADEM1SAD'),
+	(3549, 0, 75051565, 'Kreissparkasse Kelheim', 'BYLADEM1KEH'),
+	(3550, 0, 75060150, 'Raiffeisenbank Regensburg-Wenzenbach', 'GENODEF1R02'),
+	(3551, 0, 75061168, 'Raiffeisenbank Schwandorf-Nittenau', 'GENODEF1SWN'),
+	(3552, 0, 75061851, 'Raiffeisenbank', 'GENODEF1REF'),
+	(3553, 0, 75062026, 'Raiffeisenbank Oberpfalz Süd', 'GENODEF1DST'),
+	(3554, 0, 75069014, 'Raiffeisenbank Bad Abbach-Saal', 'GENODEF1ABS'),
+	(3555, 0, 75069015, 'Raiffeisenbank Bad Gögging', 'GENODEF1NGG'),
+	(3556, 0, 75069020, 'Raiffeisenbank Bruck', 'GENODEF1BUK'),
+	(3557, 0, 75069038, 'Raiffeisenbank Falkenstein-Wörth', 'GENODEF1FKS'),
+	(3558, 0, 75069043, 'Raiffeisen-Bank -alt-', 'GENODEF1FUW'),
+	(3559, 0, 75069050, 'Raiffeisenbank Grafenwöhr-Kirchenthumbach', 'GENODEF1GRW'),
+	(3560, 0, 75069055, 'Raiffeisenbank Alteglofsheim-Hagelstadt', 'GENODEF1HGA'),
+	(3561, 0, 75069061, 'Raiffeisenbank Hemau-Kallmünz', 'GENODEF1HEM'),
+	(3562, 0, 75069062, 'Raiffeisenbank Herrnwahlthann-Teugn-Dünzling -alt-', 'GENODEF1HTD'),
+	(3563, 0, 75069076, 'Raiffeisenbank Kallmünz -alt-', 'GENODEF1KLM'),
+	(3564, 0, 75069078, 'Raiffeisenbank', 'GENODEF1SZV'),
+	(3565, 0, 75069081, 'Raiffeisenbank Bad Kötzting', 'GENODEF1KTZ'),
+	(3566, 0, 75069094, 'Raiffeisenbank Parsberg-Velburg', 'GENODEF1PAR'),
+	(3567, 0, 75069110, 'Raiffeisenbank Eschlkam-Lam-Lohberg-Neukirchen b Hl Blut', 'GENODEF1NKN'),
+	(3568, 0, 75069171, 'Raiffeisenbank im Naabtal', 'GENODEF1SWD'),
+	(3569, 0, 75070013, 'Deutsche Bank', 'DEUTDEMM750'),
+	(3570, 0, 75070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB750'),
+	(3571, 0, 75080003, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF750'),
+	(3572, 0, 75090000, 'Volksbank Regensburg', 'GENODEF1R01'),
+	(3573, 0, 75090300, 'LIGA Bank', 'GENODEF1M05'),
+	(3574, 0, 75090500, 'Sparda-Bank Ostbayern', 'GENODEF1S05'),
+	(3575, 0, 75090629, 'apoBank', 'DAAEDED1029'),
+	(3576, 0, 75090900, 'PSD Bank Niederbayern-Oberpfalz', 'GENODEF1P18'),
+	(3577, 0, 75091400, 'VR Bank Burglengenfeld', 'GENODEF1BLF'),
+	(3578, 0, 75220070, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM405'),
+	(3579, 0, 75240000, 'Commerzbank', 'COBADEFF765'),
+	(3580, 0, 75250000, 'Sparkasse Amberg-Sulzbach', 'BYLADEM1ABG'),
+	(3581, 0, 75261700, 'Raiffeisenbank Sulzbach-Rosenberg', 'GENODEF1SZH'),
+	(3582, 0, 75290000, 'Volksbank-Raiffeisenbank Amberg', 'GENODEF1AMV'),
+	(3583, 0, 75300000, 'Bundesbank eh Weiden Oberpf', 'MARKDEF1753'),
+	(3584, 0, 75320075, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM454'),
+	(3585, 0, 75340090, 'Commerzbank', 'COBADEFF753'),
+	(3586, 0, 75350000, 'Sparkasse Oberpfalz Nord', 'BYLADEM1WEN'),
+	(3587, 0, 75351960, 'Vereinigte Sparkassen Eschenbach i d Opf', 'BYLADEM1ESB'),
+	(3588, 0, 75360011, 'Raiffeisenbank Weiden', 'GENODEF1WEO'),
+	(3589, 0, 75362039, 'Raiffeisenbank', 'GENODEF1FLS'),
+	(3590, 0, 75363189, 'Raiffeisenbank Neustadt-Vohenstrauß', 'GENODEF1NEW'),
+	(3591, 0, 75390000, 'Volksbank Nordoberpfalz', 'GENODEF1WEV'),
+	(3592, 0, 76000000, 'Bundesbank', 'MARKDEF1760'),
+	(3593, 0, 76010085, 'Postbank', 'PBNKDEFFXXX'),
+	(3594, 0, 76010111, 'SEB', 'ESSEDE5F760'),
+	(3595, 0, 76020070, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM460'),
+	(3596, 0, 76020099, 'UniCredit Bank - HypoVereinsbank Prepaid Card', 'HYVEDEMMCAR'),
+	(3597, 0, 76020214, 'UniCredit Bank - HypoVereinsbank Ndl 156 Nbg', 'HYVEDEM1078'),
+	(3598, 0, 76020600, 'Hanseatic Bank', 'HSTBDEH1NUE'),
+	(3599, 0, 76026000, 'norisbank', 'NORSDE71XXX'),
+	(3600, 0, 76030080, 'Cortal Consors Zndl Deutschland', 'CSDBDE71XXX'),
+	(3601, 0, 76030600, 'Isbank Fil Nürnberg', 'ISBKDEFXNUR'),
+	(3602, 0, 76030800, 'BIW Bank für Investments und Wertpapiere', 'BIWBDE33760'),
+	(3603, 0, 76032000, 'TeamBank Nürnberg', 'TEAMDE71XXX'),
+	(3604, 0, 76032001, 'TeamBank Nürnberg GF Austria', 'TEAMDE71TAT'),
+	(3605, 0, 76035000, 'UmweltBank', 'UMWEDE7NXXX'),
+	(3606, 0, 76040060, 'Commerzbank CC', 'COBADEFF100'),
+	(3607, 0, 76040061, 'Commerzbank', 'COBADEFF760'),
+	(3608, 0, 76040062, 'Commerzbank CC', 'COBADEFF101'),
+	(3609, 0, 76050000, 'Bayerische Landesbank', 'BYLADE77XXX'),
+	(3610, 0, 76050101, 'Sparkasse Nürnberg', 'SSKNDE77XXX'),
+	(3611, 0, 76052080, 'Sparkasse Neumarkt i d OPf-Parsberg', 'BYLADEM1NMA'),
+	(3612, 0, 76060000, 'DZ BANK', 'GENODEFF760'),
+	(3613, 0, 76060561, 'Evangelische Kreditgenossenschaft - Filiale Nürnberg -', 'GENODEF1N05'),
+	(3614, 0, 76060618, 'Volksbank Raiffeisenbank', 'GENODEF1N02'),
+	(3615, 0, 76061025, 'Raiffeisen Spar+Kreditbank Lauf a d Pegnitz', 'GENODEF1LAU'),
+	(3616, 0, 76061482, 'Raiffeisenbank Hersbruck', 'GENODEF1HSB'),
+	(3617, 0, 76069369, 'Raiffeisenbank Auerbach-Freihung', 'GENODEF1AUO'),
+	(3618, 0, 76069372, 'Raiffeisenbank Bad Windsheim', 'GENODEF1WDS'),
+	(3619, 0, 76069378, 'Raiffeisenbank', 'GENODEF1BEH'),
+	(3620, 0, 76069404, 'Raiffeisenbank Uehlfeld-Dachsbach', 'GENODEF1DSB'),
+	(3621, 0, 76069409, 'Raiffeisenbank', 'GENODEF1DIH'),
+	(3622, 0, 76069410, 'Raiffeisenbank Dietersheim und Umgebung', 'GENODEF1DIM'),
+	(3623, 0, 76069440, 'Raiffeisenbank Altdorf-Feucht', 'GENODEF1FEC'),
+	(3624, 0, 76069441, 'VR-Bank Feuchtwangen-Limes', 'GENODEF1FEW'),
+	(3625, 0, 76069448, 'Raiffeisenbank -alt-', 'GENODEF1FRD'),
+	(3626, 0, 76069449, 'Raiffeisenbank Berching-Freystadt-Mühlhausen', 'GENODEF1FYS'),
+	(3627, 0, 76069462, 'Raiffeisenbank Greding - Thalmässing', 'GENODEF1GDG'),
+	(3628, 0, 76069468, 'Raiffeisenbank Weißenburg-Gunzenhausen', 'GENODEF1GU1'),
+	(3629, 0, 76069483, 'Raiffeisenbank Herzogenaurach -alt-', 'GENODEF1HZA'),
+	(3630, 0, 76069486, 'Raiffeisenbank Hirschau', 'GENODEF1HSC'),
+	(3631, 0, 76069512, 'Raiffeisenbank Knoblauchsland Nürnberg-Buch', 'GENODEF1N08'),
+	(3632, 0, 76069549, 'Raiffeisenbank Münchaurach -alt-', 'GENODEF1AUT'),
+	(3633, 0, 76069552, 'Raiffeisenbank -alt-', 'GENODEF1NHF'),
+	(3634, 0, 76069553, 'Raiffeisenbank Neumarkt', 'GENODEF1NM1'),
+	(3635, 0, 76069559, 'VR-Bank Uffenheim-Neustadt', 'GENODEF1NEA'),
+	(3636, 0, 76069564, 'Raiffeisenbank Oberferrieden-Burgthann', 'GENODEF1BTO'),
+	(3637, 0, 76069576, 'Raiffeisenbank Plankstetten', 'GENODEF1BPL'),
+	(3638, 0, 76069598, 'Raiffeisenbank Großhabersdorf-Roßtal', 'GENODEF1RSS'),
+	(3639, 0, 76069601, 'VR-Bank Rothenburg', 'GENODEF1RT2'),
+	(3640, 0, 76069602, 'Raiffeisenbank Seebachgrund', 'GENODEF1HSE'),
+	(3641, 0, 76069611, 'Raiffeisenbank Unteres Vilstal', 'GENODEF1SDM'),
+	(3642, 0, 76069635, 'Raiffeisenbank Ursensollen-Ammerthal-Hohenburg -alt-', 'GENODEF1URS'),
+	(3643, 0, 76069663, 'Raiffeisenbank Heilsbronn-Windsbach', 'GENODEF1WBA'),
+	(3644, 0, 76069669, 'Raiffeisenbank', 'GENODEF1ZIR'),
+	(3645, 0, 76070012, 'Deutsche Bank', 'DEUTDEMM760'),
+	(3646, 0, 76070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB760'),
+	(3647, 0, 76080040, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF760'),
+	(3648, 0, 76080053, 'Commerzbank vormals Dresdner Bank Zw 53', 'DRESDEFFAGI'),
+	(3649, 0, 76080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFFI25'),
+	(3650, 0, 76080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ26'),
+	(3651, 0, 76080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFJ27'),
+	(3652, 0, 76089480, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI24'),
+	(3653, 0, 76089482, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI46'),
+	(3654, 0, 76090300, 'Bäcker-Bank Nürnberg', 'GENODEF1N04'),
+	(3655, 0, 76090400, 'Evenord-Bank', 'GENODEF1N03'),
+	(3656, 0, 76090500, 'Sparda-Bank Nürnberg', 'GENODEF1S06'),
+	(3657, 0, 76090613, 'apoBank', 'DAAEDED1013'),
+	(3658, 0, 76090900, 'PSD Bank', 'GENODEF1P17'),
+	(3659, 0, 76091000, 'Sparda-Bank Nürnberg Zw Sonnenstraße', 'GENODEF1S14'),
+	(3660, 0, 76211900, 'CVW - Privatbank', 'GENODEF1WHD'),
+	(3661, 0, 76220073, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM419'),
+	(3662, 0, 76230000, 'BSQ Bauspar', 'QUBADE71XXX'),
+	(3663, 0, 76240011, 'Commerzbank Fürth Bayern', 'COBADEFF762'),
+	(3664, 0, 76250000, 'Sparkasse Fürth', 'BYLADEM1SFU'),
+	(3665, 0, 76251020, 'Sparkasse i Landkreis Neustadt a d Aisch', 'BYLADEM1NEA'),
+	(3666, 0, 76260451, 'Raiffeisen-Volksbank Fürth', 'GENODEF1FUE'),
+	(3667, 0, 76300000, 'Bundesbank eh Erlangen', 'MARKDEF1763'),
+	(3668, 0, 76320072, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM417'),
+	(3669, 0, 76330111, 'Bankhaus Max Flessa', 'FLESDEMMXXX'),
+	(3670, 0, 76340061, 'Commerzbank Erlangen', 'COBADEFF763'),
+	(3671, 0, 76350000, 'Stadt- und Kreissparkasse Erlangen', 'BYLADEM1ERH'),
+	(3672, 0, 76351040, 'Sparkasse Forchheim', 'BYLADEM1FOR'),
+	(3673, 0, 76351560, 'Kreissparkasse Höchstadt', 'BYLADEM1HOS'),
+	(3674, 0, 76360033, 'VR-Bank Erlangen-Höchstadt-Herzogenaurach', 'GENODEF1ER1'),
+	(3675, 0, 76391000, 'Volksbank Forchheim', 'GENODEF1FOH'),
+	(3676, 0, 76420080, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM065'),
+	(3677, 0, 76450000, 'Sparkasse Mittelfranken-Süd', 'BYLADEM1SRS'),
+	(3678, 0, 76460015, 'Raiffeisenbank Roth-Schwabach', 'GENODEF1SWR'),
+	(3679, 0, 76461485, 'Raiffeisenbank am Rothsee', 'GENODEF1HPN'),
+	(3680, 0, 76500000, 'Bundesbank eh Ansbach', 'MARKDEF1765'),
+	(3681, 0, 76520071, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM406'),
+	(3682, 0, 76550000, 'Vereinigte Sparkassen Ansbach', 'BYLADEM1ANS'),
+	(3683, 0, 76551020, 'Kreis- und Stadtsparkasse Dinkelsbühl', 'BYLADEM1DKB'),
+	(3684, 0, 76551540, 'Vereinigte Sparkassen Gunzenhausen', 'BYLADEM1GUN'),
+	(3685, 0, 76551860, 'Stadt- und Kreissparkasse Rothenburg', 'BYLADEM1ROT'),
+	(3686, 0, 76560060, 'RaiffeisenVolksbank Gewerbebank', 'GENODEF1ANS'),
+	(3687, 0, 76561979, 'Raiffeisenbank -alt-', 'GENODEF1UFF'),
+	(3688, 0, 76591000, 'VR Bank Dinkelsbühl', 'GENODEF1DKV'),
+	(3689, 0, 77000000, 'Bundesbank eh Bamberg', 'MARKDEF1770'),
+	(3690, 0, 77020070, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM411'),
+	(3691, 0, 77030111, 'Bankhaus Max Flessa', 'FLESDEMMXXX'),
+	(3692, 0, 77040080, 'Commerzbank Bamberg', 'COBADEFF770'),
+	(3693, 0, 77050000, 'Sparkasse Bamberg', 'BYLADEM1SKB'),
+	(3694, 0, 77060100, 'VR Bank Bamberg Raiffeisen-Volksbank', 'GENODEF1BA2'),
+	(3695, 0, 77061004, 'Raiffeisenbank Obermain Nord', 'GENODEF1ALK'),
+	(3696, 0, 77061425, 'Raiffeisen-Volksbank', 'GENODEF1EBR'),
+	(3697, 0, 77062014, 'Raiffeisenbank Burgebrach-Stegaurach', 'GENODEF1BGB'),
+	(3698, 0, 77062139, 'Raiffeisen-Volksbank Bad Staffelstein', 'GENODEF1SFF'),
+	(3699, 0, 77063048, 'Raiffeisenbank Hallstadt -alt-', 'GENODEF1HLD'),
+	(3700, 0, 77065141, 'Raiffeisenbank Stegaurach -alt-', 'GENODEF1STC'),
+	(3701, 0, 77069042, 'Raiffeisenbank Gößweinstein -alt-', 'GENODEF1GWE'),
+	(3702, 0, 77069044, 'Raiffeisenbank Küps-Mitwitz-Stockheim', 'GENODEF1KC2'),
+	(3703, 0, 77069051, 'Raiffeisenbank', 'GENODEF1HIS'),
+	(3704, 0, 77069052, 'Raiffeisenbank', 'GENODEF1HOB'),
+	(3705, 0, 77069084, 'Raiffeisenbank -alt-', 'GENODEF1MEM'),
+	(3706, 0, 77069091, 'Raiffeisenbank Ebrachgrund', 'GENODEF1SFD'),
+	(3707, 0, 77069110, 'Raiffeisenbank Pretzfeld -alt-', 'GENODEF1PRE'),
+	(3708, 0, 77069128, 'Raiffeisenbank Scheßlitz-Zapfendorf -alt-', 'GENODEF1STZ'),
+	(3709, 0, 77069461, 'Vereinigte Raiffeisenbanken', 'GENODEF1GBF'),
+	(3710, 0, 77069556, 'Raiffeisenbank', 'GENODEF1NNK'),
+	(3711, 0, 77069739, 'Raiffeisenbank Thurnauer Land', 'GENODEF1THA'),
+	(3712, 0, 77069746, 'Raiffeisenbank', 'GENODEF1ETB'),
+	(3713, 0, 77069764, 'Raiffeisenbank Kemnather Land - Steinwald', 'GENODEF1KEM'),
+	(3714, 0, 77069782, 'Raiffeisenbank am Kulm', 'GENODEF1SPK'),
+	(3715, 0, 77069836, 'Raiffeisenbank Berg-Bad Steben', 'GENODEF1BGO'),
+	(3716, 0, 77069868, 'Raiffeisenbank Oberland', 'GENODEF1MGA'),
+	(3717, 0, 77069870, 'Raiffeisenbank Hochfranken West', 'GENODEF1SZF'),
+	(3718, 0, 77069879, 'Raiffeisenbank -alt-', 'GENODEF1OKZ'),
+	(3719, 0, 77069906, 'Raiffeisenbank Wüstenselbitz', 'GENODEF1WSZ'),
+	(3720, 0, 77069908, 'Raiffeisenbank Sparneck-Stammbach-Zell -alt-', 'GENODEF1ZSP'),
+	(3721, 0, 77091800, 'Raiffeisen-Volksbank Lichtenfels-Itzgrund', 'GENODEF1LIF'),
+	(3722, 0, 77120073, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM289'),
+	(3723, 0, 77140061, 'Commerzbank', 'COBADEFF771'),
+	(3724, 0, 77150000, 'Sparkasse Kulmbach-Kronach', 'BYLADEM1KUB'),
+	(3725, 0, 77190000, 'Kulmbacher Bank', 'GENODEF1KU1'),
+	(3726, 0, 77300000, 'Bundesbank', 'MARKDEF1773'),
+	(3727, 0, 77320072, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM412'),
+	(3728, 0, 77322200, 'Fondsdepot Bank', 'FODBDE77XXX'),
+	(3729, 0, 77340076, 'Commerzbank', 'COBADEFF773'),
+	(3730, 0, 77350110, 'Sparkasse Bayreuth', 'BYLADEM1SBT'),
+	(3731, 0, 77361600, 'Raiffeisen-Volksbank Kronach-Ludwigsstadt', 'GENODEF1KC1'),
+	(3732, 0, 77363749, 'Raiffeisenbank', 'GENODEF1GFS'),
+	(3733, 0, 77365792, 'Raiffeisenbank Hollfeld-Waischenfeld-Aufseß', 'GENODEF1HWA'),
+	(3734, 0, 77390000, 'Volksbank-Raiffeisenbank Bayreuth', 'GENODEF1BT1'),
+	(3735, 0, 77390500, 'Sparda-Bank Nürnberg', 'GENODEF1S13'),
+	(3736, 0, 77390628, 'apoBank', 'DAAEDED1028'),
+	(3737, 0, 78000000, 'Bundesbank eh Hof', 'MARKDEF1780'),
+	(3738, 0, 78020070, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM424'),
+	(3739, 0, 78020429, 'UniCredit Bank - HypoVereinsbank Ndl 128 Hof', 'HYVEDEM1074'),
+	(3740, 0, 78030080, 'Archon Capital Bank Deutschland', 'DELMDE71XXX'),
+	(3741, 0, 78030081, 'Archon Capital Bank Deutschland Servicing', 'DESVDE71XXX'),
+	(3742, 0, 78040081, 'Commerzbank Hof Saale', 'COBADEFF780'),
+	(3743, 0, 78050000, 'Sparkasse Hochfranken', 'BYLADEM1HOF'),
+	(3744, 0, 78055050, 'Sparkasse Hochfranken -alt-', 'BYLADEM1FIG'),
+	(3745, 0, 78060896, 'VR Bank Hof', 'GENODEF1HO1'),
+	(3746, 0, 78062488, 'Raiffeisenbank -alt-', 'GENODEF1SMM'),
+	(3747, 0, 78140000, 'Commerzbank', 'COBADEFF755'),
+	(3748, 0, 78160069, 'VR-Bank Fichtelgebirge', 'GENODEF1MAK'),
+	(3749, 0, 78161575, 'Raiffeisenbank im Stiftland', 'GENODEF1WSS'),
+	(3750, 0, 78320076, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM480'),
+	(3751, 0, 78330111, 'Bankhaus Max Flessa', 'FLESDEMMXXX'),
+	(3752, 0, 78340091, 'Commerzbank', 'COBADEFF783'),
+	(3753, 0, 78350000, 'Sparkasse Coburg-Lichtenfels', 'BYLADEM1COB'),
+	(3754, 0, 78360000, 'VR-Bank Coburg', 'GENODEF1COS'),
+	(3755, 0, 79000000, 'Bundesbank', 'MARKDEF1790'),
+	(3756, 0, 79010111, 'SEB', 'ESSEDE5F790'),
+	(3757, 0, 79020076, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM455'),
+	(3758, 0, 79020325, 'UniCredit Bank - HypoVereinsbank Ndl 149 Wzb', 'HYVEDEM1077'),
+	(3759, 0, 79020700, 'Hanseatic Bank', 'HSTBDEH1WUE'),
+	(3760, 0, 79030001, 'Fürstlich Castellsche Bank Credit-Casse', 'FUCEDE77XXX'),
+	(3761, 0, 79032038, 'Bank Schilling & Co', 'BSHADE71XXX'),
+	(3762, 0, 79040047, 'Commerzbank Würzburg', 'COBADEFF790'),
+	(3763, 0, 79050000, 'Sparkasse Mainfranken Würzburg', 'BYLADEM1SWU'),
+	(3764, 0, 79061000, 'Raiffeisenbank-alt-', 'GENODEF1OCH'),
+	(3765, 0, 79061153, 'Raiffeisenbank Lohr, Main -alt-', 'GENODEF1LOH'),
+	(3766, 0, 79062106, 'Raiffeisenbank', 'GENODEF1HAB'),
+	(3767, 0, 79063060, 'Raiffeisenbank Estenfeld-Bergtheim', 'GENODEF1EFD'),
+	(3768, 0, 79063122, 'Raiffeisenbank Höchberg', 'GENODEF1HBG'),
+	(3769, 0, 79065028, 'VR-Bank Bad Kissingen-Bad Brückenau', 'GENODEF1BRK'),
+	(3770, 0, 79065160, 'Raiffeisenbank Marktheidenfeld -alt-', 'GENODEF1MHF'),
+	(3771, 0, 79066082, 'Raiffeisenbank', 'GENODEF1AHE'),
+	(3772, 0, 79069001, 'Raiffeisenbank Volkach-Wiesentheid', 'GENODEF1WED'),
+	(3773, 0, 79069010, 'VR-Bank Schweinfurt', 'GENODEF1ATE'),
+	(3774, 0, 79069031, 'Raiffeisenbank Bütthard-Gaukönigshofen', 'GENODEF1BHD'),
+	(3775, 0, 79069090, 'Raiffeisenbank Ulsenheim-Gollhofen -alt-', 'GENODEF1GOU'),
+	(3776, 0, 79069145, 'Raiffeisenbank Kreuzwertheim-Hasloch -alt-', 'GENODEF1KRW'),
+	(3777, 0, 79069150, 'Raiffeisenbank Main-Spessart', 'GENODEF1GEM'),
+	(3778, 0, 79069165, 'Genobank Rhön-Grabfeld', 'GENODEF1MLV'),
+	(3779, 0, 79069181, 'Raiffeisenbank', 'GENODEF1NDL'),
+	(3780, 0, 79069188, 'Raiffeisenbank im Grabfeld', 'GENODEF1SLZ'),
+	(3781, 0, 79069192, 'Raiffeisenbank Obernbreit und Umgebung', 'GENODEF1ROU'),
+	(3782, 0, 79069213, 'Raiffeisenbank Maßbach', 'GENODEF1RNM'),
+	(3783, 0, 79069271, 'Raiffeisenbank', 'GENODEF1THH'),
+	(3784, 0, 79070016, 'Deutsche Bank', 'DEUTDEMM790'),
+	(3785, 0, 79070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB790'),
+	(3786, 0, 79080052, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF790'),
+	(3787, 0, 79080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ28'),
+	(3788, 0, 79090000, 'Volksbank Raiffeisenbank', 'GENODEF1WU1'),
+	(3789, 0, 79090624, 'apoBank', 'DAAEDED1024'),
+	(3790, 0, 79161058, 'Raiffeisenbank Fränkisches Weinland', 'GENODEF1ERN'),
+	(3791, 0, 79161499, 'Raiffeisenbank Kitzinger Land', 'GENODEF1OBR'),
+	(3792, 0, 79190000, 'VR Bank Kitzingen', 'GENODEF1KT1'),
+	(3793, 0, 79300000, 'Bundesbank eh Schweinfurt', 'MARKDEF1793'),
+	(3794, 0, 79320075, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM451'),
+	(3795, 0, 79320432, 'UniCredit Bank - HypoVereinsbank Ndl 137 Schft', 'HYVEDEM1075'),
+	(3796, 0, 79330111, 'Bankhaus Max Flessa', 'FLESDEMMXXX'),
+	(3797, 0, 79340054, 'Commerzbank Schweinfurt', 'COBADEFF793'),
+	(3798, 0, 79350000, 'Städtische Sparkasse Schweinfurt -alt-', 'BYLADEM1SSW'),
+	(3799, 0, 79350101, 'Sparkasse Schweinfurt', 'BYLADEM1KSW'),
+	(3800, 0, 79351010, 'Sparkasse Bad Kissingen', 'BYLADEM1KIS'),
+	(3801, 0, 79351730, 'Sparkasse Ostunterfranken', 'BYLADEM1HAS'),
+	(3802, 0, 79353090, 'Sparkasse Bad Neustadt a d Saale', 'BYLADEM1NES'),
+	(3803, 0, 79362081, 'VR-Bank Gerolzhofen', 'GENODEF1GZH'),
+	(3804, 0, 79363016, 'VR-Bank Rhön-Grabfeld', 'GENODEF1NDT'),
+	(3805, 0, 79363151, 'Raiffeisen-Volksbank Haßberge', 'GENODEF1HAS'),
+	(3806, 0, 79364069, 'Raiffeisenbank Frankenwinheim und Umgebung', 'GENODEF1FWH'),
+	(3807, 0, 79364406, 'VR-Bank Schweinfurt Land -alt-', 'GENODEF1BGF'),
+	(3808, 0, 79380051, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF793'),
+	(3809, 0, 79500000, 'Bundesbank eh Aschaffenburg', 'MARKDEF1795'),
+	(3810, 0, 79510111, 'SEB', 'ESSEDE5F795'),
+	(3811, 0, 79520070, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM407'),
+	(3812, 0, 79520533, 'UniCredit Bank - HypoVereinsbank Ndl 125 Aschb', 'HYVEDEM1106'),
+	(3813, 0, 79540049, 'Commerzbank', 'COBADEFF795');
 
-
+INSERT INTO `static_bic_de` (`uid`, `pid`, `bank_ic`, `bank_name`, `bank_bic`)
+VALUES
+	(3814, 0, 79550000, 'Sparkasse Aschaffenburg Alzenau', 'BYLADEM1ASA'),
+	(3815, 0, 79561348, 'Raiffeisenbank Bachgau -alt-', 'GENODEF1BAG'),
+	(3816, 0, 79562514, 'Raiffeisenbank Aschaffenburg', 'GENODEF1AB1'),
+	(3817, 0, 79565568, 'Raiffeisenbank Waldaschaff-Heigenbrücken', 'GENODEF1WAA'),
+	(3818, 0, 79566545, 'Raiffeisenbank Heimbuchenthal -alt-', 'GENODEF1HTH'),
+	(3819, 0, 79567531, 'VR-Bank', 'GENODEF1ALZ'),
+	(3820, 0, 79568518, 'Raiffeisenbank Haibach-Obernau', 'GENODEF1HAC'),
+	(3821, 0, 79570024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDB795'),
+	(3822, 0, 79570051, 'Deutsche Bank', 'DEUTDEFF795'),
+	(3823, 0, 79580099, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF795'),
+	(3824, 0, 79589402, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI47'),
+	(3825, 0, 79590000, 'Volksbank Aschaffenburg', 'GENODEF1AB2'),
+	(3826, 0, 79650000, 'Sparkasse Miltenberg-Obernburg', 'BYLADEM1MIL'),
+	(3827, 0, 79662558, 'Raiffeisenbank -alt-', 'GENODEF1SKP'),
+	(3828, 0, 79665540, 'Raiffeisenbank Elsavatal', 'GENODEF1EAU'),
+	(3829, 0, 79666548, 'Raiffeisenbank Großostheim-Obernburg', 'GENODEF1OBE'),
+	(3830, 0, 79668509, 'Raiffeisenbank Eichenbühl und Umgebung', 'GENODEF1ENB'),
+	(3831, 0, 79690000, 'Raiffeisen-Volksbank Miltenberg', 'GENODEF1MIL'),
+	(3832, 0, 80000000, 'Bundesbank eh Halle', 'MARKDEF1800'),
+	(3833, 0, 80020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM440'),
+	(3834, 0, 80020087, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM462'),
+	(3835, 0, 80020130, 'ZV Landesbank Baden-Württemberg', 'SOLADEST802'),
+	(3836, 0, 80040000, 'Commerzbank', 'COBADEFF800'),
+	(3837, 0, 80050500, 'Kreissparkasse Merseburg-Querfurt -alt-', 'NOLADE21MQU'),
+	(3838, 0, 80053000, 'Sparkasse Burgenlandkreis', 'NOLADE21BLK'),
+	(3839, 0, 80053552, 'Kreissparkasse Sangerhausen -alt-', 'NOLADE21SGH'),
+	(3840, 0, 80053572, 'Stadtsparkasse Dessau', 'NOLADE21DES'),
+	(3841, 0, 80053622, 'Kreissparkasse Köthen -alt-', 'NOLADE21KOT'),
+	(3842, 0, 80053722, 'Kreissparkasse Anhalt-Bitterfeld', 'NOLADE21BTF'),
+	(3843, 0, 80053762, 'Saalesparkasse', 'NOLADE21HAL'),
+	(3844, 0, 80054000, 'Kreissparkasse Weißenfels -alt-', 'NOLADE21WSF'),
+	(3845, 0, 80055008, 'Sparkasse Mansfeld-Südharz', 'NOLADE21EIL'),
+	(3846, 0, 80055500, 'Salzlandsparkasse', 'NOLADE21SES'),
+	(3847, 0, 80062608, 'Volksbank Elsterland', 'GENODEF1JE1'),
+	(3848, 0, 80063508, 'Ostharzer Volksbank', 'GENODEF1QLB'),
+	(3849, 0, 80063558, 'Volksbank', 'GENODEF1SGH'),
+	(3850, 0, 80063598, 'Volksbank Wittenberg', 'GENODEF1WB1'),
+	(3851, 0, 80063628, 'Volksbank', 'GENODEF1KOE'),
+	(3852, 0, 80063648, 'Volks- und Raiffeisenbank Saale-Unstrut', 'GENODEF1NMB'),
+	(3853, 0, 80063678, 'VR-Bank Zeitz', 'GENODEF1ZTZ'),
+	(3854, 0, 80063718, 'Volks- und Raiffeisenbank Eisleben', 'GENODEF1EIL'),
+	(3855, 0, 80080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF800'),
+	(3856, 0, 80093574, 'Volksbank Dessau-Anhalt', 'GENODEF1DS1'),
+	(3857, 0, 80093784, 'Volksbank Halle, Saale', 'GENODEF1HAL'),
+	(3858, 0, 80500000, 'Bundesbank eh Dessau', 'MARKDEF1805'),
+	(3859, 0, 80550101, 'Sparkasse Wittenberg', 'NOLADE21WBL'),
+	(3860, 0, 80550200, 'Kreissparkasse Anhalt-Zerbst -alt-', 'NOLADE21ZER'),
+	(3861, 0, 81000000, 'Bundesbank', 'MARKDEF1810'),
+	(3862, 0, 81010111, 'SEB', 'ESSEDE5F810'),
+	(3863, 0, 81020500, 'Bank für Sozialwirtschaft', 'BFSWDE33MAG'),
+	(3864, 0, 81040000, 'Commerzbank', 'COBADEFF810'),
+	(3865, 0, 81050000, 'Kreissparkasse Aschersleben-Staßfurt -alt-', ''),
+	(3866, 0, 81050555, 'Kreissparkasse Stendal', 'NOLADE21SDL'),
+	(3867, 0, 81051000, 'Bördesparkasse Oschersleben -alt-', 'NOLADE21OCL'),
+	(3868, 0, 81052000, 'Harzsparkasse', 'NOLADE21HRZ'),
+	(3869, 0, 81053272, 'Stadtsparkasse Magdeburg', 'NOLADE21MDG'),
+	(3870, 0, 81054000, 'Sparkasse Jerichower Land', 'NOLADE21JEL'),
+	(3871, 0, 81055000, 'Kreissparkasse Börde', 'NOLADE21HDL'),
+	(3872, 0, 81055555, 'Sparkasse Altmark West', 'NOLADE21SAW'),
+	(3873, 0, 81063028, 'Raiffeisenbank Kalbe-Bismark', 'GENODEF1KAB'),
+	(3874, 0, 81063238, 'Volksbank Jerichower Land', 'GENODEF1BRG'),
+	(3875, 0, 81068106, 'Bank für Kirche und Diakonie - KD-Bank Gf Sonder-BLZ', 'GENODED1KDM'),
+	(3876, 0, 81069048, 'Volksbank Jerichower Land', 'GENODEF1GNT'),
+	(3877, 0, 81069052, 'Volksbank Börde-Bernburg', 'GENODEF1WZL'),
+	(3878, 0, 81070000, 'Deutsche Bank', 'DEUTDE8MXXX'),
+	(3879, 0, 81070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBMAG'),
+	(3880, 0, 81080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF810'),
+	(3881, 0, 81093034, 'Volksbank', 'GENODEF1GA1'),
+	(3882, 0, 81093044, 'Volksbank Osterburg-Lüchow-Dannenberg -alt-', 'GENODEF1OBG'),
+	(3883, 0, 81093054, 'Volksbank Stendal', 'GENODEF1SDL'),
+	(3884, 0, 81093274, 'Volksbank Magdeburg', 'GENODEF1MD1'),
+	(3885, 0, 82000000, 'Bundesbank', 'MARKDEF1820'),
+	(3886, 0, 82010111, 'SEB', 'ESSEDE5F820'),
+	(3887, 0, 82020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM498'),
+	(3888, 0, 82020087, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM098'),
+	(3889, 0, 82020088, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM824'),
+	(3890, 0, 82040000, 'Commerzbank', 'COBADEFF820'),
+	(3891, 0, 82040085, 'Commerzbank, Gf Web-K', 'COBADEFFINT'),
+	(3892, 0, 82050000, 'Landesbank Hessen-Thür Girozentrale Erfurt', 'HELADEFF820'),
+	(3893, 0, 82051000, 'Sparkasse Mittelthüringen', 'HELADEF1WEM'),
+	(3894, 0, 82052020, 'Kreissparkasse Gotha', 'HELADEF1GTH'),
+	(3895, 0, 82054052, 'Kreissparkasse Nordhausen', 'HELADEF1NOR'),
+	(3896, 0, 82055000, 'Kyffhäusersparkasse', 'HELADEF1KYF'),
+	(3897, 0, 82056060, 'Sparkasse Unstrut-Hainich', 'HELADEF1MUE'),
+	(3898, 0, 82057070, 'Kreissparkasse Eichsfeld', 'HELADEF1EIC'),
+	(3899, 0, 82060197, 'Pax-Bank', 'GENODED1PA5'),
+	(3900, 0, 82060800, 'Evangelische Kreditgenossenschaft -Filiale Eisenach-', 'GENODEF1EK7'),
+	(3901, 0, 82064038, 'VR Bank Westthüringen', 'GENODEF1MU2'),
+	(3902, 0, 82064088, 'Volksbank und Raiffeisenbank', 'GENODEF1ESA'),
+	(3903, 0, 82064168, 'Raiffeisenbank Gotha', 'GENODEF1GTH'),
+	(3904, 0, 82064188, 'VR Bank Weimar', 'GENODEF1WE1'),
+	(3905, 0, 82064228, 'Erfurter Bank', 'ERFBDE8EXXX'),
+	(3906, 0, 82070000, 'Deutsche Bank', 'DEUTDE8EXXX'),
+	(3907, 0, 82070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBERF'),
+	(3908, 0, 82080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF827'),
+	(3909, 0, 82094004, 'Volksbank Heiligenstadt', 'GENODEF1HIG'),
+	(3910, 0, 82094054, 'Nordthüringer Volksbank', 'GENODEF1NDS'),
+	(3911, 0, 83000000, 'Bundesbank eh Gera', 'MARKDEF1830'),
+	(3912, 0, 83020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM468'),
+	(3913, 0, 83020087, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM463'),
+	(3914, 0, 83020088, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM484'),
+	(3915, 0, 83040000, 'Commerzbank', 'COBADEFF830'),
+	(3916, 0, 83050000, 'Sparkasse Gera-Greiz', 'HELADEF1GER'),
+	(3917, 0, 83050200, 'Sparkasse Altenburger Land', 'HELADEF1ALT'),
+	(3918, 0, 83050303, 'Kreissparkasse Saalfeld-Rudolstadt', 'HELADEF1SAR'),
+	(3919, 0, 83050505, 'Kreissparkasse Saale-Orla', 'HELADEF1SOK'),
+	(3920, 0, 83053030, 'Sparkasse Jena-Saale-Holzland', 'HELADEF1JEN'),
+	(3921, 0, 83064488, 'Raiffeisen-Volksbank Hermsdorfer Kreuz', 'GENODEF1HMF'),
+	(3922, 0, 83064568, 'Geraer Bank', 'GENODEF1GEV'),
+	(3923, 0, 83065408, 'VR-Bank Altenburger Land / Deutsche Skatbank', 'GENODEF1SLR'),
+	(3924, 0, 83065410, 'Deutsche Skatbank Zndl VR Bank Altenburger Land', 'GENODEF1ALT'),
+	(3925, 0, 83080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF830'),
+	(3926, 0, 83094444, 'Raiffeisen-Volksbank Saale-Orla', 'GENODEF1PN1'),
+	(3927, 0, 83094454, 'Volksbank Saaletal', 'GENODEF1RUJ'),
+	(3928, 0, 83094494, 'Volksbank Eisenberg', 'GENODEF1ESN'),
+	(3929, 0, 83094495, 'EthikBank, Zndl der Volksbank Eisenberg', 'GENODEF1ETK'),
+	(3930, 0, 84000000, 'Bundesbank eh Meiningen', 'MARKDEF1840'),
+	(3931, 0, 84020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM477'),
+	(3932, 0, 84020087, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM458'),
+	(3933, 0, 84030111, 'Bankhaus Max Flessa', 'FLESDEMMXXX'),
+	(3934, 0, 84040000, 'Commerzbank', 'COBADEFF840'),
+	(3935, 0, 84050000, 'Rhön-Rennsteig-Sparkasse', 'HELADEF1RRS'),
+	(3936, 0, 84051010, 'Sparkasse Arnstadt-Ilmenau', 'HELADEF1ILK'),
+	(3937, 0, 84054040, 'Kreissparkasse Hildburghausen', 'HELADEF1HIL'),
+	(3938, 0, 84054722, 'Sparkasse Sonneberg', 'HELADEF1SON'),
+	(3939, 0, 84055050, 'Wartburg-Sparkasse', 'HELADEF1WAK'),
+	(3940, 0, 84064798, 'Genobank Rhön-Grabfeld', 'GENODEF1MLF'),
+	(3941, 0, 84069065, 'Raiffeisenbank Schleusingen', 'GENODEF1SSG'),
+	(3942, 0, 84080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF843'),
+	(3943, 0, 84094754, 'VR-Bank Bad Salzungen Schmalkalden', 'GENODEF1SAL'),
+	(3944, 0, 84094814, 'VR Bank Südthüringen', 'GENODEF1SHL'),
+	(3945, 0, 85000000, 'Bundesbank', 'MARKDEF1850'),
+	(3946, 0, 85010500, 'Sächsische Aufbaubank -Förderbank-', 'SABDDE81XXX'),
+	(3947, 0, 85020030, 'ZV Landesbank Baden-Württemberg', 'SOLADEST850'),
+	(3948, 0, 85020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM496'),
+	(3949, 0, 85020500, 'Bank für Sozialwirtschaft', 'BFSWDE33DRE'),
+	(3950, 0, 85020890, 'UniCredit Bank - HypoVereinsbank Ndl 536 Dre', 'HYVEDEM1089'),
+	(3951, 0, 85040000, 'Commerzbank', 'COBADEFF850'),
+	(3952, 0, 85040060, 'Commerzbank CC', 'COBADEFF104'),
+	(3953, 0, 85040061, 'Commerzbank CC', 'COBADEFF105'),
+	(3954, 0, 85050100, 'Sparkasse Oberlausitz-Niederschlesien', 'WELADED1GRL'),
+	(3955, 0, 85050200, 'Kreissparkasse Riesa-Großenhain -alt-', 'SOLADES1RGA'),
+	(3956, 0, 85050300, 'Ostsächsische Sparkasse Dresden', 'OSDDDE81XXX'),
+	(3957, 0, 85050350, 'Ostsächsische Sparkasse Dresden Gf OSD.Net', 'OSDDDE81NET'),
+	(3958, 0, 85055000, 'Sparkasse Meißen', 'SOLADES1MEI'),
+	(3959, 0, 85060000, 'Volksbank Pirna', 'GENODEF1PR2'),
+	(3960, 0, 85065028, 'Raiffeisenbank Neustadt, Sachs -alt-', 'GENODEF1SEB'),
+	(3961, 0, 85080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF850'),
+	(3962, 0, 85080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ29'),
+	(3963, 0, 85080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFJ30'),
+	(3964, 0, 85080200, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF857'),
+	(3965, 0, 85089270, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI15'),
+	(3966, 0, 85090000, 'Dresdner Volksbank Raiffeisenbank', 'GENODEF1DRS'),
+	(3967, 0, 85094984, 'Volksbank Riesa', 'GENODEF1RIE'),
+	(3968, 0, 85095004, 'Volksbank Raiffeisenbank Meißen Großenhain', 'GENODEF1MEI'),
+	(3969, 0, 85095164, 'Landeskirchliche Kredit-Genossenschaft Sachsen -alt-', 'GENODEF1LKG'),
+	(3970, 0, 85550000, 'Kreissparkasse Bautzen', 'SOLADES1BAT'),
+	(3971, 0, 85550200, 'Kreissparkasse Löbau-Zittau -alt-', 'SOLADES1ZIT'),
+	(3972, 0, 85590000, 'Volksbank Bautzen', 'GENODEF1BZV'),
+	(3973, 0, 85590100, 'Volksbank Löbau-Zittau', 'GENODEF1NGS'),
+	(3974, 0, 85591000, 'Volksbank Raiffeisenbank Niederschlesien', 'GENODEF1GR1'),
+	(3975, 0, 85595500, 'Volksbank Westlausitz -alt-', 'GENODEF1BIW'),
+	(3976, 0, 86000000, 'Bundesbank', 'MARKDEF1860'),
+	(3977, 0, 86010090, 'Postbank', 'PBNKDEFFXXX'),
+	(3978, 0, 86010111, 'SEB', 'ESSEDE5F860'),
+	(3979, 0, 86010424, 'Aareal Bank', 'AARBDE5W860'),
+	(3980, 0, 86020030, 'ZV Landesbank Baden-Württemberg', 'SOLADEST860'),
+	(3981, 0, 86020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM495'),
+	(3982, 0, 86020500, 'Bank für Sozialwirtschaft', 'BFSWDE33LPZ'),
+	(3983, 0, 86020600, 'Hanseatic Bank', 'HSTBDEH1LEI'),
+	(3984, 0, 86020880, 'UniCredit Bank - HypoVereinsbank Ndl 508 Lei', 'HYVEDEM1088'),
+	(3985, 0, 86033300, 'Santander Consumer Bank', 'SCFBDE33XXX'),
+	(3986, 0, 86040000, 'Commerzbank', 'COBADEFF860'),
+	(3987, 0, 86040060, 'Commerzbank CC', 'COBADEFF106'),
+	(3988, 0, 86040061, 'Commerzbank CC', 'COBADEFF107'),
+	(3989, 0, 86050000, 'ZV Landesbank Baden-Württemberg', 'SOLADEST861'),
+	(3990, 0, 86050200, 'Sparkasse Muldental', 'SOLADES1GRM'),
+	(3991, 0, 86050600, 'Kreissparkasse Torgau-Oschatz -alt-', 'WELADED1TGU'),
+	(3992, 0, 86055002, 'Sparkasse Delitzsch-Eilenburg -alt-', 'SOLADES1DES'),
+	(3993, 0, 86055462, 'Kreissparkasse Döbeln', 'SOLADES1DLN'),
+	(3994, 0, 86055592, 'Stadt- und Kreissparkasse Leipzig', 'WELADE8LXXX'),
+	(3995, 0, 86065448, 'VR Bank Leipziger Land', 'GENODEF1BOA'),
+	(3996, 0, 86065468, 'VR-Bank Mittelsachsen', 'GENODEF1DL1'),
+	(3997, 0, 86065483, 'Raiffeisenbank Grimma', 'GENODEF1GMR'),
+	(3998, 0, 86065548, 'Wurzener Bank (Raiffeisen-Volksbank) -alt-', 'GENODEF1WUZ'),
+	(3999, 0, 86069070, 'Raiffeisenbank', 'GENODEF1TGB'),
+	(4000, 0, 86070000, 'Deutsche Bank', 'DEUTDE8LXXX'),
+	(4001, 0, 86070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBLEG'),
+	(4002, 0, 86080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF860'),
+	(4003, 0, 86080055, 'Commerzbank vormals Dresdner Bank Zw 55', 'DRESDEFF862'),
+	(4004, 0, 86080057, 'Commerzbank vormals Dresdner Bank Gf ZW 57', 'DRESDEFF867'),
+	(4005, 0, 86080085, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 1', 'DRESDEFFJ31'),
+	(4006, 0, 86080086, 'Commerzbank vormals Dresdner Bank, PCC DCC-ITGK 2', 'DRESDEFFJ32'),
+	(4007, 0, 86089280, 'Commerzbank vormals Dresdner Bank ITGK', 'DRESDEFFI16'),
+	(4008, 0, 86095484, 'Volks- und Raiffeisenbank Muldental', 'GENODEF1GMV'),
+	(4009, 0, 86095554, 'Volksbank Delitzsch', 'GENODEF1DZ1'),
+	(4010, 0, 86095604, 'Volksbank Leipzig', 'GENODEF1LVB'),
+	(4011, 0, 87000000, 'Bundesbank', 'MARKDEF1870'),
+	(4012, 0, 87020086, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM497'),
+	(4013, 0, 87020087, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM481'),
+	(4014, 0, 87020088, 'UniCredit Bank - HypoVereinsbank', 'HYVEDEMM441'),
+	(4015, 0, 87040000, 'Commerzbank', 'COBADEFF870'),
+	(4016, 0, 87050000, 'Sparkasse Chemnitz', 'CHEKDE81XXX'),
+	(4017, 0, 87051000, 'Sparkasse Mittelsachsen', 'WELADED1MTW'),
+	(4018, 0, 87052000, 'Sparkasse Mittelsachsen', 'WELADED1FGX'),
+	(4019, 0, 87053000, 'Sparkasse Mittleres Erzgebirge -alt-', 'SOLADES1SME'),
+	(4020, 0, 87054000, 'Erzgebirgssparkasse', 'WELADED1STB'),
+	(4021, 0, 87055000, 'Sparkasse Zwickau', 'WELADED1ZWI'),
+	(4022, 0, 87056000, 'Kreissparkasse Aue-Schwarzenberg -alt-', 'WELADED1AUS'),
+	(4023, 0, 87058000, 'Sparkasse Vogtland', 'WELADED1PLX'),
+	(4024, 0, 87065893, 'Volksbank Erzgebirge -alt-', 'GENODEF1AUE'),
+	(4025, 0, 87065918, 'Raiffeisenbank Werdau-Zwickau -alt-', 'GENODEF1LGH'),
+	(4026, 0, 87069075, 'Volksbank Mittleres Erzgebirge', 'GENODEF1MBG'),
+	(4027, 0, 87069077, 'Vereinigte Raiffeisenbank Burgstädt', 'GENODEF1BST'),
+	(4028, 0, 87070000, 'Deutsche Bank', 'DEUTDE8CXXX'),
+	(4029, 0, 87070024, 'Deutsche Bank Privat und Geschäftskunden', 'DEUTDEDBCHE'),
+	(4030, 0, 87080000, 'Commerzbank vormals Dresdner Bank', 'DRESDEFF870'),
+	(4031, 0, 87095824, 'Volksbank Vogtland', 'GENODEF1PL1'),
+	(4032, 0, 87095899, 'Volksbank Vogtland GAA', 'GENODEF1EXT'),
+	(4033, 0, 87095934, 'Volksbank Zwickau', 'GENODEF1Z01'),
+	(4034, 0, 87095974, 'Volksbank-Raiffeisenbank Glauchau', 'GENODEF1GC1'),
+	(4035, 0, 87096034, 'Volksbank Erzgebirge -alt-', 'GENODEF1ANA'),
+	(4036, 0, 87096074, 'Freiberger Bank -alt-', 'GENODEF1FBV'),
+	(4037, 0, 87096124, 'Volksbank Mittweida', 'GENODEF1MIW'),
+	(4038, 0, 87096214, 'Volksbank Chemnitz', 'GENODEF1CH1');

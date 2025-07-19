@@ -1,0 +1,19 @@
+{
+  "name": "michaelstaatz/static-info-tables-bic-de",
+  "description": "Static info tables - German Bank Identifier Codes",
+  "type": "typo3-cms-extension",
+  "version": "1.3.1",
+  "authors": [
+    {
+      "name": "Michael Staatz",
+      "email": "kontakt@mstaatz.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-backend": "^10"
+  },
+  "replace": {
+    "static_info_tables_bic_de": "self.version"
+  }
+}

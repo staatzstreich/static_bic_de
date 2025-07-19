@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-07-06T13:00:00Z" product-name="static_info_tables_bic_de">
+		<header/>
+		<body>
+			<trans-unit id="tx_staticinfotablesbicde">
+				<source>Bank Identifier Codes</source>
+			</trans-unit>
+			<trans-unit id="tx_staticinfotablesbicde.bank_ic">
+				<source>BIC:</source>
+			</trans-unit>
+			<trans-unit id="tx_staticinfotablesbicde.bank_name">
+				<source>Name of Bank:</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
